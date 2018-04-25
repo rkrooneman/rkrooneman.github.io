@@ -5,13 +5,11 @@ html, body {
     overflow-x: hidden;
     font-family: sans-serif;
 }
-
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-
 h1 {
   color: #fff;
   position: absolute;
@@ -31,7 +29,6 @@ h1:after {
   background: #fff;
   transition: 500ms all ease-in-out;
 }
-
 a.cta1 {
   display: block;
   position: absolute;
@@ -68,7 +65,6 @@ a.cta1:hover:before {
   color: #ee71ab;
   opacity: 1;
 }
-
 a.cta2 {
   display: block;
   position: absolute;
@@ -105,7 +101,6 @@ a.cta2:hover:before {
   color: #95e3c4;
   opacity: 1;
 }
-
 .container {
   background-image: url("https://forum4d.com/wp-content/uploads/data/2018/1/25/wallpaper-f-PIC-FWP10010525.jpg");
   background-repeat: no-repeat;
