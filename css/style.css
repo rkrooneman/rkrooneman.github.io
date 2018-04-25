@@ -29,6 +29,12 @@ h1:after {
   background: #fff;
   transition: 500ms all ease-in-out;
 }
+main {
+    position: relative;
+    height: 1500px;
+    text-align: center;
+    margin-top: 150px;
+}
 a.cta1 {
   display: block;
   position: absolute;
