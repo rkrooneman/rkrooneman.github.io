@@ -91,7 +91,7 @@ a.cta2 {
 a.cta2:before {
   content: "›";
   font-size: 1.5em;
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.5);
   opacity: 0;
   height: 0;
   width: 100%;
