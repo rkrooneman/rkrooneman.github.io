@@ -105,7 +105,7 @@ a.cta2:hover:before {
 }
 
 .container {
-  background-image: url("Background_1.jpg");
+  background-image: url(Background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom-center;
