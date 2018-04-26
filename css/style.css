@@ -170,4 +170,8 @@ a.cta2:hover:before {
 .container.right-is-hovered .left:before {
   background: rgba(0, 0, 0, 0.65);
   z-index: 2;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> parent of 42f2ef3... Big Change
