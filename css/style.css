@@ -250,7 +250,6 @@ section {
     display: flex;
     height: 100%;
     width: 100%;
-    padding-bottom: 150px;
 }
 #on {
   position: absolute;
@@ -273,6 +272,7 @@ h2 {
     width: 70%;
     height: auto;
     display: block;
+    padding-top: 150px;
 }
 .content img {
     width: 200px;
