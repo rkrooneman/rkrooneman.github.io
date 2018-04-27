@@ -241,9 +241,9 @@ h2 {
 }
 .content {
     width: 80%;
+    height: auto;
     padding: 50px;
 }
-
 .content img {
     width: 200px;
     height: auto;
