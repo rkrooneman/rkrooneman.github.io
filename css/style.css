@@ -237,6 +237,10 @@ h2 {
     font-family: Lobster;
     font-size: 2em;
 }
+.profile {
+    width: 100%;
+}
+
 .profile img {
     width: 200px;
     height: auto;
