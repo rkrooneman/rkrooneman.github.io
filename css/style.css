@@ -241,3 +241,8 @@ a {
 .contactlogos {
     float: right !important;
 }
+h2 {
+    font-size: 0.5em;
+    text-align: center;
+    font-family: Lobster;
+}
