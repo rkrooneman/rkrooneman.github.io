@@ -24,13 +24,17 @@ header {
     font-size: 2em;
     display: inline-block;
     float: left;
+    padding-left: 40px;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
 }
 .headername {
-    font-family: helvetica;
     font-size: 1em;
     display: inline-block;
     float: right;
     padding-right: 40px;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
 }
 h1 {
   color: #fff;
