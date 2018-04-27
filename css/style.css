@@ -243,11 +243,12 @@ h2 {
     font-size: 2em;
 }
 .profile img {
-    width: 60%;
+    width: 200px;
+    height: auto;
     align-content: center;
     display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .backtotop {
     float: left !important;
