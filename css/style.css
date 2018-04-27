@@ -200,6 +200,7 @@ nav li {
 }
 nav i {
     padding-bottom: 22px;
+    margin-top: -10px;
 }
 nav a {
   text-decoration: none;
