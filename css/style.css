@@ -177,7 +177,7 @@ a.cta2:hover:before {
   z-index: 2;
 }
 nav {
-  background: #91aa9d;
+  background: #91aa9d !important;
   position: relative;
   width: 100%;
   height: 50px;
