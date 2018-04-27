@@ -184,6 +184,7 @@ nav {
   text-align: center;
   padding: 5px 0;
   transition: box-shadow 0.5s ease;
+  z-index: 3;
 }
 nav li {
   display: inline-block;
