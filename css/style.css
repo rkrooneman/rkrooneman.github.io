@@ -200,7 +200,7 @@ nav a {
   padding: 22px;
 }
 nav a:hover {
-  background: #E296AA;
+  text-decoration: underline;
 }
 main {
   position: absolute;
@@ -215,15 +215,7 @@ main {
 section {
   display: flex;
   height: 100%;
-}
-#html {
-  background-color: #f3671c;
-}
-#css {
-  background-color: #0071ba;
-}
-#js {
-  background-color: #e7a307;
+  width: 100%;
 }
 #on {
   position: absolute;
