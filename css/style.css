@@ -238,3 +238,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.contactlogos {
+    float: right !important;
+}
