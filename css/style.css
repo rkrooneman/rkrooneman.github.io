@@ -24,16 +24,15 @@ header {
     font-size: 2em;
     display: inline-block;
     float: left;
-    padding-left: 40px;
+    margin-left: 50px;
     margin-top: 16px !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 8px !important;
 }
 .headername {
     font-size: 1em;
     display: inline-block;
     float: right;
-    padding-right: 40px;
-    margin-top: 16px !important;
+    margin-right: 50px;
     margin-bottom: -10px !important;
 }
 h1 {
