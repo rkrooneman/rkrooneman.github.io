@@ -201,7 +201,7 @@ nav a {
   color: #fcfff5;
   padding: 22px;
 }
-nav a:hover {
+nav .topnav:hover {
   border-bottom: white 1px solid;
     
 }
