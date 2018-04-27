@@ -16,7 +16,6 @@ html, body {
 
 h1 {
   color: #fff;
-  font-size: 0.5em;
   position: absolute;
   left: 50%;
   top: 20%;
@@ -43,7 +42,7 @@ a.cta1 {
   width: 120px;
   text-align: center;
   color: #fff;
-  font-size: 0.15em !important;
+  font-size: 0.75em;
   text-decoration: none;
   left: 50%;
   bottom: 20%;
@@ -80,7 +79,7 @@ a.cta2 {
   width: 120px;
   text-align: center;
   color: #fff;
-  font-size: 0.15em !important;
+  font-size: 0.75em;
   text-decoration: none;
   left: 50%;
   bottom: 20%;
@@ -241,10 +240,8 @@ a {
     float: right !important;
 }
 h2 {
-    font-size: 0.5em;
     text-align: center;
     font-family: Lobster;
-    font-size: 0.5em;
 }
 .profile img {
     width: 60%;
