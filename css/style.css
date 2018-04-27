@@ -41,7 +41,7 @@ a.cta1 {
   width: 120px;
   text-align: center;
   color: #fff;
-  font-size: 0.15em;
+  font-size: 0.15em !important;
   text-decoration: none;
   left: 50%;
   bottom: 20%;
@@ -78,7 +78,7 @@ a.cta2 {
   width: 120px;
   text-align: center;
   color: #fff;
-  font-size: 0.15em;
+  font-size: 0.15em !important;
   text-decoration: none;
   left: 50%;
   bottom: 20%;
