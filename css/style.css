@@ -196,12 +196,11 @@ nav li {
 }
 nav i {
     padding-bottom: 22px;
-    padding-top: 22px;
 }
 nav a {
   text-decoration: none;
   color: #fcfff5;
-  padding: 22px;
+  padding: 10px;
 }
 nav .topnav:hover {
   border-bottom: white 2px solid;
