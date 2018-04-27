@@ -191,7 +191,6 @@ nav {
 nav ul {
     margin-right: 40px;
 }
-
 nav li {
   display: inline-block;
   list-style: none;
@@ -259,8 +258,8 @@ h2 {
 .backtotop {
     float: left !important;
     opacity: 0;
-}
-.navScrolled .backtotop {
-    opacity: 1;
     transition: 200ms all ease-in-out; 
+}
+.navScrolled.backtotop {
+    opacity: 1;
 }
