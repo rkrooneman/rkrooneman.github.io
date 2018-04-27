@@ -1,14 +1,3 @@
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementsByClassName("backtotop").style.opacity = 0;
-  } else {
-    document.getElementsByClassName("backtotop").style.opacity = 1;
-  }
-  prevScrollpos = currentScrollPos;
-}
-
 var navBar = $("#topNav");
 var hdrHeight = $("header").height();
 
