@@ -17,7 +17,7 @@ header {
     height: 100px;
     background-color: white;
     color= #000;
-    margin-top: 0 !important;
+    margin-top: -100 !important;
 }
 .headertitle {
     font-family: Cookie;
