@@ -179,11 +179,10 @@ a.cta2:hover:before {
 nav {
   position: absolute;
   top: 0;
-  left: 35%;
   display: flex;
   justify-content: space-around;
   width: 80%;
-  margin-left: -200px;
+  margin: auto;
   box-sizing: border-box;
   padding: 15px;
   border-radius: 0 0 4px 4px;
