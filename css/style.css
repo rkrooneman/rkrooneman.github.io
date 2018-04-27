@@ -6,11 +6,13 @@ html, body {
   font-family: sans-serif;
 }
 
+/*
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+*/
 
 h1 {
   color: #fff;
@@ -236,7 +238,6 @@ section {
   opacity: 0;
 }
 a {
-  display: block;
   width: 100px;
   text-decoration: none;
   color: inherit;
