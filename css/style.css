@@ -237,12 +237,12 @@ h2 {
     font-family: Lobster;
     font-size: 2em;
 }
-.profile {
+.content {
     width: 100%;
     padding: 50px;
 }
 
-.profile img {
+.content img {
     width: 200px;
     height: auto;
     align-content: center;
