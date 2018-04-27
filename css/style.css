@@ -34,7 +34,7 @@ header {
     float: right;
     padding-right: 40px;
     margin-top: 16px !important;
-    margin-bottom: 5px !important;
+    margin-bottom: -10px !important;
 }
 h1 {
   color: #fff;
