@@ -5,7 +5,6 @@ html, body {
   overflow: hidden;
   font-family: sans-serif;
 }
-
 /*
 *,
 *:before,
@@ -13,7 +12,11 @@ html, body {
   box-sizing: border-box;
 }
 */
-
+header {
+  text-align: center;
+  height: 150px;
+  padding-top: 50px;
+}
 h1 {
   color: #fff;
   position: absolute;
@@ -208,6 +211,12 @@ nav a {
 }
 nav .topnav:hover {
   border-bottom: white 2px solid;  
+}
+.navScrolled {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 1px 5px #000;
 }
 main {
   position: absolute;
