@@ -22,10 +22,12 @@ header {
 .headertitle {
     font-family: Cookie;
     font-size: 2em;
+    display: inline-block
 }
 .headername {
     font-family: helvetica;
     font-size: 1em;
+    display: inline-block
 }
 h1 {
   color: #fff;
