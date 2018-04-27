@@ -2,9 +2,9 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    list.getElementsByClassName("backtotop").style.opacity = "0";
+    document.getElementsByClassName("backtotop").style.opacity = "0";
   } else {
-    list.getElementsByClassName("backtotop").style.opacity = "1";
+    document.getElementsByClassName("backtotop").style.opacity = "1";
   }
   prevScrollpos = currentScrollPos;
 }
