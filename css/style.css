@@ -181,7 +181,7 @@ nav {
   top: 0;
   display: flex;
   justify-content: space-around;
-  width: 80%;
+  width: 100%;
   margin: auto;
   box-sizing: border-box;
   padding: 15px;
