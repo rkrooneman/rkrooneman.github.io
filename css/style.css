@@ -196,6 +196,10 @@ nav li {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+nav i {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
 nav a {
   text-decoration: none;
   color: #fcfff5;
