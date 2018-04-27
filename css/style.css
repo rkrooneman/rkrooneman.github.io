@@ -252,3 +252,6 @@ h2 {
     align-content: center;
     display: block;
 }
+.backtotop {
+    float: left !important;
+}
