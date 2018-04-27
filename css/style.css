@@ -179,7 +179,7 @@ nav {
   left: 50%;
   display: flex;
   justify-content: space-around;
-  width: 400px;
+  width: 600px;
   margin-left: -200px;
   box-sizing: border-box;
   padding: 15px;
@@ -188,6 +188,7 @@ nav {
   font-size: 20px;
   line-height: 1;
   text-align: center;
+  color: #FFF;
 }
 main {
   position: absolute;
