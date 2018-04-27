@@ -245,4 +245,10 @@ h2 {
     font-size: 0.5em;
     text-align: center;
     font-family: Lobster;
+    font-size: 0.5em;
+}
+.profile {
+    width: 60%;
+    align-content: center;
+    display: block;
 }
