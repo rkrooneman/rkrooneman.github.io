@@ -19,6 +19,14 @@ header {
     background-color: white;
     color= #000;
 }
+.headertitle {
+    font-family: cookie;
+    font-size: 5em;
+}
+.headername {
+    font-family: helvetica;
+    font-size: 3em;
+}
 h1 {
   color: #fff;
   position: absolute;
