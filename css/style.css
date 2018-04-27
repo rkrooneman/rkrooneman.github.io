@@ -13,9 +13,11 @@ html, body {
 }
 */
 header {
-  text-align: center;
-  height: 150px;
-  padding-top: 50px;
+    text-align: center;
+    height: 150px;
+    padding-top: 50px;
+    background-color: white;
+    z-index: 4;
 }
 h1 {
   color: #fff;
