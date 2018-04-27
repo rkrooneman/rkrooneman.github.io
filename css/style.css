@@ -200,7 +200,8 @@ nav a {
   padding: 22px;
 }
 nav a:hover {
-  text-decoration: underline;
+  border-bottom: white 1px solid;
+    
 }
 main {
   position: absolute;
