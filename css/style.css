@@ -243,6 +243,7 @@ h2 {
     width: 80%;
     height: auto;
     padding: 50px;
+    display: block;
 }
 .content img {
     width: 200px;
