@@ -18,7 +18,6 @@ header {
     background-color: white;
     color= #000;
     margin-top: -100 !important;
-    position: fixed;
 }
 .headertitle {
     font-family: Cookie;
@@ -33,7 +32,6 @@ header {
     font-size: 1em;
     display: inline-block;
     float: right;
-    padding-top: 25px !important;
     margin-right: 50px;
     margin-bottom: -10px !important;
 }
