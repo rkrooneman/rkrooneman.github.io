@@ -288,3 +288,34 @@ h2 {
 p {
     font-size: 1.25em;
 }
+a.cta3 {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  width: 120px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.75em;
+  text-decoration: none;
+  border: 2px solid #fff;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+a.cta3:before {
+  content: "";
+  font-size: 1.5em;
+  background: #fff;
+  opacity: 0;
+  height: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 200ms all ease-in-out;
+}
+a.cta3:hover:before {
+  height: 4px;
+  opacity: 1;
+}
