@@ -294,10 +294,10 @@ a.cta3 {
   line-height: 50px;
   width: 120px;
   text-align: center;
-  color: #fff;
+  color: #E694A6;
   font-size: 0.75em;
   text-decoration: none;
-  border: 2px solid #fff;
+  border: 2px solid #E694A6;
   font-size: 0.75em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -306,7 +306,7 @@ a.cta3 {
 a.cta3:before {
   content: "";
   font-size: 1.5em;
-  background: #fff;
+  background: #9DD0AC;
   opacity: 0;
   height: 0;
   width: 100%;
