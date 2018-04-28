@@ -24,8 +24,6 @@ header {
     font-family: Cookie;
     font-size: 2em;
     display: inline-block;
-    position: absolute;
-    bottom: 50% !important;
     float: left;
     margin-left: 50px;
     margin-top: 16px !important;
