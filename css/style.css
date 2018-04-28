@@ -310,7 +310,7 @@ a.cta3 {
 a.cta3:before {
   content: "";
   font-size: 1.5em;
-  background: #9DD0AC;
+  background: #E694A6;
   opacity: 0;
   height: 0;
   width: 240px;
@@ -320,6 +320,6 @@ a.cta3:before {
   transition: 200ms all ease-in-out;
 }
 a.cta3:hover:before {
-  height: 4px;
+  height: 8px;
   opacity: 1;
 }
