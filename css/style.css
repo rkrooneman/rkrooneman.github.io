@@ -270,7 +270,7 @@ h2 {
     width: 70%;
     height: auto;
     display: block;
-    position: absolute;
+    position: relative;
     left: 50%;
     padding-top: 150px;
 }
@@ -279,7 +279,7 @@ h2 {
     height: auto;
     align-content: center;
     display: block;
-    position: absolute;
+    position: relative;
     margin-bottom: 25px;
 }
 .backtotop {
