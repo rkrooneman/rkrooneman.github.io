@@ -267,6 +267,7 @@ h2 {
     font-size: 2em;
 }
 .content {
+    align-self: center !important;
     width: 70%;
     height: auto;
     display: block;
