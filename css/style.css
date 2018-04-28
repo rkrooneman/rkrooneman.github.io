@@ -36,6 +36,44 @@ header {
     margin-top: 16px !important;
     margin-bottom: -10px !important;
 }
+nav {
+  background: #9DD0AC !important;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  transition: box-shadow 0.5s ease;
+  z-index: 3;
+  overflow-y: hidden;
+  box-shadow: 0px 1px 5px #000;
+}
+nav ul {
+    margin-right: 40px;
+}
+nav li {
+  display: inline-block;
+  list-style: none;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+nav i {
+    padding-bottom: 22px;
+    margin-top: -10px;
+}
+nav a {
+  text-decoration: none;
+  color: #fcfff5;
+  padding: 10px;
+}
+nav .topnav:hover {
+  border-bottom: white 2px solid;  
+}
+.navScrolled {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 1px 5px #000;
+}
 h1 {
   color: #fff;
   position: absolute;
@@ -55,7 +93,6 @@ h1:after {
   background: #fff;
   transition: 500ms all ease-in-out;
 }
-
 a.cta1 {
   display: block;
   position: absolute;
@@ -196,44 +233,6 @@ a.cta2:hover:before {
 .container.right-is-hovered .left:before {
   background: rgba(0, 0, 0, 0.65);
   z-index: 2;
-}
-nav {
-  background: #9DD0AC !important;
-  position: fixed;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  transition: box-shadow 0.5s ease;
-  z-index: 3;
-  overflow-y: hidden;
-  box-shadow: 0px 1px 5px #000;
-}
-nav ul {
-    margin-right: 40px;
-}
-nav li {
-  display: inline-block;
-  list-style: none;
-  margin-top: 0;
-  text-transform: uppercase;
-}
-nav i {
-    padding-bottom: 22px;
-    margin-top: -10px;
-}
-nav a {
-  text-decoration: none;
-  color: #fcfff5;
-  padding: 10px;
-}
-nav .topnav:hover {
-  border-bottom: white 2px solid;  
-}
-.navScrolled {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  box-shadow: 0px 1px 5px #000;
 }
 main {
   position: absolute;
