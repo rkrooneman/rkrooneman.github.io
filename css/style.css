@@ -292,7 +292,7 @@ a.cta3 {
   display: block;
   height: 50px;
   line-height: 50px;
-  width: 120px;
+  width: auto;
   text-align: center;
   color: #E694A6;
   font-size: 0.75em;
