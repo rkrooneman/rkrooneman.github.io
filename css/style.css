@@ -33,6 +33,7 @@ header {
     display: inline-block;
     float: right;
     margin-right: 50px;
+    margin-top: 16px !important;
     margin-bottom: -10px !important;
 }
 h1 {
@@ -127,7 +128,6 @@ a.cta2:hover:before {
   height: 4px;
   opacity: 1;
 }
-
 .container {
   background-image: url("https://forum4d.com/wp-content/uploads/data/2018/1/25/wallpaper-f-PIC-FWP10010525.jpg");
   background-repeat: no-repeat;
@@ -238,7 +238,6 @@ nav .topnav:hover {
 main {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
