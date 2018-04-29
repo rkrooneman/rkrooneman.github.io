@@ -271,6 +271,7 @@ h2 {
     left: 15%;
     position: relative;
     padding-top: 150px;
+    min-height: 200px;
 }
 .content img {
     width: 200px;
