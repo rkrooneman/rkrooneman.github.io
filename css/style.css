@@ -353,8 +353,7 @@ a.cta3:hover:before {
     width: 50%;
 }
 .containerexp::after {
-    content: "\f102";
-    font-family: FontAwesome;
+    content: "";
     position: absolute;
     width: 25px;
     height: 25px;
@@ -390,7 +389,7 @@ a.cta3:hover:before {
     top: 22px;
     width: 0;
     z-index: 1;
-    left: 30px;
+    left: 260px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
@@ -398,7 +397,7 @@ a.cta3:hover:before {
 .rightexp::after {
     left: -16px;
 }
-.content {
+.contentexp {
     padding: 20px 30px;
     background-color: white;
     position: relative;
