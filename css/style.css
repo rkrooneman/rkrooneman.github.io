@@ -325,6 +325,7 @@ a.cta3:hover:before {
 .section_exp {
     font-family: Helvetica, sans-serif;
     background-color: #6BC2A6
+    width: 100%;
 }
 .timeline {
     position: relative;
@@ -339,7 +340,6 @@ a.cta3:hover:before {
     background-color: #E694A6;
     top: 0;
     bottom: 0;
-    left: 50%;
     margin-left: -3px;
 }
 .containerexp {
