@@ -354,7 +354,7 @@ a.cta3:hover:before {
     width: 50%;
 }
 .containerexp::after {
-    content: '\f102';
+    content: "\f102";
     font-family: FontAwesome;
     position: absolute;
     width: 25px;
