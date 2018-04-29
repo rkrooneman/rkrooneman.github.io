@@ -335,8 +335,6 @@ a.cta3:hover:before {
     height: auto;
     display: block;
     position: relative;
-    padding-top: 150px;;
-
 }
 .timeline::after {
     content: '';
