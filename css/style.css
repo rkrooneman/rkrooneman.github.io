@@ -5,13 +5,11 @@ html, body {
   overflow: hidden;
   font-family: sans-serif;
 }
-/*
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-*/
 header {
     text-align: center;
     height: 75px;
@@ -322,4 +320,106 @@ a.cta3:before {
 a.cta3:hover:before {
   height: 8px;
   opacity: 1;
+}
+
+.section_exp {
+    font-family: Helvetica, sans-serif;
+    background-color: #6BC2A6
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #E694A6;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+.containerexp {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+.containerexp::after {
+    content: '\f102';
+    font-family: FontAwesome !important;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #E694A6;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.leftexp {
+    left: 0;
+}
+.rightexp {
+    left: 50%;
+}
+.leftexp::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+.rightexp::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+.rightexp::after {
+    left: -16px;
+}
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .containerexp {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .containerexp::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .leftexp::after, .rightexp::after {
+    left: 15px;
+  }
+  .rightexp {
+    left: 0%;
+  }
 }
