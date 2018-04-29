@@ -323,8 +323,9 @@ a.cta3:hover:before {
 }
 
 .section_exp {
-    background-color: #6BC2A6
+    background-color: #6BC2A6;
     display: flex;
+    position: relative;
     height: 100%;
     width: 100%;
 }
