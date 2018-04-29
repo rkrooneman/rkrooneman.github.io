@@ -328,9 +328,13 @@ a.cta3:hover:before {
     width: 100%;
 }
 .timeline {
+    align-self: center !important;
+    width: 70%;
+    height: auto;
+    display: block;
+    left: 15%;
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding-top: 150px;;
 
 }
 .timeline::after {
