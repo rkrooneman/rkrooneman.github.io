@@ -16,6 +16,7 @@ header {
     background-color: white;
     color= #000;
     margin-top: -100 !important;
+    z-index: 2;
 }
 .headertitle {
     font-family: Cookie;
@@ -336,6 +337,7 @@ a.cta3:hover:before {
     display: block;
     position: relative;
     margin: 0 auto;  
+    z-index: 1;
 }
 .timeline ul {
     text-align: left !important;
