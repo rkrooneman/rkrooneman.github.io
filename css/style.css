@@ -322,14 +322,12 @@ a.cta3:hover:before {
   height: 8px;
   opacity: 1;
 }
-
 .section_exp {
     background-color: #9DD0AC;
     display: flex;
     position: relative;
     height: 100%;
     width: 100%;
-}
 }
 .timeline {
     align-self: center !important;
@@ -366,10 +364,10 @@ a.cta3:hover:before {
     z-index: 1;
 }
 .leftexp {
-    left: 0;
+    left: -50%;
 }
 .rightexp {
-    left: 50%;
+    left: 0;
 }
 .leftexp::before {
     content: " ";
