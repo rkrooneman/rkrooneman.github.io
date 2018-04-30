@@ -330,11 +330,11 @@ a.cta3:hover:before {
     width: 100%;
 }
 .timeline {
-    align-self: center !important;
     width: 70%;
     height: auto;
     display: block;
     position: relative;
+    margin: 0 auto;
 }
 .timeline::after {
     content: '';
