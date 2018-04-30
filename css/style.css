@@ -344,6 +344,8 @@ a.cta3:hover:before {
 }
 .timeline img {
     float: right;
+    width: 100px;
+    height: 100px;
 }
 .timeline::after {
     content: '';
