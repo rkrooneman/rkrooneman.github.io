@@ -334,8 +334,7 @@ a.cta3:hover:before {
     height: auto;
     display: block;
     position: relative;
-    margin: 0 auto;
-    text-align: left;   
+    margin: 0 auto;  
 }
 .timeline img {
     float: right;
