@@ -68,7 +68,7 @@ nav .topnav:hover {
 }
 .navScrolled {
   position: fixed;
-  top: 0;
+  top: 0 !important;
   z-index: 1;
   box-shadow: 0px 1px 5px #000;
 }
@@ -173,7 +173,6 @@ a.cta2:hover:before {
   height: 100%;
   position: relative;
   overflow: hidden;
-  margin-top: 75px;
 }
 .container .one-half {
   position: absolute;
@@ -343,7 +342,7 @@ a.cta3:hover:before {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #E694A6;
+    background-color: #000;
     top: 0;
     bottom: 0;
     margin-left: -3px;
