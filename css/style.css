@@ -173,6 +173,7 @@ a.cta2:hover:before {
   height: 100%;
   position: relative;
   overflow: hidden;
+  margin-top: 150px;
 }
 .container .one-half {
   position: absolute;
@@ -358,7 +359,7 @@ a.cta3:hover:before {
     position: absolute;
     width: 25px;
     height: 25px;
-    left: 260px;
+    margin-left: 3-px;
     background-color: white;
     border: 4px solid #E694A6;
     top: 15px;
