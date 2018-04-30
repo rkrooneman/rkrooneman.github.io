@@ -359,7 +359,7 @@ timeline h2 {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 2px;
     background-color: #5e5e5e;
     top: 0;
     bottom: 0;
