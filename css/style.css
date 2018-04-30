@@ -345,6 +345,12 @@ a.cta3:hover:before {
 .timeline p {
     text-align: left !important;
 }
+timeline h2 {
+    text-align: right !important;
+}
+.timeline h3 {
+    text-align: left !important;
+}
 .timeline img {
     float: right;
     width: 100px;
