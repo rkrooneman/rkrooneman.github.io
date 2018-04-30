@@ -428,6 +428,10 @@ input[type=submit]:hover {
     padding: 10px;
     color: #FFF;
     width: 100%;
+    height: auto;
+}
+label {
+    text-align: left;
 }
 .contactcolumn {
     float: left;
