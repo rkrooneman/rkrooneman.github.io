@@ -492,4 +492,7 @@ label {
     .contactlogos {
     float: left;
     }
+    .contentexp {
+        width: 400px;
+    }
 }
