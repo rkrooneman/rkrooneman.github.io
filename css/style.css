@@ -335,8 +335,6 @@ a.cta3:hover:before {
     display: block;
     position: relative;
     margin: 0 auto;
-}
-.timeline li {
     text-align: left;   
 }
 .timeline img {
