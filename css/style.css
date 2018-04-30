@@ -368,8 +368,8 @@ timeline h2 {
 .containerexp {
     padding: 10px 40px;
     position: relative;
-    top: 25%;
-    transform: translateY(-25%);
+    top: 15%;
+    transform: translateY(-15%);
     background-color: inherit;
     width: 50%;
 }
