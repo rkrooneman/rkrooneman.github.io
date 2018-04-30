@@ -1,12 +1,12 @@
-var navBar = $("#topNav");
+var nav = $("nav");
 var hdrHeight = $("header").height();
 
 
 $(window).scroll(function() {
   if( $(this).scrollTop() > hdrHeight + 50) {
-    navBar.addClass("navScrolled");
+    nav.addClass("navScrolled");
   } else {
-    navBar.removeClass("navScrolled");
+    nav.removeClass("navScrolled");
   }
 });
 
