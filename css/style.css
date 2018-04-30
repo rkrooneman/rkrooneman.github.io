@@ -365,6 +365,7 @@ timeline h2 {
     bottom: 0;
     margin-left: -3px;
     z-index: 1;
+    padding-bottom: 50px;
 }
 .containerexp {
     padding: 10px 40px;
