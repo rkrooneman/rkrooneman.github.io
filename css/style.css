@@ -336,6 +336,12 @@ a.cta3:hover:before {
     position: relative;
     margin: 0 auto;
 }
+.timeline li {
+    text-align: left;   
+}
+.timeline img {
+    float: right;
+}
 .timeline::after {
     content: '';
     position: absolute;
