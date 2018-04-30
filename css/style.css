@@ -326,7 +326,7 @@ a.cta3:hover:before {
     background-color: #9DD0AC;
     display: flex;
     position: relative;
-    height: 100%;
+    min-height: 1000px;
     width: 100%;
 }
 .timeline {
@@ -356,7 +356,7 @@ a.cta3:hover:before {
     position: absolute;
     width: 25px;
     height: 25px;
-    right: -17px;
+    right: -12.5px;
     background-color: white;
     border: 4px solid #E694A6;
     top: 15px;
@@ -394,7 +394,7 @@ a.cta3:hover:before {
     border-color: transparent white transparent transparent;
 }
 .rightexp::after {
-    left: -16px;
+    left: -12.5px;
 }
 .contentexp {
     padding: 20px 30px;
