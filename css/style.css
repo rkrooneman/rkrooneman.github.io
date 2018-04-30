@@ -348,6 +348,8 @@ a.cta3:hover:before {
 .containerexp {
     padding: 10px 40px;
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: inherit;
     width: 50%;
 }
