@@ -351,7 +351,7 @@ a.cta3:hover:before {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
+    width: 4px;
     background-color: #5e5e5e;
     top: 0;
     bottom: 0;
@@ -373,7 +373,7 @@ a.cta3:hover:before {
     height: 25px;
     right: -12.5px;
     background-color: white;
-    border: 4px solid #E694A6;
+    border: 2px solid #E694A6;
     top: 15px;
     border-radius: 50%;
     z-index: 3;
