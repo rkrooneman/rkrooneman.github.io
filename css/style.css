@@ -471,6 +471,9 @@ label {
 .contactrow {
     text-align: left;
 }
+.contactrow p {
+    width: 80%;
+}
 .contactrow:after {
     content: "";
     display: table;
