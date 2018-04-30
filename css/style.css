@@ -245,6 +245,7 @@ section {
     display: flex;
     height: 100%;
     width: 100%;
+    min-height: 1000px;
 }
 #on {
   position: absolute;
