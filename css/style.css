@@ -464,28 +464,31 @@ label {
     clear: both;
 }
 @media screen and (max-width: 600px) {
-  .timeline::after {
+    .timeline::after {
     left: 31px;
-  }
-  .containerexp {
+    }
+    .containerexp {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
-  }
-  .containerexp::before {
+    }
+    .containerexp::before {
     left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
-  }
-  .leftexp::after, .rightexp::after {
+    }
+    .leftexp::after, .rightexp::after {
     left: 15px;
-  }
-  .rightexp {
+    }
+    .rightexp {
     left: 0%;
-  }
-  .contactcolumn, input[type=submit] {
+    }
+    .contactcolumn, input[type=submit] {
         width: 100%;
         margin-top: 0;
-  }
+    }
+    .contactlogos {
+    float: left;
+    }
 }
