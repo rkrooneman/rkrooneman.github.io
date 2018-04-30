@@ -414,7 +414,7 @@ timeline h2 {
     border-color: transparent white transparent transparent;
 }
 .rightexp::after {
-    left: -11px;
+    left: -14px;
 }
 .contentexp {
     padding: 20px 30px;
