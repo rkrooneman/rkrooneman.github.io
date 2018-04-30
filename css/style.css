@@ -365,7 +365,6 @@ a.cta3:hover:before {
     transform: translateY(-25%);
     background-color: inherit;
     width: 50%;
-    text-align: left !important;
 }
 .containerexp::after {
     content: "";
@@ -417,6 +416,7 @@ a.cta3:hover:before {
     background-color: white;
     position: relative;
     border-radius: 6px;
+    text-align: left !important;
 }
 input[type=text], select, textarea {
     width: 100%;
