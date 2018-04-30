@@ -459,6 +459,9 @@ label {
     padding: 20px;
     align-content: lef;
 }
+.contactrow {
+    text-align: left;
+}
 .contactrow:after {
     content: "";
     display: table;
