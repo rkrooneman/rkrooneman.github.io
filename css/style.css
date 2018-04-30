@@ -326,7 +326,7 @@ a.cta3:hover:before {
     background-color: #9DD0AC;
     display: flex;
     position: relative;
-    min-height: 1000px;
+    min-height: 1100px;
     width: 100%;
 }
 .timeline {
@@ -348,8 +348,8 @@ a.cta3:hover:before {
 .containerexp {
     padding: 10px 40px;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 25%;
+    transform: translateY(-25%);
     background-color: inherit;
     width: 50%;
 }
