@@ -344,6 +344,7 @@ a.cta3:hover:before {
     top: 0;
     bottom: 0;
     margin-left: -3px;
+    z-index: 1;
 }
 .containerexp {
     padding: 10px 40px;
