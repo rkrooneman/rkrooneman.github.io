@@ -491,8 +491,9 @@ label {
     clear: both;
 }
 .footer li {
-  display: inline-block;
-  list-style: none;
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
 }
 .carousel-wrap {
   margin: 90px auto;
