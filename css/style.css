@@ -491,6 +491,7 @@ label {
     clear: both;
 }
 .footer li {
+    align-content: left !important;
     display: inline-block;
     list-style: none;
     padding: 10px;
