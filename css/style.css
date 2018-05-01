@@ -491,10 +491,12 @@ label {
     clear: both;
 }
 .footer li {
-    align-content: left !important;
     display: inline-block;
     list-style: none;
     padding: 10px;
+}
+.footer ul {
+    align-content: left !important;
 }
 .carousel-wrap {
   margin: 90px auto;
