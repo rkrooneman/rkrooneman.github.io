@@ -490,6 +490,10 @@ label {
     display: table;
     clear: both;
 }
+.footer li {
+  display: inline-block;
+  list-style: none;
+}
 .carousel-wrap {
   margin: 90px auto;
   padding: 0 5%;
