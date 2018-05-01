@@ -361,7 +361,7 @@ timeline h2 {
     content: '';
     position: absolute;
     width: 2px;
-    background-color: #5e5e5e;
+    background-color: #E694A6;
     top: 0;
     bottom: 0;
     margin-left: -3px;
@@ -381,7 +381,7 @@ timeline h2 {
     width: 25px;
     height: 25px;
     right: -11px;
-    background-color: #FFF;
+    background-color: #E694A6;
     border: 2px solid #E694A6;
     top: 15px;
     border-radius: 50%;
