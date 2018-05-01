@@ -381,10 +381,11 @@ timeline h2 {
     width: 25px;
     height: 25px;
     right: -11px;
-    background-color: white;
+    background-color: #FFF;
     border: 2px solid #E694A6;
     top: 15px;
     border-radius: 50%;
+    z-index: 1;
 }
 .leftexp {
     left: -25%;
