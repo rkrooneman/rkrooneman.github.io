@@ -520,8 +520,8 @@ label {
     vertical-align: middle;
 }
 .skillscontent {
-    padding-left: 50%;
-    display: block;
+    margin-left: 25%;
+    display: inline-flex;
 }
 @media screen and (max-width: 800px) {
     .columnskills {
