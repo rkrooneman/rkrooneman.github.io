@@ -294,6 +294,7 @@ a.cta3 {
   display: block;
   position: relative;
   margin-top: 16px;
+  margin-bottom: 80px;
   height: 50px;
   line-height: 50px;
   width: 240px;
@@ -330,7 +331,7 @@ a.cta3:hover:before {
     background-color: #edf7f0;
     display: flex;
     position: relative;
-    min-height: 1400px;
+    min-height: 1800px;
     width: 100%;
 }
 .timeline {
@@ -501,6 +502,13 @@ label {
     align-content: left !important;
     padding-left: 0!important;
 }
+.skillsheader {
+    display: inline-flex;
+}
+.skillscontent {
+    margin-left: 25%;
+    display: inline-flex;
+}
 .rowskills {
     display: -ms-flexbox; 
     display: flex;
@@ -518,10 +526,6 @@ label {
 .columnskills img {
     margin-top: 8px;
     vertical-align: middle;
-}
-.skillscontent {
-    margin-left: 25%;
-    display: inline-flex;
 }
 @media screen and (max-width: 800px) {
     .columnskills {
