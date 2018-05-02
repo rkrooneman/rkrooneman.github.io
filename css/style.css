@@ -521,6 +521,7 @@ label {
 }
 .skillscontent {
     padding-left: 50%;
+    display: block;
 }
 @media screen and (max-width: 800px) {
     .columnskills {
