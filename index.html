@@ -14,8 +14,17 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cookie">
-    {% include head.html %}
-    {% seo %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118583502-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118583502-1');
+    </script>
+
 </head>
 
 <body>
@@ -24,13 +33,12 @@
 <div class="headername">R.M. (Roderik) Krooneman MA<br>+31 613 845 296</div>
 </header>
 <nav id="topNav">
-  <ul>
+  <ul>
       <li class="backtotop"><a href="#slide"><span class="fa-stack">
   <i class="far fa-circle fa-stack-2x"></i>
   <i class="fa fa-angle-up fa-stack-1x"></i>
 </span></a></li>
       <li><a href="#personal" class="topnav">Personal Statement</a></li>
-      <li><a href="#education" class="topnav">Education</a></li>
       <li><a href="#experience" class="topnav">Experience</a></li>
       <li><a href="#skills" class="topnav">Skills</a></li>
       <li><a href="#contact" class="topnav">Contact</a></li>
@@ -72,12 +80,6 @@
         <a href="mailto:r.krooneman@gmail.com" class="cta3">Feel free to contact!</a>
     </center>
     </div>
-    </section>
-    <br>
-    <br>
-    <br>    
-    <section id="education">
-        <div class="content"><h2>Education</h2></div>
     </section>
   
     <section id="experience">
@@ -125,16 +127,43 @@
                         </ul>
                     </div>
                 </div>
+                <div class="containerexp rightexp">
+                    <div class="contentexp">
+                        <img src="RUG-Logo.png">
+                        <h3>Grad. 2016</h3><h2>Master of Arts - History Today</h2>
+                        <p>Rijksuniversiteit Groningen</p>
+                        <ul>
+                            <li>Internship at Noordhoff Uitgevers</li>
+                            <li><a href="https://www.slideshare.net/RoderikKrooneman/texas-textbook-troubles" target="_blank">Masterthesis <i class="fas fa-external-link-alt"></i></a></li>
+                            <li>Learning Organizations</li>
+                            <li>Online presentation</li>
+                            <li>Data research</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
     <section id="skills">
-        <div class="content"><h2>Skills</h2></div>
-    
-  
-    </section>
-        
+        <div class="skillscontent">
+            <div class="rowskills"> 
+                <div class="columnskills">
+                    <img src="/images/CSS3.png" style="width:100%">
+                    <img src="/images/GoogleAnalytics.png" style="width:100%">
+                </div>
+                <div class="columnskills">
+                    <img src="/images/HTML5.png" style="width:100%">
+                    <img src="/images/Liferay.png" style="width:100%">
+                    <img src="/images/Mailchimp.png" style="width:100%">
+                </div>  
+                <div class="columnskills">
+                    <img src="/images/Photoshop.png" style="width:100%">
+                    <img src="/images/Hotjar.png" style="width:100%">
+                </div>
+            </div>
+        </div>
+    </section>  
+
     <section id="contact">
         <div class="footer">
             <div style="text-align:center">
@@ -148,11 +177,11 @@
                         9723 AJ Groningen</p>
                         <p><a href="tel:+31613845296"><em>+31 613 845 296</em></a></p>
                         <ul>
-                        <li><a href="https://www.linkedin.com/in/rkrooneman/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
-                        <li><a href="https://twitter.com/rkrooneman" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></li>
-                        <li><a href="https://github.com/rkrooneman" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
-                        <li><a href="https://codepen.io/rkrooneman" target="_blank"><i class="fab fa-codepen fa-2x"></i></a></li>
                         <li><a href="mailto:r.krooneman@gmail.com"><i class="fas fa-envelope fa-2x"></i></a></li>
+                        <li><a href="https://codepen.io/rkrooneman" target="_blank"><i class="fab fa-codepen fa-2x"></i></a></li>
+                        <li><a href="https://github.com/rkrooneman" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
+                        <li><a href="https://twitter.com/rkrooneman" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/rkrooneman/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
                         </ul>
                     </div>
                     <div class="contactcolumn">

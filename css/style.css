@@ -49,6 +49,7 @@ nav {
 }
 nav ul {
     margin-right: 40px;
+    margin-top: 30px;
 }
 nav li {
   display: inline-block;
@@ -71,7 +72,7 @@ nav .topnav:hover {
 .navScrolled {
   position: fixed;
   top: 0 !important;
-  z-index: 1;
+  z-index: 3;
   box-shadow: 0px 1px 5px #000;
 }
 h1 {
@@ -294,6 +295,7 @@ a.cta3 {
   display: block;
   position: relative;
   margin-top: 16px;
+  margin-bottom: 80px;
   height: 50px;
   line-height: 50px;
   width: 240px;
@@ -330,12 +332,12 @@ a.cta3:hover:before {
     background-color: #edf7f0;
     display: flex;
     position: relative;
-    min-height: 1400px;
+    min-height: 1750px;
     width: 100%;
 }
 .timeline {
     width: 70%;
-    height: 1400px;
+    height: 1750px;
     display: block;
     position: relative;
     margin: 0 auto;  
@@ -352,6 +354,9 @@ timeline h2 {
 .timeline h3 {
     text-align: left !important;
 }
+.timeline i {
+    color: #E694A6;
+}
 .timeline img {
     float: right;
     width: 100px;
@@ -363,7 +368,7 @@ timeline h2 {
     width: 2px;
     background-color: #E694A6;
     top: 0;
-    bottom: 0;
+    height: 1750px;
     margin-left: -3px;
     padding-bottom: 50px;
 }
@@ -424,6 +429,30 @@ timeline h2 {
     position: relative;
     border-radius: 6px;
     text-align: left !important;
+}
+.skillscontent {
+    margin-left: 25%;
+    display: inline-flex;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.rowskills {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.columnskills {
+    -ms-flex: 20%; 
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 4px;
+    align-self: center !important;
+}
+.columnskills img {
+    margin-top: 8px;
+    vertical-align: middle;
 }
 input[type=text], select, textarea {
     width: 100%;
@@ -509,9 +538,26 @@ label {
     display: inline-block;
     list-style: none;
     padding: 10px;
+    padding-left: 0px;
+    padding-right: 20px;
 }
 .footer ul {
     align-content: left !important;
+    padding-left: 0!important;
+}
+@media screen and (max-width: 800px) {
+    .columnskills {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .columnskills {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
 }
 @media screen and (max-width: 600px) {
     .timeline::after {
@@ -543,5 +589,8 @@ label {
     }
     .contentexp {
         width: 400px;
+    }
+    .timeline {
+        height: 2100px;
     }
 }
