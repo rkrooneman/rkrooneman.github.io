@@ -354,6 +354,9 @@ timeline h2 {
 .timeline h3 {
     text-align: left !important;
 }
+.timeline i {
+    color: #E694A6;
+}
 .timeline img {
     float: right;
     width: 100px;
