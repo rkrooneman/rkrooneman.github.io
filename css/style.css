@@ -501,6 +501,10 @@ label {
     align-content: left !important;
     padding-left: 0!important;
 }
+.skillsheader {
+    margin-left: 25%;
+    display: inline-flex;
+}
 .rowskills {
     display: -ms-flexbox; 
     display: flex;
