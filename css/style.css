@@ -434,23 +434,38 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 input[type=submit] {
-    background-color: #9DD0AC;
-    padding: 15px 25px;
-    font-size: 24px;
+    margin-top: 16px;
+    height: 50px;
+    line-height: 50px;
+    width: 240px;
     text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #E694A6;
+    font-size: 0.75em;
+    text-decoration: none;
+    border: 2px solid #E694A6;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     cursor: pointer;
-    outline: none;
-    color: #fff;
-    border: none;
-    box-shadow: 0 9px #999;
 }
-input[type=submit]:hover {
-    background-color: #4a9b62;
+input[type=submit]:hover:before {
+  height: 8px;
+  opacity: 1;
 }
-input[type=submit]:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+input[type=submit]:before {
+  content: "";
+  font-size: 1.5em;
+  background: #E694A6;
+  opacity: 0;
+  height: 0;
+  width: 240px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 200ms all ease-in-out;
 }
 .footer {
     border-radius: 5px;
