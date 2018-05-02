@@ -336,7 +336,7 @@ a.cta3:hover:before {
 }
 .timeline {
     width: 70%;
-    height: 1400px;
+    height: 1800px;
     display: block;
     position: relative;
     margin: 0 auto;  
@@ -364,7 +364,7 @@ timeline h2 {
     width: 2px;
     background-color: #E694A6;
     top: 0;
-    bottom: 0;
+    height: 1800px;
     margin-left: -3px;
     padding-bottom: 50px;
 }
