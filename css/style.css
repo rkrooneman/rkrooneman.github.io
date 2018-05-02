@@ -502,6 +502,9 @@ label {
     padding-left: 0!important;
 }
 .skillsheader {
+    display: inline-flex;
+}
+.skillscontent {
     margin-left: 25%;
     display: inline-flex;
 }
@@ -522,10 +525,6 @@ label {
 .columnskills img {
     margin-top: 8px;
     vertical-align: middle;
-}
-.skillscontent {
-    margin-left: 25%;
-    display: inline-flex;
 }
 @media screen and (max-width: 800px) {
     .columnskills {
