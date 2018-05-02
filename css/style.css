@@ -509,10 +509,11 @@ label {
     padding: 0 4px;
 }
 .columnskills {
-    -ms-flex: 30%; 
-    flex: 30%;
-    max-width: 30%;
+    -ms-flex: 20%; 
+    flex: 20%;
+    max-width: 20%;
     padding: 0 4px;
+    align-self: center !important;
 }
 .columnskills img {
     margin-top: 8px;
