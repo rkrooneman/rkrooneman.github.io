@@ -521,6 +521,7 @@ label {
 }
 .skillscontent {
     margin-left: 25%;
+    display: inline-flex;
 }
 @media screen and (max-width: 800px) {
     .columnskills {
