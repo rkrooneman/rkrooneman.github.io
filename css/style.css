@@ -464,13 +464,14 @@ input[type=text], select, textarea {
 }
 input[type=submit] {
     margin-top: 16px;
-    height: 50px;
+    height: auto;
     line-height: 50px;
     width: 240px;
     text-align: center;
     padding-top: 8px;
     padding-bottom: 8px;
     color: #E694A6;
+    background-color: #fff; 
     font-size: 0.75em;
     text-decoration: none;
     border: 2px solid #E694A6;
