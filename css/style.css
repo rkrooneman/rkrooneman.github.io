@@ -519,6 +519,9 @@ label {
     margin-top: 8px;
     vertical-align: middle;
 }
+.skillscontent {
+    padding-left: 50%;
+}
 @media screen and (max-width: 800px) {
     .columnskills {
         -ms-flex: 50%;
