@@ -331,12 +331,12 @@ a.cta3:hover:before {
     background-color: #edf7f0;
     display: flex;
     position: relative;
-    min-height: 1800px;
+    min-height: 1750px;
     width: 100%;
 }
 .timeline {
     width: 70%;
-    height: 1400px;
+    height: 1750px;
     display: block;
     position: relative;
     margin: 0 auto;  
@@ -364,7 +364,7 @@ timeline h2 {
     width: 2px;
     background-color: #E694A6;
     top: 0;
-    bottom: 0;
+    height: 1750px;
     margin-left: -3px;
     padding-bottom: 50px;
 }
@@ -425,6 +425,30 @@ timeline h2 {
     position: relative;
     border-radius: 6px;
     text-align: left !important;
+}
+.skillscontent {
+    margin-left: 25%;
+    display: inline-flex;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.rowskills {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.columnskills {
+    -ms-flex: 20%; 
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 4px;
+    align-self: center !important;
+}
+.columnskills img {
+    margin-top: 8px;
+    vertical-align: middle;
 }
 input[type=text], select, textarea {
     width: 100%;
@@ -501,31 +525,6 @@ label {
 .footer ul {
     align-content: left !important;
     padding-left: 0!important;
-}
-.skillsheader {
-    display: inline-flex;
-}
-.skillscontent {
-    margin-left: 25%;
-    display: inline-flex;
-}
-.rowskills {
-    display: -ms-flexbox; 
-    display: flex;
-    -ms-flex-wrap: wrap; 
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-.columnskills {
-    -ms-flex: 20%; 
-    flex: 20%;
-    max-width: 20%;
-    padding: 0 4px;
-    align-self: center !important;
-}
-.columnskills img {
-    margin-top: 8px;
-    vertical-align: middle;
 }
 @media screen and (max-width: 800px) {
     .columnskills {
