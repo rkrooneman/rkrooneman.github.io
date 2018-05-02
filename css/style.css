@@ -501,6 +501,37 @@ label {
     align-content: left !important;
     padding-left: 0!important;
 }
+.rowskills {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.columnskills {
+    -ms-flex: 33%; 
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 4px;
+}
+.columnskills img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+@media screen and (max-width: 800px) {
+    .columnskills {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .columnskills {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
 @media screen and (max-width: 600px) {
     .timeline::after {
     left: 31px;
