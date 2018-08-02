@@ -42,6 +42,7 @@ nav {
   width: 100%;
   height: auto;
   text-align: center;
+  font-weight: bold;
   transition: box-shadow 0.5s ease;
   z-index: 3;
   overflow-y: hidden;
