@@ -13,8 +13,8 @@ html, body {
 header {
     text-align: center;
     height: 75px;
-    background-color: white;
-    color= #000;
+    background-color: #5e5e5e;
+    color: #FFFFFF;
     margin-top: -100 !important;
     z-index: 2;
 }
