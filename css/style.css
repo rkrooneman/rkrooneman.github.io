@@ -262,6 +262,7 @@ a {
 }
 .contactlogos {
     float: right !important;
+    font-weight: normal !important;
 }
 h2 {
     text-align: center;
