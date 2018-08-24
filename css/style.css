@@ -13,8 +13,8 @@ html, body {
 header {
     text-align: center;
     height: 75px;
-    background-color: white;
-    color= #000;
+    background-color: #5e5e5e;
+    color: #FFFFFF;
     margin-top: -100 !important;
     z-index: 2;
 }
@@ -42,6 +42,7 @@ nav {
   width: 100%;
   height: auto;
   text-align: center;
+  font-weight: bold;
   transition: box-shadow 0.5s ease;
   z-index: 3;
   overflow-y: hidden;
@@ -167,7 +168,7 @@ a.cta2:hover:before {
   opacity: 1;
 }
 .container {
-  background-image: url("https://forum4d.com/wp-content/uploads/data/2018/1/25/wallpaper-f-PIC-FWP10010525.jpg");
+  background-image: url(/Background_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom-center;
@@ -261,6 +262,7 @@ a {
 }
 .contactlogos {
     float: right !important;
+    font-weight: normal !important;
 }
 h2 {
     text-align: center;
