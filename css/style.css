@@ -264,6 +264,9 @@ a {
     float: right !important;
     font-weight: normal !important;
 }
+li.contactlogos i:hover:active {
+    color: #ddd;
+}
 h2 {
     text-align: center;
     font-family: Lobster;
