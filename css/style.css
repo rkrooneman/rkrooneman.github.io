@@ -264,7 +264,10 @@ a {
     float: right !important;
     font-weight: normal !important;
 }
-li.contactlogos i:hover:active {
+.contactlogos i:hover:active {
+    color: #ddd;
+}
+.contactcolumnleft i:hover:active {
     color: #ddd;
 }
 h2 {
