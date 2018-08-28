@@ -556,10 +556,9 @@ label {
 }
 @media only screen and (max-width: 1000px) {
     .columnskills {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-        
+        -ms-flex: 75%;
+        flex: 75%;
+        max-width: 75%;   
     }
     .section_exp {
         min-height: 1900px;
