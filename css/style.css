@@ -567,6 +567,12 @@ label {
         flex: 100%;
         max-width: 100%;
     }
+    .section_exp {
+        min-height: 1900px;
+    }
+    .timeline::after {
+    height: 1900px;
+    }
 }
 @media screen and (max-width: 600px) {
     .timeline::after {
