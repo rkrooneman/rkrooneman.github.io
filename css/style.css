@@ -561,7 +561,7 @@ label {
         max-width: 50%;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
     .columnskills {
         -ms-flex: 100%;
         flex: 100%;
@@ -574,7 +574,7 @@ label {
     height: 1900px;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
     .timeline::after {
     left: 31px;
     }
