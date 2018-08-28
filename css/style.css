@@ -554,18 +554,12 @@ label {
     align-content: left !important;
     padding-left: 0!important;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .columnskills {
         -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
-    }
-}
-@media screen and (max-width: 680px) {
-    .columnskills {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
+        
     }
     .section_exp {
         min-height: 1900px;
@@ -607,5 +601,10 @@ label {
     }
     .timeline {
         height: 2100px;
+    }
+       .columnskills {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
 }
