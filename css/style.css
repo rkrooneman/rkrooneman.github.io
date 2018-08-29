@@ -264,6 +264,12 @@ a {
     float: right !important;
     font-weight: normal !important;
 }
+.contactlogos i:hover {
+    color: #ddd;
+}
+.contactcolumnleft i:hover {
+    color: #ddd;
+}
 h2 {
     text-align: center;
     font-family: Lobster;
@@ -548,23 +554,23 @@ label {
     align-content: left !important;
     padding-left: 0!important;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .columnskills {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
+        -ms-flex: 75%;
+        flex: 75%;
+        max-width: 75%;   
+    }
+    .section_exp {
+        min-height: 1900px;
+    }
+    .timeline::after {
+    height: 1900px;
     }
 }
-@media screen and (max-width: 600px) {
-    .columnskills {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
     .timeline::after {
     left: 31px;
+    height: 1900px;
     }
     .containerexp {
     width: 100%;
@@ -595,5 +601,10 @@ label {
     }
     .timeline {
         height: 2100px;
+    }
+       .columnskills {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
 }
