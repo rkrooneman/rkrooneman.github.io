@@ -437,7 +437,8 @@ timeline h2 {
 }
 .contentexp {
     padding: 20px 30px;
-    background-color: #864AFF;
+    background-color: #ffffff;
+    color: #000000;
     position: relative;
     border-radius: 6px;
     text-align: left !important;
@@ -448,6 +449,11 @@ timeline h2 {
     margin-top: 32px;
     margin-bottom: 32px;
 }
+
+#skills {
+    background-color: #ffffff;
+}
+
 .rowskills {
     display: -ms-flexbox; 
     display: flex;
