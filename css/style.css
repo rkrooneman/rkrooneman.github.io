@@ -4,8 +4,7 @@ html, body {
   height: 100%;
   overflow: hidden;
   font-family: sans-serif;
-  color: #000000;
-  background-color: #864AFF;
+  color: #ffffff;
 }
 *,
 *:before,
@@ -281,12 +280,14 @@ h2 {
 .content {
     align-self: center !important;
     width: 70%;
+    color: #ffffff;
     height: auto;
     display: block;
     left: 15%;
     position: relative;
     padding-top: 150px;
     min-height: 200px;
+    background-color: #864AFF;
 }
 .content img {
     width: 200px;
