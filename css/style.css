@@ -351,7 +351,7 @@ a.cta3:hover:before {
   opacity: 1;
 }
 .section_exp {
-    background-color: #edf7f0;
+    background-color: #915bff;
     display: flex;
     position: relative;
     min-height: 1750px;
@@ -377,7 +377,7 @@ timeline h2 {
     text-align: left !important;
 }
 .timeline i {
-    color: #00FDCB;
+    color: #864aff;
 }
 .timeline img {
     float: right;
@@ -466,7 +466,7 @@ timeline h2 {
 }
 
 #skills {
-    background-color: #ffffff;
+    background-color: #9d6cff;
 }
 
 .rowskills {
