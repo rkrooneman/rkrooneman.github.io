@@ -283,10 +283,14 @@ a {
     color: #00FDCB;
 }
 
+#personal ul {
+    margin-left: 25%;
+}
+
 #personal li {
   padding-left: 1.3em;
   text-align: left;
-  margin-left: 100px;
+  font-size: 1.25rem;
 }
 #personal li:before {
   content: "\f005"; 
