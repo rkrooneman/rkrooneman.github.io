@@ -282,6 +282,18 @@ a {
 .contactcolumnleft i:hover {
     color: #00FDCB;
 }
+
+#personal li {
+  padding-left: 1.3em;
+}
+#personal li:before {
+  content: "\f005"; 
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; 
+  width: 1.3em; 
+}
+
 h2 {
     text-align: center;
     font-family: 'Archivo', sans-serif;
