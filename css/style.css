@@ -528,6 +528,10 @@ input[type=submit]:before {
     width: 100%;
 }
 
+#contact {
+    min-height: unset;
+}
+
 .footer h2 {
     text-align: left;
 }
