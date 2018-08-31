@@ -251,6 +251,7 @@ section {
     height: 100%;
     width: 100%;
     min-height: 730px;
+    background-color: #864AFF;
 }
 #on {
   position: absolute;
@@ -287,7 +288,6 @@ h2 {
     position: relative;
     padding-top: 150px;
     min-height: 200px;
-    background-color: #864AFF;
 }
 .content img {
     width: 200px;
@@ -314,10 +314,10 @@ a.cta3 {
   text-align: center;
   padding-top: 8px;
   padding-bottom: 8px;
-  color: #E694A6;
+  color: #00FDCB;
   font-size: 0.75em;
   text-decoration: none;
-  border: 2px solid #E694A6;
+  border: 2px solid #00FDCB;
   font-size: 0.75em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -327,7 +327,7 @@ a.cta3 {
 a.cta3:before {
   content: "";
   font-size: 1.5em;
-  background: #E694A6;
+  background: #00FDCB;
   opacity: 0;
   height: 0;
   width: 240px;
