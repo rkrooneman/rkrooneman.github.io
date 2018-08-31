@@ -379,6 +379,10 @@ timeline h2 {
 .timeline i {
     color: #864aff;
 }
+.timeline i:hover {
+    color: #fd0098;
+}
+
 .timeline img {
     float: right;
     width: 100px;
