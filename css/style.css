@@ -86,14 +86,24 @@ h1 {
           transform: translateX(-50%);
   white-space: nowrap;
 }
-h1:after {
+.one-half.left h1:after {
   content: "";
   position: absolute;
   width: 0;
   height: 4px;
   left: 0;
   bottom: -8px;
-  background: #fff;
+  background: #00FDCB;
+  transition: 500ms all ease-in-out;
+}
+.one-half.right h1:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: -8px;
+  background: #864aff;
   transition: 500ms all ease-in-out;
 }
 a.cta1 {
