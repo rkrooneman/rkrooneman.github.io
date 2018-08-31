@@ -4,6 +4,8 @@ html, body {
   height: 100%;
   overflow: hidden;
   font-family: sans-serif;
+  color: #000000;
+  background-color: #864AFF;
 }
 *,
 *:before,
@@ -274,6 +276,7 @@ h2 {
     text-align: center;
     font-family: 'Archivo', sans-serif;
     font-size: 2em;
+    color: #00FDCB;
 }
 .content {
     align-self: center !important;
