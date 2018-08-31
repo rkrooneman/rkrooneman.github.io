@@ -527,6 +527,11 @@ input[type=submit]:before {
     color: #FFF;
     width: 100%;
 }
+
+.footer h2 {
+    text-align: left;
+}
+
 label {
     text-align: left !important;
 }
