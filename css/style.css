@@ -443,6 +443,11 @@ timeline h2 {
     border-radius: 6px;
     text-align: left !important;
 }
+
+.contentexp h2 {
+    color: #000000;
+}
+
 .skillscontent {
     margin-left: 25%;
     display: inline-flex;
