@@ -367,7 +367,7 @@ timeline h2 {
     text-align: left !important;
 }
 .timeline i {
-    color: #E694A6;
+    color: #00FDCB;
 }
 .timeline img {
     float: right;
@@ -378,7 +378,7 @@ timeline h2 {
     content: '';
     position: absolute;
     width: 2px;
-    background-color: #E694A6;
+    background-color: #00FDCB;
     top: 0;
     height: 1750px;
     margin-left: -3px;
@@ -398,8 +398,8 @@ timeline h2 {
     width: 25px;
     height: 25px;
     right: -11px;
-    background-color: #E694A6;
-    border: 2px solid #E694A6;
+    background-color: #00FDCB;
+    border: 2px solid #00FDCB;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -493,11 +493,11 @@ input[type=submit] {
     text-align: center;
     padding-top: 8px;
     padding-bottom: 8px;
-    color: #E694A6;
+    color: #00FDCB;
     background-color: #fff; 
     font-size: 0.75em;
     text-decoration: none;
-    border: 2px solid #E694A6;
+    border: 2px solid #00FDCB;
     font-size: 0.75em;
     font-weight: 700;
     letter-spacing: 1px;
@@ -511,7 +511,7 @@ input[type=submit]:hover:before {
 input[type=submit]:before {
   content: "";
   font-size: 1.5em;
-  background: #E694A6;
+  background: #00FDCB;
   opacity: 0;
   height: 0;
   width: 240px;
