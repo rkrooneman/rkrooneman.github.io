@@ -285,6 +285,8 @@ a {
 
 #personal li {
   padding-left: 1.3em;
+  text-align: left;
+  margin-left: 100px;
 }
 #personal li:before {
   content: "\f005"; 
