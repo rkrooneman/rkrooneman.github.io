@@ -276,17 +276,27 @@ a {
     float: right !important;
     font-weight: normal !important;
 }
+.contactlogos i{
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.contactlcolumnleft i{
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
 .contactlogos i:hover {
     color: #ddd;
 }
 .contactcolumnleft i:hover {
     color: #00FDCB;
 }
-
 #personal ul {
     margin-left: 25%;
 }
-
 #personal li {
   text-align: left;
   font-size: 1.25rem;
@@ -396,6 +406,10 @@ timeline h2 {
 }
 .timeline i {
     color: #864aff;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
 .timeline i:hover {
     color: #fd0098;
