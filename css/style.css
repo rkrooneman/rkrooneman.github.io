@@ -68,7 +68,7 @@ nav a {
   color: #fcfff5;
   padding: 10px;
 }
-nav.topnav a:after {
+.topnav a::after {
   content: '';
   display: block;
   border-bottom: 2px solid white;
@@ -79,7 +79,7 @@ nav.topnav a:after {
   transition: 1s ease;
 }
 
-nav.topnav a:hover:after { 
+.topnav a:hover::after { 
   width: 100%; 
 }
 
