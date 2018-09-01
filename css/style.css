@@ -58,6 +58,7 @@ nav li {
   list-style: none;
   margin-top: 0;
   text-transform: uppercase;
+  position: relative;
 }
 nav i {
     padding-bottom: 22px;
@@ -75,8 +76,10 @@ nav a {
   width: 0;
   position: absolute;
   right: 0;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
 
 .topnavi:hover::after { 
