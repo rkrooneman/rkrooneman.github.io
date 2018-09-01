@@ -49,6 +49,9 @@ nav {
   overflow-y: hidden;
   box-shadow: 0px 1px 5px #000;
 }
+.fa-stack-1x:hover {
+    line-height: initial;
+}
 nav ul {
     margin-right: 40px;
     margin-top: 30px;
