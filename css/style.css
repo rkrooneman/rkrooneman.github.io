@@ -549,7 +549,7 @@ input[type=submit] {
     text-transform: uppercase;
     cursor: pointer;
 }
-#submitbutton:hover:before {
+#submitbutton:before:hover {
   height: 8px;
   opacity: 1;
 }
