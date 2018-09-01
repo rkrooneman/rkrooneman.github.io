@@ -50,10 +50,10 @@ nav {
   box-shadow: 0px 1px 5px #000;
 }
 .fa-stack-1x {
-    -moz-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;    
+    -moz-transition: all .8s ease-in;
+    -o-transition: all .8s ease-in;
+    -webkit-transition: all .8s ease-in;
+    transition: all .8s ease-in;    
 }
 
 .fa-stack-1x:hover {
