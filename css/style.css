@@ -81,12 +81,9 @@ nav a {
     -webkit-transition: all .5s ease-in;
     transition: all .5s ease-in;
 }
-
 .topnavi:hover::after { 
   width: 100%; 
 }
-
-
 .navScrolled {
   position: fixed;
   top: 0 !important;
@@ -590,7 +587,7 @@ input[type=submit] {
 }
 
 #contact {
-    min-height: 525px !important;
+    min-height: 300px !important;
 }
 
 .footer h2 {
