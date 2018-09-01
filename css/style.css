@@ -68,9 +68,22 @@ nav a {
   color: #fcfff5;
   padding: 10px;
 }
-nav .topnav:hover {
-  border-bottom: white 2px solid;  
+.topnav a:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid white;
+  width: 0;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
+
+.topnav a:hover:after { 
+  width: 100%; 
+}
+
+
 .navScrolled {
   position: fixed;
   top: 0 !important;
