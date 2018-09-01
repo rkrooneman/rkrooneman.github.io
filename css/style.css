@@ -75,7 +75,7 @@ nav a {
   border-bottom: 2px solid white;
   width: 0;
   position: absolute;
-  right: 0;
+  left: 0;
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
