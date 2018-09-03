@@ -16,7 +16,6 @@ header {
     height: 75px;
     background-color: #5e5e5e;
     color: #FFFFFF;
-    margin-top: -75px !important;
     z-index: 2;
 }
 .headertitle {
