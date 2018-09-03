@@ -82,7 +82,7 @@ nav a {
 .topnavi::after {
   content: '';
   display: block;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #864AFF;
   width: 0;
   position: absolute;
   left: 0;
