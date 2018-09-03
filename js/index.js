@@ -35,13 +35,3 @@ $(window).scroll(function() {
     $('button.back-to-top').removeClass('show');
   }
 });
-
-$('button.back-to-top').click(function() {
-  $('html, body').animate({
-    scrollTop: 0
-  }, 800);
-  return false;
-});
-
-Waves.attach('button.back-to-top', 'waves-effect');
-Waves.init();
