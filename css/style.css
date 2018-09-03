@@ -54,11 +54,11 @@ nav {
     -o-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
     transition: all .3s ease-in;
-    line-height: 2;
+    line-height: 2 !important;
 }
 
 .fa-stack-1x:hover {
-    line-height: 1;
+    line-height: 1 !important;
     color: #864AFF;
 }
 nav ul {
