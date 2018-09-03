@@ -1,3 +1,4 @@
+{
 var nav = $("nav");
 var hdrHeight = $("header").height();
 
@@ -9,7 +10,9 @@ $(window).scroll(function() {
     nav.removeClass("navScrolled");
   }
 });
+}
 
+{
 $l = $('.left');
 $r = $('.right');
 
@@ -24,4 +27,4 @@ $r.mouseenter(function() {
 }).mouseleave(function() {
   $('.container').removeClass('right-is-hovered');
 });
-
+}
