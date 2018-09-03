@@ -1,16 +1,3 @@
-{
-var nav = $("nav");
-var hdrHeight = $("header").height();
-
-
-$(window).scroll(function() {
-  if( $(this).scrollTop() > hdrHeight + 50) {
-    nav.addClass("navScrolled");
-  } else {
-    nav.removeClass("navScrolled");
-  }
-});
-}
 
 {
 $l = $('.left');
