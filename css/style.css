@@ -55,6 +55,7 @@ nav {
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
     line-height: 2 !important;
+    font-weight: bold;
 }
 
 .fa-stack-1x:hover {
