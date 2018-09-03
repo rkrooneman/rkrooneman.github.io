@@ -564,7 +564,7 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
 }
-input[type=submit] {
+input > #submitbutton {
     margin-top: 16px;
     height: auto;
     width: 170px;
@@ -582,11 +582,11 @@ input[type=submit] {
     text-transform: uppercase;
     cursor: pointer;
 }
-#submitbutton:hover::before {
+input > #submitbutton:hover::before {
   height: 8px;
   opacity: 1;
 }
-#submitbutton::before {
+input > #submitbutton::before {
   content: "";
   font-size: 1.5em;
   background: #00FDCB;
