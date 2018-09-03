@@ -98,6 +98,9 @@ nav a {
 .topnavi:hover::after { 
   width: 100%; 
 }
+.topnavi:active::after { 
+  width: 100%; 
+}
 .navScrolled {
   position: fixed;
   top: 0 !important;
