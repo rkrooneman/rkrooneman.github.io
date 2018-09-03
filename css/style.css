@@ -584,7 +584,7 @@ input[type=text], select, textarea {
     position: relative;
 }
 #submitbutton:hover:before {
-  height: 8px;
+  height: 6px;
   opacity: 1;
 }
 #submitbutton:before {
