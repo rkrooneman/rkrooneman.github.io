@@ -5,6 +5,7 @@ html, body {
   overflow: hidden;
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
+  position: relative;
 }
 *,
 *:before,
