@@ -596,7 +596,6 @@ input[type=submit] {
   transition: 200ms all ease-in-out;
 }
 .footer {
-    border-radius: 5px;
     background-color: #5e5e5e;
     padding: 10px;
     color: #FFF;
