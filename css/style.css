@@ -218,6 +218,7 @@ a.cta2:hover:before {
   height: 100%;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 1px 5px #000;
 }
 .container .one-half {
   position: absolute;
@@ -292,6 +293,7 @@ section {
     width: 100%;
     min-height: 730px;
     background-color: #864AFF;
+    box-shadow: 0px 1px 5px #000;
 }
 #on {
   position: absolute;
@@ -414,6 +416,7 @@ a.cta3:hover:before {
     position: relative;
     min-height: 1750px;
     width: 100%;
+    box-shadow: 0px 1px 5px #000;
 }
 .timeline {
     width: 70%;
