@@ -615,7 +615,7 @@ input[type=text], select, textarea {
 }
 
 #contact {
-    min-height: 300px !important;
+    min-height: 500px !important;
 }
 
 .footer h2 {
