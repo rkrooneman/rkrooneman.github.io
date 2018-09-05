@@ -340,6 +340,14 @@ a {
   width: 1.3em; 
 }
 
+#name {
+    font-family: cookie;
+    position: absolute;
+    display: block;
+    margin-top: 50px !important;
+    font-size: 4em;
+}
+
 h2 {
     text-align: center;
     font-family: 'Archivo', sans-serif;
