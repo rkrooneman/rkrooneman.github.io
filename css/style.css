@@ -615,7 +615,7 @@ input[type=text], select, textarea {
 }
 
 #contact {
-    min-height: 500px !important;
+    min-height: 300px !important;
 }
 
 .footer h2 {
@@ -753,6 +753,9 @@ button.back-to-top.show:active {
     }
     .rightexp {
     left: 0%;
+    }
+    #contact {
+    min-height: 500px !important;
     }
     .contactcolumn, input[type=submit] {
         width: 100%;
