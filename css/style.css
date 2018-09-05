@@ -725,10 +725,10 @@ button.back-to-top.show:active {
         max-width: 75%;   
     }
     .section_exp {
-        min-height: 1900px;
+        min-height: 2000px;
     }
     .timeline::after {
-    height: 1900px;
+    height: 2000px;
     }
 }
 @media only screen and (max-width: 680px) {
