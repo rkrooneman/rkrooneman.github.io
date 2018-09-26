@@ -541,6 +541,8 @@ timeline h2 {
   -ms-flex: 300px;
   flex: 300px;
   margin: 30px;
+  font-size: .6em;
+  text-align: left;
 }
 .card-container .card {
   font-weight: bold;
@@ -575,12 +577,14 @@ timeline h2 {
   margin-top: 180px;
 }
 .card-container .card a .card--display h2 {
+  text-align: left;
   margin: 20px 0 0;
 }
 .card-container .card a .card--hover {
   display: none;
 }
 .card-container .card a .card--hover h2 {
+  text-align: left;
   margin: 20px 0;
 }
 .card-container .card a .card--hover p {
