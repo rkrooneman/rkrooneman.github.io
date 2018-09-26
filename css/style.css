@@ -534,6 +534,10 @@ timeline h2 {
     color: #000000;
 }
 
+.skillscontent-desktop {
+    display: flex;
+}
+
 .card-container i {
 	padding-right: 12px;
 }
