@@ -541,6 +541,7 @@ timeline h2 {
   -ms-flex: 300px;
   flex: 300px;
   margin: 30px;
+  margin-top: 120px;
   font-size: .6em;
   text-align: left;
 }
