@@ -287,6 +287,7 @@ main {
 }
 section {
     display: flex;
+    display: -webkit-flex; 
     height: 100%;
     width: 100%;
     min-height: 730px;
@@ -537,7 +538,7 @@ timeline h2 {
 	padding-right: 12px;
 }
 .card-container {
-  -webkit-box-flex: 300px;
+  -webkit-flex: 300px;
   -ms-flex: 300px;
   flex: 300px;
   margin: 30px;
@@ -621,12 +622,12 @@ timeline h2 {
   color: #00CAA2;
 }
 
-/*
 .skillscontent {
     margin-left: 25%;
     display: inline-flex;
     margin-top: 32px;
     margin-bottom: 32px;
+    display: none;
 }
 
 #skills {
@@ -651,7 +652,6 @@ timeline h2 {
     margin-top: 8px;
     vertical-align: middle;
 }
-*/
 
 input[type=text], select, textarea {
     width: 100%;
@@ -820,6 +820,9 @@ button.back-to-top.show:active {
     }
     .timeline::after {
     height: 2000px;
+    }
+    .skillscontent {
+    display: block;
     }
 }
 @media only screen and (max-width: 680px) {
