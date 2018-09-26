@@ -155,77 +155,24 @@
         </div>
     </section>
     <section id="skills">
-     
-<head>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-</head>
-<body>
-<div class="card-container"> 
-  <div class="card"><a href="hottub">
-      <div class="card--display"><i class="fas fa-code"></i>
-        <h2>Web development & optimization</h2>
-      </div>
-      <div class="card--hover">
-        <h2>Web development & optimization</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit bibendum.</p>
-        <p class="link">Click to see project</p>
-      </div></a>
-    <div class="card--border"></div>
-  </div>
-</div>
-<div class="card-container"> 
-  <div class="card"><a href="worldweb">
-      <div class="card--display"><i class="fas fa-object-group"></i>
-        <h2>UX/UI/CX design & development</h2>
-      </div>
-      <div class="card--hover">
-        <h2>UX/UI/CX design & development</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit bibendum.</p>
-        <p class="link">Click to see project</p>
-      </div></a>
-    <div class="card--border"></div>
-  </div>
-</div>
-<div class="card-container"> 
-  <div class="card"><a href="trainthings">
-      <div class="card--display"><i class="fas fa-funnel-dollar"></i>
-        <h2>Digital marketing & CRO</h2>
-      </div>
-      <div class="card--hover">
-        <h2>Digital marketing & CRO</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit bibendum.</p>
-        <p class="link">Click to see project</p>
-      </div></a>
-    <div class="card--border"></div>
-  </div>
-</div>
-<div class="card-container"> 
-  <div class="card card--dark"><a href="androidupdate">
-      <div class="card--display"><i class="fas fa-chart-bar"></i>
-        <h2>Research & data analysis</h2>
-      </div>
-      <div class="card--hover">
-        <h2>Research & data analysis</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit bibendum.</p>
-        <p class="link">Click to see project</p>
-      </div></a>
-    <div class="card--border"></div>
-  </div>
-</div>
-<div class="card-container"> 
-  <div class="card card--dark"><a href="phonesoff">
-      <div class="card--display"><i class="fas fa-landmark"></i>
-        <h2>Learning histories and change trajectories</h2>
-      </div>
-      <div class="card--hover">
-        <h2>Learning histories and change trajectories</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit bibendum.</p>
-        <p class="link">Click to see project</p>
-      </div></a>
-    <div class="card--border"></div>
-  </div>
-</div>
-</body>
+        <div class="skillscontent">
+            <div class="rowskills"> 
+                <div class="columnskills">
+                    <img src="/images/Green/CSS3.png" style="width:100%">
+                    <img src="/images/Green/GoogleAnalytics.png" style="width:100%">
+                </div>
+                <div class="columnskills">
+                    <img src="/images/Green/HTML5.png" style="width:100%">
+                    <img src="/images/Green/Liferay.png" style="width:100%">
+                    <img src="/images/Photoshop.png" style="width:100%">
+                    
+                </div>  
+                <div class="columnskills">
+                    <img src="/images/Green/javascript.png" style="width:100%">
+                    <img src="/images/Green/Hotjar.png" style="width:100%">
+                </div>
+            </div>
+        </div>
     </section>  
     <section id="contact">
         <div class="footer">
