@@ -576,6 +576,9 @@ timeline h2 {
   -ms-transform: translate(-30px, -30px);
   transform: translate(-30px, -30px);
   border-color: #00CAA2;
+  background-color: white !important;
+  color: #5E5E5E !important; 
+  border-color: #00CAA2 !important;
 }
 .card-container .card a:hover .card--border {
     z-index: 0;
