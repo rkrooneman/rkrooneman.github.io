@@ -536,6 +536,8 @@ timeline h2 {
 
 .skillscontent-desktop {
     display: flex;
+    -webkit-flex-direction: row; 
+    flex-direction: row;
 }
 
 .card-container i {
