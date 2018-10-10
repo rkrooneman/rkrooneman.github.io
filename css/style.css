@@ -553,19 +553,19 @@ timeline h2 {
     transition: all .2s ease-in;  
 }
 .leftexp .contentexp:hover {
-    transform: translate(-20px, -20px);
+    transform: translate(-8px, -8px);
 }
 
 .leftexp:hover::before {
-    transform: translate(-20px, -20px);
+    transform: translate(-8px, -8px);
 }
 
 .rightexp .contentexp:hover {
-    transform: translate(20px, -20px);
+    transform: translate(8px, -8px);
 }
 
-.righttexp:hover::before {
-    transform: translate(20px, -20px);
+.rightexp:hover::before {
+    transform: translate(8px, -8px);
 }
 
 .contentexp h2 {
