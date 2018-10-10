@@ -508,6 +508,10 @@ timeline h2 {
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
     z-index: 2;
+     -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in; 
 }
 .rightexp::before {
     content: " ";
@@ -519,6 +523,10 @@ timeline h2 {
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
+     -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in; 
 }
 .rightexp::after {
     left: -13px !important;
@@ -539,6 +547,25 @@ timeline h2 {
     position: relative;
     text-align: left !important;
     border: #ffffff 2px solid;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;  
+}
+.leftexp .contentexp {
+    transform: translate(-20px, -20px);
+}
+
+.leftexp:hover::before {
+    transform: translate(-20px, -20px);
+}
+
+.rightexp .contentexp {
+    transform: translate(20px, -20px);
+}
+
+.righttexp:hover::before {
+    transform: translate(20px, -20px);
 }
 
 .contentexp h2 {
