@@ -881,7 +881,8 @@ button.back-to-top.show:active {
     display: flex;
     -webkit-flex-direction: row; 
     flex-direction: row;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    margin-bottom: 100px;
     }
     .card-container {
     -webkit-flex: 400px;
