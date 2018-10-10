@@ -507,6 +507,7 @@ timeline h2 {
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
+    z-index: 2;
 }
 .rightexp::before {
     content: " ";
@@ -522,6 +523,15 @@ timeline h2 {
 .rightexp::after {
     left: -13px !important;
 }
+
+.rightexp .contentexp {
+    box-shadow: 3px 3px 3px #333;
+}
+
+.leftexp .contentexp {
+    box-shadow: 3px 3px 3px #333;
+}
+
 .contentexp {
     padding: 20px 30px;
     background-color: #ffffff;
