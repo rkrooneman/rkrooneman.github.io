@@ -552,7 +552,7 @@ timeline h2 {
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;  
 }
-.leftexp .contentexp {
+.leftexp .contentexp:hover {
     transform: translate(-20px, -20px);
 }
 
@@ -560,7 +560,7 @@ timeline h2 {
     transform: translate(-20px, -20px);
 }
 
-.rightexp .contentexp {
+.rightexp .contentexp:hover {
     transform: translate(20px, -20px);
 }
 
