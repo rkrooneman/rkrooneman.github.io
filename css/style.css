@@ -84,6 +84,7 @@ nav a {
 .topnavi::after {
   content: '';
   display: block;
+  padding-bottom: 10px;
   border-bottom: 3px solid #864AFF;
   width: 0;
   position: absolute;
