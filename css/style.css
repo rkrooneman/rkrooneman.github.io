@@ -554,19 +554,21 @@ timeline h2 {
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;  
 }
-.leftexp .contentexp:hover {
+.leftexp .contentexp:hover, .leftexp .contentexp:active {
+    transform: translate(-8px, -8px);
+    box-shadow: 11px 11px 3px #666;
+}
+
+.leftexp:hover::before, .leftexp .contentexp:hover::before {
     transform: translate(-8px, -8px);
 }
 
-.leftexp:hover::before {
-    transform: translate(-8px, -8px);
-}
-
-.rightexp .contentexp:hover {
+.rightexp .contentexp:hover, .rightexp .contentexp:active  {
     transform: translate(8px, -8px);
+    box-shadow: 11px 11px 3px #666;
 }
 
-.rightexp:hover::before {
+.rightexp:hover::before, .rightexp .contentexp:active::before {
     transform: translate(8px, -8px);
 }
 
