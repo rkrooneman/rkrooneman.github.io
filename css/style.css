@@ -556,7 +556,7 @@ timeline h2 {
 }
 .leftexp .contentexp:hover, .leftexp .contentexp:active {
     transform: translate(-8px, -8px);
-    box-shadow: 11px 11px 3px #666;
+    box-shadow: 11px 11px 11px #666;
 }
 
 .leftexp:hover::before, .leftexp .contentexp:hover::before {
@@ -565,7 +565,7 @@ timeline h2 {
 
 .rightexp .contentexp:hover, .rightexp .contentexp:active  {
     transform: translate(8px, -8px);
-    box-shadow: 11px 11px 3px #666;
+    box-shadow: 11px 11px 11px #666;
 }
 
 .rightexp:hover::before, .rightexp .contentexp:active::before {
