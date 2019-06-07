@@ -867,10 +867,10 @@ button.back-to-top.show:active {
         max-width: 75%;   
     }
     .section_exp {
-        min-height: 2000px;
+        min-height: 2100px;
     }
     .timeline::after {
-    height: 2000px;
+    height: 2100px;
     }
     /*.skillscontent {
     display: block;
