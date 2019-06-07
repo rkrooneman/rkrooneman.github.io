@@ -872,7 +872,7 @@ button.back-to-top.show:active {
         min-height: 2100px;
     }
     .timeline::after {
-    height: 2100px;
+        height: 2100px;
     }
     /*.skillscontent {
     display: block;
@@ -881,48 +881,69 @@ button.back-to-top.show:active {
     display: none;
     }*/
     .skillscontent-desktop {
-    display: flex;
-    -webkit-flex-direction: row; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
+        display: flex;
+        -webkit-flex-direction: row; 
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
     }
     .card-container {
-    -webkit-flex: 400px;
-    -ms-flex: 400px;
-    flex: 400px;
-}
+        -webkit-flex: 400px;
+        -ms-flex: 400px;
+        flex: 400px;
+    }
 @media only screen and (max-width: 680px) {
+    section#slide {
+        display: flex;
+        height: 100%;
+        flex-flow: column nowrap; 
+    }
+    .container .one-half {
+        position: relative;
+        width: 100%;
+    }
+    .container.right-is-hovered .left {
+        height: 25%;
+    }
+    .container.right-is-hovered .right {
+        height: 75%;
+    }
+    .container.left-is-hovered .left {
+        height: 75%;
+        }
+    .container.left-is-hovered .right {
+        height: 25%;
+    }
     .timeline::after {
-    left: 31px;
-    height: 1900px;
+        left: 31px;
+        height: 1900px;
     }
     .containerexp {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
     }
     .containerexp::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
     }
     .leftexp::after, .rightexp::after {
-    left: 15px;
+        left: 15px;
     }
     .rightexp {
-    left: 0%;
+        left: 0%;
     }
     #contact {
-    min-height: 500px !important;
+        min-height: 500px !important;
     }
     .contactcolumn, input[type=submit] {
         width: 100%;
         margin-top: 0;
     }
     .contactlogos {
-    float: left;
+        float: left;
     }
     .contentexp {
         width: 400px;
@@ -930,7 +951,7 @@ button.back-to-top.show:active {
     .timeline {
         height: 2100px;
     }
-       .columnskills {
+    .columnskills {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
