@@ -667,8 +667,8 @@ timeline h2 {
 .card-container .card.card--dark a {
     color: #ffffff;
 /*    background-color: #5E5E5E;*/
-    background: rgb(0,253,203);
-    background: linear-gradient(45deg, rgba(0,253,203,1) 0%, rgba(123,57,255,1) 100%);
+    background: rgb(0,183,128);
+    background: linear-gradient(45deg, rgba(0,183,128,1) 0%, rgba(123,57,255,1) 100%);
     border-color: #ffffff;
 }   
 .card-container .card.card--dark a .card--hover .link {
