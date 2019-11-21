@@ -649,6 +649,7 @@ timeline h2 {
 .card-container .card a .card--hover p {
     font-weight: normal;
     line-height: 1.5;
+    color: #fff;
 }
 .card-container .card a .card--hover p.link {
     margin: 20px 0 0;
