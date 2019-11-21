@@ -547,7 +547,7 @@ timeline h2 {
     color: #ffffff;
     position: relative;
     text-align: left !important;
-    border: #ffffff 2px solid;
+    border: #ffffff 1px solid;
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
@@ -603,7 +603,7 @@ timeline h2 {
     width: 100%;
     min-height: 400px;
     height: auto;
-    border: 2px solid #00CAA2;
+    border: 1px solid #00CAA2;
     background: white;
     position: relative;
     z-index: 2;
