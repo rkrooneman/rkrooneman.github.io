@@ -19,11 +19,11 @@ $(document).ready(function () {
 
         if (h < 12) {
             h = "0" + h;
-            $("h3.day-message").html(greet);
+            $(".day__greet").html(greet);
         } else if (h < 18) {
-            $("h3.day-message").html(greet);
+            $(".day__greet").html(greet);
         } else {
-            $("h3.day-message").html(greet);
+            $(".day__greet").html(greet);
         }
 
         if (s < 10) {
@@ -49,7 +49,7 @@ var typewriter = new Typewriter(app, {
 typewriter.typeString('Hello there...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('good <span class="day__greet"></span>')
+    .typeString('Good <span class="day__greet"></span>')
     .pauseFor(1500)
     .deleteAll()
     .typeString('please come closer...')
