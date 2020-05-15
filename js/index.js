@@ -46,22 +46,22 @@ $(document).ready(function () {
         delay: 75,
     });
 
-    typewriter.typeString('<i class="fas fa-chevron-right"></i> Hello there...')
+    typewriter.typeString('Hello there...')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('<i class="fas fa-chevron-right"></i> Good <span class="day__greet"></span>...')
+        .typeString('Good <span class="day__greet"></span>...')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('<i class="fas fa-chevron-right"></i> you can scroll down...')
+        .typeString('you can scroll down...')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('<i class="fas fa-chevron-right"></i> or just stay here...')
+        .typeString('or just stay here...')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('<i class="fas fa-chevron-right"></i> how about some 🍣?')
+        .typeString('how about some 🍣?')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('<i class="fas fa-chevron-right"></i> or just a cup of ☕?')
+        .typeString('or just a cup of ☕?')
         .pauseFor(1500)
         .start();
 
