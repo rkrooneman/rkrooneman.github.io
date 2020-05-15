@@ -6,13 +6,13 @@ $(document).ready(function () {
         var h = hr % 12;
 
         if (hr < 12) {
-            greet = 'morning...';
+            greet = 'morning';
             format = 'AM';
         } else if (hr >= 12 && hr <= 17) {
-            greet = 'afternoon...';
+            greet = 'afternoon';
             format = 'PM';
         } else if (hr >= 17 && hr <= 24)
-            greet = 'evening...';
+            greet = 'evening';
 
         var m = ndate.getMinutes().toString();
         var s = ndate.getSeconds().toString();
@@ -49,7 +49,7 @@ var typewriter = new Typewriter(app, {
 typewriter.typeString('<i class="fas fa-chevron-right"></i> Hello there...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('<i class="fas fa-chevron-right"></i> Good <span class="day__greet"></span>')
+    .typeString('<i class="fas fa-chevron-right"></i> Good <span class="day__greet"></span>...')
     .pauseFor(1500)
     .deleteAll()
     .typeString('<i class="fas fa-chevron-right"></i> please come closer...')
