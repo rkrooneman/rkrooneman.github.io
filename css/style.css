@@ -458,6 +458,10 @@ h4 span,
     color: #de5f5f;
 }
 
+h2#app span {
+    color: #000;
+}
+
 h2 a {
     color: #de5f5f;
 }
