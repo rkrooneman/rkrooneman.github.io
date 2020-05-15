@@ -384,6 +384,7 @@ h4,
     }
 }
 
+p a,
 h1 a,
 .h1 a,
 h2 a,
@@ -504,9 +505,11 @@ p a {
     color: inherit;
 }
 
+/*
 p a:hover {
     border-bottom: .1875rem solid;
 }
+*/
 
 .lead {
     display: block;
