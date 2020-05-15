@@ -432,6 +432,10 @@ h4 a::after,
     transition: all .25s ease-in;
 }
 
+h2 span::after {
+    color: #de5f5f;
+}
+
 a:hover::after,
 a:active::after,
 a:focus::after {
