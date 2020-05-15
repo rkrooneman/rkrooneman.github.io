@@ -35,7 +35,7 @@ var typewriter = new Typewriter(app, {
 typewriter.typeString('Hello there...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('Good <strong class="day__greet></strong>"')
+    .typeString('Good <strong class="day__greet"></strong>')
     .pauseFor(1500)
     .deleteAll()
     .typeString('please come closer...')
