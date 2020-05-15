@@ -395,6 +395,7 @@ h4 a,
     color: inherit;
 }
 
+/*
 h1 a:hover,
 .h1 a:hover,
 h2 a:hover,
@@ -404,6 +405,27 @@ h3 a:hover,
 h4 a:hover,
 .h5 a:hover {
     border-bottom: .1875rem solid;
+}
+*/
+
+a::after {
+    content: '';
+    display: block;
+    padding-bottom: 4px;
+    border-bottom: 3px solid inherit;
+    width: 0;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+a:hover::after,
+a:active::after,
+a:focus::after {
+    width: 100%;
 }
 
 h1 span,
