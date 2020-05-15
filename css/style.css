@@ -355,6 +355,11 @@ a {
     fill: white;
 }
 
+svg .skill__icon {
+    max-width: 3rem;
+    max-height: 3rem;
+}
+
 h1,
 .h1,
 h2,
