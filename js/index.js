@@ -13,28 +13,6 @@ $(document).ready(function() {
                 format = 'PM';
             } else if (hr >= 17 && hr <= 24)
                 greet = 'Good evening...';
-
-            var m = ndate.getMinutes().toString();
-            var s = ndate.getSeconds().toString();
-
-            if (h < 12) {
-                h = "0" + h;
-                $("h2.day-message").html(greet);
-            } else if (h < 18) {
-                $("h2.day-message").html(greet);
-            } else {
-                $("h2.day-message").html(greet);
-            }
-
-            if (s < 10) {
-                s = "0" + s;
-            }
-
-            if (m < 10) {
-                m = "0" + m;
-            }
-
-            $('.date').html(h + ":" + m + ":" + s + format);
         }
 
         setInterval(dateTime, 1000);
