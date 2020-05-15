@@ -272,7 +272,7 @@ a {
     padding: 20vh 50px 20vh 75px;
 }
 
-.section svg {
+.section #section__svg {
     position: absolute;
     top: -50px;
     left: 0;
@@ -281,7 +281,7 @@ a {
     height: 50px;
 }
 
-.section svg.bottom {
+.section #section__svg.bottom {
     bottom: 0;
     top: auto;
     fill: grey;
