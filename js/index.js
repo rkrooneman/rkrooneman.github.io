@@ -38,7 +38,7 @@ $(document).ready(function () {
     }
 
     setInterval(dateTime, 1000);
-});
+
 
 var app = document.getElementById('app');
 var typewriter = new Typewriter(app, {
@@ -61,3 +61,5 @@ typewriter.typeString('<i class="fas fa-chevron-right"></i> Hello there...')
     .typeString('<i class="fas fa-chevron-right"></i> Coffee? ☕')
     .pauseFor(1500)
     .start();
+    
+});
