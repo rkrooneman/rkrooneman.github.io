@@ -438,7 +438,7 @@ h4 a::after,
 }
 
 h2 span a::after {
-    border-bottom: #de5f5f;
+    border-bottom: .25rem solid #de5f5f;;
 }
 
 a:hover::after,
