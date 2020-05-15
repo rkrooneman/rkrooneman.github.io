@@ -322,13 +322,13 @@ a {
 }
 
 .section.section--portfolio {
-    background-color: orange;
+    background-color: #03CEA4;
     color: white;
 }
 
 .section.section--portfolio svg {
     top: -20px;
-    fill: orange;
+    fill: #03CEA4;
 }
 
 .section.section--portfolio svg.bottom {
