@@ -13,9 +13,31 @@ $(document).ready(function () {
             format = 'PM';
         } else if (hr >= 17 && hr <= 24)
             greet = 'Good evening...';
+
+        var m = ndate.getMinutes().toString();
+        var s = ndate.getSeconds().toString();
+
+        if (h < 12) {
+            h = "0" + h;
+            $("h2.day-message").html(greet);
+        } else if (h < 18) {
+            $("h2.day-message").html(greet);
+        } else {
+            $("h2.day-message").html(greet);
+        }
+
+        if (s < 10) {
+            s = "0" + s;
+        }
+
+        if (m < 10) {
+            m = "0" + m;
+        }
+
+        $('.date').html(h + ":" + m + ":" + s + format);
     }
 
-    setInterval(dateTime, 1000);    
+    setInterval(dateTime, 1000);
 });
 
 var app = document.getElementById('app');
@@ -27,7 +49,7 @@ var typewriter = new Typewriter(app, {
 typewriter.typeString('Hello there...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('')
+    .typeString('<h2 class="day__greet"></h2>')
     .pauseFor(1500)
     .deleteAll()
     .typeString('Please come closer...')
@@ -39,4 +61,3 @@ typewriter.typeString('Hello there...')
     .typeString('Coffee?')
     .pauseFor(1500)
     .start();
-
