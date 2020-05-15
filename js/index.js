@@ -58,6 +58,6 @@ typewriter.typeString('Hello there...')
     .typeString('or scroll down...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('Coffee?')
+    .typeString('Coffee? ☕')
     .pauseFor(1500)
     .start();
