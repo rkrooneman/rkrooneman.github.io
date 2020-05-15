@@ -433,7 +433,7 @@ h4 a::after,
 }
 
 h2 span a::after {
-    color: #de5f5f;
+    border-bottom: #de5f5f;
 }
 
 a:hover::after,
