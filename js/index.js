@@ -6,13 +6,13 @@ $(document).ready(function () {
         var h = hr % 12;
 
         if (hr < 12) {
-            greet = 'morning';
+            greet = 'Goodmorning';
             format = 'AM';
         } else if (hr >= 12 && hr <= 17) {
-            greet = 'afternoon';
+            greet = 'Good afternoon';
             format = 'PM';
         } else if (hr >= 17 && hr <= 24)
-            greet = 'evening';
+            greet = 'Good evening';
 
         var m = ndate.getMinutes().toString();
         var s = ndate.getSeconds().toString();
@@ -49,7 +49,7 @@ $(document).ready(function () {
     typewriter.typeString('Hello there...')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('Good <span class="day__greet"></span>...')
+        .typeString('How are you doing?')
         .pauseFor(1500)
         .deleteAll()
         .typeString('you can scroll down...')
