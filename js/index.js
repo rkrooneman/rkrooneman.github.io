@@ -15,7 +15,8 @@ $(document).ready(function () {
             greet = 'Good evening...';
     }
 
-    setInterval(dateTime, 1000);
+    setInterval(dateTime, 1000);    
+});
 
 var app = document.getElementById('app');
 var typewriter = new Typewriter(app, {
@@ -38,5 +39,4 @@ typewriter.typeString('Hello there...')
     .typeString('Coffee?')
     .pauseFor(1500)
     .start();
-    
-});
+
