@@ -432,7 +432,7 @@ h4 a::after,
     transition: all .25s ease-in;
 }
 
-h2 span::after {
+h2 span a::after {
     color: #de5f5f;
 }
 
