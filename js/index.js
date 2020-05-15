@@ -46,18 +46,18 @@ var typewriter = new Typewriter(app, {
     delay: 75,
 });
 
-typewriter.typeString('Hello there...')
+typewriter.typeString('> Hello there...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('Good <span class="day__greet"></span>')
+    .typeString('> Good <span class="day__greet"></span>')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('please come closer...')
+    .typeString('> please come closer...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('or scroll down...')
+    .typeString('> or scroll down...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('Coffee? ☕')
+    .typeString('> Coffee? ☕')
     .pauseFor(1500)
     .start();
