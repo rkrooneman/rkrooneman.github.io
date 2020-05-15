@@ -19,11 +19,11 @@ $(document).ready(function () {
 
         if (h < 12) {
             h = "0" + h;
-            $("h2.day-message").html(greet);
+            $("h2.day__greet").html(greet);
         } else if (h < 18) {
-            $("h2.day-message").html(greet);
+            $("h2.day__greet").html(greet);
         } else {
-            $("h2.day-message").html(greet);
+            $("h2.day__greet").html(greet);
         }
 
         if (s < 10) {
