@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     }
 
-    setInterval(dateTime, 1000); 
+    setInterval(dateTime, 1000);
 });
 
 var app = document.getElementById('app');
@@ -33,7 +33,7 @@ var typewriter = new Typewriter(app, {
 typewriter.typeString('Hello there...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('Good <strong class="day__greet"></strong>')
+    .typeString('<span class="day__greet"></span>')
     .pauseFor(1500)
     .deleteAll()
     .typeString('please come closer...')
