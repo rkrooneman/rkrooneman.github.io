@@ -393,6 +393,7 @@ h3 a,
 h4 a,
 .h5 a {
     color: inherit;
+    position: relative;
 }
 
 /*
@@ -412,7 +413,7 @@ a::after {
     content: '';
     display: block;
     padding-bottom: 4px;
-    border-bottom: 3px solid inherit;
+    border-bottom: .1875rem solid #555;
     width: 0;
     position: absolute;
     left: 0;
