@@ -37,7 +37,7 @@ $(document).ready(function () {
         $('.date').html(h + ":" + m + ":" + s + format);
     }
 
-    setInterval(dateTime, 1000);
+    setInterval(dateTime, 1000); 
 });
 
 var app = document.getElementById('app');
