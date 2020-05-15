@@ -266,7 +266,7 @@ a {
     flex-flow: column nowrap;
     -webkit-box-align: stretch;
     align-items: stretch;
-    min-height: 60vh;
+    min-height: 100vh;
     width: 100%;
     align-content: center;
     padding: 20vh 50px 20vh 75px;
