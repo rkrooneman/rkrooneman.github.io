@@ -57,8 +57,11 @@ typewriter.typeString('<i class="fas fa-chevron-right"></i> Hello there...')
     .deleteAll()
     .typeString('<i class="fas fa-chevron-right"></i> or scroll down...')
     .pauseFor(1500)
-    .deleteAll()
-    .typeString('<i class="fas fa-chevron-right"></i> Coffee? ☕')
+    .deleteAll()🍣
+    .typeString('<i class="fas fa-chevron-right"></i> how about some 🍣?')
+    .pauseFor(1500)
+    .deleteAll()🍣
+    .typeString('<i class="fas fa-chevron-right"></i> or just a cup of ☕?')
     .pauseFor(1500)
     .start();
     
