@@ -49,7 +49,7 @@ var typewriter = new Typewriter(app, {
 typewriter.typeString('Hello there...')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('<h2 class="day__greet"></h2>')
+    .typeString(greet)
     .pauseFor(1500)
     .deleteAll()
     .typeString('Please come closer...')
