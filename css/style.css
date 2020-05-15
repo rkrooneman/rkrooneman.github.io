@@ -355,7 +355,7 @@ a {
     fill: white;
 }
 
-svg .skill__icon {
+svg.skill__icon {
     max-width: 3rem;
     max-height: 3rem;
 }
