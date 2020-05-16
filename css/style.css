@@ -574,26 +574,6 @@ p a:hover {
     margin: 0;
 }
 
-.st0 {
-    fill: #d4b830
-}
-
-.st1,
-.st2 {
-    opacity: .986;
-    fill: #ebebeb;
-    fill-opacity: 0;
-    enable-background: new
-}
-
-.st2 {
-    fill-opacity: .9216
-}
-
-.st3 {
-    fill: #d4b830
-}
-
 @media (min-width: 30rem) {
     .lead {
         font-size: 1rem;
