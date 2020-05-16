@@ -83,8 +83,8 @@ $(document).ready(function () {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
         } else {
-            $('.top').removeClass('nav__black');
-            $('.top').addClass('nav__white');
+            $('.top').removeClass('nav__white');
+            $('.top').addClass('nav__black');
         }
 
     })
