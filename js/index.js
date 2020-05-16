@@ -82,9 +82,10 @@ $(document).ready(function () {
         console.log('menu1', menu_pos1);
         console.log('scroll', scroll);
 
-        if (scroll > (dark_pos - svg_height) && menu_pos1 < (dark_pos + dark_height + svg_height)) || (scroll > (dark_pos2 - svg_height) && menu_pos1 < (dark_pos2 + dark_height2 + svg_height)) {
+        if (scroll > (dark_pos - svg_height) && menu_pos1 < (dark_pos + dark_height + svg_height)) {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
+        } if else (scroll > (dark_pos2 - svg_height) && menu_pos1 < (dark_pos2 + dark_height2 + svg_height)) {    
         } else {
             $('.top').removeClass('nav__white');
             $('.top').addClass('nav__black');
@@ -106,9 +107,10 @@ $(document).ready(function () {
 
         console.log('menu2', menu_pos2);
 
-        if (scroll > (dark_pos - svg_height) && menu_pos2 < (dark_pos + dark_height + svg_height)) || (scroll > (dark_pos2 - svg_height) && menu_pos1 < (dark_pos2 + dark_height2 + svg_height)) { {
+        if (scroll > (dark_pos - svg_height) && menu_pos2 < (dark_pos + dark_height + svg_height)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
+        } if else ((scroll > (dark_pos2 - svg_height) && menu_pos1 < (dark_pos2 + dark_height2 + svg_height)) {  
         } else {
             $('.bottom').removeClass('nav__white');
             $('.bottom').addClass('nav__black');
