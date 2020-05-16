@@ -74,7 +74,11 @@ $(document).ready(function () {
         var menu_pos = $('.top').offset().top;
         var menu_height = $('.top').height();
         var scroll = $(window).scrollTop();
-
+        
+        console.log('dark', dark_pos);
+        console.log('menu', menu_pos);
+        console.log('scroll', scroll);
+        
         if (menu_pos > dark_pos && menu_pos < (dark_pos + dark_height)) {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
