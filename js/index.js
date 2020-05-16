@@ -79,7 +79,7 @@ $(document).ready(function () {
         console.log('menu', menu_pos);
         console.log('scroll', scroll);
         
-        if (menu_pos > dark_pos && menu_pos < (dark_pos + dark_height)) {
+        if (scroll > dark_pos && menu_pos < (dark_pos + menu_height)) {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
         } else {
