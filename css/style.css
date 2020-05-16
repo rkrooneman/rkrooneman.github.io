@@ -164,7 +164,7 @@ a {
 }
 
 .side.nav__black {
-    color: rgba(0, 0, 0, 0.5);  
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .side .side__inner {
@@ -552,6 +552,7 @@ ul.availability li::before {
 }
 
 .availability span {
+    text-decoration: underline;
     text-decoration-style: dotted;
     color: #DE5F5F;
 }
