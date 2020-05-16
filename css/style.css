@@ -147,7 +147,7 @@ a {
     width: 50px;
     border-right: 1px dashed rgba(0, 0, 0, 0.3);
     color: rgba(0, 0, 0, 0.5);
-    font-family: 'Lato', sans-serif;
+    font-family: "nimbus-sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: .0875rem;
     font-size: 10px;
