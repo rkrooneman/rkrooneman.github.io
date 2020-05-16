@@ -79,7 +79,7 @@ $(document).ready(function () {
         console.log('menu1', menu_pos1);
         console.log('scroll', scroll);
 
-        if (scroll > (dark_pos - 50) && menu_pos1 < (dark_pos + dark_height)) {
+        if (scroll > (dark_pos - 50) && menu_pos1 < (dark_pos + dark_height - 50)) {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
         } else {
@@ -100,7 +100,7 @@ $(document).ready(function () {
 
         console.log('menu2', menu_pos2);
 
-        if (scroll > (dark_pos - 50) && menu_pos2 < (dark_pos + dark_height)) {
+        if (scroll > (dark_pos - 50) && menu_pos2 < (dark_pos + dark_height - 50)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
         } else {
