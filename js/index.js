@@ -72,14 +72,14 @@ $(document).ready(function () {
         var dark_pos = $('.section__dark').offset().top;
         var dark_height = $('.section__dark').height();
         var menu_pos = $('.top').offset().top;
-        var menu_height = $('.top').height();
+        var menu_width = $('.top').width();
         var scroll = $(window).scrollTop();
         
         console.log('dark', dark_pos);
         console.log('menu', menu_pos);
         console.log('scroll', scroll);
         
-        if (scroll > dark_pos && menu_pos < (dark_pos + menu_height)) {
+        if (scroll > dark_pos && menu_pos < (dark_pos + menu_width)) {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
         } else {
