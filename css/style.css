@@ -159,7 +159,7 @@ a {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.side .nav_white {
+.side.nav_white {
     color: #fff;
 }
 
