@@ -159,8 +159,12 @@ a {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.side.nav_white {
+.side.nav__white {
     color: #fff;
+}
+
+.side.nav__black {
+    color: rgba(0, 0, 0, 0.5);  
 }
 
 .side .side__inner {
