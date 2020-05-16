@@ -89,7 +89,7 @@ $(document).ready(function () {
             $('.top').removeClass('nav__white');
             $('.top').addClass('nav__black');
         }
-        if (scroll > dark_pos && menu_pos2 < (dark_pos + dark_height)) {
+        if (menu_pos2 > dark_pos && menu_pos2 < (dark_pos + dark_height)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
         } else {
