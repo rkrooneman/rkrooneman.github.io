@@ -71,16 +71,16 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var dark_pos = $('.section__dark').offset().top;
         var dark_height = $('.section__dark').height();
-        var menu_pos = $('.side').offset().top;
-        var menu_height = $('.side').height();
+        var menu_pos = $('.top').offset().top;
+        var menu_height = $('.top').height();
         var scroll = $(window).scrollTop();
 
         if (menu_pos > dark_pos && menu_pos < (dark_pos + dark_height)) {
-            $('.side').addClass('nav__white');
-            $('.side').removeClass('nav__black');
+            $('.top').addClass('nav__white');
+            $('.top').removeClass('nav__black');
         } else {
-            $('.side').removeClass('nav__black');
-            $('.side').addClass('nav__white');
+            $('.top').removeClass('nav__black');
+            $('.top').addClass('nav__white');
         }
 
     })
