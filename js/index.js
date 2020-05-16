@@ -73,8 +73,6 @@ $(document).ready(function () {
         var dark_height = $('.section__dark').height();
         var menu_pos1 = $('.top').offset().top;
         var menu_width1 = $('.top').width();
-        var menu_pos2 = $('.bottom').offset().top;
-        var menu_width2 = $('.bottom').width();
         var scroll = $(window).scrollTop();
 
         console.log('dark', dark_pos);
@@ -88,7 +86,7 @@ $(document).ready(function () {
             $('.top').removeClass('nav__white');
             $('.top').addClass('nav__black');
         }
-        
+
     })
 })
 
@@ -99,7 +97,9 @@ $(document).ready(function () {
         var menu_pos2 = $('.bottom').offset().top;
         var menu_width2 = $('.bottom').width();
         var scroll = $(window).scrollTop();
-        
+
+        console.log('menu2', menu_pos2);
+
         if (menu_pos2 > dark_pos && scroll < (dark_pos + dark_height)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
@@ -107,6 +107,6 @@ $(document).ready(function () {
             $('.bottom').removeClass('nav__white');
             $('.bottom').addClass('nav__black');
         }
-        
+
     })
 })
