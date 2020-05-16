@@ -312,12 +312,12 @@ a {
     fill: #de5f5f;
 }
 
-.section.section--clients {
+.section.section--experience {
     background-color: #343436;
     color: white;
 }
 
-.section.section--clients svg {
+.section.section--experience svg {
     fill: #343436;
 }
 
