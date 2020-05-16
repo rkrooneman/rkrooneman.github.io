@@ -95,6 +95,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var dark_pos = $('.section__dark').offset().top;
         var dark_height = $('.section__dark').height();
+        var svg_height = $('.section__svg').height();
         var menu_pos2 = $('.bottom').offset().top;
         var menu_width2 = $('.bottom').width();
         var scroll = $(window).scrollTop();
