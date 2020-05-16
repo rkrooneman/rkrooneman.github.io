@@ -71,6 +71,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var dark_pos = $('.section__dark').offset().top;
         var dark_height = $('.section__dark').height();
+        var svg_height = $('.section__svg').height();
         var menu_pos1 = $('.top').offset().top;
         var menu_width1 = $('.top').width();
         var scroll = $(window).scrollTop();
@@ -79,7 +80,7 @@ $(document).ready(function () {
         console.log('menu1', menu_pos1);
         console.log('scroll', scroll);
 
-        if (scroll > (dark_pos - 50) && menu_pos1 < (dark_pos + dark_height - 50)) {
+        if (scroll > (dark_pos - svg_height) && menu_pos1 < (dark_pos + dark_height - svg_height)) {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
         } else {
@@ -100,7 +101,7 @@ $(document).ready(function () {
 
         console.log('menu2', menu_pos2);
 
-        if (scroll > (dark_pos - 50) && menu_pos2 < (dark_pos + dark_height - 50)) {
+        if (scroll > (dark_pos - svg_height) && menu_pos2 < (dark_pos + dark_height - svg_height)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
         } else {
