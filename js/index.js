@@ -82,14 +82,14 @@ $(document).ready(function () {
         console.log('menu2', menu_pos2);
         console.log('scroll', scroll);
 
-        if (menu_pos1 > dark_pos && menu_pos < (dark_pos + dark_height)) {
+        if (menu_pos1 > dark_pos && menu_pos1 < (dark_pos + dark_height)) {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
         } else {
             $('.top').removeClass('nav__white');
             $('.top').addClass('nav__black');
         }
-        if (menu_pos2 > dark_pos && menu_pos < (dark_pos + dark_height)) {
+        if (menu_pos2 > dark_pos && menu_pos2 < (dark_pos + dark_height)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
         } else {
