@@ -79,7 +79,6 @@ $(document).ready(function () {
 
         console.log('dark', dark_pos);
         console.log('menu1', menu_pos1);
-        console.log('menu2', menu_pos2);
         console.log('scroll', scroll);
 
         if (scroll > dark_pos && menu_pos1 < (dark_pos + dark_height)) {
@@ -89,12 +88,25 @@ $(document).ready(function () {
             $('.top').removeClass('nav__white');
             $('.top').addClass('nav__black');
         }
-        if (menu_pos2 > dark_pos && menu_pos2 < (dark_pos + dark_height)) {
+        
+    })
+})
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        var dark_pos = $('.section__dark').offset().top;
+        var dark_height = $('.section__dark').height();
+        var menu_pos2 = $('.bottom').offset().top;
+        var menu_width2 = $('.bottom').width();
+        var scroll = $(window).scrollTop();
+        
+        if (menu_pos2 > dark_pos && scroll < (dark_pos + dark_height)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
         } else {
             $('.bottom').removeClass('nav__white');
             $('.bottom').addClass('nav__black');
         }
+        
     })
 })
