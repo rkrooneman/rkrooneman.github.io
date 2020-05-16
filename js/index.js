@@ -66,3 +66,25 @@ $(document).ready(function () {
         .start();
 
 });
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        var dark_pos = $('.section__dark').offset().top;
+        var dark_height = $('.section__dark').height();
+        var menu_pos = $('.side').offset().top;
+        var menu_height = $('.side').height();
+        var scroll = $(window).scrollTop();
+        console.log('dark', dark_pos);
+        console.log('menu', menu_pos);
+        console.log('scroll', scroll);
+
+        if (menu_pos > dark_pos && menu_pos < (dark_pos + dark_height)) {
+            $('.side').addClass('nav_white');
+            $('.side').removeClass('nav_black');
+        } else {
+            $('.side').removeClass('nav_black');
+            $('.side').addClass('nav_white');
+        }
+
+    })
+})
