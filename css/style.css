@@ -530,6 +530,24 @@ li {
     margin-left: 1rem;
 }
 
+ul.availability {
+    list-style: none;
+}
+
+ul.availability li::before {
+    content: "\2022";
+    color: #DE5F5F;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.availability span {
+    text-decoration-style: dotted;
+    color: #DE5F5F;
+}
+
 p a {
     font-weight: bold;
     color: inherit;
