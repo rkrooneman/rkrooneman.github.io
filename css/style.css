@@ -438,7 +438,8 @@ h4 a::after,
 }
 
 h2 span a::after {
-    border-bottom: .25rem solid #de5f5f;;
+    border-bottom: .25rem solid #de5f5f;
+    ;
 }
 
 a:hover::after,
@@ -523,6 +524,10 @@ p {
     p {
         font-size: .875rem;
     }
+}
+
+li {
+    margin-left: 1rem;
 }
 
 p a {
