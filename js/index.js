@@ -79,11 +79,11 @@ $(document).ready(function () {
         console.log('scroll', scroll);
 
         if (menu_pos > dark_pos && menu_pos < (dark_pos + dark_height)) {
-            $('.side').addClass('nav__white');
-            $('.side').removeClass('nav__black');
+            $('.side').addClass('nav__black');
+            $('.side').removeClass('nav__white');
         } else {
-            $('.side').removeClass('nav__black');
-            $('.side').addClass('nav__white');
+            $('.side').removeClass('nav__white');
+            $('.side').addClass('nav__black');
         }
 
     })
