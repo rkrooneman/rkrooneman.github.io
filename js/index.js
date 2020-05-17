@@ -100,6 +100,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var dark_pos = $('.section__dark').offset().top;
         var dark_height = $('.section__dark').height();
+        var windowheight = $(window).height();
         var dark_pos2 = $('.section__dark2').offset().top;
         var dark_height2 = $('.section__dark2').height();
         var svg_height = $('.section__svg').height();
@@ -109,7 +110,7 @@ $(document).ready(function () {
 
         console.log('menu2', menu_pos2);
 
-        if (scroll > (dark_pos - 150) && menu_pos2 < (dark_pos + dark_height + 150)) {
+        if (scroll > (dark_pos - windowheight) && menu_pos2 < (dark_pos + dark_height + windowheight)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
         } else if (scroll > (dark_pos2 - svg_height) && menu_pos2 < (dark_pos2 + dark_height2 + svg_height)) {
