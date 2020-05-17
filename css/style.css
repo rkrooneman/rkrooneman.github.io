@@ -161,10 +161,12 @@ a {
 
 .side .top.nav__white, .side .bottom.nav__white  {
     color: #fff !important;
+    fill: #fff;
 }
 
 .side top.nav__black, .side bottom.nav__black {
     color: rgba(0, 0, 0, 0.5) !important;
+    fill: rgba(0, 0, 0, 0.5);
 }
 
 .side .side__inner {
