@@ -110,10 +110,10 @@ $(document).ready(function () {
 
         console.log('menu2', menu_pos2);
 
-        if (scroll > (dark_pos - windowheight) && menu_pos2 < (dark_pos + dark_height + windowheight)) {
+        if (scroll > (dark_pos - windowheight) && menu_pos2 < (dark_pos + dark_height)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
-        } else if (scroll > (dark_pos2 - svg_height) && menu_pos2 < (dark_pos2 + dark_height2 + svg_height)) {
+        } else if (scroll > (dark_pos2 - windowheight) && menu_pos2 < (dark_pos2 + dark_height2)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
         } else {
