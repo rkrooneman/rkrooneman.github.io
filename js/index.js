@@ -24,18 +24,30 @@ $(document).ready(function () {
 //    var random__interest1 = Math.floor(Math.random() * textArray.length);
 //    var random__interest2 = Math.floor(Math.random() * textArray.length);
 //    var random__interest3 = Math.floor(Math.random() * textArray.length);
+        
     console.log(arr);    
     console.log('interest1', textArray[arr[0]]);
     console.log('interest2', textArray[arr[1]]);
     console.log('interest3', textArray[arr[2]]);
     
-    $('.interest1').text(textArray[arr[0]]);
-    $('.interest2').text(textArray[arr[1]]);
-    $('.interest3').text(textArray[arr[2]]);
+//    $('.interest1').text(textArray[arr[0]]);
+//    $('.interest2').text(textArray[arr[1]]);
+//    $('.interest3').text(textArray[arr[2]]);
+    
+    var checkContents = setInterval(function(){
+    if ($(".interest1").length > 0){ 
+        $('.interest1').text(textArray[arr[0]]);
+    } else if ($(".interest2").length > 0) {
+        $('.interest2').text(textArray[arr[1]]);
+    } else if ($(".interest3").length > 0) {
+        $('.interest3').text(textArray[arr[2]]);
+    }
+    
+    }, 1000);
     
     }
     
-    setInterval(randominterest, 1500);
+//    setInterval(randominterest, 1500);
 });
 
 $(document).ready(function () {
