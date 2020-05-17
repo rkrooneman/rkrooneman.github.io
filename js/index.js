@@ -23,13 +23,19 @@ $(document).ready(function () {
         console.log('interest2', textArray[random__interest2]);
         console.log('interest3', textArray[random__interest3]);
 
-        $('.interest1').text(textArray[random__interest1]);
-        $('.interest2').text(textArray[random__interest2]);
-        $('.interest3').text(textArray[random__interest3]);
+        $('.interest1').ready(function () {
+            $(this).text(textArray[random__interest1]);
+        });
+        $('.interest2').ready(function () {
+            $(this).text(textArray[random__interest2]);
+        });
+        $('.interest3').ready(function () {
+            $(this).text(textArray[random__interest3]);
+        });
 
     }
 
-    setInterval(randominterest, 2000);
+//    setInterval(randominterest, 2000);
 });
 
 $(document).ready(function () {
