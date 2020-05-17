@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     }
 
-    setInterval(randominterest, 500);
+    setInterval(randominterest, 1500);
 });
 
 $(document).ready(function () {
