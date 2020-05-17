@@ -14,21 +14,25 @@ $(document).ready(function () {
     '👨🏼‍💻',
     '🎧',
     ];
-
-    var random__interest1 = Math.floor(Math.random() * textArray.length);
-    var random__interest2 = Math.floor(Math.random() * textArray.length);
-    var random__interest3 = Math.floor(Math.random() * textArray.length);
         
-    console.log('interest1', textArray[random__interest1]);
-    console.log('interest2', textArray[random__interest2]);
-    console.log('interest3', textArray[random__interest3]);
+    var arr = [];
+    while(arr.length < 3) {
+    var r = Math.floor(Math.random() * textArray.length) + 1;
+    if(arr.indexOf(r) === -1) arr.push(r);
+    }
+        
+//    var random__interest1 = Math.floor(Math.random() * textArray.length);
+//    var random__interest2 = Math.floor(Math.random() * textArray.length);
+//    var random__interest3 = Math.floor(Math.random() * textArray.length);
+        
+    console.log('interest1', textArray[arr[1]]);
+    console.log('interest2', textArray[arr[2]]);
+    console.log('interest3', textArray[arr[3]]);
     
     $('.interest1').text(textArray[random__interest1]);
     $('.interest2').text(textArray[random__interest2]);
     $('.interest3').text(textArray[random__interest3]);
-
-    
-
+        
     setInterval(randominterest, 1500);
 });
 
