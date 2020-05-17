@@ -64,7 +64,7 @@ $(document).ready(function () {
     console.log('interest2', textArray[arr[1]]);
     console.log('interest3', textArray[arr[2]]);
     
-    function checkcontent() {
+    setInterval(function checkcontent() {
                   
     if ($(".interest1").length > 0){ 
         $('.interest1').text(textArray[arr[0]]);
@@ -74,7 +74,7 @@ $(document).ready(function () {
         $('.interest3').text(textArray[arr[2]]);
     }
     
-    }
+    }, 1000); 
     
 });
 
