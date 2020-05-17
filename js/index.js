@@ -33,6 +33,10 @@ $(document).ready(function () {
 //    $('.interest1').text(textArray[arr[0]]);
 //    $('.interest2').text(textArray[arr[1]]);
 //    $('.interest3').text(textArray[arr[2]]);
+        
+    }
+    
+    setInterval(randominterest, 1500);
     
     var checkContents = setInterval(function(){
     if ($(".interest1").length > 0){ 
@@ -45,9 +49,6 @@ $(document).ready(function () {
     
     }, 1000);
     
-    }
-    
-//    setInterval(randominterest, 1500);
 });
 
 $(document).ready(function () {
