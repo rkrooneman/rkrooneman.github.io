@@ -1,6 +1,46 @@
-$(document).ready(function () {
-    function randominterest() {
-        var textArray = [
+//$(document).ready(function () {
+//    function randominterest() {
+//        var textArray = [
+//    '⛷',
+//    '🏂',
+//    '🏋️‍♂️',
+//    '🏑',
+//    '🎬',
+//    '🛫',
+//    '⛵️',
+//    '🏄',
+//    '👨‍🍳',
+//    '👨‍👩‍👧‍👦',
+//    '👨🏼‍💻',
+//    '🎧',
+//    ];
+//
+//        var random__interest1 = Math.floor(Math.random() * textArray.length);
+//        var random__interest2 = Math.floor(Math.random() * textArray.length);
+//        var random__interest3 = Math.floor(Math.random() * textArray.length);
+//
+//        console.log('interest1', textArray[random__interest1]);
+//        console.log('interest2', textArray[random__interest2]);
+//        console.log('interest3', textArray[random__interest3]);
+//
+//        $('.interest1').ready(function () {
+//            $(this).text(textArray[random__interest1]);
+//        });
+//        $('.interest2').ready(function () {
+//            $(this).text(textArray[random__interest2]);
+//        });
+//        $('.interest3').ready(function () {
+//            $(this).text(textArray[random__interest3]);
+//        });
+//
+//    }
+//
+//    setInterval(randominterest, 1500);
+//});
+
+
+
+var textArray = [
     '⛷',
     '🏂',
     '🏋️‍♂️',
@@ -15,28 +55,31 @@ $(document).ready(function () {
     '🎧',
     ];
 
-        var random__interest1 = Math.floor(Math.random() * textArray.length);
-        var random__interest2 = Math.floor(Math.random() * textArray.length);
-        var random__interest3 = Math.floor(Math.random() * textArray.length);
+var random__interest1 = Math.floor(Math.random() * textArray.length);
+var random__interest2 = Math.floor(Math.random() * textArray.length);
+var random__interest3 = Math.floor(Math.random() * textArray.length);
 
-        console.log('interest1', textArray[random__interest1]);
-        console.log('interest2', textArray[random__interest2]);
-        console.log('interest3', textArray[random__interest3]);
+console.log('interest1', textArray[random__interest1]);
+console.log('interest2', textArray[random__interest2]);
+console.log('interest3', textArray[random__interest3]);
 
-        $('.interest1').ready(function () {
-            $(this).text(textArray[random__interest1]);
-        });
-        $('.interest2').ready(function () {
-            $(this).text(textArray[random__interest2]);
-        });
-        $('.interest3').ready(function () {
-            $(this).text(textArray[random__interest3]);
-        });
 
+var checkIfExists = setInterval(function () {
+    var interest1_exists = $(".interest1");
+    var interest2_exists = $(".interest2");
+    var interest3_exists = $(".interest3");
+
+    if (interest1_exists) {
+        clearInterval(checkIfExists);
+        add_interest;
     }
+}, 25);
 
-//    setInterval(randominterest, 2000);
-});
+function add_interest() {
+    $('.interest1').text(textArray[random__interest1]);
+}
+
+
 
 $(document).ready(function () {
     function dateTime() {
