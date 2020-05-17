@@ -67,11 +67,11 @@ $(document).ready(function () {
     console.log('interest3', textArray[arr[2]]);
                   
     if ($(".interest1").length > 0){ 
-        $('.interest1').text(textArray[arr[0]]);
+        $('.interest1').one.text(textArray[arr[0]]);
     } else if ($(".interest2").length > 0) {
-        $('.interest2').text(textArray[arr[1]]);
+        $('.interest2').one.text(textArray[arr[1]]);
     } else if ($(".interest3").length > 0) {
-        $('.interest3').text(textArray[arr[2]]);
+        $('.interest3').one.text(textArray[arr[2]]);
     }
     
     }, 1000);
