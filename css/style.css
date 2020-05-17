@@ -200,6 +200,10 @@ a {
     color: black;
 }
 
+.krooneman__logo {
+    transform: rotate(90deg);
+}
+
 .side .bottom {
     top: auto;
     bottom: 75px;
