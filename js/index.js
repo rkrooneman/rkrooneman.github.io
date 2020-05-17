@@ -46,19 +46,47 @@ $(document).ready(function () {
         delay: 75,
     });
 
+    var textArray = [
+    '⛷',
+    '🏂',
+    '🏋️‍♂️',
+    '🏑',
+    '🎬',
+    '🛫',
+    '⛵️',
+    '🏄',
+    '👨‍🍳',
+    '👨‍👩‍👧‍👦',
+    '👨🏼‍💻',
+    '🎧',
+    ];
+    
+    var random__interest = Math.floor(Math.random() * textArray.length);
+    
+    $('.interest').append(random__interest);
+
     typewriter.typeString('Hello there...')
         .pauseFor(1500)
         .deleteAll()
         .typeString('How are you doing?')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('you can scroll down...')
+        .typeString('you could scroll down...')
         .pauseFor(1500)
         .deleteAll()
         .typeString('or just stay here...')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('how about some 🍣?')
+        .typeString('i love <span class="interest"></span>')
+        .pauseFor(1500)
+        .deleteAll()
+        .typeString('...and <span class="interest"></span>')
+        .pauseFor(1500)
+        .deleteAll()
+        .typeString('...also <span class="interest"></span>')
+        .pauseFor(1500)
+        .deleteAll()
+        .typeString('so how about some 🍣?')
         .pauseFor(1500)
         .deleteAll()
         .typeString('or just a cup of ☕?')
