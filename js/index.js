@@ -82,7 +82,7 @@ $(document).ready(function () {
         console.log('menu1', menu_pos1);
         console.log('scroll', scroll);
 
-        if (scroll > (dark_pos - svg_height) && menu_pos1 < (dark_pos + dark_height + 150)) {
+        if (scroll > (dark_pos - 150) && menu_pos1 < (dark_pos + dark_height + 150)) {
             $('.top').addClass('nav__white');
             $('.top').removeClass('nav__black');
         } else if (scroll > (dark_pos2 - svg_height) && menu_pos1 < (dark_pos2 + dark_height2 + svg_height)) {
