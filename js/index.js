@@ -39,7 +39,7 @@ $(document).ready(function () {
 //    setInterval(randominterest, 1500);
     
     var textArray = [
-    '⛷',
+    '🎮🏿',
     '🏂',
     '🏋️‍♂️',
     '🏑',
