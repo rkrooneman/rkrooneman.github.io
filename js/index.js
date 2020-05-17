@@ -74,7 +74,7 @@ $(document).ready(function () {
         $('.interest3').text(textArray[arr[2]]);
     }
     
-    }, 1000); 
+    }, 500); 
     
 });
 
