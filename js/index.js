@@ -39,14 +39,8 @@ $(document).ready(function () {
 
     setInterval(dateTime, 100);
 
-
-    var app = document.getElementById('app');
-    var typewriter = new Typewriter(app, {
-        loop: false,
-        delay: 75,
-    });
-
-    var textArray = [
+    function interest() {
+        var textArray = [
     '⛷',
     '🏂',
     '🏋️‍♂️',
@@ -60,10 +54,26 @@ $(document).ready(function () {
     '👨🏼‍💻',
     '🎧',
     ];
-    
-    var random__interest = Math.floor(Math.random() * textArray.length);
-    
-    $('.interest').append(random__interest);
+
+        var random__interest1 = Math.floor(Math.random() * textArray.length);
+        var random__interest2 = Math.floor(Math.random() * textArray.length);
+        var random__interest3 = Math.floor(Math.random() * textArray.length);
+        
+        console.log('interest1', random__interest1);
+        console.log('interest2', random__interest2);
+        console.log('interest3', random__interest3);
+
+        $('.interest1').append(random__interest);
+        $('.interest2').append(random__interest);
+        $('.interest3').append(random__interest);
+
+    }
+
+    var app = document.getElementById('app');
+    var typewriter = new Typewriter(app, {
+        loop: false,
+        delay: 75,
+    });
 
     typewriter.typeString('Hello there...')
         .pauseFor(1500)
@@ -77,13 +87,13 @@ $(document).ready(function () {
         .typeString('or just stay here...')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('i love <span class="interest"></span>')
+        .typeString('i love <span class="interest1"></span>')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('...and <span class="interest"></span>')
+        .typeString('...and <span class="interest2"></span>')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('...also <span class="interest"></span>')
+        .typeString('...also <span class="interest3"></span>')
         .pauseFor(1500)
         .deleteAll()
         .typeString('so how about some 🍣?')
