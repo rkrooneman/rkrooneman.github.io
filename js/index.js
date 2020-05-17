@@ -22,9 +22,9 @@ $(document).ready(function () {
     console.log('interest2', textArray[random__interest2]);
     console.log('interest3', textArray[random__interest3]);
 
-    $('.interest1').append(textArray[random__interest1]);
-    $('.interest2').append(textArray[random__interest2]);
-    $('.interest3').append(textArray[random__interest3]);
+    $('.interest1').text(textArray[random__interest1]);
+    $('.interest2').text(textArray[random__interest2]);
+    $('.interest3').text(textArray[random__interest3]);
 
 });
 
