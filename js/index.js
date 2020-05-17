@@ -1,6 +1,46 @@
 $(document).ready(function () {
-    function randominterest() {
-        var textArray = [
+//    function randominterest() {
+//        var textArray = [
+//    '⛷',
+//    '🏂',
+//    '🏋️‍♂️',
+//    '🏑',
+//    '🎬',
+//    '🛫',
+//    '⛵️',
+//    '🏄',
+//    '👨‍🍳',
+//    '👨‍👩‍👧‍👦',
+//    '👨🏼‍💻',
+//    '🎧',
+//    ];
+//        
+//    var arr = [];
+//    while(arr.length < 3) {
+//    var r = Math.floor(Math.random() * textArray.length);
+//    if(arr.indexOf(r) === -1) arr.push(r);
+//    };
+//        
+////    var random__interest1 = Math.floor(Math.random() * textArray.length);
+////    var random__interest2 = Math.floor(Math.random() * textArray.length);
+////    var random__interest3 = Math.floor(Math.random() * textArray.length);
+//        
+//    console.log(arr);    
+//    console.log('interest1', textArray[arr[0]]);
+//    console.log('interest2', textArray[arr[1]]);
+//    console.log('interest3', textArray[arr[2]]);
+//    
+////    $('.interest1').text(textArray[arr[0]]);
+////    $('.interest2').text(textArray[arr[1]]);
+////    $('.interest3').text(textArray[arr[2]]);
+//        
+//    }
+//    
+//    setInterval(randominterest, 1500);
+    
+    var checkContents = setInterval(function(){
+    
+    var textArray = [
     '⛷',
     '🏂',
     '🏋️‍♂️',
@@ -21,24 +61,11 @@ $(document).ready(function () {
     if(arr.indexOf(r) === -1) arr.push(r);
     };
         
-//    var random__interest1 = Math.floor(Math.random() * textArray.length);
-//    var random__interest2 = Math.floor(Math.random() * textArray.length);
-//    var random__interest3 = Math.floor(Math.random() * textArray.length);
-        
     console.log(arr);    
     console.log('interest1', textArray[arr[0]]);
     console.log('interest2', textArray[arr[1]]);
     console.log('interest3', textArray[arr[2]]);
-    
-//    $('.interest1').text(textArray[arr[0]]);
-//    $('.interest2').text(textArray[arr[1]]);
-//    $('.interest3').text(textArray[arr[2]]);
-        
-    }
-    
-    setInterval(randominterest, 1500);
-    
-    var checkContents = setInterval(function(){
+                  
     if ($(".interest1").length > 0){ 
         $('.interest1').text(textArray[arr[0]]);
     } else if ($(".interest2").length > 0) {
