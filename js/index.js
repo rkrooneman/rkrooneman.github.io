@@ -19,7 +19,7 @@ $(document).ready(function () {
     while(arr.length < 3) {
     var r = Math.floor(Math.random() * textArray.length) + 1;
     if(arr.indexOf(r) === -1) arr.push(r);
-    }
+    };
         
 //    var random__interest1 = Math.floor(Math.random() * textArray.length);
 //    var random__interest2 = Math.floor(Math.random() * textArray.length);
@@ -32,7 +32,9 @@ $(document).ready(function () {
     $('.interest1').text(textArray[random__interest1]);
     $('.interest2').text(textArray[random__interest2]);
     $('.interest3').text(textArray[random__interest3]);
-        
+    
+    }
+    
     setInterval(randominterest, 1500);
 });
 
