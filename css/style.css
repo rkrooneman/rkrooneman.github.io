@@ -195,7 +195,7 @@ a {
 }
 
 .side .top {
-    top: 75px;
+    top: 100px;
     text-align: right;
     color: black;
 }
@@ -203,6 +203,8 @@ a {
 .krooneman__logo {
     transform: rotate(90deg);
     fill: #000;
+    margin-top: 8px;
+    position: absolute;
 }
 
 .side .bottom {
