@@ -159,11 +159,11 @@ a {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.side .top.nav__white {
+.side .top.nav__white, .side .bottom.nav__white  {
     color: #fff !important;
 }
 
-.side top.nav__black {
+.side top.nav__black, .side bottom.nav__black {
     color: rgba(0, 0, 0, 0.5) !important;
 }
 
