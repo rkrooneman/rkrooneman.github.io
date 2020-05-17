@@ -84,19 +84,19 @@ $(document).ready(function () {
 
         if (scroll > (dark_pos - 150) && menu_pos1 < (dark_pos + dark_height + 150)) {
             $('.top').addClass('nav__white');
-            $('#krooneman__logo').addClass('nav__white');
+            $('svg#krooneman__logo').addClass('nav__white');
             $('.top').removeClass('nav__black');
-            $('#krooneman__logo').removeClass('nav__black');
+            $('svg#krooneman__logo').removeClass('nav__black');
         } else if (scroll > (dark_pos2 - 150) && menu_pos1 < (dark_pos2 + dark_height2 + 150)) {
             $('.top').addClass('nav__white');
-            $('#krooneman__logo').addClass('nav__white');
+            $('svg#krooneman__logo').addClass('nav__white');
             $('.top').removeClass('nav__black');
-            $('#krooneman__logo').removeClass('nav__black');
+            $('svg#krooneman__logo.nav__white').removeClass('nav__black');
         } else {
             $('.top').removeClass('nav__white');
-            $('#krooneman__logo').removeClass('nav__white');
+            $('svg#krooneman__logo').removeClass('nav__white');
             $('.top').addClass('nav__black');
-            $('#krooneman__logo').addClass('nav__black');
+            $('svg#krooneman__logo').addClass('nav__black');
         }
 
     });
