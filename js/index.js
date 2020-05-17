@@ -38,8 +38,6 @@ $(document).ready(function () {
 //    
 //    setInterval(randominterest, 1500);
     
-    var checkContents = setTimeout(function(){
-    
     var textArray = [
     '⛷',
     '🏂',
@@ -59,12 +57,14 @@ $(document).ready(function () {
     while(arr.length < 3) {
     var r = Math.floor(Math.random() * textArray.length);
     if(arr.indexOf(r) === -1) arr.push(r);
-    };
-        
+    }
+    
     console.log(arr);    
     console.log('interest1', textArray[arr[0]]);
     console.log('interest2', textArray[arr[1]]);
     console.log('interest3', textArray[arr[2]]);
+    
+    function checkcontent() {
                   
     if ($(".interest1").length > 0){ 
         $('.interest1').text(textArray[arr[0]]);
@@ -74,7 +74,7 @@ $(document).ready(function () {
         $('.interest3').text(textArray[arr[2]]);
     }
     
-    }, 1000);
+    }
     
 });
 
