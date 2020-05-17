@@ -88,7 +88,7 @@ $(document).ready(function () {
             $('.top').removeClass('nav__black');
         } else if (scroll > (dark_pos2 - 150) && menu_pos1 < (dark_pos2 + dark_height2 + 150)) {
             $('.top').addClass('nav__white');
-            $('#krooneman__logo').attrtr('class', 'nav__black nav__white');
+            $('#krooneman__logo').attr('class', 'nav__black nav__white');
             $('.top').removeClass('nav__black');
         } else {
             $('.top').removeClass('nav__white');
