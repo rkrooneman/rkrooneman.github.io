@@ -39,36 +39,6 @@ $(document).ready(function () {
 
     setInterval(dateTime, 100);
 
-    function interest() {
-        var textArray = [
-    '⛷',
-    '🏂',
-    '🏋️‍♂️',
-    '🏑',
-    '🎬',
-    '🛫',
-    '⛵️',
-    '🏄',
-    '👨‍🍳',
-    '👨‍👩‍👧‍👦',
-    '👨🏼‍💻',
-    '🎧',
-    ];
-
-        var random__interest1 = Math.floor(Math.random() * textArray.length);
-        var random__interest2 = Math.floor(Math.random() * textArray.length);
-        var random__interest3 = Math.floor(Math.random() * textArray.length);
-        
-        console.log('interest1', random__interest1);
-        console.log('interest2', random__interest2);
-        console.log('interest3', random__interest3);
-
-        $('.interest1').append(random__interest);
-        $('.interest2').append(random__interest);
-        $('.interest3').append(random__interest);
-
-    }
-
     var app = document.getElementById('app');
     var typewriter = new Typewriter(app, {
         loop: false,
@@ -163,4 +133,34 @@ $(document).ready(function () {
         }
 
     });
+});
+
+$(document).ready(function () {
+    var textArray = [
+    '⛷',
+    '🏂',
+    '🏋️‍♂️',
+    '🏑',
+    '🎬',
+    '🛫',
+    '⛵️',
+    '🏄',
+    '👨‍🍳',
+    '👨‍👩‍👧‍👦',
+    '👨🏼‍💻',
+    '🎧',
+    ];
+
+    var random__interest1 = Math.floor(Math.random() * textArray.length);
+    var random__interest2 = Math.floor(Math.random() * textArray.length);
+    var random__interest3 = Math.floor(Math.random() * textArray.length);
+
+    console.log('interest1', random__interest1);
+    console.log('interest2', random__interest2);
+    console.log('interest3', random__interest3);
+
+    $('.interest1').append(random__interest);
+    $('.interest2').append(random__interest);
+    $('.interest3').append(random__interest);
+
 });
