@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    function randominterest {
+    function randominterest() {
         var textArray = [
     '⛷',
     '🏂',
