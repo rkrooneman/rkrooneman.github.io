@@ -1,4 +1,34 @@
 $(document).ready(function () {
+    var textArray = [
+    '⛷',
+    '🏂',
+    '🏋️‍♂️',
+    '🏑',
+    '🎬',
+    '🛫',
+    '⛵️',
+    '🏄',
+    '👨‍🍳',
+    '👨‍👩‍👧‍👦',
+    '👨🏼‍💻',
+    '🎧',
+    ];
+
+    var random__interest1 = Math.floor(Math.random() * textArray.length);
+    var random__interest2 = Math.floor(Math.random() * textArray.length);
+    var random__interest3 = Math.floor(Math.random() * textArray.length);
+
+    console.log('interest1', textArray[random__interest1]);
+    console.log('interest2', textArray[random__interest2]);
+    console.log('interest3', textArray[random__interest3]);
+
+    $('.interest1').append(textArray[random__interest1]);
+    $('.interest2').append(textArray[random__interest2]);
+    $('.interest3').append(textArray[random__interest3]);
+
+});
+
+$(document).ready(function () {
     function dateTime() {
         var format = "";
         var ndate = new Date();
@@ -133,34 +163,4 @@ $(document).ready(function () {
         }
 
     });
-});
-
-$(document).ready(function () {
-    var textArray = [
-    '⛷',
-    '🏂',
-    '🏋️‍♂️',
-    '🏑',
-    '🎬',
-    '🛫',
-    '⛵️',
-    '🏄',
-    '👨‍🍳',
-    '👨‍👩‍👧‍👦',
-    '👨🏼‍💻',
-    '🎧',
-    ];
-
-    var random__interest1 = Math.floor(Math.random() * textArray.length);
-    var random__interest2 = Math.floor(Math.random() * textArray.length);
-    var random__interest3 = Math.floor(Math.random() * textArray.length);
-
-    console.log('interest1', textArray[random__interest1]);
-    console.log('interest2', textArray[random__interest2]);
-    console.log('interest3', textArray[random__interest3]);
-
-    $('.interest1').append(textArray[random__interest1]);
-    $('.interest2').append(textArray[random__interest2]);
-    $('.interest3').append(textArray[random__interest3]);
-
 });
