@@ -16,7 +16,7 @@ $(document).ready(function () {
     ];
         
     var arr = [];
-    while(arr.length < 3) {
+    while(arr.length < 4) {
     var r = Math.floor(Math.random() * textArray.length) + 1;
     if(arr.indexOf(r) === -1) arr.push(r);
     };
