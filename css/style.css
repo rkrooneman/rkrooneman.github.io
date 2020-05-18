@@ -330,6 +330,12 @@ a {
     color: #181818;
 }
 
+.section.section--hello svg.bottom {
+    fill: #FDEF52;
+    top: auto;
+    bottom: -50px;
+}
+
 .section.section--intro {
     background-color: white;
     color: #555;
