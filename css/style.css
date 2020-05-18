@@ -210,6 +210,10 @@ a {
     position: absolute;
 }
 
+.side__icon {
+    fill: #000;
+}
+
 .side .bottom {
     top: auto;
     bottom: 75px;
