@@ -581,6 +581,11 @@ p a:hover {
 }
 */
 
+#skill__python, #skill__nodejs {
+    display: none;
+}
+
+
 .lead {
     display: block;
     font-size: .875rem;
