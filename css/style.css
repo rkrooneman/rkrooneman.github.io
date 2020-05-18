@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    font-display: swap;
     color: #555;
     font-size: 16px;
     scroll-behavior: smooth;
@@ -397,6 +398,7 @@ h4,
 .h5 {
     font-family: "nimbus-sans", sans-serif;
     font-weight: bold;
+    font-display: swap;
     margin: 0 0 1em;
     line-height: 1;
     letter-spacing: -1px;
