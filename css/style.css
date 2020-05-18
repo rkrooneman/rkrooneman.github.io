@@ -238,6 +238,8 @@ a {
     display: block;
     height: 2px;
     background: black;
+    -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
+    transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
 }
 
 .anchornav li:last-child::after {
@@ -259,7 +261,7 @@ a {
 .anchornav a span {
     display: inline;
     padding: .5em 0 0;
-    opacity: .3;
+/*    opacity: .3;*/
     letter-spacing: normal;
     font-family: 'Lato', sans-serif;
     text-transform: none;
@@ -272,6 +274,10 @@ a {
 .anchornav a:hover span {
     opacity: 1;
     color: #181818;
+}
+
+.anchornav a:hover .anchornav li::after {
+    width: 9rem;
 }
 
 .interest1 {}
@@ -452,10 +458,8 @@ h4 a::after,
     width: 0;
     position: absolute;
     left: 0;
-    -webkit-transition: all .25s ease-in;
-    -moz-transition: all .25s ease-in;
-    -o-transition: all .25s ease-in;
-    transition: all .25s ease-in;
+    -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
+    transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
 }
 
 h2 span a::after {
