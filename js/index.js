@@ -202,12 +202,18 @@ $(document).ready(function () {
         if (scroll > (dark_pos - windowheight) && menu_pos2 < (dark_pos + dark_height)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
+            $('.side__icon').addClass('nav__white');
+            $('.side__icon').removeClass('nav__black');
         } else if (scroll > (dark_pos2 - windowheight) && menu_pos2 < (dark_pos2 + dark_height2)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
+            $('.side__icon').addClass('nav__white');
+            $('.side__icon').removeClass('nav__black');
         } else {
             $('.bottom').removeClass('nav__white');
             $('.bottom').addClass('nav__black');
+            $('.side__icon').removeClass('nav__white');
+            $('.side__icon').addClass('nav__black');
         }
 
     });
