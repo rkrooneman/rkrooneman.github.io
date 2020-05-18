@@ -180,19 +180,3 @@ $(document).ready(function () {
 
     });
 });
-
-(function($){
-	function addSwipeTo(selector){
-        $(selector).swipe("destroy");
-        $(selector).swipe( {
-            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-	            if(direction=='left') {
-	            	$(this).carousel('next');
-				} else if(direction=='right') {
-	                $(this).carousel('prev');
-				}
-            }
-		});
-	}
-	addSwipeTo(".carousel");
-})(jQuery);
