@@ -651,30 +651,21 @@ p a:hover {
 	min-height: 100%;
 	margin-bottom: 7px;
 	overflow: hidden;
-}
-.hero-figure-one {
-	background: url(http://picsum.photos/1920/1080/?image=603);
-}
-.hero-figure-two {
-	background: url(http://picsum.photos/1920/1080/?image=605);
-}
-.hero-figure-three {
-	background: url(http://picsum.photos/1920/1080/?image=606);
-}
-.hero-figure-fourth {
-	background: url(http://picsum.photos/1920/1080/?image=609);
-}
+} 
+
 .gd-hero {
 	background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 480px;  
 }
+
 @media only screen and (min-width: 768px) {
 	.gd-hero {
 		height: 600px;
 	}
 }
+
 .carousel-controls {
 	width: 100%;
 	height: auto;
@@ -688,11 +679,13 @@ p a:hover {
     transform: translate(-50%, -50%);
     z-index: 2;
 }
+
 .carousel-controls a {
 	width: 80px;
 	height: 100%;
 	display: block;
 }
+
 .carousel-controls a.prev {
 	padding-left: 15px;
 	text-align: left;
@@ -703,10 +696,12 @@ p a:hover {
   	-o-transition: all 300ms ease;
   	transition: all 300ms ease;		
 }
+
 .carousel-controls a.prev:hover, .carousel-controls a.prev:active {
 	padding-left: 0;
 	opacity: 1;
 }
+
 .carousel-controls a.next {
 	padding-right: 15px;
 	text-align: right;
@@ -717,15 +712,18 @@ p a:hover {
   	-o-transition: all 300ms ease;
   	transition: all 300ms ease;			
 }
+
 .carousel-controls a.next:hover, .carousel-controls a.next:active {
 	padding-right: 0;
 	opacity: 1;
 }
+
 .carousel-controls .hero-section i {
     font-size: 52px;
     font-size: 5.2rem;
     color: #fff;
 }
+
 .hero-section .carousel-controls i{
 	font-size: 52px;
 	font-size: 5.2rem;
@@ -737,13 +735,16 @@ p a:hover {
 		font-size: 8.2rem;
 	}
 }
+
 .carousel-indicators {
 	font-size: 0;
 }
+
 .carousel-indicators li.indicators.active {
     margin: 0;
     opacity: .3;
 }
+
 .carousel-indicators li.indicators {
     width: 30px;
     height: 7px;
