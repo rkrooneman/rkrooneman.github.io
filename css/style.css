@@ -298,7 +298,7 @@ a {
     flex-flow: column nowrap;
     -webkit-box-align: stretch;
     align-items: stretch;
-    min-height: 100vh;
+    min-height: calc(100vh - 50px);
     width: 100%;
     align-content: center;
     padding: 20vh 50px 20vh 75px;
@@ -334,6 +334,7 @@ a {
     fill: #FDEF52;
     top: auto;
     bottom: -50px;
+    z-index: 3;
 }
 
 .section.section--intro {
