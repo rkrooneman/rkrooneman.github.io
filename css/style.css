@@ -533,7 +533,7 @@ h2,
 .pre span {
     font-size: .9em;
     margin-right: .4em;
-    opacity: .5;
+/*    opacity: .5;*/
 }
 
 .pre:hover {
