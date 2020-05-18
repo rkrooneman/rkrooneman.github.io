@@ -51,6 +51,7 @@ $(document).ready(function () {
     '👨‍👩‍👧‍👦',
     '👨🏼‍💻',
     '🎧',
+    '🍣',
     ];
         
     var arr = [];
@@ -137,19 +138,16 @@ $(document).ready(function () {
         .typeString('or just stay here...')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('i love <span class="interest1"></span>')
+        .typeString('did you know I love <span class="interest1"></span>?')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('...and <span class="interest2"></span>')
+        .typeString('...and I really enjoy <span class="interest2"></span>')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('...also <span class="interest3"></span>')
+        .typeString('...and ofcourse <span class="interest3"></span>')
         .pauseFor(1500)
         .deleteAll()
-        .typeString('so how about some 🍣?')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('or just a cup of ☕?')
+        .typeString('how about a cup of ☕?')
         .pauseFor(1500)
         .start();
 
