@@ -206,7 +206,7 @@ $(document).ready(function () {
     }
 
     var xp2_Function = function () {
-        if (("#exp__1").is(":visible")) {
+        if ($("#exp__1").is(":visible")) {
             $("#exp__a").css({
                 'background': 'linear-gradient(to right, #717171 50%, #bbb 50%)',
                 'background-position': 'left bottom',
