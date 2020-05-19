@@ -193,7 +193,7 @@ $(document).ready(function () {
         }
     });
 
-    function xp1_Function() {
+    var xp1_Function = function() {
         $("#exp__1").show();
         $("#exp__1").fadeTo("slow", 1);
         $("#exp__2").hide();
@@ -201,8 +201,6 @@ $(document).ready(function () {
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
     }
-    
-    var xp1_Fuction = 'xp1_Function';
 
     var xp2_Function = function() {
         $("#exp__1").hide();
