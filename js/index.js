@@ -211,6 +211,7 @@ $(document).ready(function () {
         $("#exp__2").css("opacity", "0");
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
+        $(".control__dot").toggleClass("dot__active");
     }
 
     var xp2_Function = function () {
@@ -220,6 +221,7 @@ $(document).ready(function () {
         $("#exp__2").fadeTo("slow", 1);
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
+        $(".control__dot").toggleClass("dot__active");
     };
 
     var xp3_Function = function () {
@@ -229,6 +231,7 @@ $(document).ready(function () {
         $("#exp__2").css("opacity", "0");
         $("#exp__3").show();
         $("#exp__3").fadeTo("slow", 1);
+        $(".control__dot").toggleClass("dot__active");
     };
     
     $(".control__dot").click(dot_Function);
@@ -247,10 +250,8 @@ $(document).ready(function () {
 
 
     $("#exp__2").touchwipe({
-        wipeLeft: dot_Function,
-//        wipeLeft: xp3_Function, 
-        wipeRight: dot_Function,
-//        wipeRight: xp1_Function,
+        wipeLeft: xp3_Function, 
+        wipeRight: xp1_Function,
         min_move_x: 20,
         min_move_y: 20,
         preventDefaultEvents: true
