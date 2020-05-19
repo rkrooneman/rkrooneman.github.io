@@ -188,8 +188,8 @@ $(document).ready(function () {
                 .addClass("dot__active")
                 .removeClass("dot__inactive");
             $(".dot__active")
-                .addClass(".dot__inactive")
-                .removeClass(".dot__acive");
+                .addClass("dot__inactive")
+                .removeClass("dot__acive");
         } 
     });
 });
