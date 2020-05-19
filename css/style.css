@@ -673,7 +673,7 @@ p a:hover {
 
 .control__dot {
     cursor: pointer;
-    height: 10px;
+    height: .25rem;
     width: 50px;
 /*    margin: 0 5px;*/
     background-color: #717171;
