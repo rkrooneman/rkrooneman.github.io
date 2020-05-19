@@ -182,12 +182,10 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".control__dot").click(function () {
-        if (this).hasClass("dot__inactive") {
-            $(this).addClass("dot__active");
-            $(this).removeClass("dot__inactive");
-//            $(".exp__1").addClass("exp__active");
-//            $(".exp__1").removeClass("exp__inactive");
-        }
+    $(".dot__inactive").click(function () {
+        $(this).addClass("dot__active");
+        $(this).removeClass("dot__inactive");
+        //            $(".exp__1").addClass("exp__active");
+        //            $(".exp__1").removeClass("exp__inactive");
     });
 });
