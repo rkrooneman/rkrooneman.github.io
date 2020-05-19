@@ -199,7 +199,7 @@ $(document).ready(function () {
         $("#exp__2").hide();
         $("#exp__2").fadeTo( "slow", 0 );
         $("#exp__3").hide();
-        $("#exp__3")..fadeTo( "slow", 0 );
+        $("#exp__3").fadeTo( "slow", 0 );
     });
     
     $("#exp__b").click(function () {
