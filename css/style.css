@@ -160,12 +160,22 @@ a {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.side .top.nav__white, .side .bottom.nav__white, svg#krooneman__logo.nav__white, svg#icon__mail.nav__white, svg#icon__github.nav__white, svg#icon__codepen.nav__white  {
+.side .top.nav__white,
+.side .bottom.nav__white,
+svg#krooneman__logo.nav__white,
+svg#icon__mail.nav__white,
+svg#icon__github.nav__white,
+svg#icon__codepen.nav__white {
     color: #fff !important;
     fill: #fff !important;
 }
 
-.side top.nav__black, .side bottom.nav__black, svg#krooneman__logo.nav__black, svg#icon__mail.nav__black, svg#icon__github.nav__black, svg#icon__codepen.nav__black {
+.side top.nav__black,
+.side bottom.nav__black,
+svg#krooneman__logo.nav__black,
+svg#icon__mail.nav__black,
+svg#icon__github.nav__black,
+svg#icon__codepen.nav__black {
     color: rgba(0, 0, 0, 0.5) !important;
     fill: #000;
 }
@@ -266,7 +276,7 @@ a {
 .anchornav a span {
     display: inline;
     padding: .5em 0 0;
-/*    opacity: .3;*/
+    /*    opacity: .3;*/
     letter-spacing: normal;
     font-family: 'Lato', sans-serif;
     text-transform: none;
@@ -286,7 +296,9 @@ a {
 }
 
 .interest1 {}
+
 .interest2 {}
+
 .interest3 {}
 
 .section {
@@ -546,7 +558,7 @@ h2,
 .pre span {
     font-size: .9em;
     margin-right: .4em;
-/*    opacity: .5;*/
+    /*    opacity: .5;*/
 }
 
 .pre:hover {
@@ -598,7 +610,8 @@ p a:hover {
 }
 */
 
-#skill__python, #skill__nodejs {
+#skill__python,
+#skill__nodejs {
     display: none;
 }
 
@@ -652,4 +665,21 @@ p a:hover {
 .exp__inactive {
     display: none;
     opacity: 0;
+}
+
+.control__dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
+    transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
+}
+
+.dot__active,
+control__dot:hover {
+    background-color: #717171;
 }
