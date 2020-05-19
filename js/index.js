@@ -192,4 +192,20 @@ $(document).ready(function () {
                 .removeClass("dot__active");
         } 
     });
+    
+    $("#exp__a").click(function () {
+        $("#exp__1").show();
+        $("#exp__1").siblings().hide();
+    });
+    
+    $("#exp__b").click(function () {
+        $("#exp__2").show();
+        $("#exp__2").siblings().hide();
+    });
+    
+    $("#exp__c").click(function () {
+        $("#exp__3").show();
+        $("#exp__3").siblings().hide();
+    });
+    
 });
