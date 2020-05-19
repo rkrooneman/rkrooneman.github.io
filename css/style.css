@@ -668,6 +668,7 @@ p a:hover {
 .slide__controls {
     max-width: 800px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .control__dot {
