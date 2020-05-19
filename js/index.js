@@ -182,17 +182,17 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-//    $(".control__dot").click(function () {
-//        if ($(".control__dot").hasClass("dot__inactive")) {
-//            $(this)
-//                .addClass("dot__active")
-//                .removeClass("dot__inactive");
-//            $(this).siblings()
-//                .addClass("dot__inactive")
-//                .removeClass("dot__active");
-//        }
-//    });
-    
+    //    $(".control__dot").click(function () {
+    //        if ($(".control__dot").hasClass("dot__inactive")) {
+    //            $(this)
+    //                .addClass("dot__active")
+    //                .removeClass("dot__inactive");
+    //            $(this).siblings()
+    //                .addClass("dot__inactive")
+    //                .removeClass("dot__active");
+    //        }
+    //    });
+
     var dot_Function = function () {
         if ($(".control__dot").hasClass("dot__inactive")) {
             $(this)
@@ -230,7 +230,7 @@ $(document).ready(function () {
         $("#exp__3").show();
         $("#exp__3").fadeTo("slow", 1);
     };
-    
+
     $(".control__dot").click(dot_Function);
 
     $("#exp__a").click(xp1_Function);
@@ -247,14 +247,26 @@ $(document).ready(function () {
 
 
     $("#exp__2").touchwipe({
-        wipeLeft: function() { 
-            $(".control__dot").toggleClass("dot__inactive");
-            $(".control__dot").toggleClass("dot__active");
+        wipeLeft: function () {
+            if ($(".control__dot").hasClass("dot__inactive")) {
+                $(this)
+                    .addClass("dot__active")
+                    .removeClass("dot__inactive");
+                $(this).siblings()
+                    .addClass("dot__inactive")
+                    .removeClass("dot__active");
+            }
         },
-        wipeLeft: xp3_Function, 
-        wipeRight: function() { 
-            $(".control__dot").toggleClass("dot__inactive");
-            $(".control__dot").toggleClass("dot__active");
+        wipeLeft: xp3_Function,
+        wipeRight: function () {
+            if ($(".control__dot").hasClass("dot__inactive")) {
+                $(this)
+                    .addClass("dot__active")
+                    .removeClass("dot__inactive");
+                $(this).siblings()
+                    .addClass("dot__inactive")
+                    .removeClass("dot__active");
+            }
         },
         wipeRight: xp1_Function,
         min_move_x: 20,
