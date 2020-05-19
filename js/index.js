@@ -203,9 +203,9 @@ $(document).ready(function () {
         $("#exp__2").siblings().hide();
     });
     
-    $("#exp__c").click(function () {
-        $("#exp__3").show();
-        $("#exp__3").siblings().hide();
-    });
+//    $("#exp__c").click(function () {
+//        $("#exp__3").show();
+//        $("#exp__3").siblings().hide();
+//    });
     
 });
