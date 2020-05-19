@@ -195,6 +195,16 @@ $(document).ready(function () {
     }
 
     var xp1_Function = function () {
+        if ($("#exp__2").is(":visible")) {
+            $("#exp__b")
+                .removeClass("dot__left")
+                .addClass("dot__right");
+        }
+        if ($("#exp__3").is(":visible")) {
+            $("#exp__c")
+                .removeClass("dot__right")
+                .addClass("dot__left");
+        }
         $("#exp__1").show();
         $("#exp__1").fadeTo("slow", 1);
         $("#exp__2").hide();
@@ -213,8 +223,8 @@ $(document).ready(function () {
         }
         if ($("#exp__3").is(":visible")) {
             $("#exp__c")
-                .removeClass("dot__left")
-                .addClass("dot__right");
+                .removeClass("dot__right")
+                .addClass("dot__left");
         }
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
@@ -227,6 +237,16 @@ $(document).ready(function () {
     };
 
     var xp3_Function = function () {
+        if ($("#exp__1").is(":visible")) {
+            $("#exp__a")
+                .removeClass("dot__left")
+                .addClass("dot__right");
+        }
+        if ($("#exp__2").is(":visible")) {
+            $("#exp__b")
+                .removeClass("dot__right")
+                .addClass("dot__left");
+        }
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").hide();
