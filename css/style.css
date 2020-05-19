@@ -643,3 +643,13 @@ p a:hover {
     color: #343436;
     opacity: .7;
 }
+
+.exp__active {
+    display: block;
+    opacity: 1;
+}
+
+.exp__inactive {
+    display: none;
+    opacity: 0;
+}
