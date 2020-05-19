@@ -188,7 +188,7 @@ $(document).ready(function () {
                 .addClass("dot__active")
                 .removeClass("dot__inactive");
         } 
-        else if ((this).hasClass("dot__active")) {
+        else if ($(this).hasClass("dot__active")) {
             $(this)
                 .addClass("dot__inactive")
                 .removeClass("dot__active");
