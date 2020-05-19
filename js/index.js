@@ -189,7 +189,7 @@ $(document).ready(function () {
                 .removeClass("dot__inactive");
             $(".dot__active")
                 .addClass("dot__inactive")
-                .removeClass("dot__acive");
+                .removeClass("dot__active");
         } 
     });
 });
