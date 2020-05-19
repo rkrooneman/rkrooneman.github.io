@@ -205,7 +205,7 @@ $(document).ready(function () {
                 .removeClass("dot__right")
                 .addClass("dot__left");
         }
-        $("#exp__a")
+        $(".control__dot")
             .removeClass("dot__right")
             .removeClass("dot__left");
         $("#exp__1").show();
@@ -229,7 +229,7 @@ $(document).ready(function () {
                 .removeClass("dot__right")
                 .addClass("dot__left");
         }
-        $("#exp__b")
+        $(".control__dot")
             .removeClass("dot__right")
             .removeClass("dot__left");
         $("#exp__1").hide();
@@ -253,7 +253,7 @@ $(document).ready(function () {
                 .removeClass("dot__right")
                 .addClass("dot__left");
         }
-        $("#exp__c")
+        $(".control__dot")
             .removeClass("dot__right")
             .removeClass("dot__left");
         $("#exp__1").hide();
