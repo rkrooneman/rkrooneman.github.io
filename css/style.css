@@ -659,12 +659,10 @@ p a:hover {
 
 .exp__active {
     display: block;
-    opacity: 1;
 }
 
 .exp__inactive {
     display: none;
-    opacity: 0;
 }
 
 .slide__controls {
