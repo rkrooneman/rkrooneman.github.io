@@ -182,12 +182,14 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".dot__inactive").click(function () {
-        $(this).addClass("dot__active");
-        $(this).removeClass("dot__inactive");
-    });
-    $(".dot__active").click(function () {
-        $(this).addClass("dot__inactive");
-        $(this).removeClass("dot__active");
+    $(".control__dot").click(function () {
+        if (this).hasClass("dot__inactive") {
+            $(this).addClass("dot__active");
+            $(this).removeClass("dot__inactive");
+        } 
+        else if (this).hasClass("dot__active") {
+            $(this).addClass("dot__inactive");
+            $(this).removeClass("dot__active");
+        }
     });
 });
