@@ -247,8 +247,10 @@ $(document).ready(function () {
 
 
     $("#exp__2").touchwipe({
-        wipeLeft: function() {dot_Function(); xp3_Function()}, 
-        wipeRight: function() {dot_Function(); xp1_Function()},
+        wipeLeft: dot_Function, 
+        wipeLeft: xp3_Function, 
+        wipeRight: dot_Function,
+        WipeRight: xp1_Function,
         min_move_x: 20,
         min_move_y: 20,
         preventDefaultEvents: true
