@@ -185,7 +185,9 @@ $(document).ready(function () {
     $(".dot__inactive").click(function () {
         $(this).addClass("dot__active");
         $(this).removeClass("dot__inactive");
-        //            $(".exp__1").addClass("exp__active");
-        //            $(".exp__1").removeClass("exp__inactive");
+    });
+    $(".dot__active").click(function () {
+        $(this).addClass("dot__inactive");
+        $(this).removeClass("dot__active");
     });
 });
