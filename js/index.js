@@ -200,7 +200,7 @@ $(document).ready(function () {
         $("#exp__2").css("opacity", "0");
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
-    }
+    };
 
     var xp2_Function = function () {
         $("#exp__1").hide();
@@ -209,7 +209,7 @@ $(document).ready(function () {
         $("#exp__2").fadeTo("slow", 1);
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
-    }
+    };
 
     var xp3_Function = function () {
         $("#exp__1").hide();
@@ -218,7 +218,7 @@ $(document).ready(function () {
         $("#exp__2").css("opacity", "0");
         $("#exp__3").show();
         $("#exp__3").fadeTo("slow", 1);
-    }
+    };
 
 
     $("#exp__a").click(xp1_Function)
