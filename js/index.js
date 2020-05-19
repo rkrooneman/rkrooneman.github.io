@@ -210,7 +210,7 @@ $(document).ready(function () {
             $("#exp__a").css({
                 'background': 'linear-gradient(to right, #717171 50%, #bbb 50%)',
                 'background-position': 'left bottom',
-                'background-size': '200% 100%',
+                'background-size': '200% 100%'
             });
         };
         $("#exp__1").hide();
