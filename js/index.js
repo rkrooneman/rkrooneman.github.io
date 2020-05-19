@@ -193,7 +193,7 @@ $(document).ready(function () {
         }
     });
 
-    var xp1_Function = function() {
+    var xp1_Function = function () {
         $("#exp__1").show();
         $("#exp__1").fadeTo("slow", 1);
         $("#exp__2").hide();
@@ -202,7 +202,7 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
     }
 
-    var xp2_Function = function() {
+    var xp2_Function = function () {
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").show();
@@ -211,7 +211,7 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
     };
 
-    var xp3_Function = function() {
+    var xp3_Function = function () {
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").hide();
@@ -224,36 +224,60 @@ $(document).ready(function () {
     $("#exp__a").click(xp1_Function);
     $("#exp__b").click(xp2_Function);
     $("#exp__c").click(xp3_Function);
-    
+
     $("#exp__1").touchwipe({
-     wipeLeft: function() { alert("left"); },
-     wipeRight: function() { alert("right"); },
-     wipeUp: function() { alert("up"); },
-     wipeDown: function() { alert("down"); },
-     min_move_x: 20,
-     min_move_y: 20,
-     preventDefaultEvents: true
-});
+        wipeLeft: function () {
+            alert("left");
+        },
+        wipeRight: function () {
+            alert("right");
+        },
+        wipeUp: function () {
+            alert("up");
+        },
+        wipeDown: function () {
+            alert("down");
+        },
+        min_move_x: 20,
+        min_move_y: 20,
+        preventDefaultEvents: true
+    });
 
 
     $("#exp__2").touchwipe({
-     wipeLeft: function() { alert("left"); },
-     wipeRight: function() { alert("right"); },
-     wipeUp: function() { alert("up"); },
-     wipeDown: function() { alert("down"); },
-     min_move_x: 20,
-     min_move_y: 20,
-     preventDefaultEvents: true
-});
+        wipeLeft: function () {
+            alert("left");
+        },
+        wipeRight: function () {
+            alert("right");
+        },
+        wipeUp: function () {
+            alert("up");
+        },
+        wipeDown: function () {
+            alert("down");
+        },
+        min_move_x: 20,
+        min_move_y: 20,
+        preventDefaultEvents: true
+    });
 
     $("#exp__3").touchwipe({
-     wipeLeft: function() { alert("left"); },
-     wipeRight: function() { alert("right"); },
-     wipeUp: function() { alert("up"); },
-     wipeDown: function() { alert("down"); },
-     min_move_x: 20,
-     min_move_y: 20,
-     preventDefaultEvents: true
-});
+        wipeLeft: function () {
+            alert("left");
+        },
+        wipeRight: function () {
+            alert("right");
+        },
+        wipeUp: function () {
+            alert("up");
+        },
+        wipeDown: function () {
+            alert("down");
+        },
+        min_move_x: 20,
+        min_move_y: 20,
+        preventDefaultEvents: true
+    });
 
 });
