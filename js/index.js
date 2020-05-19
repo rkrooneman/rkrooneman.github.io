@@ -245,13 +245,13 @@ $(document).ready(function () {
     var xp3_Function = function () {
         if ($("#exp__1").is(":visible")) {
             $("#exp__a")
-                .removeClass("dot__left")
-                .addClass("dot__right");
+                .removeClass("dot__right")
+                .addClass("dot__left");
         }
         if ($("#exp__2").is(":visible")) {
             $("#exp__b")
-                .removeClass("dot__right")
-                .addClass("dot__left");
+                .removeClass("dot__left")
+                .addClass("dot__right");
         }
         $(".control__dot")
             .removeClass("dot__right")
