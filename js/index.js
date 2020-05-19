@@ -248,13 +248,13 @@ $(document).ready(function () {
 
     $("#exp__2").touchwipe({
         wipeLeft: function() { 
-            $(".control__dot").toggleClass(".dot__inactive");
-            $(".control__dot").toggleClass(".dot__active");
+            $(".control__dot").toggleClass("dot__inactive");
+            $(".control__dot").toggleClass("dot__active");
         },
         wipeLeft: xp3_Function, 
         wipeRight: function() { 
-            $(".control__dot").toggleClass(".dot__inactive");
-            $(".control__dot").toggleClass(".dot__active");
+            $(".control__dot").toggleClass("dot__inactive");
+            $(".control__dot").toggleClass("dot__active");
         },
         wipeRight: xp1_Function,
         min_move_x: 20,
