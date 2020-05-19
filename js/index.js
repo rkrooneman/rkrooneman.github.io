@@ -184,12 +184,13 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".control__dot").click(function () {
         if ($(".control__dot").hasClass("dot__inactive")) {
-            $(this)
-                .addClass("dot__active")
-                .removeClass("dot__inactive");
             $(".dot__active")
                 .addClass("dot__inactive")
                 .removeClass("dot__active");
-        } 
+         
+            $(this)
+                .addClass("dot__active")
+                .removeClass("dot__inactive");
+        }
     });
 });
