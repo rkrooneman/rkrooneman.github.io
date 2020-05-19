@@ -205,6 +205,9 @@ $(document).ready(function () {
                 .removeClass("dot__right")
                 .addClass("dot__left");
         }
+        $("exp__a")
+            .removeClass("dot__right")
+            .removeClass("dot__left");
         $("#exp__1").show();
         $("#exp__1").fadeTo("slow", 1);
         $("#exp__2").hide();
@@ -226,6 +229,9 @@ $(document).ready(function () {
                 .removeClass("dot__right")
                 .addClass("dot__left");
         }
+        $("exp__b")
+            .removeClass("dot__right")
+            .removeClass("dot__left");
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").show();
@@ -247,6 +253,9 @@ $(document).ready(function () {
                 .removeClass("dot__right")
                 .addClass("dot__left");
         }
+        $("exp__c")
+            .removeClass("dot__right")
+            .removeClass("dot__left");
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").hide();
