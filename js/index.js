@@ -207,7 +207,7 @@ $(document).ready(function () {
 
     var xp2_Function = function () {
         if ($("#exp__1").is(":visible")) {
-            $("exp__a")
+            $("#exp__a")
                 .removeClass("dot__right")
                 .addClass("dot__left");
         }
