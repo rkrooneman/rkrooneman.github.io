@@ -183,13 +183,15 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $(".control__dot").click(function () {
-        if ($(this).hasClass("dot__inactive")) {
-            $(this)
-                .addClass("dot__active")
-                .removeClass("dot__inactive");
-            $(".dot__active")
-                .addClass("dot__inactive")
-                .removeClass("dot__acive");
-        } 
+        $(this).toggleClass("dot__active");
+        
+//        if ($(this).hasClass("dot__inactive")) {
+//            $(this)
+//                .addClass("dot__active")
+//                .removeClass("dot__inactive");
+//            $(".dot__active")
+//                .addClass("dot__inactive")
+//                .removeClass("dot__acive");
+//        } 
     });
 });
