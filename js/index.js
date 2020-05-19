@@ -161,12 +161,12 @@ $(document).ready(function () {
 
         console.log('menu2', menu_pos2);
 
-        if (scroll > (dark_pos - windowheight) && menu_pos2 < (dark_pos + dark_height)) {
+        if (scroll > (dark_pos - windowheight) && menu_pos2 < (dark_pos + dark_height + 150)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
             $('.side__icon').addClass('nav__white');
             $('.side__icon').removeClass('nav__black');
-        } else if (scroll > (dark_pos2 - windowheight) && menu_pos2 < (dark_pos2 + dark_height2)) {
+        } else if (scroll > (dark_pos2 - windowheight) && menu_pos2 < (dark_pos2 + dark_height2 + 150)) {
             $('.bottom').addClass('nav__white');
             $('.bottom').removeClass('nav__black');
             $('.side__icon').addClass('nav__white');
