@@ -183,7 +183,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $(".control__dot").click(function () {
-        if ($(this).hasClass("protected")) {
+        if ($(this).hasClass("dot__inactive")) {
             $(this)
                 .addClass("dot__active")
                 .removeClass("dot__inactive");
