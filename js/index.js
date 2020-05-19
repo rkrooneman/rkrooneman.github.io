@@ -15,30 +15,30 @@ $(document).ready(function () {
     '🎧',
     '🍣',
     ];
-        
+
     var arr = [];
-    while(arr.length < 3) {
-    var r = Math.floor(Math.random() * textArray.length);
-    if(arr.indexOf(r) === -1) arr.push(r);
+    while (arr.length < 3) {
+        var r = Math.floor(Math.random() * textArray.length);
+        if (arr.indexOf(r) === -1) arr.push(r);
     }
-    
-    console.log(arr);    
+
+    console.log(arr);
     console.log('interest1', textArray[arr[0]]);
     console.log('interest2', textArray[arr[1]]);
     console.log('interest3', textArray[arr[2]]);
-    
+
     setInterval(function checkcontent() {
-                  
-    if ($(".interest1").length > 0){ 
-        $('.interest1').text(textArray[arr[0]]);
-    } else if ($(".interest2").length > 0) {
-        $('.interest2').text(textArray[arr[1]]);
-    } else if ($(".interest3").length > 0) {
-        $('.interest3').text(textArray[arr[2]]);
-    }
-    
-    }, 500); 
-    
+
+        if ($(".interest1").length > 0) {
+            $('.interest1').text(textArray[arr[0]]);
+        } else if ($(".interest2").length > 0) {
+            $('.interest2').text(textArray[arr[1]]);
+        } else if ($(".interest3").length > 0) {
+            $('.interest3').text(textArray[arr[2]]);
+        }
+
+    }, 500);
+
 });
 
 $(document).ready(function () {
@@ -178,5 +178,16 @@ $(document).ready(function () {
             $('.side__icon').addClass('nav__black');
         }
 
+    });
+});
+
+$(document).ready(function () {
+    $(".control__dot").click(function () {
+        if (this).hasClass("dot__inactive") {
+            $(this).addClass("dot__active");
+            $(this).removeClass("dot__inactive");
+//            $(".exp__1").addClass("exp__active");
+//            $(".exp__1").removeClass("exp__inactive");
+        }
     });
 });
