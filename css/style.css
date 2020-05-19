@@ -677,6 +677,9 @@ p a:hover {
     width: 50px;
 /*    margin: 0 5px;*/
     background-color: #717171;
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
 /*    border-radius: 50%;*/
     display: inline-block;
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
@@ -684,5 +687,7 @@ p a:hover {
 }
 
 .dot__active {
-    background-color: #bbb;
+    background-position: right bottom;
+    -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
+    transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
 }
