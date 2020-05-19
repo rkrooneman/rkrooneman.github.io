@@ -247,9 +247,15 @@ $(document).ready(function () {
 
 
     $("#exp__2").touchwipe({
-        wipeLeft: dot_Function, 
+        wipeLeft: function() { 
+            $(".control__dot").toggleClass(".dot__inactive");
+            $(".control__dot").toggleClass(".dot__active");
+        },
         wipeLeft: xp3_Function, 
-        wipeRight: dot_Function,
+        wipeRight: function() { 
+            $(".control__dot").toggleClass(".dot__inactive");
+            $(".control__dot").toggleClass(".dot__active");
+        },
         WipeRight: xp1_Function,
         min_move_x: 20,
         min_move_y: 20,
