@@ -195,17 +195,20 @@ $(document).ready(function () {
     
     $("#exp__a").click(function () {
         $("#exp__1").show();
-        $("#exp__1").siblings().hide();
+        $("#exp__2").hide();
+        $("#exp__3").hide();
     });
     
     $("#exp__b").click(function () {
+        $("#exp__1").hide();
         $("#exp__2").show();
-        $("#exp__2").siblings().hide();
+        $("#exp__3").hide();
     });
     
-//    $("#exp__c").click(function () {
-//        $("#exp__3").show();
-//        $("#exp__3").siblings().hide();
-//    });
-    
+    $("#exp__c").click(function () {
+        $("#exp__1").hide();
+        $("#exp__2").hide();
+        $("#exp__3").show();
+    });  
+
 });
