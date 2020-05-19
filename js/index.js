@@ -182,7 +182,18 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".control__dot").click(function () {
+//    $(".control__dot").click(function () {
+//        if ($(".control__dot").hasClass("dot__inactive")) {
+//            $(this)
+//                .addClass("dot__active")
+//                .removeClass("dot__inactive");
+//            $(this).siblings()
+//                .addClass("dot__inactive")
+//                .removeClass("dot__active");
+//        }
+//    });
+    
+    var dot_Function = function () {
         if ($(".control__dot").hasClass("dot__inactive")) {
             $(this)
                 .addClass("dot__active")
@@ -191,7 +202,7 @@ $(document).ready(function () {
                 .addClass("dot__inactive")
                 .removeClass("dot__active");
         }
-    });
+    }
 
     var xp1_Function = function () {
         $("#exp__1").show();
@@ -219,7 +230,8 @@ $(document).ready(function () {
         $("#exp__3").show();
         $("#exp__3").fadeTo("slow", 1);
     };
-
+    
+    $(".control__dot").click(dot_Function);
 
     $("#exp__a").click(xp1_Function);
     $("#exp__b").click(xp2_Function);
@@ -235,8 +247,8 @@ $(document).ready(function () {
 
 
     $("#exp__2").touchwipe({
-        wipeLeft: xp3_Function,
-        wipeRight: xp1_Function,
+        wipeLeft: function() { dot_Function; xp3_Function}, 
+        wipeRight: function() { dot_Function; xp1_Function},
         min_move_x: 20,
         min_move_y: 20,
         preventDefaultEvents: true
