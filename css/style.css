@@ -677,7 +677,7 @@ p a:hover {
     width: 50px;
 /*    margin: 0 5px;*/
     background-color: #717171;
-    background: linear-gradient(to left, #717171 50%, #bbb 50%);
+    background: linear-gradient(to left, #717171 0%, #717171 33%, #bbb 33%, #bbb 66%, #717171 66%, #717171 100%);
     background-size: 200% 100%;
     background-position: right bottom;
 /*    border-radius: 50%;*/
@@ -689,23 +689,19 @@ p a:hover {
 .dot__active {
     background: linear-gradient(to left, #717171 50%, #bbb 50%);
     background-size: 200% 100%;
-    background-position: left bottom;
+    background-position: center bottom;
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
 }
 
-.dot__right {
-    background: linear-gradient(to right, #717171 50%, #bbb 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
+.dot__left {
+    background-position: left bottom;
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1); 
 }
 
-.dot__left {
-    background: linear-gradient(to left, #717171 50%, #bbb 50%);
-    background-size: 200% 100%;
-    background-position: left bottom;
+.dot__right {
+    background-position: right bottom;
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1); 
 }
