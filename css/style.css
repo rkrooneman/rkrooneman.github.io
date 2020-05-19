@@ -667,6 +667,11 @@ p a:hover {
     opacity: 0;
 }
 
+.slide__controls {
+    max-width: 800px;
+    text-align: center;
+}
+
 .control__dot {
     cursor: pointer;
     height: 15px;
