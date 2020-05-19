@@ -182,7 +182,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    
+
     var dot_Function = function () {
         if ($(".control__dot").hasClass("dot__inactive")) {
             $(this)
@@ -206,6 +206,12 @@ $(document).ready(function () {
     }
 
     var xp2_Function = function () {
+        if (("#exp__1").is(":visible")) {
+            $("#exp__a").css({
+                'background': 'linear-gradient(to right, #717171 50%, #bbb 50%)',
+                'background-position': 'left bottom',
+            });
+        }
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").show();
@@ -226,7 +232,7 @@ $(document).ready(function () {
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(3)").addClass("dot__active");
     };
-    
+
     $(".control__dot").click(dot_Function);
 
     $("#exp__a").click(xp1_Function);
@@ -243,7 +249,7 @@ $(document).ready(function () {
 
 
     $("#exp__2").touchwipe({
-        wipeLeft: xp3_Function, 
+        wipeLeft: xp3_Function,
         wipeRight: xp1_Function,
         min_move_x: 20,
         min_move_y: 20,
