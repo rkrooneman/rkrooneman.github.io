@@ -703,6 +703,8 @@ p a:hover {
 }
 
 .dot__active {
+    background: linear-gradient(to left, #717171 50%, #bbb 50%);
+    background-size: 200% 100%;
     background-position: left bottom;
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
