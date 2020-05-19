@@ -250,13 +250,15 @@ $(document).ready(function () {
         wipeLeft: function() { 
             $(".control__dot").toggleClass(".dot__inactive");
             $(".control__dot").toggleClass(".dot__active");
+            xp3_Function;
         },
-        wipeLeft: xp3_Function, 
+//        wipeLeft: xp3_Function, 
         wipeRight: function() { 
             $(".control__dot").toggleClass(".dot__inactive");
             $(".control__dot").toggleClass(".dot__active");
+            xp1_Function;
         },
-        WipeRight: xp1_Function,
+//        WipeRight: xp1_Function,
         min_move_x: 20,
         min_move_y: 20,
         preventDefaultEvents: true
