@@ -193,7 +193,7 @@ $(document).ready(function () {
         }
     });
 
-    var xp1_Function = function () {
+    var xp1_Function = function() {
         $("#exp__1").show();
         $("#exp__1").fadeTo("slow", 1);
         $("#exp__2").hide();
@@ -202,7 +202,7 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
     };
 
-    var xp2_Function = function () {
+    var xp2_Function = function() {
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").show();
@@ -211,7 +211,7 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
     };
 
-    var xp3_Function = function () {
+    var xp3_Function = function() {
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").hide();
@@ -221,7 +221,7 @@ $(document).ready(function () {
     };
 
 
-    $("#exp__a").click(xp1_Function)
+    $("#exp__a").click(xp1_Function);
     $("#exp__1").touchwipe({
         wipeLeft: xp2_Function,
         wipeRight: xp3_Function,
@@ -229,7 +229,7 @@ $(document).ready(function () {
         preventDefaultEvents: true
     });
 
-    $("#exp__b").click(xp2_Function)
+    $("#exp__b").click(xp2_Function);
     $("#exp__2").touchwipe({
         wipeLeft: xp3_Function,
         wipeRight: xp1_Function,
@@ -237,7 +237,7 @@ $(document).ready(function () {
         preventDefaultEvents: true
     });
 
-    $("#exp__c").click(xp3_Functionn) 
+    $("#exp__c").click(xp3_Function);
     $("#exp__3").touchwipe({
         wipeLeft: xp1_Function,
         wipeRight: xp3_Function,
