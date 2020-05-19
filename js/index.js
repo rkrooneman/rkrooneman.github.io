@@ -211,7 +211,7 @@ $(document).ready(function () {
                 'background': 'linear-gradient(to right, #717171 50%, #bbb 50%)',
                 'background-position': 'left bottom',
             });
-        }
+        };
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").show();
