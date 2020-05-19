@@ -208,8 +208,8 @@ $(document).ready(function () {
     var xp2_Function = function () {
         if ($("#exp__1").is(":visible")) {
             $("#exp__a")
-                .removeClass("dot__right")
-                .addClass("dot__left");
+                .removeClass("dot__left")
+                .addClass("dot__right");
         }
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
