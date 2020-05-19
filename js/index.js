@@ -195,29 +195,29 @@ $(document).ready(function () {
     
     $("#exp__a").click(function () {
         $("#exp__1").show();
-        $("#exp__1").fadeTo( "slow", 1 );
+        $("#exp__1").fadeTo("slow", 1);
         $("#exp__2").hide();
-        $("#exp__2").fadeTo( "slow", 0 );
+        $("#exp__1").css("opacity", "0");  
         $("#exp__3").hide();
-        $("#exp__3").fadeTo( "slow", 0 );
+        $("#exp__1").css("opacity", "0");  
     });
     
     $("#exp__b").click(function () {
         $("#exp__1").hide();
-        $("#exp__1").fadeTo( "slow", 0 );
+        $("#exp__1").css("opacity", "0");   
         $("#exp__2").show();
-        $("#exp__2").fadeTo( "slow", 1 );
+        $("#exp__2").fadeTo("slow", 1);
         $("#exp__3").hide();
-        $("#exp__3").fadeTo( "slow", 0 );
+        $("#exp__1").css("opacity", "0");  
     });
     
     $("#exp__c").click(function () {
         $("#exp__1").hide();
-        $("#exp__1").fadeTo( "slow", 0 );
+        $("#exp__1").css("opacity", "0");  
         $("#exp__2").hide();
-        $("#exp__2").fadeTo( "slow", 0 );
+        $("#exp__1").css("opacity", "0");  
         $("#exp__3").show();
-        $("#exp__3").fadeTo( "slow", 1 );
+        $("#exp__3").fadeTo("slow", 1);
     });  
 
 });
