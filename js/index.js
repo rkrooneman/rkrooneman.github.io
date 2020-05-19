@@ -207,12 +207,10 @@ $(document).ready(function () {
 
     var xp2_Function = function () {
         if ($("#exp__1").is(":visible")) {
-            $("#exp__a").css({
-                'background': 'linear-gradient(to right, #717171 50%, #bbb 50%)',
-                'background-position': 'left bottom',
-                'background-size': '200% 100%'
-            });
-        };
+            $("exp__a")
+                .removeClass("dot__right")
+                .addClass("dot__left");
+        }
         $("#exp__1").hide();
         $("#exp__1").css("opacity", "0");
         $("#exp__2").show();
