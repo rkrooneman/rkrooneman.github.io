@@ -672,7 +672,7 @@ p a:hover {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: #717171;
     border-radius: 50%;
     display: inline-block;
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
@@ -681,5 +681,5 @@ p a:hover {
 
 .dot__active,
 control__dot:hover {
-    background-color: #717171;
+    background-color: #bbb;
 }
