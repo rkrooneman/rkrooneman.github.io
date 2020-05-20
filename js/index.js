@@ -197,9 +197,11 @@ $(document).ready(function () {
     var xp1_Function = function () {
         if ($("#exp__b").hasClass("dot__active")) {
             $(this).addClass("dot__inactiveleft");
+            $("#exp__c").addClass("dot__inactive");
         }
         if ($("#exp__c").hasClass("dot__active")) {
             $(this).addClass("dot__inactiveright");
+            $("#exp__b").addClass("dot__inactive");
         }
         $("#exp__c")
             .removeClass("dot__right")
@@ -220,9 +222,11 @@ $(document).ready(function () {
     var xp2_Function = function () {
         if ($("#exp__a").hasClass("dot__active")) {
             $(this).addClass("dot__inactiveright");
+            $("#exp__c").addClass("dot__inactive");
         }
         if ($("#exp__c").hasClass("dot__active")) {
             $(this).addClass("dot__inactiveleft");
+            ("#exp__a").addClass("dot__inactive");
         }
         $("#exp__a")
             .removeClass("dot__right")
@@ -243,9 +247,11 @@ $(document).ready(function () {
     var xp3_Function = function () {
         if ($("#exp__a").hasClass("dot__active")) {
             $(this).addClass("dot__inactiveleft");
+            $("#exp__b").addClass("dot__inactive");
         }
         if ($("#exp__b").hasClass("dot__active")) {
             $(this).addClass("dot__inactiveright");
+            $("#exp__a").addClass("dot__inactive");
         }
         $("#exp__b")
             .removeClass("dot__right")
