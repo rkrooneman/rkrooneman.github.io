@@ -304,7 +304,6 @@ $(document).ready(function () {
         preventDefaultEvents: true
     });
 
-
     $("#exp__2").touchwipe({
         wipeLeft: xp3_Function,
         wipeRight: xp1_Function,
