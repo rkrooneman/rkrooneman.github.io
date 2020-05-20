@@ -126,9 +126,9 @@ $(document).ready(function () {
         var menu_width1 = $('.top').width();
         var scroll = $(window).scrollTop();
 
-        console.log('dark', dark_pos);
-        console.log('menu1', menu_pos1);
-        console.log('scroll', scroll);
+//        console.log('dark', dark_pos);
+//        console.log('menu1', menu_pos1);
+//        console.log('scroll', scroll);
 
         if (scroll > (dark_pos - 150) && menu_pos1 < (dark_pos + dark_height + 150)) {
             $('.top').addClass('nav__white');
