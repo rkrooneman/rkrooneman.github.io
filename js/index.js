@@ -447,25 +447,3 @@ $(document).ready(function () {
     });
 
 });
-
-$(document).ready(function () {
-    $("#hello").touchwipe({
-        wipeUp: function () {
-            window.location.href = "#intro";
-        },
-        min_move_x: 20,
-        min_move_y: 20,
-        preventDefaultEvents: true
-    });
-    $("#intro").touchwipe({
-        wipeDown: function () {
-            window.location.href = "#hello";
-        },
-        wipeUp: function () {
-            window.location.href = "#about";
-        },
-        min_move_x: 20,
-        min_move_y: 20,
-        preventDefaultEvents: true
-    });
-});
