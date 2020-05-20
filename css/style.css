@@ -715,30 +715,66 @@ p a:hover {
     animation-duration: 1s;
 }
 
+.dot__inactive.dot__right {
+    animation-name: dotempty__right;
+    animation-duration: 1s;
+}
+
+.dot__inactive.dot__left {
+    animation-name: dotempty__left;
+    animation-duration: 1s;
+}
+
 
 @keyframes dotfill__left {
   from {
-    background: linear-gradient(to left, #bbb 0%, #bbb 33.333%, #717171 33.333%, #717171 66.666%, #717171 66.666%, #717171 100%);
-    background-position: center bottom;
-    background-size: 300% 100%
+    background: linear-gradient(to right, #bbb 50%, #717171 50%);
+    background-position: right bottom;
+    background-size: 200% 100%
     }
   to {
-    background: linear-gradient(to left, #717171 0%, #717171 33.333%, #bbb 33.333%, #bbb 66.666%, #717171 66.666%, #717171 100%);
-    background-position: center bottom;
-    background-size: 300% 100%;
+    background: linear-gradient(to right, #bbb 50%, #717171 50%);
+    background-position: left bottom;
+    background-size: 200% 100%
     }
 }
 
 @keyframes dotfill__right {
   from {
-    background: linear-gradient(to left, #717171 0%, #717171 33.333%, #717171 33.333%, #717171 66.666%, #bbb 66.666%, #bbb 100%);
-    background-position: center bottom;
-    background-size: 300% 100%
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-position: left bottom;
+    background-size: 200% 100%
     }
   to {
-    background: linear-gradient(to left, #717171 0%, #717171 33.333%, #bbb 33.333%, #bbb 66.666%, #717171 66.666%, #717171 100%);
-    background-position: center bottom;
-    background-size: 300% 100%
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-position: right bottom;
+    background-size: 200% 100%
+    }
+}
+
+@keyframes dotempty__right {
+  from {
+    background: linear-gradient(to right, #bbb 50%, #717171 50%);
+    background-position: right bottom;
+    background-size: 200% 100%
+    }
+  to {
+    background: linear-gradient(to right, #bbb 50%, #717171 50%);
+    background-position: left bottom;
+    background-size: 200% 100%
+    }
+}
+
+@keyframes dotempty__left {
+  from {
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-position: right bottom;
+    background-size: 200% 100%
+    }
+  to {
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-position: left bottom;
+    background-size: 200% 100%
     }
 }
 

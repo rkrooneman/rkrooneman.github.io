@@ -195,6 +195,12 @@ $(document).ready(function () {
     }
 
     var xp1_Function = function () {
+        if ($("#exp__b").hasClass("dot__active")) {
+            $(this).addClass("dot__inactiveleft");
+        }
+        if ($("#exp__c").hasClass("dot__active")) {
+            $(this).addClass("dot__inactiveright");
+        }
         $("#exp__c")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -209,12 +215,15 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(1)").addClass("dot__active");
-//        $("#exp__a").delay(300)
-//            .removeClass("dot__right")
-//            .removeClass("dot__left");
     }
 
     var xp2_Function = function () {
+        if ($("#exp__a").hasClass("dot__active")) {
+            $(this).addClass("dot__inactiveright");
+        }
+        if ($("#exp__c").hasClass("dot__active")) {
+            $(this).addClass("dot__inactiveleft");
+        }
         $("#exp__a")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -229,12 +238,15 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(2)").addClass("dot__active");
-//        $("#exp__b").delay(300)
-//            .removeClass("dot__right")
-//            .removeClass("dot__left");
     };
 
     var xp3_Function = function () {
+        if ($("#exp__a").hasClass("dot__active")) {
+            $(this).addClass("dot__inactiveleft");
+        }
+        if ($("#exp__b").hasClass("dot__active")) {
+            $(this).addClass("dot__inactiveright");
+        }
         $("#exp__b")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -249,9 +261,6 @@ $(document).ready(function () {
         $("#exp__3").fadeTo("slow", 1);
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(3)").addClass("dot__active");
-//        $("#exp__c").delay(300)
-//            .removeClass("dot__right")
-//            .removeClass("dot__left");
     };
 
     $(".control__dot").click(dot_Function);
