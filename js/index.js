@@ -203,8 +203,8 @@ $(document).ready(function () {
             $("#exp__c").addClass("dot__inactiveright");
             $("#exp__b").addClass("dot__inactive");
         }
-        $("#exp__a").removeClass("dot_inactiveleft");
-        $("#exp__a").removeClass("dot_inactiveright");
+        $("#exp__a").removeClass("dot__inactiveleft");
+        $("#exp__a").removeClass("dot__inactiveright");
         $("#exp__c")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -230,8 +230,8 @@ $(document).ready(function () {
             $("#exp__c").addClass("dot__inactiveleft");
             $("#exp__a").addClass("dot__inactive");
         }
-        $("#exp__b").removeClass("dot_inactiveleft");
-        $("#exp__b").removeClass("dot_inactiveright");
+        $("#exp__b").removeClass("dot__inactiveleft");
+        $("#exp__b").removeClass("dot__inactiveright");
         $("#exp__a")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -257,8 +257,8 @@ $(document).ready(function () {
             $("#exp__b").addClass("dot__inactiveright");
             $("#exp__a").addClass("dot__inactive");
         }
-        $("#exp__c").removeClass("dot_inactiveleft");
-        $("#exp__c").removeClass("dot_inactiveright");
+        $("#exp__c").removeClass("dot__inactiveleft");
+        $("#exp__c").removeClass("dot__inactiveright");
         $("#exp__b")
             .removeClass("dot__right")
             .addClass("dot__left");
