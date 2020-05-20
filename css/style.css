@@ -657,11 +657,11 @@ p a:hover {
     opacity: .7;
 }
 
-.exp__active {
+.exp__active, .exp__inactive {
     display: block;
 }
 
-.exp__inactive {
+.exp__inactive, .skills__inactive {
     display: none;
 }
 
