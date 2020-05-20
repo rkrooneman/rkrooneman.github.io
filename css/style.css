@@ -675,7 +675,7 @@ p a:hover {
     height: .25rem;
     width: 50px;
     background-color: #717171;
-    background: linear-gradient(to left, #717171 0%, #717171 33%, #bbb 33%, #bbb 66%, #717171 66%, #717171 100%);
+    background: linear-gradient(to left, #717171 0%, #717171 33.333%, #bbb 33.333%, #bbb 66.666%, #717171 66.666%, #717171 100%);
     background-size: 300% 100%;
     display: inline-block;
 }
