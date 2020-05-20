@@ -222,8 +222,8 @@ $(document).ready(function () {
         $("#exp__2").css("opacity", "0");
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
-        $(".control__dot").removeClass("dot__active");
-        $(".control__dot:nth-child(1)").addClass("dot__active");
+        $(".exp__dot").removeClass("dot__active");
+        $(".exp__dot:nth-child(1)").addClass("dot__active");
     }
 
     var xp2_Function = function () {
@@ -254,8 +254,8 @@ $(document).ready(function () {
         $("#exp__2").fadeTo("slow", 1);
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
-        $(".control__dot").removeClass("dot__active");
-        $(".control__dot:nth-child(2)").addClass("dot__active");
+        $(".exp__dot").removeClass("dot__active");
+        $(".exp__dot:nth-child(2)").addClass("dot__active");
     };
 
     var xp3_Function = function () {
@@ -286,8 +286,8 @@ $(document).ready(function () {
         $("#exp__2").css("opacity", "0");
         $("#exp__3").show();
         $("#exp__3").fadeTo("slow", 1);
-        $(".control__dot").removeClass("dot__active");
-        $(".control__dot:nth-child(3)").addClass("dot__active");
+        $(".exp__dot").removeClass("dot__active");
+        $(".exp__dot:nth-child(3)").addClass("dot__active");
     };
 
 //    $(".control__dot").click(expdot_Function);
@@ -360,8 +360,8 @@ $(document).ready(function () {
         $("#skills__2").css("opacity", "0");
         $("#skills__3").hide();
         $("#skills__3").css("opacity", "0");
-        $(".control__dot").removeClass("dot__active");
-        $(".control__dot:nth-child(1)").addClass("dot__active");
+        $(".skill__dot").removeClass("dot__active");
+        $(".skill__dot:nth-child(1)").addClass("dot__active");
     }
 
     var skills2_Function = function () {
@@ -392,8 +392,8 @@ $(document).ready(function () {
         $("#skills__2").fadeTo("slow", 1);
         $("#skills__3").hide();
         $("#skills__3").css("opacity", "0");
-        $(".control__dot").removeClass("dot__active");
-        $(".control__dot:nth-child(2)").addClass("dot__active");
+        $(".skill__dot").removeClass("dot__active");
+        $(".skill__dot:nth-child(2)").addClass("dot__active");
     };
 
     var skills3_Function = function () {
@@ -424,8 +424,8 @@ $(document).ready(function () {
         $("#skills__2").css("opacity", "0");
         $("#skills__3").show();
         $("#skills__3").fadeTo("slow", 1);
-        $(".control__dot").removeClass("dot__active");
-        $(".control__dot:nth-child(3)").addClass("dot__active");
+        $(".skill__dot").removeClass("dot__active");
+        $(".skill__dot:nth-child(3)").addClass("dot__active");
     };
 
 //    $(".control__dot").click(skilldot_Function);
