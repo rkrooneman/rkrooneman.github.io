@@ -706,23 +706,23 @@ p a:hover {
 }
 
 .dot__active.dot__right {
-    animation-name: dotfill__right;
-    animation-duration: 1s;
+    animation-name: dotfill__left;
+    animation-duration: .3s;
 }
 
 .dot__active.dot__left {
-    animation-name: dotfill__left;
-    animation-duration: 1s;
+    animation-name: dotfill__right;
+    animation-duration: .3s;
 }
 
-.dot__inactive.dot__right {
+.dot__inactiveright {
     animation-name: dotempty__right;
-    animation-duration: 1s;
+    animation-duration: .3s;
 }
 
-.dot__inactive.dot__left {
+.dot__inactiveleft {
     animation-name: dotempty__left;
-    animation-duration: 1s;
+    animation-duration: .3s;
 }
 
 
@@ -777,7 +777,3 @@ p a:hover {
     background-size: 200% 100%
     }
 }
-
-
-
-
