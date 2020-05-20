@@ -290,7 +290,7 @@ $(document).ready(function () {
         $(".control__dot:nth-child(3)").addClass("dot__active");
     };
 
-    $(".control__dot").click(expdot_Function);
+//    $(".control__dot").click(expdot_Function);
 
     $("#exp__a").click(xp1_Function);
     $("#exp__b").click(xp2_Function);
@@ -428,7 +428,7 @@ $(document).ready(function () {
         $(".control__dot:nth-child(3)").addClass("dot__active");
     };
 
-    $(".control__dot").click(skilldot_Function);
+//    $(".control__dot").click(skilldot_Function);
 
     $("#skills__a").click(skills1_Function);
     $("#skills__b").click(skills2_Function);
