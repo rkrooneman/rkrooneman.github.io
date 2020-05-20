@@ -310,10 +310,14 @@ svg#icon__codepen.nav__black {
     flex-flow: column nowrap;
     -webkit-box-align: stretch;
     align-items: stretch;
-    min-height: calc(100vh - 25px);
+    min-height: 100vh;
     width: 100%;
     align-content: center;
     padding: 20vh 50px 20vh 75px;
+}
+
+.section:first-child {
+    min-height: calc(100vh - 25px);
 }
 
 .section .section__svg {
