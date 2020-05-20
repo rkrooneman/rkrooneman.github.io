@@ -750,13 +750,13 @@ p a:hover {
 
 @keyframes dotempty__right {
   from {
-    background: linear-gradient(to right, #bbb 50%, #717171 50%);
-    background-position: right bottom;
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-position: left bottom;
     background-size: 200% 100%
     }
   to {
-    background: linear-gradient(to right, #bbb 50%, #717171 50%);
-    background-position: left bottom;
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-position: right bottom;
     background-size: 200% 100%
     }
 }
