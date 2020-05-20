@@ -715,13 +715,17 @@ p a:hover {
     animation-duration: .3s;
 }
 
+.dot__inactive {
+    
+}
+
 .dot__inactiveright {
-    animation-name: dotempty__right;
+    animation-name: dotempty__left;
     animation-duration: .3s;
 }
 
 .dot__inactiveleft {
-    animation-name: dotempty__left;
+    animation-name: dotempty__right;
     animation-duration: .3s;
 }
 
