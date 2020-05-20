@@ -707,12 +707,12 @@ p a:hover {
 
 .dot__active.dot__right {
     animation-name: dotfill__right;
-    animation-duration: .3s;
+    animation-duration: 1s;
 }
 
-.dot__active.dot__right {
+.dot__active.dot__left {
     animation-name: dotfill__left;
-    animation-duration: .3s;
+    animation-duration: 1s;
 }
 
 
