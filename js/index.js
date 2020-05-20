@@ -183,16 +183,16 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-//    var dot_Function = function () {
-//        if ($(".control__dot").hasClass("dot__inactive")) {
-//            $(this)
-//                .addClass("dot__active")
-//                .removeClass("dot__inactive");
-//            $(this).siblings()
-//                .addClass("dot__inactive")
-//                .removeClass("dot__active");
-//        }
-//    }
+    var expdot_Function = function () {
+        if ($(".exp__dot").hasClass("dot__inactive")) {
+            $(this)
+                .addClass("dot__active")
+                .removeClass("dot__inactive");
+            $(this).siblings()
+                .addClass("dot__inactive")
+                .removeClass("dot__active");
+        }
+    }
 
     var xp1_Function = function () {
         if ($("#exp__b").hasClass("dot__active")) {
@@ -290,7 +290,7 @@ $(document).ready(function () {
         $(".control__dot:nth-child(3)").addClass("dot__active");
     };
 
-//    $(".control__dot").click(dot_Function);
+    $(".control__dot").click(expdot_Function);
 
     $("#exp__a").click(xp1_Function);
     $("#exp__b").click(xp2_Function);
@@ -319,6 +319,18 @@ $(document).ready(function () {
         min_move_y: 20,
         preventDefaultEvents: true
     });
+    
+    var skilldot_Function = function () {
+        if ($(".skill__dot").hasClass("dot__inactive")) {
+            $(this)
+                .addClass("dot__active")
+                .removeClass("dot__inactive");
+            $(this).siblings()
+                .addClass("dot__inactive")
+                .removeClass("dot__active");
+        }
+    }
+
 
     var skills1_Function = function () {
         if ($("#skills__b").hasClass("dot__active")) {
@@ -416,7 +428,7 @@ $(document).ready(function () {
         $(".control__dot:nth-child(3)").addClass("dot__active");
     };
 
-    $(".control__dot").click(dot_Function);
+    $(".control__dot").click(skilldot_Function);
 
     $("#skills__a").click(skills1_Function);
     $("#skills__b").click(skills2_Function);
