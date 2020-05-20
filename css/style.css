@@ -705,10 +705,6 @@ p a:hover {
     animation-duration: .3s;
 }
 
-.dot__inactive {
-    background-color: #717171;
-}
-
 .dot__inactiveright {
     animation-name: dotempty__left;
     animation-duration: .3s;
