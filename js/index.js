@@ -424,14 +424,14 @@ $(document).ready(function () {
 
     $("#skills__1").touchwipe({
         wipeLeft: skills2_Function,
-        wipeRight: skills3_Function,
+        wipeRight: skills2_Function,
         min_move_x: 20,
         min_move_y: 20,
         preventDefaultEvents: true
     });
 
     $("#skills__2").touchwipe({
-        wipeLeft: skills3_Function,
+        wipeLeft: skills1_Function,
         wipeRight: skills1_Function,
         min_move_x: 20,
         min_move_y: 20,
