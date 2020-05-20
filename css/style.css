@@ -681,13 +681,13 @@ p a:hover {
 
 .dot__left {
     background: linear-gradient(to right, #bbb 50%, #717171 50%);
-    background-position: left bottom;
+    background-position: right bottom;
     background-size: 300% 100%;
 }
 
 .dot__right {
     background: linear-gradient(to right, #717171 50%, #bbb 50%);
-    background-position: right bottom;
+    background-position: left bottom;
     background-size: 300% 100%;
 }
 
