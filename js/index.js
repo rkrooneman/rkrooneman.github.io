@@ -222,10 +222,6 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(1)").addClass("dot__active");
-//        $(".dot__active").css({
-//            "background": "linear-gradient(to left, #717171 0%, #717171 33.333%, #717171 33.333%, #717171 66.666%, #bbb 66.666%, #bbb 100%)",
-//            "background-position": "left bottom"
-//        });
     }
 
     var xp2_Function = function () {
@@ -256,10 +252,6 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(2)").addClass("dot__active");
-//        $(".dot__active").css({
-//            "background": "linear-gradient(to left, #717171 0%, #717171 33.333%, #bbb 33.333%, #bbb 66.666%, #717171 66.666%, #717171 100%)",
-//            "background-position": "center bottom"
-//        });
     };
 
     var xp3_Function = function () {
@@ -287,10 +279,6 @@ $(document).ready(function () {
         $("#exp__3").fadeTo("slow", 1);
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(3)").addClass("dot__active");
-//        $(".dot__active").css({
-//            "background": "linear-gradient(to right, #717171 0%, #717171 33.333%, #717171 33.333%, #717171 66.666%, #bbb 66.666%, #bbb 100%)",
-//            "background-position": "right bottom"
-//        });
     };
 
     $(".control__dot").click(dot_Function);
