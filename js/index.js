@@ -290,7 +290,7 @@ $(document).ready(function () {
         $(".control__dot:nth-child(3)").addClass("dot__active");
     };
 
-    $(".control__dot").click(dot_Function);
+//    $(".control__dot").click(dot_Function);
 
     $("#exp__a").click(xp1_Function);
     $("#exp__b").click(xp2_Function);
