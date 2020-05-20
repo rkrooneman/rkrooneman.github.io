@@ -447,3 +447,10 @@ $(document).ready(function () {
     });
 
 });
+
+$("#hello").touchwipe({
+    wipeUp: function() { window.location.href = "#intro"; },
+    min_move_x: 20,
+    min_move_y: 20,
+    preventDefaultEvents: true
+});
