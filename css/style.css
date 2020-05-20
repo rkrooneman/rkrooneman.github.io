@@ -679,6 +679,7 @@ p a:hover {
     display: inline-block;
 }
 
+/*
 .dot__left {
     background-position: left bottom;
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
@@ -690,6 +691,7 @@ p a:hover {
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1); 
 }
+*/
 
 .dot__active {
     background-color: #bbb;
