@@ -716,7 +716,7 @@ p a:hover {
 }
 
 .dot__inactive {
-    
+    background-color: #717171;
 }
 
 .dot__inactiveright {

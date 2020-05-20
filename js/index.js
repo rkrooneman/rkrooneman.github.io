@@ -209,6 +209,7 @@ $(document).ready(function () {
         }
         $("#exp__a").removeClass("dot__inactiveleft");
         $("#exp__a").removeClass("dot__inactiveright");
+        $("#exp__a").removeClass("dot__inactive");
         $("#exp__c")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -240,6 +241,7 @@ $(document).ready(function () {
         }
         $("#exp__b").removeClass("dot__inactiveleft");
         $("#exp__b").removeClass("dot__inactiveright");
+        $("#exp__b").removeClass("dot__inactive");
         $("#exp__a")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -271,6 +273,7 @@ $(document).ready(function () {
         }
         $("#exp__c").removeClass("dot__inactiveleft");
         $("#exp__c").removeClass("dot__inactiveright");
+        $("#exp__c").removeClass("dot__inactive");
         $("#exp__b")
             .removeClass("dot__right")
             .addClass("dot__left");
