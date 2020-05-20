@@ -320,4 +320,130 @@ $(document).ready(function () {
         preventDefaultEvents: true
     });
 
+    var skills1_Function = function () {
+        if ($("#skills__b").hasClass("dot__active")) {
+            $("#skills__b").addClass("dot__inactiveleft");
+            $("#skills__c").addClass("dot__inactive");
+            $("#skills__c").removeClass("dot__inactiveleft");
+            $("#skills__c").removeClass("dot__inactiveright");
+        }
+        if ($("#skills__c").hasClass("dot__active")) {
+            $("#skills__c").addClass("dot__inactiveright");
+            $("#skills__b").addClass("dot__inactive");
+            $("#skills__b").removeClass("dot__inactiveleft");
+            $("#skills__b").removeClass("dot__inactiveright");
+        }
+        $("#skills__a").removeClass("dot__inactiveleft");
+        $("#skills__a").removeClass("dot__inactiveright");
+        $("#skills__a").removeClass("dot__inactive");
+        $("#skills__c")
+            .removeClass("dot__right")
+            .addClass("dot__left");
+        $("#skills__b")
+            .removeClass("dot__left")
+            .addClass("dot__right");
+        $("#skills__1").show();
+        $("#skills__1").fadeTo("slow", 1);
+        $("#skills__2").hide();
+        $("#skills__2").css("opacity", "0");
+        $("#skills__3").hide();
+        $("#skills__3").css("opacity", "0");
+        $(".control__dot").removeClass("dot__active");
+        $(".control__dot:nth-child(1)").addClass("dot__active");
+    }
+
+    var skills2_Function = function () {
+        if ($("#skills__a").hasClass("dot__active")) {
+            $("#skills__a").addClass("dot__inactiveright");
+            $("#skills__c").addClass("dot__inactive");
+            $("#skills__c").removeClass("dot__inactiveleft");
+            $("#skills__c").removeClass("dot__inactiveright");
+        }
+        if ($("#skills__c").hasClass("dot__active")) {
+            $("#skills__c").addClass("dot__inactiveleft");
+            $("#skills__a").addClass("dot__inactive");
+            $("#skills__a").removeClass("dot__inactiveleft");
+            $("#skills__a").removeClass("dot__inactiveright");
+        }
+        $("#skills__b").removeClass("dot__inactiveleft");
+        $("#skills__b").removeClass("dot__inactiveright");
+        $("#skills__b").removeClass("dot__inactive");
+        $("#skills__a")
+            .removeClass("dot__right")
+            .addClass("dot__left");
+        $("#skills__c")
+            .removeClass("dot__left")
+            .addClass("dot__right");
+        $("#skills__1").hide();
+        $("#skills__1").css("opacity", "0");
+        $("#skills__2").show();
+        $("#skills__2").fadeTo("slow", 1);
+        $("#skills__3").hide();
+        $("#skills__3").css("opacity", "0");
+        $(".control__dot").removeClass("dot__active");
+        $(".control__dot:nth-child(2)").addClass("dot__active");
+    };
+
+    var skills3_Function = function () {
+        if ($("#skills__a").hasClass("dot__active")) {
+            $("#skills__a").addClass("dot__inactiveleft");
+            $("#skills__b").addClass("dot__inactive");
+            $("#skills__b").removeClass("dot__inactiveleft");
+            $("#skills__b").removeClass("dot__inactiveright");
+        }
+        if ($("#skills__b").hasClass("dot__active")) {
+            $("#skills__b").addClass("dot__inactiveright");
+            $("#skills__a").addClass("dot__inactive");
+            $("#skills__a").removeClass("dot__inactiveleft");
+            $("#skills__a").removeClass("dot__inactiveright");
+        }
+        $("#skills__c").removeClass("dot__inactiveleft");
+        $("#skills__c").removeClass("dot__inactiveright");
+        $("#skills__c").removeClass("dot__inactive");
+        $("#skills__b")
+            .removeClass("dot__right")
+            .addClass("dot__left");
+        $("#skills__a")
+            .removeClass("dot__left")
+            .addClass("dot__right");
+        $("#skills__1").hide();
+        $("#skills__1").css("opacity", "0");
+        $("#skills__2").hide();
+        $("#skills__2").css("opacity", "0");
+        $("#skills__3").show();
+        $("#skills__3").fadeTo("slow", 1);
+        $(".control__dot").removeClass("dot__active");
+        $(".control__dot:nth-child(3)").addClass("dot__active");
+    };
+
+    $(".control__dot").click(dot_Function);
+
+    $("#skills__a").click(skills1_Function);
+    $("#skills__b").click(skills2_Function);
+    $("#skills__c").click(skills3_Function);
+
+    $("#skills__1").touchwipe({
+        wipeLeft: skills2_Function,
+        wipeRight: skills3_Function,
+        min_move_x: 20,
+        min_move_y: 20,
+        preventDefaultEvents: true
+    });
+
+    $("#skills__2").touchwipe({
+        wipeLeft: skills3_Function,
+        wipeRight: skills1_Function,
+        min_move_x: 20,
+        min_move_y: 20,
+        preventDefaultEvents: true
+    });
+
+    $("#skills__3").touchwipe({
+        wipeLeft: skills1_Function,
+        wipeRight: skills2_Function,
+        min_move_x: 20,
+        min_move_y: 20,
+        preventDefaultEvents: true
+    });
+
 });
