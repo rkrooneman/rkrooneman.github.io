@@ -674,8 +674,6 @@ p a:hover {
     cursor: pointer;
     height: .25rem;
     width: 50px;
-    background-color: #717171;
-    background-size: 300% 100%;
     display: inline-block;
 }
 
@@ -712,11 +710,17 @@ p a:hover {
 }
 
 .dot__inactiveright {
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
     animation-name: dotempty__left;
     animation-duration: .3s;
 }
 
 .dot__inactiveleft {
+    background: linear-gradient(to right, #717171 50%, #bbb 50%);
+    background-position: left bottom;
+    background-size: 200% 100%;
     animation-name: dotempty__right;
     animation-duration: .3s;
 }
