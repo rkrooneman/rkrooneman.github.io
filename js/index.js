@@ -209,9 +209,9 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(1)").addClass("dot__active");
-        $("#exp__a").delay(300)
-            .removeClass("dot__right")
-            .removeClass("dot__left");
+//        $("#exp__a").delay(300)
+//            .removeClass("dot__right")
+//            .removeClass("dot__left");
     }
 
     var xp2_Function = function () {
@@ -229,9 +229,9 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(2)").addClass("dot__active");
-        $("#exp__b").delay(300)
-            .removeClass("dot__right")
-            .removeClass("dot__left");
+//        $("#exp__b").delay(300)
+//            .removeClass("dot__right")
+//            .removeClass("dot__left");
     };
 
     var xp3_Function = function () {
@@ -249,9 +249,9 @@ $(document).ready(function () {
         $("#exp__3").fadeTo("slow", 1);
         $(".control__dot").removeClass("dot__active");
         $(".control__dot:nth-child(3)").addClass("dot__active");
-        $("#exp__c").delay(300)
-            .removeClass("dot__right")
-            .removeClass("dot__left");
+//        $("#exp__c").delay(300)
+//            .removeClass("dot__right")
+//            .removeClass("dot__left");
     };
 
     $(".control__dot").click(dot_Function);
