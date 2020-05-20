@@ -198,10 +198,14 @@ $(document).ready(function () {
         if ($("#exp__b").hasClass("dot__active")) {
             $("#exp__b").addClass("dot__inactiveleft");
             $("#exp__c").addClass("dot__inactive");
+            $("#exp__c").removeClass("dot__inactiveleft");
+            $("#exp__c").removeClass("dot__inactiveright");
         }
         if ($("#exp__c").hasClass("dot__active")) {
             $("#exp__c").addClass("dot__inactiveright");
             $("#exp__b").addClass("dot__inactive");
+            $("#exp__b").removeClass("dot__inactiveleft");
+            $("#exp__b").removeClass("dot__inactiveright");
         }
         $("#exp__a").removeClass("dot__inactiveleft");
         $("#exp__a").removeClass("dot__inactiveright");
@@ -225,10 +229,14 @@ $(document).ready(function () {
         if ($("#exp__a").hasClass("dot__active")) {
             $("#exp__a").addClass("dot__inactiveright");
             $("#exp__c").addClass("dot__inactive");
+            $("#exp__c").removeClass("dot__inactiveleft");
+            $("#exp__c").removeClass("dot__inactiveright");
         }
         if ($("#exp__c").hasClass("dot__active")) {
             $("#exp__c").addClass("dot__inactiveleft");
             $("#exp__a").addClass("dot__inactive");
+            $("#exp__a").removeClass("dot__inactiveleft");
+            $("#exp__a").removeClass("dot__inactiveright");
         }
         $("#exp__b").removeClass("dot__inactiveleft");
         $("#exp__b").removeClass("dot__inactiveright");
@@ -252,10 +260,14 @@ $(document).ready(function () {
         if ($("#exp__a").hasClass("dot__active")) {
             $("#exp__a").addClass("dot__inactiveleft");
             $("#exp__b").addClass("dot__inactive");
+            $("#exp__b").removeClass("dot__inactiveleft");
+            $("#exp__b").removeClass("dot__inactiveright");
         }
         if ($("#exp__b").hasClass("dot__active")) {
             $("#exp__b").addClass("dot__inactiveright");
             $("#exp__a").addClass("dot__inactive");
+            $("#exp__a").removeClass("dot__inactiveleft");
+            $("#exp__a").removeClass("dot__inactiveright");
         }
         $("#exp__c").removeClass("dot__inactiveleft");
         $("#exp__c").removeClass("dot__inactiveright");
