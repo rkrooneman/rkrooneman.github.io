@@ -195,17 +195,19 @@ $(document).ready(function () {
     }
 
     var xp1_Function = function () {
-        if ($("#exp__2").is(":visible")) {
-            $("#exp__b")
-                .removeClass("dot__left")
-                .addClass("dot__right");
-        }
-        if ($("#exp__3").is(":visible")) {
-            $("#exp__c")
-                .removeClass("dot__right")
-                .addClass("dot__left");
-        }
-        $(".control__dot")
+//        if ($("#exp__2").is(":visible")) {
+//            $("#exp__b")
+//                .removeClass("dot__left")
+//                .addClass("dot__right");
+//        }
+//        if ($("#exp__3").is(":visible")) {
+//            $("#exp__c")
+//                .removeClass("dot__right")
+//                .addClass("dot__left");
+//        }
+        $("#exp__c").addClass("dot__left");
+        $("#exp__b").addClass("dot__right");
+        $("#exp__a")
             .removeClass("dot__right")
             .removeClass("dot__left");
         $("#exp__1").show();
@@ -219,17 +221,19 @@ $(document).ready(function () {
     }
 
     var xp2_Function = function () {
-        if ($("#exp__1").is(":visible")) {
-            $("#exp__a")
-                .removeClass("dot__right")
-                .addClass("dot__left");
-        }
-        if ($("#exp__3").is(":visible")) {
-            $("#exp__c")
-                .removeClass("dot__right")
-                .addClass("dot__left");
-        }
-        $(".control__dot")
+//        if ($("#exp__1").is(":visible")) {
+//            $("#exp__a")
+//                .removeClass("dot__right")
+//                .addClass("dot__left");
+//        }
+//        if ($("#exp__3").is(":visible")) {
+//            $("#exp__c")
+//                .removeClass("dot__right")
+//                .addClass("dot__left");
+//        }
+        $("#exp__a").addClass("dot__left");
+        $("#exp__c").addClass("dot__right");
+        $("#exp__b")
             .removeClass("dot__right")
             .removeClass("dot__left");
         $("#exp__1").hide();
@@ -243,17 +247,16 @@ $(document).ready(function () {
     };
 
     var xp3_Function = function () {
-        if ($("#exp__1").is(":visible")) {
-            $("#exp__a")
-                .removeClass("dot__right")
-                .addClass("dot__left");
-        }
-        if ($("#exp__2").is(":visible")) {
-            $("#exp__b")
-                .removeClass("dot__left")
-                .addClass("dot__right");
-        }
-        $(".control__dot")
+//        if ($("#exp__1").is(":visible")) {
+//            $("#exp__a").addClass("dot__left");
+//        }
+//        if ($("#exp__2").is(":visible")) {
+//            $("#exp__b")
+//                .addClass("dot__right");
+//        }
+        $("#exp__b").addClass("dot__left");
+        $("#exp__a").addClass("dot__right");
+        $("#exp__c")
             .removeClass("dot__right")
             .removeClass("dot__left");
         $("#exp__1").hide();
