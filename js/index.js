@@ -196,13 +196,15 @@ $(document).ready(function () {
 
     var xp1_Function = function () {
         if ($("#exp__b").hasClass("dot__active")) {
-            $(this).addClass("dot__inactiveleft");
+            $("#exp__b").addClass("dot__inactiveleft");
             $("#exp__c").addClass("dot__inactive");
         }
         if ($("#exp__c").hasClass("dot__active")) {
-            $(this).addClass("dot__inactiveright");
+            $("#exp__c").addClass("dot__inactiveright");
             $("#exp__b").addClass("dot__inactive");
         }
+        $("#exp__a").removeClass("dot_inactiveleft");
+        $("#exp__a").removeClass("dot_inactiveright");
         $("#exp__c")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -221,13 +223,15 @@ $(document).ready(function () {
 
     var xp2_Function = function () {
         if ($("#exp__a").hasClass("dot__active")) {
-            $(this).addClass("dot__inactiveright");
+            $("#exp__a").addClass("dot__inactiveright");
             $("#exp__c").addClass("dot__inactive");
         }
         if ($("#exp__c").hasClass("dot__active")) {
-            $(this).addClass("dot__inactiveleft");
-            ("#exp__a").addClass("dot__inactive");
+            $("#exp__c").addClass("dot__inactiveleft");
+            $("#exp__a").addClass("dot__inactive");
         }
+        $("#exp__b").removeClass("dot_inactiveleft");
+        $("#exp__b").removeClass("dot_inactiveright");
         $("#exp__a")
             .removeClass("dot__right")
             .addClass("dot__left");
@@ -246,13 +250,15 @@ $(document).ready(function () {
 
     var xp3_Function = function () {
         if ($("#exp__a").hasClass("dot__active")) {
-            $(this).addClass("dot__inactiveleft");
+            $("#exp__a").addClass("dot__inactiveleft");
             $("#exp__b").addClass("dot__inactive");
         }
         if ($("#exp__b").hasClass("dot__active")) {
-            $(this).addClass("dot__inactiveright");
+            $("#exp__b").addClass("dot__inactiveright");
             $("#exp__a").addClass("dot__inactive");
         }
+        $("#exp__c").removeClass("dot_inactiveleft");
+        $("#exp__c").removeClass("dot_inactiveright");
         $("#exp__b")
             .removeClass("dot__right")
             .addClass("dot__left");
