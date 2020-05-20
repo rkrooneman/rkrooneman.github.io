@@ -705,6 +705,43 @@ p a:hover {
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
 }
 
+.dot__active.dot__right {
+    animation-name: dotfill__right;
+    animation-duration: .3s;
+}
+
+.dot__active.dot__right {
+    animation-name: dotfill__left;
+    animation-duration: .3s;
+}
+
+
+@keyframes dotfill__left {
+  from {
+    background: linear-gradient(to left, #bbb 0%, #bbb 33.333%, #717171 33.333%, #717171 66.666%, #717171 66.666%, #717171 100%);
+    background-position: center bottom;
+    background-size: 300% 100%
+    }
+  to {
+    background: linear-gradient(to left, #717171 0%, #717171 33.333%, #bbb 33.333%, #bbb 66.666%, #717171 66.666%, #717171 100%);
+    background-position: center bottom;
+    background-size: 300% 100%;
+    }
+}
+
+@keyframes dotfill__right {
+  from {
+    background: linear-gradient(to left, #717171 0%, #717171 33.333%, #717171 33.333%, #717171 66.666%, #bbb 66.666%, #bbb 100%);
+    background-position: center bottom;
+    background-size: 300% 100%
+    }
+  to {
+    background: linear-gradient(to left, #717171 0%, #717171 33.333%, #bbb 33.333%, #bbb 66.666%, #717171 66.666%, #717171 100%);
+    background-position: center bottom;
+    background-size: 300% 100%
+    }
+}
+
 
 
 
