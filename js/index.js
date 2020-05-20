@@ -183,16 +183,16 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-//    var dot_Function = function () {
-//        if ($(".control__dot").hasClass("dot__inactive")) {
-//            $(this)
-//                .addClass("dot__active")
-//                .removeClass("dot__inactive");
-//            $(this).siblings()
-//                .addClass("dot__inactive")
-//                .removeClass("dot__active");
-//        }
-//    }
+    var dot_Function = function () {
+        if ($(".control__dot").hasClass("dot__inactive")) {
+            $(this)
+                .addClass("dot__active")
+                .removeClass("dot__inactive");
+            $(this).siblings()
+                .addClass("dot__inactive")
+                .removeClass("dot__active");
+        }
+    }
 
     var xp1_Function = function () {
 //        if ($("#exp__2").is(":visible")) {
