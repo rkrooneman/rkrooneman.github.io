@@ -324,12 +324,12 @@ $(document).ready(function () {
         $("#chevron__left").click(xp3_Function);
         $("#chevron__right").click(xp2_Function);
     }
-    if else ($("#exp__2").is(":visible")) {
+    if ($("#exp__2").is(":visible")) {
         $("#chevron__left").click(xp1_Function);
         $("#chevron__right").click(xp3_Function);
     }
-    if else ($("#exp__3").is(":visible")) {
-        $("#chevron__left").click(xp3_Function);
+    if ($("#exp__3").is(":visible")) {
+        $("#chevron__left").click(xp2_Function);
         $("#chevron__right").click(xp1_Function);
     }
     
