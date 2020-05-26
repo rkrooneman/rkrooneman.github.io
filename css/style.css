@@ -783,6 +783,7 @@ p a:hover {
 
 .block__chevron span  {
     color: #717171;
+    cursor: pointer;
 }
 
 .block__chevron span:hover {
