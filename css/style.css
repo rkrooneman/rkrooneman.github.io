@@ -772,6 +772,11 @@ p a:hover {
     }
 }
 
+.section__inner {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
 .block__chevron {
     margin: auto;
 }
