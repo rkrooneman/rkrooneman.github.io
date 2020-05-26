@@ -788,6 +788,13 @@ p a:hover {
     height: 100%;   
 }
 
+@media only screen and (max-width: 600px) {
+    .block__chevron {
+        display: none;
+    }
+}
+
+
 .block__chevron span  {
     color: #717171;
     cursor: pointer;
