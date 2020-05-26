@@ -126,9 +126,9 @@ $(document).ready(function () {
         var menu_width1 = $('.top').width();
         var scroll = $(window).scrollTop();
 
-//        console.log('dark', dark_pos);
-//        console.log('menu1', menu_pos1);
-//        console.log('scroll', scroll);
+        //        console.log('dark', dark_pos);
+        //        console.log('menu1', menu_pos1);
+        //        console.log('scroll', scroll);
 
         if (scroll > (dark_pos - 150) && menu_pos1 < (dark_pos + dark_height + 150)) {
             $('.top').addClass('nav__white');
@@ -290,8 +290,6 @@ $(document).ready(function () {
         $(".exp__dot:nth-child(3)").addClass("dot__active");
     };
 
-//    $(".control__dot").click(expdot_Function);
-
     $("#exp__a").click(xp1_Function);
     $("#exp__b").click(xp2_Function);
     $("#exp__c").click(xp3_Function);
@@ -319,20 +317,19 @@ $(document).ready(function () {
         min_move_y: 20,
         preventDefaultEvents: true
     });
-    
-    if ($("#exp__1").is(":visible")) {
-        $("#chevron__left").click(xp3_Function);
-        $("#chevron__right").click(xp2_Function);
-    }
-    if ($("#exp__2").is(":visible")) {
-        $("#chevron__left").click(xp1_Function);
-        $("#chevron__right").click(xp3_Function);
-    }
-    if ($("#exp__3").is(":visible")) {
-        $("#chevron__left").click(xp2_Function);
-        $("#chevron__right").click(xp1_Function);
-    }
-    
+
+
+    if ($("#exp__1").hasClass("exp__active")) {
+            $("#chevron__left").click(xp3_Function);
+            $("#chevron__right").click(xp2_Function);
+        } else if ($("#exp__2").hasClass("exp__active")) {
+            $("#chevron__left").click(xp1_Function);
+            $("#chevron__right").click(xp3_Function);
+        } else {
+            $("#chevron__left").click(xp2_Function);
+            $("#chevron__right").click(xp1_Function);
+        }
+
     var skilldot_Function = function () {
         if ($(".skill__dot").hasClass("dot__inactive")) {
             $(this)
@@ -343,7 +340,6 @@ $(document).ready(function () {
                 .removeClass("dot__active");
         }
     }
-
 
     var skills1_Function = function () {
         if ($("#skills__b").hasClass("dot__active")) {
@@ -441,8 +437,6 @@ $(document).ready(function () {
         $(".skill__dot:nth-child(3)").addClass("dot__active");
     };
 
-//    $(".control__dot").click(skilldot_Function);
-
     $("#skills__a").click(skills1_Function);
     $("#skills__b").click(skills2_Function);
     $("#skills__c").click(skills3_Function);
@@ -472,5 +466,3 @@ $(document).ready(function () {
     });
 
 });
-
-
