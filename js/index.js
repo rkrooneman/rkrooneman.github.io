@@ -306,9 +306,13 @@ $(document).ready(function () {
     $("#exp__b").click(xp2_Function);
     $("#exp__c").click(xp3_Function);
 
-    $(".xpchev__1").click(xp1_Function);
-    $(".xpchev__2").click(xp2_Function);
-    $(".xpchev__3").click(xp3_Function);
+//    $(".xpchev__1").click(xp1_Function);
+//    $(".xpchev__2").click(xp2_Function);
+//    $(".xpchev__3").click(xp3_Function);
+    
+    $(document).on('click', ".xpchev__1", xp1_Function);
+    $(document).on('click', ".xpchev__2", xp2_Function);
+    $(document).on('click', ".xpchev__3", xp3_Function);
 
     $("#exp__1").touchwipe({
         wipeLeft: xp2_Function,
