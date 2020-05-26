@@ -375,10 +375,10 @@ $(document).ready(function () {
         $("#skills__3").css("opacity", "0");
         $(".skill__dot").removeClass("dot__active");
         $(".skill__dot:nth-child(1)").addClass("dot__active");
-        $("#chevron__left").removeClass("skillchev__1");
-        $("#chevron__left").addClass("skillchev__2");
-        $("#chevron__right").removeClass("skillchev__1");
-        $("#chevron__right").addClass("skillchev__2");
+        $("#skillchevron__left").removeClass("skillchev__1");
+        $("#skillchevron__left").addClass("skillchev__2");
+        $("#skillchevron__right").removeClass("skillchev__1");
+        $("#skillchevron__right").addClass("skillchev__2");
     }
 
     var skills2_Function = function () {
@@ -411,10 +411,10 @@ $(document).ready(function () {
         $("#skills__3").css("opacity", "0");
         $(".skill__dot").removeClass("dot__active");
         $(".skill__dot:nth-child(2)").addClass("dot__active");
-        $("#chevron__left").removeClass("skillchev__2");
-        $("#chevron__left").addClass("skillchev__1");
-        $("#chevron__right").removeClass("skillchev__2");
-        $("#chevron__right").addClass("skillchev__1");
+        $("#skillchevron__left").removeClass("skillchev__2");
+        $("#skillchevron__left").addClass("skillchev__1");
+        $("#skillchevron__right").removeClass("skillchev__2");
+        $("#skillchevron__right").addClass("skillchev__1");
     };
 
     var skills3_Function = function () {
@@ -447,10 +447,10 @@ $(document).ready(function () {
         $("#skills__3").fadeTo("slow", 1);
         $(".skill__dot").removeClass("dot__active");
         $(".skill__dot:nth-child(3)").addClass("dot__active");
-        $("#chevron__left").removeClass("skillchev__1 skillchev__3");
-        $("#chevron__left").addClass("skillchev__2");
-        $("#chevron__right").removeClass("skillchev__2 skillchev__3");
-        $("#chevron__right").addClass("skillchev__1");
+        $("#skillchevron__left").removeClass("skillchev__1 skillchev__3");
+        $("#skillchevron__left").addClass("skillchev__2");
+        $("#skillchevron__right").removeClass("skillchev__2 skillchev__3");
+        $("#skillchevron__right").addClass("skillchev__1");
     };
 
     $("#skills__a").click(skills1_Function);
