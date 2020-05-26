@@ -782,10 +782,9 @@ p a:hover {
 }
 
 .block__chevron {
-    margin: auto;
+    margin: auto 48px;
     display: inherit;
     font-size: 10rem;
-    height: 100%;   
 }
 
 @media only screen and (max-width: 999px) {
