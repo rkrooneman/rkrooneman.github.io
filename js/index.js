@@ -307,17 +307,17 @@ $(document).ready(function () {
     $("#exp__c").click(xp3_Function);
 
     if ($("#chevron__left").hasClass(".xpchev__1")) {
-        $(this).click(xp1_Function);}
+        $("#chevron__left").click(xp1_Function);}
     if ($("#chevron__left").hasClass(".xpchev__2")) {
-        $(this).click(xp2_Function);}
+        $("#chevron__left").click(xp2_Function);}
     if ($("#chevron__left").hasClass(".xpchev__3")) {
-        $(this).click(xp3_Function);}
+        $("#chevron__left").click(xp3_Function);}
     if ($("#chevron__right").hasClass(".xpchev__1")) {
-        $(this).click(xp1_Function);}
+        $("#chevron__right").click(xp1_Function);}
     if ($("#chevron__right").hasClass(".xpchev__2")) {
-        $(this).click(xp2_Function);}
+        $("#chevron__right").click(xp2_Function);}
     if ($("#chevron__right").hasClass(".xpchev__3")) {
-        $(this).click(xp3_Function);}
+        $("#chevron__right").click(xp3_Function);}
     
 //    $("#chevron__left").hasClass(".xpchev__2").click(xp2_Function);
 //    $("#chevron__left").hasClass(".xpchev__3").click(xp3_Function);
