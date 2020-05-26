@@ -779,6 +779,9 @@ p a:hover {
 
 .block__chevron {
     margin: auto;
+    display: inherit;
+    font-size: 10rem;
+    height: 100%;
 }
 
 .block__chevron span  {
