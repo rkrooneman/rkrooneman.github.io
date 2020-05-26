@@ -342,7 +342,7 @@ svg#icon__codepen.nav__black {
 }
 
 .block {
-    max-width: 800px;
+    width: 800px;
 }
 
 .section.section--hello {
