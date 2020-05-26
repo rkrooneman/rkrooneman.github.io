@@ -445,8 +445,6 @@ $(document).ready(function () {
     $("#skills__b").click(skills2_Function);
     $("#skills__c").click(skills3_Function);
 
-    $(".skillchev__2").clickToggle(skills2_Function, skills1_Function);
-
     $(".skillchev__2").toggle(skills2_Function, skills1_Function);
 
     $("#skills__1").touchwipe({
