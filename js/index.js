@@ -325,7 +325,7 @@ $(document).ready(function () {
         } else if ($("#exp__2").hasClass("exp__active")) {
             $("#chevron__left").click(xp1_Function);
             $("#chevron__right").click(xp3_Function);
-        } else {
+        } else if ($("#exp__3").hasClass("exp__active")) {
             $("#chevron__left").click(xp2_Function);
             $("#chevron__right").click(xp1_Function);
         }
