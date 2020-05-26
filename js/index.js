@@ -224,6 +224,10 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
         $(".exp__dot").removeClass("dot__active");
         $(".exp__dot:nth-child(1)").addClass("dot__active");
+        $("#chevron__left").removeClass("xpchev__1 xpchev__2");
+        $("#chevron__left").addClass("xpchev__3");
+        $("#chevron__right").removeClass("xpchev__1 xpchev__3");
+        $("#chevron__right").addClass("xpchev__2");
     }
 
     var xp2_Function = function () {
@@ -256,6 +260,10 @@ $(document).ready(function () {
         $("#exp__3").css("opacity", "0");
         $(".exp__dot").removeClass("dot__active");
         $(".exp__dot:nth-child(2)").addClass("dot__active");
+        $("#chevron__left").removeClass("xpchev__2 xpchev__3");
+        $("#chevron__left").addClass("xpchev__1");
+        $("#chevron__right").removeClass("xpchev__1 xpchev__2");
+        $("#chevron__right").addClass("xpchev__3");
     };
 
     var xp3_Function = function () {
@@ -288,11 +296,19 @@ $(document).ready(function () {
         $("#exp__3").fadeTo("slow", 1);
         $(".exp__dot").removeClass("dot__active");
         $(".exp__dot:nth-child(3)").addClass("dot__active");
+        $("#chevron__left").removeClass("xpchev__1 xpchev__3");
+        $("#chevron__left").addClass("xpchev__2");
+        $("#chevron__right").removeClass("xpchev__2 xpchev__3");
+        $("#chevron__right").addClass("xpchev__1");
     };
 
     $("#exp__a").click(xp1_Function);
     $("#exp__b").click(xp2_Function);
     $("#exp__c").click(xp3_Function);
+    
+    $(".xpchev__1").click(xp1_Function);
+    $(".xpchev__2").click(xp2_Function);
+    $(".xpchev__3").click(xp3_Function);
 
     $("#exp__1").touchwipe({
         wipeLeft: xp2_Function,
@@ -317,18 +333,6 @@ $(document).ready(function () {
         min_move_y: 20,
         preventDefaultEvents: true
     });
-
-
-    if ($("#exp__1").is(":visible")) {
-            $("#chevron__left").click(xp3_Function);
-            $("#chevron__right").click(xp2_Function);
-        } else if ($("#exp__2").is(":visible")) {
-            $("#chevron__left").click(xp1_Function);
-            $("#chevron__right").click(xp3_Function);
-        } else if ($("#exp__3").is(":visible")) {
-            $("#chevron__left").click(xp2_Function);
-            $("#chevron__right").click(xp1_Function);
-        }
 
     var skilldot_Function = function () {
         if ($(".skill__dot").hasClass("dot__inactive")) {
