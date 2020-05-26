@@ -375,9 +375,9 @@ $(document).ready(function () {
         $("#skills__3").css("opacity", "0");
         $(".skill__dot").removeClass("dot__active");
         $(".skill__dot:nth-child(1)").addClass("dot__active");
-        $("#chevron__left").removeClass("skillchev__1 skillchev__2");
-        $("#chevron__left").addClass("skillchev__3");
-        $("#chevron__right").removeClass("skillchev__1 skillchev__3");
+        $("#chevron__left").removeClass("skillchev__1");
+        $("#chevron__left").addClass("skillchev__2");
+        $("#chevron__right").removeClass("skillchev__1");
         $("#chevron__right").addClass("skillchev__2");
     }
 
@@ -411,10 +411,10 @@ $(document).ready(function () {
         $("#skills__3").css("opacity", "0");
         $(".skill__dot").removeClass("dot__active");
         $(".skill__dot:nth-child(2)").addClass("dot__active");
-        $("#chevron__left").removeClass("skillchev__2 skillchev__3");
+        $("#chevron__left").removeClass("skillchev__2");
         $("#chevron__left").addClass("skillchev__1");
-        $("#chevron__right").removeClass("skillchev__1 skillchev__2");
-        $("#chevron__right").addClass("skillchev__3");
+        $("#chevron__right").removeClass("skillchev__2");
+        $("#chevron__right").addClass("skillchev__1");
     };
 
     var skills3_Function = function () {
