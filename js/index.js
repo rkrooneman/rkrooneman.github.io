@@ -306,24 +306,9 @@ $(document).ready(function () {
     $("#exp__b").click(xp2_Function);
     $("#exp__c").click(xp3_Function);
 
-    if ($("#chevron__left").hasClass(".xpchev__1")) {
-        $("#chevron__left").click(xp1_Function);}
-    if ($("#chevron__left").hasClass(".xpchev__2")) {
-        $("#chevron__left").click(xp2_Function);}
-    if ($("#chevron__left").hasClass(".xpchev__3")) {
-        $("#chevron__left").click(xp3_Function);}
-    if ($("#chevron__right").hasClass(".xpchev__1")) {
-        $("#chevron__right").click(xp1_Function);}
-    if ($("#chevron__right").hasClass(".xpchev__2")) {
-        $("#chevron__right").click(xp2_Function);}
-    if ($("#chevron__right").hasClass(".xpchev__3")) {
-        $("#chevron__right").click(xp3_Function);}
-    
-//    $("#chevron__left").hasClass(".xpchev__2").click(xp2_Function);
-//    $("#chevron__left").hasClass(".xpchev__3").click(xp3_Function);
-//    $("#chevron__right").hasClass(".xpchev__1").click(xp1_Function);
-//    $("#chevron__right").hasClass(".xpchev__2").click(xp2_Function);
-//    $("#chevron__right").hasClass(".xpchev__3").click(xp3_Function);
+    $(".xpchev__1").click(xp1_Function);
+    $(".xpchev__2").click(xp2_Function);
+    $(".xpchev__3").click(xp3_Function);
 
     $("#exp__1").touchwipe({
         wipeLeft: xp2_Function,
