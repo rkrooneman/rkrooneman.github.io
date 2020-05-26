@@ -337,8 +337,12 @@ svg#icon__codepen.nav__black {
 
 .section .section__inner {
     height: 100%;
-    max-width: 800px;
+/*    max-width: 800px;*/
     margin: auto 0;
+}
+
+.block {
+    max-width: 800px;
 }
 
 .section.section--hello {
