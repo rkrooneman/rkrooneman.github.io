@@ -771,3 +771,15 @@ p a:hover {
     background-size: 200% 100%
     }
 }
+
+.block__chevron {
+    margin: auto;
+}
+
+.block__chevron svg {
+    fill: #717171;
+}
+
+.block__chevron svg:hover {
+    fill: #bbb;
+}
