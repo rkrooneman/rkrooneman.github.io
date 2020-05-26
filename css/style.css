@@ -781,10 +781,10 @@ p a:hover {
     margin: auto;
 }
 
-.block__chevron svg {
-    fill: #717171;
+.block__chevron span  {
+    color: #717171;
 }
 
-.block__chevron svg:hover {
-    fill: #bbb;
+.block__chevron span:hover {
+    color: #bbb;
 }
