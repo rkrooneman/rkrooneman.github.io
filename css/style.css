@@ -780,8 +780,6 @@ p a:hover {
 .block__chevron {
     margin: auto;
     display: inherit;
-    position: absolute;
-    right: 10vw;
     font-size: 10rem;
     height: 100%;   
 }
