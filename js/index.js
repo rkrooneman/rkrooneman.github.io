@@ -319,13 +319,13 @@ $(document).ready(function () {
     });
 
 
-    if ($("#exp__1").hasClass("exp__active")) {
+    if ($("#exp__1").is(":visible")) {
             $("#chevron__left").click(xp3_Function);
             $("#chevron__right").click(xp2_Function);
-        } else if ($("#exp__2").hasClass("exp__active")) {
+        } else if ($("#exp__2").is(":visible")) {
             $("#chevron__left").click(xp1_Function);
             $("#chevron__right").click(xp3_Function);
-        } else if ($("#exp__3").hasClass("exp__active")) {
+        } else if ($("#exp__3").is(":visible")) {
             $("#chevron__left").click(xp2_Function);
             $("#chevron__right").click(xp1_Function);
         }
