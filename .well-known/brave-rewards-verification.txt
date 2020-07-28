@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: rkrooneman.github.io
+Token: 3fa35aa32cf9ed8b798d2fff1f1173428627d62ab3a7b625425a9c621746aeaa
