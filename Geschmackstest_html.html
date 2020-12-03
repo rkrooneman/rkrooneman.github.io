@@ -9,6 +9,15 @@
         margin: 30px 0
     }
 
+    .aui .c7-list-inline,
+    .aui .c7-list-unstyled,
+    .aui .c7-list-table,
+    .aui .c7-list-checks,
+    .aui .c7-list-crosses,
+    .aui .c7-list-timeline {
+        list-style: none;
+    }
+
     .aui .c7-list-checks-item::before {
         content: "\2714";
         color: #4bae45;
@@ -16,6 +25,12 @@
         top: 0;
         left: 0;
         position: absolute;
+    }
+
+    .aui .c7-list-checks-item {
+        padding-left: 1.25rem;
+        padding-bottom: .5rem;
+        position: relative;
     }
 
     .main-button {
