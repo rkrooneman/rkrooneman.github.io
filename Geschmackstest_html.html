@@ -3,9 +3,19 @@
     html {
         font-family: Bliss2, Helvetica, Arial, sans-serif;
     }
+
     html header h1 {
         text-align: center;
         margin: 30px 0
+    }
+
+    .aui .c7-list-checks-item::before {
+        content: "\2714";
+        color: #4bae45;
+        display: block;
+        top: 0;
+        left: 0;
+        position: absolute;
     }
 
     .main-button {
@@ -535,9 +545,9 @@
         top: 0;
         left: 50%
     }
-    
+
     .productVisual {
-        display: flex; 
+        display: flex;
     }
 
     .deutschcolumn {
@@ -762,6 +772,7 @@
             padding-top: unset !important
         }
     }
+
 </style>
 <meta charset="utf-8">
 <meta content="ie=edge" http-equiv="x-ua-compatible">
@@ -1494,4 +1505,5 @@
     setTimeout(function() {
         $("#wheel").toggleClass("active")
     }, 1000);
+
 </script>
