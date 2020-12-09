@@ -218,6 +218,7 @@
     .question-title h3 {
         display: inline-block;
         text-align: left;
+        margin-left: 0;
         width: 45%
     }
 
@@ -233,6 +234,8 @@
     .sb-progress {
         -webkit-appearance: none;
         appearance: none;
+        position: absolute;
+        right: 0;
         width: 20%;
         height: 6px;
     }
@@ -907,8 +910,8 @@
     <div class="content">
         <div class="starter">
             <span class="question-title">
-            <h3 id="startertext">Ik geef les in de ...</h3>
-            <progress class="sb-progress sb-progress--green" value="0" max="1000"></progress>
+                <h3 id="startertext">Ik geef les in de ...</h3>
+                <progress class="sb-progress sb-progress--green" value="0" max="1000"></progress>
             </span>
             <div class="starter-row">
                 <div class="starter-column"> <a id="stream-onderbouw">
