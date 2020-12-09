@@ -1530,11 +1530,11 @@
         var d = $("#geschmackstest-a");
         var c = d.find(".binary-choice li");
         var b = {};
-        c.on("click touchstart", function() {
+        c.on("click touchstart", setTimeout(function() {
             $(this).siblings().removeClass("active");
             $(this).addClass("active")
-        });
-        $(".see-results").click("click touchstart", function() {
+        }, 200);
+        $(".see-results").click("click touchstart", setTimeout(function() {
             var f = a();
             var e = (f > 0) ? $(".answer-1") : $(".answer-2");
             if (f == null) {
