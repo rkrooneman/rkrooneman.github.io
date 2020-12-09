@@ -1,0 +1,1625 @@
+<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" rel="stylesheet">
+<style type="text/css">
+    @font-face {
+        font-family: Grotesk;
+        src: url(Px-Grotesk-Bold.woff);
+    }
+
+    @font-face {
+        font-family: Bliss;
+        src: url("BlissPro - Bliss Pro - Regular.woff");
+    }
+
+    html {
+        font-family: Bliss2, Helvetica, Arial, sans-serif;
+    }
+
+    html header h1 {
+        text-align: center;
+        margin: 30px 0
+    }
+
+    h3 {
+        font-family: Grotesk, Helvetica, Arial, sans-serif;
+    }
+
+    a {
+        color: #000;
+    }
+
+    .c7-button-neutral:hover,
+    .c7-button-neutral:focus {
+        background-color: rgb(224, 244, 253);
+    }
+
+    .c7-button-brand:hover,
+    .c7-button-brand:focus,
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background: #009df1;
+        color: #fff;
+    }
+
+    a.c7-button.c7-button-neutral.c7-button-large {
+        margin-top: 0px;
+        position: absolute;
+    }
+
+    .c7-grid-col {
+        text-align: left;
+    }
+
+    .c7-list-checks,
+    .c7-list-inline {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .c7-list-checks-item {
+        padding-left: 1.25rem;
+        padding-bottom: .5rem;
+        position: relative;
+    }
+
+    .productVisual .c7-button-large {
+        padding: 1rem 1rem;
+        font-size: 18px;
+        margin-top: .5rem;
+    }
+
+    .c7-list-checks-item::before {
+        /*
+        content: "\2714";
+        color: #4bae45;
+*/
+        content: "■";
+        color: rgb(245, 180, 0);
+        width: 2rem;
+        display: block;
+        font-size: 2rem;
+        top: -.75rem;
+        left: -.5rem;
+        position: absolute;
+    }
+
+    .c7-button-neutral {
+        border: 2px solid rgb(0, 130, 200);
+        border-radius: 50rem;
+    }
+
+    .main-button {
+        display: inline-block;
+        background: #0285cd;
+        border: 0;
+        padding: .75em 1.5em;
+        font-family: "Cabin", sans-serif;
+        font-weight: bold;
+        color: white;
+        cursor: pointer
+    }
+
+    .starter {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 60px 0 80px 60px
+    }
+
+    #stream-bovenbouw,
+    #stream-onderbouw {
+        text-decoration: none !important
+    }
+
+    #startertext {
+        margin-left: 60px;
+        font-family: Bliss2, Helvetica, Arial, sans-serif;
+    }
+
+    .starter-row {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        width: 100%;
+        padding: 3px
+    }
+
+    .starter-column {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 600px
+    }
+
+    .starter-column:first-child {
+        margin-right: 5px
+    }
+
+    .streambutton {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center
+    }
+
+    .streambutton:hover .overlay {
+        opacity: .9
+    }
+
+    .streambutton:hover>h3 {
+        opacity: .9;
+        -webkit-text-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+        -moz-text-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+        text-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+        transform: translate(0px, -80px)
+    }
+
+    #streambtn_onderbouw {
+        background-color: darkorange;
+        margin-right: 1.25rem
+    }
+
+    #streambtn_bovenbouw {
+        background-color: cadetblue
+    }
+
+    .streambutton h3 {
+        color: #fff;
+        font-size: -webkit-xxx-large;
+        font-size: 2.5rem;
+        -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        transition: all .5s ease-out
+    }
+
+    @media screen and (max-width:770px) {
+        .starter {
+            margin-left: unset
+        }
+
+        .starter-row {
+            flex-flow: column nowrap;
+            justify-content: center;
+            width: 100%;
+            padding: 3px
+        }
+
+        .starter-column:first-child {
+            margin-bottom: 5px
+        }
+
+        .starter-column {
+            width: 100%
+        }
+    }
+
+    .binary-quiz {
+        display: none
+    }
+
+    .binary-quiz.current {
+        display: block
+    }
+
+    .main-button:hover,
+    .main-button:active {
+        background: #0285cd
+    }
+
+    .question-title {
+        max-width: 100%
+    }
+
+    .question-title h3 {
+        display: inline-block;
+        text-align: left;
+        width: 75%
+    }
+
+    .question-title h4 {
+        display: inline-block;
+        text-align: right;
+        font-size: 1.25rem;
+        margin-right: 12px;
+        width: 10%;
+        margin-right: 60px
+    }
+
+    .binary-quiz .quiz {
+        margin-top: -40px;
+        padding: 0;
+        list-style: none
+    }
+
+    .binary-quiz .quiz>li {
+        position: relative;
+        display: none
+    }
+
+    .binary-quiz .quiz>li.current {
+        display: block
+    }
+
+    .binary-quiz .question {
+        text-align: center
+    }
+
+    .binary-quiz .question::after {
+        clear: both;
+        content: "";
+        display: table
+    }
+
+    .binary-quiz .question img {
+        width: 100% !important
+    }
+
+    .binary-quiz .question p {
+        display: none
+    }
+
+    .binary-quiz .question h3 {
+        text-align: left
+    }
+
+    .binary-quiz .question h3::after {
+        clear: both;
+        content: "";
+        display: table
+    }
+
+    .binary-quiz .question .binary-choice {
+        display: inline-block;
+        position: relative;
+        max-width: 100%;
+        margin: 0;
+        margin-bottom: 80px;
+        padding: 0
+    }
+
+    .binary-quiz .question .binary-choice>li:first-child {
+        margin-bottom: 50px
+    }
+
+    .binary-quiz .question .binary-choice>li {
+        position: relative;
+        z-index: 2;
+        display: block;
+        vertical-align: top;
+        width: 49%;
+        height: auto;
+        border-radius: 5px;
+        list-style: none;
+        background: #0285cd;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        -webkit-transition: background .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -moz-transition: background .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition: background .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    }
+
+    .binary-quiz .question .binary-choice>li:hover {
+        background: #acf9d4
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #0285cd
+    }
+
+    #icon {
+        color: white;
+        height: 5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center
+    }
+
+    #icon.anim {
+        animation-name: thumbsup;
+        animation-duration: .25s;
+
+    }
+
+    @keyframes thumbsup {
+        0% {
+            transform: rotate(0);
+            -ms-transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(55deg);
+            -ms-transform: rotate(55deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        }
+    }
+
+    .binary-quiz .question .binary-choice>li:hover .overlay {
+        opacity: .9
+    }
+
+    .binary-quiz .results {
+        position: relative;
+        padding: 0 60px
+    }
+
+    .binary-quiz .results .answer,
+    .binary-quiz .results .share-bar {
+        display: none
+    }
+
+    .binary-quiz .results .placeholder {
+        position: relative
+    }
+
+    .binary-quiz .results .placeholder h3 {
+        display: inline-block
+    }
+
+    .binary-quiz .results .placeholder button {
+        font-size: 1.1em
+    }
+
+    .binary-quiz .results.complete .placeholder {
+        display: none
+    }
+
+    .binary-quiz .results .answer.selected,
+    .binary-quiz .results.complete .share-bar {
+        display: block
+    }
+
+    @media all and (min-width:760px) {
+        binary-quiz .question .binary-choice {
+            margin-left: -60px
+        }
+
+        .binary-quiz .question .binary-choice li:first-child {
+            margin: 0
+        }
+
+        .binary-quiz .question .binary-choice li:first-child:after {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            color: #000
+        }
+
+        .binary-quiz .question .binary-choice>li {
+            display: inline-block
+        }
+
+        .binary-quiz .quiz {
+            margin-left: 60px;
+            margin-top: 0
+        }
+
+        .binary-quiz .quiz .question {
+            position: relative;
+            margin-top: 50px
+        }
+
+        .binary-quiz .quiz>li:before {
+            position: absolute;
+            top: -45px;
+            left: -60px
+        }
+
+        .binary-quiz .placeholder button {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%)
+        }
+    }
+
+    .share-bar {
+        text-align: center;
+        color: #6d7c86
+    }
+
+    .share-bar h2 {
+        margin-top: 17px;
+        display: inline-block
+    }
+
+    .share-bar .share-icons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center
+    }
+
+    .share-bar a {
+        text-decoration: none;
+        color: #2e85d0
+    }
+
+    .share-bar a:hover {
+        color: #389ef4
+    }
+
+    .button {
+        display: block;
+        border-radius: 50rem;
+        background-color: #0285cd;
+        border: 0;
+        border-bottom: 2px solid #00679f;
+        max-height: 60px;
+        max-width: 180px;
+        color: #fff;
+        text-align: center;
+        font-size: 18px !important;
+        font-family: "Bliss 2", "Helvetica Neue", "Roboto", Arial, sans-serif;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        transition: all .5s;
+        cursor: pointer;
+        text-decoration: none
+    }
+
+    .methodlogo {
+        vertical-align: text-bottom
+    }
+
+    .methodlogo:after {
+        vertical-align: bottom;
+        content: '';
+        padding-left: 15px
+    }
+
+    .cannon {
+        height: 500px;
+        width: 10px;
+        margin-top: -100px;
+        position: relative;
+        transform-origin: 50% 100%;
+        animation: cannon-explosion 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) both;
+        animation-iteration-count: 2
+    }
+
+    @keyframes cannon-explosion {
+        0% {
+            transform: scale(0)
+        }
+
+        80% {
+            opacity: 1
+        }
+
+        100% {
+            opacity: 0
+        }
+    }
+
+    .cannon__path {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform-origin: 50% 100%;
+        padding-bottom: 30%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center
+    }
+
+    .cannon__path--lg {
+        height: 100%
+    }
+
+    .cannon__path--md {
+        height: 95%
+    }
+
+    .cannon__path--sm {
+        height: 90%
+    }
+
+    .cannon__path--angle-2 {
+        transform: rotate(-15deg)
+    }
+
+    .cannon__path--angle-1 {
+        transform: rotate(-7.5deg)
+    }
+
+    .cannon__path--angle1 {
+        transform: rotate(7.5deg)
+    }
+
+    .cannon__path--angle2 {
+        transform: rotate(15deg)
+    }
+
+    .cannon__confetti {
+        flex: 0 1 auto;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+        animation-iteration-count: 2
+    }
+
+    .cannon__confetti:nth-child(even) {
+        animation-name: confetti-rotate-l
+    }
+
+    @keyframes confetti-rotate-l {
+        0% {
+            transform: rotate(0) scaleY(1)
+        }
+
+        50% {
+            transform: rotate(2turn) scaleY(1.5)
+        }
+
+        100% {
+            transform: rotate(2.05turn) scaleY(1)
+        }
+    }
+
+    .cannon__confetti:nth-child(odd) {
+        animation-name: confetti-rotate-r
+    }
+
+    @keyframes confetti-rotate-r {
+        0% {
+            transform: rotate(0) scaleY(1)
+        }
+
+        50% {
+            transform: rotate(-2turn) scaleY(1.5)
+        }
+
+        100% {
+            transform: rotate(-2.05turn) scaleY(1)
+        }
+    }
+
+    .cannon__confetti--ribbon {
+        height: 1em;
+        width: .5em;
+        border-radius: .1em
+    }
+
+    .cannon__confetti--flake {
+        height: .5em;
+        width: .5em;
+        border-radius: 50%
+    }
+
+    .cannon__confetti--color-1 {
+        background-color: #f3e400
+    }
+
+    .cannon__confetti--color-2 {
+        background-color: #004874
+    }
+
+    .cannon__confetti--color-3 {
+        background-color: #e88408
+    }
+
+    .cannon__confetti--color-4 {
+        background-color: #81b1e2
+    }
+
+    .party-popper {
+        left: 42.5%;
+        bottom: 5vh;
+        font-size: 2em
+    }
+
+    .cannon {
+        position: absolute;
+        top: 0;
+        left: 50%
+    }
+
+    .productVisual {
+        display: flex;
+    }
+
+    .deutschcolumn {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+        border: 2px;
+        border-style: solid;
+        border-color: white;
+        overflow: overlay
+    }
+
+    .deutschrow {
+        min-height: 300px;
+        margin-top: 24px;
+        color: #fff;
+        display: flex;
+        flex-flow: row nowrap
+    }
+
+    .deutschrow:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+
+    .dropbtn {
+        background: #0082c8;
+        color: #fff;
+        text-decoration: none !important;
+        border: 0;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        font-family: "Bliss 2", "Helvetica Neue", "Roboto", Arial, sans-serif !important;
+        margin-bottom: 1.5625rem;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50rem;
+        padding: 17px 20px
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 100%;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 2
+    }
+
+    .dropdown-content a {
+        color: #62747e !important;
+        padding: 12px 16px;
+        text-decoration: none !important;
+        display: block
+    }
+
+    #firstdropdownitem {
+        border-bottom: 1px #8e9ea7 solid !important
+    }
+
+    /*
+    .dropdown-content a:hover {
+        text-decoration: underline !important
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block
+    }
+
+    .dropdown:hover .dropbtn {
+        background: #009df1;
+        border-bottom: 0;
+        border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important
+    }
+*/
+
+    @media screen and (max-width:770px) {
+        .binary-quiz .question h3 {
+            width: 100%
+        }
+
+        .result_btns {
+            display: flex;
+            flex-flow: column nowrap
+        }
+
+        a.dropbtn {
+            margin-bottom: unset
+        }
+
+        .binary-quiz .question h4 {
+            font-size: inherit;
+            width: 90%
+        }
+
+        .binary-quiz .question .binary-choice>li:first-child {
+            margin-bottom: 5px
+        }
+
+        .deutschrow {
+            flex-flow: column wrap
+        }
+
+        .binary-quiz .results {
+            padding: unset
+        }
+
+        .deutschcolumn {
+            width: 100%;
+            height: auto
+        }
+
+        .binary-quiz .question .binary-choice>li {
+            width: 100%
+        }
+
+        .methodlogo {
+            width: 100%
+        }
+
+        .binary-quiz .quiz>li.current {
+            padding-top: 50px
+        }
+
+        #geschmacklogo {
+            display: none
+        }
+
+        #geschmacklogomobile {
+            display: block
+        }
+
+        .zeigesmirbutton {
+            width: 90vw;
+            height: 80vw;
+            margin-top: 10px !important
+        }
+
+        .c7-button-neutral {
+            width: 100% !important
+        }
+
+        .dropbtn {
+            width: 100%
+        }
+
+        .dropdown {
+            width: 100%
+        }
+
+        #waaier-desktop {
+            display: none
+        }
+
+        #waaier-mobile {
+            display: block
+        }
+    }
+
+    i {
+        font-style: normal !important
+    }
+
+    #geschmacklogo {
+        width: 50%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    #wheel {
+        position: absolute;
+        margin-left: -400px;
+        bottom: -15px;
+        transform: translateX(0) rotateZ(0);
+        opacity: 0;
+        transition: .75s ease-out, transform 2.2s ease-out;
+        transform-origin: center;
+        -webkit-transition: .75s ease-out, -webkit-transform 2.2s ease-out
+    }
+
+    #wheel.active {
+        transform: translateX(525px) rotateZ(900deg);
+        opacity: 1
+    }
+
+    @media screen and (min-width:770px) {
+        #geschmacklogomobile {
+            display: none
+        }
+
+        #waaier-desktop {
+            display: block;
+            width: 480px
+        }
+
+        #waaier-mobile {
+            display: none
+        }
+    }
+
+    .aui .c7-grid-col {
+        text-align: left
+    }
+
+    .aui .c7-border-bottom {
+        border-bottom: unset !important
+    }
+
+    @media(min-width:640px) {
+        .aui .c7-pb-xxl {
+            padding-bottom: unset !important;
+            padding-top: unset !important
+        }
+    }
+
+</style>
+<meta charset="utf-8">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script src="js/vendor/modernizr-2.8.3.min.js"></script><br> &nbsp; <div id="geschmacklogo"> <img src="Geschmackstest/Geschmackstest_logo_nowheel3.png">
+    <div id="wheel"><img src="Geschmackstest/Trabi-wheel.png"></div>
+</div>
+<div id="geschmacklogomobile">
+    <center><img src="Geschmackstest/Geschmackstest_logo3_500px.png"></center>
+</div>
+<div class="wrapper">
+    <div class="content">
+        <div class="starter">
+            <h3 id="startertext">Ik geef les in de ...</h3>
+            <div class="starter-row">
+                <div class="starter-column"> <a id="stream-onderbouw">
+                        <div class="streambutton" id="streambtn_onderbouw">
+                            <h3>onderbouw / vmbo bovenbouw</h3>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </div>
+                    </a> </div>
+                <div class="starter-column"> <a id="stream-bovenbouw">
+                        <div class="streambutton" id="streambtn_bovenbouw">
+                            <h3>havo / vwo bovenbouw</h3>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </div>
+                    </a> </div>
+            </div>
+        </div>
+        <div class="binary-quiz" id="geschmackstest-a">
+            <ol class="quiz">
+                <li class="question step1 current"> <span class="question-title">
+                        <h3>Welches Bild spricht Sie mehr an?</h3>
+                        <h4>(1/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question1">
+                        <li data-value="-1"><a href="#question1"><img src="Geschmackstest/vraag%203_TT.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question1"><img src="Geschmackstest/vraag%203_NK.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step2"> <span class="question-title">
+                        <h3>Sie haben am Ende der Stunde noch 20 Minuten Zeit. Was machen Sie?</h3>
+                        <h4>(2/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question2">
+                        <li data-value="1"><a href="#question2"><img src="Geschmackstest/Vraag-2_NK_ob.jpg.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question2"><img src="Geschmackstest/Vraag-2_TT_ob.jpg.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step3"> <span class="question-title">
+                        <h3>Was müssen Ihre Schüler immer dabei haben?</h3>
+                        <h4>(3/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question3">
+                        <li data-value="1"><a href="#question3"><img src="Geschmackstest/vraag-1_NK.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question3"><img src="Geschmackstest/vraag-1_TT.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step4"> <span class="question-title">
+                        <h3>Welcher Artikel von <i>NU Actueel</i> spricht Sie am meisten an?</h3>
+                        <h4>(4/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question4">
+                        <li data-value="-1"><a href="#question4"><img src="Geschmackstest/Vraag-4_TT_ob.jpg.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question4"><img src="Geschmackstest/Vraag-4_NK_ob.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step5"> <span class="question-title">
+                        <h3>Welche Grammatik-Aufgabe spricht Sie am meisten an?</h3>
+                        <h4>(5/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question5">
+                        <li data-value="1"><a href="#question5"><img src="Geschmackstest/vraag-4_NK.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question5"><img src="Geschmackstest/Vraag-5_TT_ob.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step6"> <span class="question-title">
+                        <h3>Welche Aussprache-Theorie spricht Sie am meisten an?</h3>
+                        <h4>(6/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question6">
+                        <li data-value="1"><a href="#question6"><img src="Geschmackstest/vraag-8_NK.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question6"><img src="Geschmackstest/vraag-8_TT.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step7"> <span class="question-title">
+                        <h3>In meinem Unterricht möchte ich gerne …</h3>
+                        <h4>(7/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question7">
+                        <li data-value="-1"><a href="#question7"><img src="Geschmackstest/vraag-5_TT.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question7"><img src="Geschmackstest/vraag-5_NK.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step8"> <span class="question-title">
+                        <h3>Ich schaue diesen deutschen Film mit meiner Klasse:</h3>
+                        <h4>(8/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question8">
+                        <li data-value="1"><a href="#question8"><img src="Geschmackstest/Vraag-7_NK.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question8"><img src="Geschmackstest/Vraag-7_TT.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step9"> <span class="question-title">
+                        <h3>Welche drei Wörter sprechen Sie mehr an?</h3>
+                        <h4>(9/9)</h4>
+                    </span>
+                    <ul class="binary-choice see-results" id="question9">
+                        <li data-value="-1"><a href="#question9"><img src="Geschmackstest/vraag-9b_TT.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question9"><img src="Geschmackstest/vraag-9b_NK.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="results">
+                <div class="answer answer-1">
+                    <center>
+                        <div class="party-popper"></div>
+                        <div class="cannon">
+                            <div class="cannon__path cannon__path--sm cannon__path--angle-2">
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--md cannon__path--angle-1">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--lg cannon__path--angle0">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--md cannon__path--angle1">
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--sm cannon__path--angle2">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="productVisual c7-grid-row c7-pb-xxl c7-pt-xl c7-border-bottom">
+                            <div class="c7-grid-col c7-width-large-12-24"> <img id="waaier-mobile" class="c7-mr c7-mb" src="https://www.noordhoff.nl/documents/2449749/2468133/NU_VO_NeueKontakte_7e+ed_Onderbouw_2.png"> <img id="waaier-desktop" class="c7-mr c7-mb" alt="Neue Kontakte 7e editie onderbouw" src="Geschmackstest/NU_VO_NeueKontakte_7e%20ed%20Onderbouw_digitaal_2.png"> </div>
+                            <div class="c7-grid-col c7-width-large-12-24">
+                                <h3>De methode die bij je past is:</h3>
+                                <div class="methodlogo"><img src="Geschmackstest/NK_logo_vinder.png"></div>
+                                <h3>Onderbouw</h3>
+                                <div class="pv-descr">
+                                    <ul class="c7-list-checks c7-theme-list-checks">
+                                        <li class="c7-list-checks-item">Duits om écht te gebruiken</li>
+                                        <li class="c7-list-checks-item">Glasheldere structuur</li>
+                                        <li class="c7-list-checks-item">Eenvoudig differentiëren</li>
+                                    </ul>
+                                </div> <span class="result_btns">
+                                    <div class="dropdown"> <button class="dropbtn"><img src="shopping_cart-24px.svg">&nbsp;&nbsp;Beoordelingspakket aanvragen</button>
+                                        <!--                                        <div class="dropdown-content"> <a href="https://www.noordhoff.nl/product/-/webshop/voortgezet-onderwijs/talen/beoordelingspakket-neue-kontakte-7e-editie-vmbo-onderbouw/271807?source_geschmack=geschmackstest" target="_blank" id="firstdropdownitem">Vmbo onderbouw</a> <a href="https://www.noordhoff.nl/product/-/webshop/voortgezet-onderwijs/talen/beoordelingspakket-neue-kontakte-7e-editie-havo-vwo-onderbouw/273926?source_geschmack=geschmackstest" target="_blank">Havo vwo onderbouw</a> </div>-->
+                                    </div>&nbsp;<a class="c7-button c7-button-neutral c7-button-large" onclick="window.location.reload()"><img src="settings_backup_restore-24px.svg"></a>
+                                </span>
+                                <!--
+                                <ul class="pv-links c7-list-inline">
+                                    <li class="c7-list-inline-item c7-pr"><a href="https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte?source_geschmack=geschmackstest" target="_blank">Meer informatie</a></li>
+                                </ul>
+-->
+                            </div>
+                        </div>
+                    </center>
+                    <!--
+                    <div class="deutschrow">
+                        <div class="deutschcolumn" style="background-color:#7ab3e2">
+                            <h3><i class="fas fa-comments" style="font-style: normal;"></i> Communicatie</h3>
+                            <p>Duits leren is pas zinvol als je het ook echt kunt gebruiken. Daarom biedt de nieuwe editie van Neue Kontakte geen vaste zinnen, maar Sprachmittel: bouwstenen met Duitse zinsdelen, die leerlingen naar hun eigen hand kunnen zetten, zodat ze passen bij hun eigen situatie en wat zíj willen zeggen in het Duits.</p>
+                        </div>
+                        <div class="deutschcolumn" style="background-color:#509bd9">
+                            <h3><i class="fas fa-th" style="font-style: normal;"></i> Structuur</h3>
+                            <p>Neue Kontakte kent al edities lang een glasheldere opbouw. In elk hoofdstuk komen vaste vaardigheden aan bod en elke paragraaf heeft een vaste opbouw waarmee leerlingen al snel vertrouwd raken.</p>
+                        </div>
+                        <div class="deutschcolumn" style="background-color:#2c83ca">
+                            <h3><i class="fas fa-random" style="font-style: normal;"></i> Eenvoudig differentiëren</h3>
+                            <p>Met de gepersonaliseerde online leeromgeving werkt iedere leerling op zijn eigen niveau. Differentiëren kan best lastig zijn in de praktijk. De adaptieve leerroutes helpen u daarbij. De leerstof en de opdrachten passen zich automatisch aan op het niveau van de leerling.</p>
+                        </div>
+                    </div> <a href="https://www.noordhoff.nl/voortgezet-onderwijs/methoden/duits/trabitour/4e-editie-onderbouw?source_geschmack=geschmackstest">
+                        <p>Toch benieuwd naar onze andere methode Duits: TrabiTour?</p>
+                    </a>
+-->
+                    <div class="share-bar">
+                        <center>
+                            <h3>Deel je resultaat</h3> <span class="share-icons"> <a class="share-twitter" target="blank" href="https://twitter.com/intent/tweet?text=Ik kies dit jaar voor Neue Kontakte!&amp;url=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte&amp;hastags=duits;voortgezetonderwijs&amp;via=noordhoff&amp;source_geschmack=geschmackstest"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a> <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a> <a class="share-linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.noordhoffuitgevers.nl%2Fvoortgezet-onderwijs%2Fmethoden%2Fduits%2Fneue-kontakte&amp;lang=nl_NL&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span></a> </span>
+                        </center>
+                    </div>
+                </div>
+                <div class="answer answer-2">
+                    <center>
+                        <div class="party-popper"></div>
+                        <div class="cannon">
+                            <div class="cannon__path cannon__path--sm cannon__path--angle-2">
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--md cannon__path--angle-1">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--lg cannon__path--angle0">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--md cannon__path--angle1">
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--sm cannon__path--angle2">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="productVisual c7-grid-row c7-pb-xxl c7-pt-xl c7-border-bottom">
+                            <div class="c7-grid-col c7-width-large-12-24"> <img id="waaier-mobile" class="c7-mr c7-mb" src="Geschmackstest/Trabitour-4e-ob-12-vmbo-gt-havo-2-Boek-en-Tablet.png">
+                                <img id="waaier-desktop" class="c7-mr c7-mb" src="Geschmackstest/Trabitour-4e-ob-12-vmbo-gt-havo-2-Boek-en-Tablet.png">
+                            </div>
+                            <div class="c7-grid-col c7-width-large-12-24">
+                                <h3>De methode die bij je past is:</h3>
+                                <div class="methodlogo"><img src="Geschmackstest/Trabi_logo_vinder.png"></div>
+                                <h3>Onderbouw</h3>
+                                <div class="pv-descr">
+                                    <ul class="c7-list-checks c7-theme-list-checks">
+                                        <li class="c7-list-checks-item">Variatie en verrassing in elke les </li>
+                                        <li class="c7-list-checks-item">TrabiTour = Landeskunde</li>
+                                        <li class="c7-list-checks-item">Eenvoudig differentiëren</li>
+                                    </ul>
+                                </div> <span class="result_btns">
+                                    <div class="dropdown"> <button class="dropbtn"><img src="shopping_cart-24px.svg">&nbsp;&nbsp;Beoordelingspakket aanvragen</button>
+                                        <!--                                        <div class="dropdown-content"> <a href="https://www.noordhoff.nl/product/-/webshop/voortgezet-onderwijs/talen/beoordelingspakket-trabitour-4e-editie-vmbo-onderbouw/271803?source_geschmack=geschmackstest" target="_blank" id="firstdropdownitem">Vmbo onderbouw</a> <a href="https://www.noordhoff.nl/product/-/webshop/voortgezet-onderwijs/talen/beoordelingspakket-trabitour-4e-editie-havo-vwo-onderbouw/273928?source_geschmack=geschmackstest" target="_blank">Havo vwo onderbouw</a> </div>-->
+                                    </div>&nbsp;<a class="c7-button c7-button-neutral c7-button-large" onclick="window.location.reload()"><img src="settings_backup_restore-24px.svg"></a>
+                                </span>
+                                <!--
+                                <ul class="pv-links c7-list-inline">
+                                    <li class="c7-list-inline-item c7-pr"><a href="https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/TrabiTour?source_geschmack=geschmackstest" target="_blank">Meer informatie</a></li>
+                                </ul>
+-->
+                            </div>
+                        </div>
+                    </center>
+                    <!--
+                    <div class="deutschrow">
+                        <div class="deutschcolumn" style="background-color:#7ab3e2">
+                            <h3><i class="fas fa-dice" style="font-style: normal;"></i> Afwisseling</h3>
+                            <p>Een gevarieerde en plezierige les Duits is het uitgangspunt bij TrabiTour. In één les komen dan ook veel verschillende opdrachtvormen en vaardigheden aan bod. Leer bijvoorbeeld de Duitstalige landen beter kennen in <em>Trabi on Tour</em>, oefen verder met woordenschat en grammatica in de <em>Training en Challenge</em> of ga aan de slag met een actueel Duits nieuwsbericht op <em>NU Actueel.</em></p>
+                        </div>
+                        <div class="deutschcolumn" style="background-color:#509bd9">
+                            <h3><i class="fas fa-globe-africa" style="font-style: normal;"></i> Landeskunde</h3>
+                            <p>Heb je het over TrabiTour, dan heb je het over Landeskunde. Kennis van de cultuur in landen waar Duits wordt gesproken. Het zit overal in elk hoofdstuk - in liedjes, video’s, leesteksten. En Landeskunde in TrabiTour is meer dan alleen Duitsland - leerlingen maken een tour langs alle Duitstalige landen en ervaren de verschillen en overeenkomsten.</p>
+                        </div>
+                        <div class="deutschcolumn" style="background-color:#2c83ca">
+                            <h3><i class="fas fa-random" style="font-style: normal;"></i> Eenvoudig differentiëren</h3>
+                            <p>Met de gepersonaliseerde online leeromgeving werkt iedere leerling op zijn eigen niveau. Differentiëren kan best lastig zijn in de praktijk. De adaptieve leerroutes helpen je daarbij. De leerstof en de opdrachten passen zich automatisch aan op het niveau van de leerling.</p>
+                        </div>
+                    </div> <a href="https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte/7e-editie-onderbouw?source_geschmack=geschmackstest">
+                        <p>Toch benieuwd naar onze andere methode Duits: Neue Kontakte?</p>
+                    </a>
+-->
+                    <div class="share-bar">
+                        <center>
+                            <h3>Deel je resultaat</h3> <span class="share-icons"> <a class="share-twitter" target="blank" href="https://twitter.com/intent/tweet?text=Ik kies dit jaar voor TrabiTour!&amp;url=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/TrabiTour&amp;hastags=duits;voortgezetonderwijs&amp;via=noordhoff&amp;source_geschmack=geschmackstest"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a> <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/TrabiTour&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a> <a class="share-linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.noordhoffuitgevers.nl%2Fvoortgezet-onderwijs%2Fmethoden%2Fduits%2FTrabiTour&amp;lang=nl_NL&amp;&amp;ANNR=18432" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span></a> </span>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="binary-quiz" id="geschmackstest-b">
+            <ol class="quiz">
+                <li class="question step1 current"> <span class="question-title">
+                        <h3>Welches Bild spricht Sie mehr an?</h3>
+                        <h4>(1/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question1">
+                        <li data-value="-1"><a href="#question1"><img src="Geschmackstest/vraag%203_TT.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question1"><img src="Geschmackstest/vraag%203_NK.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step2"> <span class="question-title">
+                        <h3>Sie haben am Ende der Stunde noch 20 Minuten Zeit. Was machen Sie?</h3>
+                        <h4>(2/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question2">
+                        <li data-value="1"><a href="#question2"><img src="Geschmackstest/Vraag-4_NK_bb.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question2"><img src="Geschmackstest/Vraag-4_TT_bb.jpg.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step3"> <span class="question-title">
+                        <h3>Was müssen Ihre Schüler immer dabei haben?</h3>
+                        <h4>(3/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question3">
+                        <li data-value="1"><a href="#question3"><img src="Geschmackstest/vraag-1_NK.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question3"><img src="Geschmackstest/vraag-1_TT.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step4"> <span class="question-title">
+                        <h3>Welcher Artikel von <i>NU Actueel</i> spricht Sie am meisten an?</h3>
+                        <h4>(4/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question4">
+                        <li data-value="-1"><a href="#question4"><img src="Geschmackstest/Vraag-4_NK_bb.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question4"><img src="Geschmackstest/Vraag-4_NK_bb.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step5"> <span class="question-title">
+                        <h3>Welche Grammatik-Aufgabe spricht Sie am meisten an?</h3>
+                        <h4>(5/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question5">
+                        <li data-value="1"><a href="#question5"><img src="Geschmackstest/Vraag-5_NK_bb.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question5"><img src="Geschmackstest/vraag-5_TT.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step6"> <span class="question-title">
+                        <h3>Prüfungsvorbereitung im 4. Jahr?</h3>
+                        <h4>(6/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question6">
+                        <li data-value="-1"><a href="#question9"><img src="Geschmackstest/Examenvoorbereiding_TT_v2.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question9"><img src="Geschmackstest/Examenvoorbereiding_NK_v2.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step6"> <span class="question-title">
+                        <h3>In meinem Unterricht möchte ich gerne …</h3>
+                        <h4>(7/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question7">
+                        <li data-value="-1"><a href="#question7"><img src="Geschmackstest/BB_vraag%207_TT.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question7"><img src="Geschmackstest/BB_vraag%207_NK_v2.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step8"> <span class="question-title">
+                        <h3>Ich schaue diesen deutschen Film mit meiner Klasse:</h3>
+                        <h4>(8/9)</h4>
+                    </span>
+                    <ul class="binary-choice" id="question8">
+                        <li data-value="1"><a href="#question8"><img src="Geschmackstest/Vraag-7_NK.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="-1"><a href="#question8"><img src="Geschmackstest/Vraag-7_TT.jpg"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="question step9"> <span class="question-title">
+                        <h3>Welche drei Wörter sprechen Sie mehr an?</h3>
+                        <h4>(9/9)</h4>
+                    </span>
+                    <ul class="binary-choice see-results" id="question9">
+                        <li data-value="-1"><a href="#question9"><img src="Geschmackstest/vraag-9b_TT.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                        <li data-value="1"><a href="#question9"><img src="Geschmackstest/vraag-9b_NK.png"></a>
+                            <div class="overlay"><img src="thumb_up-24px.svg" id="icon"></div>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="results">
+                <div class="answer answer-3">
+                    <center>
+                        <div class="party-popper"></div>
+                        <div class="cannon">
+                            <div class="cannon__path cannon__path--sm cannon__path--angle-2">
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--md cannon__path--angle-1">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--lg cannon__path--angle0">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--md cannon__path--angle1">
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--sm cannon__path--angle2">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="productVisual c7-grid-row c7-pb-xxl c7-pt-xl c7-border-bottom">
+                            <div class="c7-grid-col c7-width-large-12-24"> <img id="waaier-mobile" class="c7-mr c7-mb" src="https://www.noordhoff.nl/c/document_library/get_file?uuid=d012ee99-aede-49d6-a6dc-eb9209121358&amp;groupId=2449749"> <img id="waaier-desktop" class="c7-mr c7-mb" alt="Neue Kontakte 7e editie onderbouw" src="Geschmackstest/NK7%20boek%20+%20tablet.png"> </div>
+                            <div class="c7-grid-col c7-width-large-12-24">
+                                <h3>De methode die bij je past is:</h3>
+                                <div class="methodlogo"><img src="Geschmackstest/NK_logo_vinder.png"></div>
+                                <h3>havo/vwo bovenbouw</h3>
+                                <div class="pv-descr">
+                                    <ul class="c7-list-checks c7-theme-list-checks">
+                                        <li class="c7-list-checks-item">Unieke aanpak spreken</li>
+                                        <li class="c7-list-checks-item">Sterke doorlopende leerlijn</li>
+                                        <li class="c7-list-checks-item">Vol vertrouwen naar het examen</li>
+                                    </ul>
+                                </div> <span class="result_btns"> <a href="http://noordhoff.nl/product/-/webshop/voortgezet-onderwijs/talen/beoordelingspakket-neue-kontakte-7e-editie-tweede-fase/271802?source_geschmack=geschmackstest" class="dropbtn"><img src="shopping_cart-24px.svg">&nbsp;&nbsp;Beoordelingspakket aanvragen</a>&nbsp;<a class="c7-button c7-button-neutral c7-button-large" onclick="window.location.reload()"><img src="settings_backup_restore-24px.svg"></a></span>
+                                <!--
+                                <ul class="pv-links c7-list-inline">
+                                    <li class="c7-list-inline-item c7-pr"><a href="https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte?source_geschmack=geschmackstest" target="_blank">Meer informatie</a></li>
+                                </ul>
+-->
+                            </div>
+                        </div>
+                    </center>
+                    <!--
+                    <div class="deutschrow">
+                        <div class="deutschcolumn" style="background-color:#7ab3e2">
+                            <h3><i class="fas fa-comments" style="font-style: normal;"></i> Communicatie</h3>
+                            <p>Duits leren is pas zinvol als je het ook echt kunt gebruiken. Daarom biedt de nieuwe editie van Neue Kontakte geen vaste zinnen, maar Sprachmittel: bouwstenen met Duitse zinsdelen, die de leerling kan uitbreiden met zijn eigen aanvullingen en aantekeningen. Zo bouwt elke leerling aan een persoonlijke toolbox, waarmee hij ook na zijn schoolcarrière vol vertrouwen Duits kan spreken.</p>
+                        </div>
+                        <div class="deutschcolumn" style="background-color:#509bd9">
+                            <h3><i class="fas fa-sort-amount-up" style="font-style: normal;"></i> Doorlopende leerlijn</h3>
+                            <p>In klas 4 zijn de verschillen tussen leerlingen veelal groot en lijkt soms alles wat in de onderbouw is geleerd, alweer vergeten. Met de cursus <em>Brückenschlag</em> breng je glashelder in beeld welke onderdelen nog extra aandacht nodig hebben en kunnen leerlingen deze zelfstandig herhalen. Zo is een soepele overgang van onder- naar bovenbouw gegarandeerd.</p>
+                        </div>
+                        <div class="deutschcolumn" style="background-color:#2c83ca">
+                            <h3><i class="fas fa-graduation-cap" style="font-style: normal;"></i> Vol vertrouwen naar het examen</h3>
+                            <p>Met Neue Kontakte ben je verzekerd van materiaal dat voldoet aan de meest recente eisen van het curriculum. Al vanaf leerjaar 4 gaan leerlingen actief aan de slag met examenteksten. In de examenjaren is er volop aandacht voor alle vaardigheden. Samen met de online adaptieve trainer Examensprint, kun je rekenen op de beste voorbereiding op het examen.</p>
+                        </div>
+                    </div> <a href="https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/TrabiTour/3e-editie-onderbouw-en-vmbo-bovenbouw?source_geschmack=geschmackstest">
+                        <p>Toch benieuwd naar onze andere methode Duits: TrabiTour?</p>
+                    </a>
+-->
+                    <div class="share-bar">
+                        <center>
+                            <h3>Deel je resultaat</h3>
+                            <span class="share-icons">
+                                <a class="share-twitter" target="blank" href="https://twitter.com/intent/tweet?text=Ik kies dit jaar voor Neue Kontakte!&amp;url=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte&amp;hastags=duits;voortgezetonderwijs&amp;via=noordhoff&amp;source_geschmack=geschmackstest"><span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a>
+                                <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a>
+                                <a class="share-linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.noordhoffuitgevers.nl%2Fvoortgezet-onderwijs%2Fmethoden%2Fduits%2Fneue-kontakte&amp;lang=nl_NL&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span></a>
+                            </span>
+                        </center>
+                    </div>
+                </div>
+                <div class="answer answer-4">
+                    <center>
+                        <div class="party-popper"></div>
+                        <div class="cannon">
+                            <div class="cannon__path cannon__path--sm cannon__path--angle-2">
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--md cannon__path--angle-1">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--lg cannon__path--angle0">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--md cannon__path--angle1">
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                            <div class="cannon__path cannon__path--sm cannon__path--angle2">
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-2">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-3">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--flake cannon__confetti--color-4">&nbsp;</div>
+                                <div class="cannon__confetti cannon__confetti--ribbon cannon__confetti--color-1">&nbsp;</div>
+                                <div class="cannon__confetti-spacer">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="productVisual c7-grid-row c7-pb-xxl c7-pt-xl c7-border-bottom">
+                            <div class="c7-grid-col c7-width-large-12-24"> <img id="waaier-mobile" class="c7-mr c7-mb" src="https://www.noordhoffuitgevers.nl/documents/2449749/2465001/NU_VO_Talen_Trabitour_4vwo_omslag_789001826925.png"> <img id="waaier-desktop" class="c7-mr c7-mb" src="https://www.noordhoff.nl/documents/2449749/2465001/NU_VO_Talen_Trabitour_Online_2.png"> </div>
+                            <div class="c7-grid-col c7-width-large-12-24">
+                                <h3>De methode die bij je past is:</h3>
+                                <div class="methodlogo"><img src="Geschmackstest/Trabi_logo_vinder.png"></div>
+                                <h3>havo/vwo bovenbouw</h3>
+                                <div class="pv-descr">
+                                    <ul class="c7-list-checks c7-theme-list-checks">
+                                        <li class="c7-list-checks-item">Variatie en verrassing in elke les </li>
+                                        <li class="c7-list-checks-item">TrabiTour = Landeskunde</li>
+                                        <li class="c7-list-checks-item">Handige, resultaatgerichte examentraining</li>
+                                    </ul>
+                                </div> <span class="result_btns"><a href="https://www.noordhoff.nl/product/-/webshop/voortgezet-onderwijs/talen/beoordelingspakket-trabitour-2e-editie-tweede-fase/271810?source_geschmack=geschmackstest" target="_blank" class="dropbtn"><img src="shopping_cart-24px.svg">&nbsp;&nbsp;Beoordelingspakket aanvragen</a>&nbsp;<a class="c7-button c7-button-neutral c7-button-large" onclick="window.location.reload()"><img src="settings_backup_restore-24px.svg"></a></span>
+                                <!--
+                                <ul class="pv-links c7-list-inline">
+                                    <li class="c7-list-inline-item c7-pr"><a href="https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/TrabiTour?source_geschmack=geschmackstest" target="_blank">Meer informatie</a></li>
+                                </ul>
+-->
+                            </div>
+                        </div>
+                    </center>
+                    <!--
+                    <div class="deutschrow">
+                        <div class="deutschcolumn" style="background-color:#7ab3e2">
+                            <h3><i class="fas fa-dice" style="font-style: normal;"></i> Afwisseling</h3>
+                            <p>Een gevarieerde en plezierige les Duits is het uitgangspunt bij TrabiTour. In één les komen dan ook veel verschillende opdrachtvormen en vaardigheden aan bod. <i>Einfach mal was anderes machen?</i> Met de vele extra keuzeopties zijn de mogelijkheden nog groter. Kies bijvoorbeeld een originele, activerende opdracht uit het <i>Karussell</i> of ga aan de slag met een actueel Duits nieuwsbericht op <i>NU Actueel.</i></p>
+                        </div>
+                        <div class="deutschcolumn" style="background-color:#509bd9">
+                            <h3><i class="fas fa-globe-africa" style="font-style: normal;"></i> Landeskunde</h3>
+                            <p>Heb je het over TrabiTour, dan heb je het over Landeskunde. Kennis van de cultuur in landen waar Duits wordt gesproken. Het zit overal in elk hoofdstuk - in liedjes, video’s, leesteksten. En Landeskunde in TrabiTour is meer dan alleen Duitsland - leerlingen maken een tour langs alle Duitstalige landen en ervaren de verschillen en overeenkomsten.</p>
+                        </div>
+                        <div class="deutschcolumn" style="background-color:#2c83ca">
+                            <h3><i class="fas fa-graduation-cap" style="font-style: normal;"></i> Examengericht</h3>
+                            <p>Bijna ongemerkt starten uw leerlingen in leerjaar 4 al met examentraining in het nieuwe onderdeel <i>Strategietraining Lesen</i>: uitgebreide strategietraining met concrete tips. In de examenjaren is er volop aandacht voor alle vaardigheden in de vaardigheidskaternen. En voor de laatste eindsprint naar het examen is er ook nog eens Examensprint: een online en adaptieve examentrainer met échte Cito-examens, met feedback en studieadvies op maat.</p>
+                        </div>
+                    </div> <a href="https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte/7e-editie-onderbouw?source_geschmack=geschmackstest">
+                        <p>Toch benieuwd naar onze andere methode Duits: Neue Kontakte?</p>
+                    </a>
+-->
+                    <div class="share-bar">
+                        <center>
+                            <h3>Deel je resultaat</h3> <span class="share-icons"> <a class="share-twitter" target="blank" href="https://twitter.com/intent/tweet?text=Ik kies dit jaar voor TrabiTour!&amp;url=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/TrabiTour&amp;hastags=duits;voortgezetonderwijs&amp;via=noordhoff&amp;source_geschmack=geschmackstest"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a> <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/TrabiTour&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a> <a class="share-linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.noordhoffuitgevers.nl%2Fvoortgezet-onderwijs%2Fmethoden%2Fduits%2FTrabiTour&amp;lang=nl_NL&amp;&amp;ANNR=18432" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span></a> </span>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $("#stream-onderbouw").click(function() {
+        $("#geschmackstest-a").addClass("current");
+        //        $("#geschmacklogo").css("display", "none");
+        $(".starter").css("display", "none")
+    });
+    $("#stream-bovenbouw").click(function() {
+        $("#geschmackstest-b").addClass("current");
+        //        $("#geschmacklogo").css("display", "none");
+        $(".starter").css("display", "none")
+    });
+
+    $(".overlay").click(function() {
+        $(this).find("#icon").addClass("anim");
+    })
+
+    $(function() {
+        var d = $("#geschmackstest-a");
+        var c = d.find(".binary-choice li");
+        var b = {};
+        c.on("click touchstart", function() {
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active")
+        });
+        $(".see-results").click("click touchstart", function() {
+            var f = a();
+            var e = (f > 0) ? $(".answer-1") : $(".answer-2");
+            if (f == null) {
+                return
+            }
+            $(".results").addClass("complete");
+            e.addClass("selected");
+            c.off()
+        });
+        var a = function() {
+            var e = 0;
+            var f = true;
+            d.find(".binary-choice li.active").map(function() {
+                e += parseInt($(this).attr("data-value"));
+                f = false
+            });
+            if (f) {
+                return null
+            }
+            return e
+        }
+    });
+    $(function() {
+        var d = $("#geschmackstest-b");
+        var c = d.find(".binary-choice li");
+        var b = {};
+        c.on("click touchstart", function() {
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active")
+        });
+        $(".see-results").click("click touchstart", function() {
+            var f = a();
+            var e = (f > 0) ? $(".answer-3") : $(".answer-4");
+            if (f == null) {
+                return
+            }
+            $(".results").addClass("complete");
+            e.addClass("selected");
+            c.off()
+        });
+        var a = function() {
+            var e = 0;
+            var f = true;
+            d.find(".binary-choice li.active").map(function() {
+                e += parseInt($(this).attr("data-value"));
+                f = false
+            });
+            if (f) {
+                return null
+            }
+            return e
+        }
+    });
+
+    function updateStep(a) {
+        if (a.hasClass("current")) {
+            a.removeClass("current");
+            a.next().addClass("current")
+        }
+    }
+    var quizSteps = $(".binary-quiz .question");
+    quizSteps.each(function() {
+        var b = $(this),
+            a = b.children(".binary-choice");
+        a.each(function() {
+            var c = $(this);
+            c[0].addEventListener("click", d, false);
+
+            function d() {
+                var h = $(this),
+                    g = h.attr("loremipsum###"),
+                    e = parseInt(g);
+                if (b.children(".active").length > 0) {
+                    var f = b.children(".active");
+                    b.children(".active").removeClass("active");
+                    h.addClass("active")
+                } else {
+                    h.addClass("active");
+                    updateStep(b)
+                }
+            }
+        })
+    });
+    setTimeout(function() {
+        $("#wheel").toggleClass("active")
+    }, 1000);
+
+</script>
