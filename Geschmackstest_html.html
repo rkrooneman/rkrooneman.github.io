@@ -1511,20 +1511,22 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
-    $("#stream-onderbouw").click(function() {
-        $("#geschmackstest-a").addClass("current");
-        //        $("#geschmacklogo").css("display", "none");
-        $(".starter").css("display", "none")
-    });
-    $("#stream-bovenbouw").click(function() {
-        $("#geschmackstest-b").addClass("current");
-        //        $("#geschmacklogo").css("display", "none");
-        $(".starter").css("display", "none")
-    });
-
     $(".streambutton").click(function() {
         $(this).find("#icon").addClass("anim");
     })
+
+    $("#stream-onderbouw").click(setTimeout(function() {
+        $("#geschmackstest-a").addClass("current");
+        //        $("#geschmacklogo").css("display", "none");
+        $(".starter").css("display", "none")
+    }), 200);
+    $("#stream-bovenbouw").click(setTimeout(function() {
+        $("#geschmackstest-b").addClass("current");
+        //        $("#geschmacklogo").css("display", "none");
+        $(".starter").css("display", "none")
+    }), 200);
+
+
 
     $(function() {
         var d = $("#geschmackstest-a");
