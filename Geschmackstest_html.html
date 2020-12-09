@@ -1530,11 +1530,11 @@
         var d = $("#geschmackstest-a");
         var c = d.find(".binary-choice li");
         var b = {};
-        c.on("click touchstart", setTimeout function() {
+        c.on("click touchstart", function() {
             $(this).siblings().removeClass("active");
             $(this).addClass("active")
-        }, 200);
-        $(".see-results").click("click touchstart", setTimeout function() {
+        });
+        $(".see-results").click("click touchstart", function() {
             var f = a();
             var e = (f > 0) ? $(".answer-1") : $(".answer-2");
             if (f == null) {
@@ -1561,11 +1561,11 @@
         var d = $("#geschmackstest-b");
         var c = d.find(".binary-choice li");
         var b = {};
-        c.on("click touchstart", setTimeout function() {
+        c.on("click touchstart", function() {
             $(this).siblings().removeClass("active");
             $(this).addClass("active")
-        }, 200);
-        $(".see-results").click("click touchstart", setTimeout function() {
+        });
+        $(".see-results").click("click touchstart", function() {
             var f = a();
             var e = (f > 0) ? $(".answer-3") : $(".answer-4");
             if (f == null) {
@@ -1574,7 +1574,7 @@
             $(".results").addClass("complete");
             e.addClass("selected");
             c.off()
-        }, 200);
+        });
         var a = function() {
             var e = 0;
             var f = true;
