@@ -328,6 +328,29 @@
         text-align: center
     }
 
+    #icon .anim {
+        animation-name: thumbsup;
+        animation-duration: 2s;
+
+    }
+
+    @keyframes thumbsup {
+        0% {
+            transform: rotate(0);
+            -ms-transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(55);
+            -ms-transform: rotate(55);
+        }
+
+        100% {
+            transform: rotate(45);
+            -ms-transform: rotate(45);
+        }
+    }
+
     .binary-quiz .question .binary-choice>li:hover .overlay {
         opacity: .9
     }
@@ -1386,7 +1409,12 @@
 -->
                     <div class="share-bar">
                         <center>
-                            <h3>Deel je resultaat</h3> <span class="share-icons"> <a class="share-twitter" target="blank" href="https://twitter.com/intent/tweet?text=Ik kies dit jaar voor Neue Kontakte!&amp;url=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte&amp;hastags=duits;voortgezetonderwijs&amp;via=noordhoff&amp;source_geschmack=geschmackstest"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a> <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a> <a class="share-linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.noordhoffuitgevers.nl%2Fvoortgezet-onderwijs%2Fmethoden%2Fduits%2Fneue-kontakte&amp;lang=nl_NL&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span></a> </span>
+                            <h3>Deel je resultaat</h3>
+                            <span class="share-icons">
+                                <a class="share-twitter" target="blank" href="https://twitter.com/intent/tweet?text=Ik kies dit jaar voor Neue Kontakte!&amp;url=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte&amp;hastags=duits;voortgezetonderwijs&amp;via=noordhoff&amp;source_geschmack=geschmackstest"><span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a>
+                                <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.noordhoffuitgevers.nl/voortgezet-onderwijs/methoden/duits/neue-kontakte&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a>
+                                <a class="share-linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.noordhoffuitgevers.nl%2Fvoortgezet-onderwijs%2Fmethoden%2Fduits%2Fneue-kontakte&amp;lang=nl_NL&amp;source_geschmack=geschmackstest" target="_blank"> <span class="fa-stack fa-2x"><i class="fas fa-square fa-stack-2x"></i> <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span></a>
+                            </span>
                         </center>
                     </div>
                 </div>
@@ -1482,14 +1510,6 @@
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!--
-<script>
-    jq331 = jQuery.noConflict(true);
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>');
-
-</script>
-<script src="js/main.js"></script>
--->
 <script>
     $("#stream-onderbouw").click(function() {
         $("#geschmackstest-a").addClass("current");
@@ -1501,6 +1521,11 @@
         //        $("#geschmacklogo").css("display", "none");
         $(".starter").css("display", "none")
     });
+
+    $(".overlay").click(function() {
+        $(this).find("#icon").addClass("anim");
+    })
+
     $(function() {
         var d = $("#geschmackstest-a");
         var c = d.find(".binary-choice li");
