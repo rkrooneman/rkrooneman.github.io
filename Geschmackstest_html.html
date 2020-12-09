@@ -341,15 +341,13 @@
         }
 
         50% {
-            transform: rotate(-10deg);
-            -ms-transform: rotate(-10deg);
-            transform:scale(1.1,1.1);
-            -ms-transform:scale(1.1,1.1);
+            transform: rotate(55deg);
+            -ms-transform: rotate(55deg);
         }
 
         100% {
-            transform: rotate(-5deg);
-            -ms-transform: rotate(-5deg);
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
         }
     }
 
@@ -1513,22 +1511,20 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
-    $(".streambutton").click(function() {
-        $(this).find("#icon").addClass("anim");
-    })
-
-    $("#stream-onderbouw").click(setTimeout(function() {
+    $("#stream-onderbouw").click(function() {
         $("#geschmackstest-a").addClass("current");
         //        $("#geschmacklogo").css("display", "none");
         $(".starter").css("display", "none")
-    }), 200);
-    $("#stream-bovenbouw").click(setTimeout(function() {
+    });
+    $("#stream-bovenbouw").click(function() {
         $("#geschmackstest-b").addClass("current");
         //        $("#geschmacklogo").css("display", "none");
         $(".starter").css("display", "none")
-    }), 200);
+    });
 
-
+    $(".overlay").click(function() {
+        $(this).find("#icon").addClass("anim");
+    })
 
     $(function() {
         var d = $("#geschmackstest-a");
