@@ -208,7 +208,11 @@
     }
 
     .question-title {
-        max-width: 100%
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .question-title h3 {
@@ -229,8 +233,7 @@
     .sb-progress {
         -webkit-appearance: none;
         appearance: none;
-        height: 15px;
-        width: 300px;
+        width: 20%;
     }
 
     .sb-progress::-webkit-progress-bar,
