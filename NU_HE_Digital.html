@@ -50,6 +50,10 @@
         table-layout: fixed;
     }
 
+    #myTable tr {
+        line-height: 1.75rem;
+    }
+
     #myTable tr:nth-child(even) {
         background-color: #fff !important;
     }
@@ -100,11 +104,16 @@
         padding: 12px 20px 12px 40px;
         border: 1px solid #ddd;
         border-radius: 4px;
-        margin-top: 12px;
-        margin-bottom: 12px;
+        margin-top: 2.25rem;
+        margin-bottom: 2.25rem;
         display: inline-block;
     }
 
+    #myInput:focus {
+        box-shadow: rgb(0, 130, 200) 0px 0px 11px 0px;
+    }
+
+    /*
     #myTable::-webkit-scrollbar {
         width: 20px;
     }
@@ -122,6 +131,7 @@
     #myTable::-webkit-scrollbar-thumb:hover {
         background: #16adff;
     }
+*/
 
 </style>
 <div class="search_wrapper">
@@ -2579,18 +2589,19 @@
         </tbody>
     </table>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-    $("#myTable").css("display", "none");
-    $("#myInput").blur(function(){
-        if(!$(this).val()){
-            $("#myTable").css("display", "none");
-        } else {
-            $("#myTable")..css("display", "block");
-        }
+    $(document).ready(function() {
+        $("#myTable").css("display", "none");
+        $("#myInput").blur(function() {
+            if (!$(this).val()) {
+                $("#myTable").css("display", "none");
+            } else {
+                $("#myTable")..css("display", "block");
+            }
+        });
     });
-});
 
 </script>
 <script>
@@ -2629,4 +2640,3 @@ $(document).ready(function(){
     }
 
 </script>
-
