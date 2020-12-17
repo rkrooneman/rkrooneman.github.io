@@ -2609,26 +2609,25 @@
 
     document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
 
-    const input = document.getElementById('myInput');
-    const table = document.getElementById('myTable');
-    var show = function(elem) {
-        table.style.display = 'block';
-    };
-    var hide = function(elem) {
-        table.style.display = 'none';
-    };
+    const input = document.querySelector('input')
 
-    document.addEventListener('keyup', showTable);
-    event.preventDefault();
+    input.addEventListener('input', evt => {
+        var table = document.getElementById('myTable')
+        const value = input.value
 
-    function showTable(e) {
-	if (window.getComputedStyle(table).display === 'block') {
-		hide(table);
-		return;
-	}
-	show(table);
+        if (!value) {
+            table.style.display = 'none'
+            return
+        }
 
-    };
+        const trimmed = value.trim()
+
+        if (trimmed) {
+            table.style.display = 'block'
+        } else {
+            table.style.display = 'none'
+        }
+    })
 
     //    function myFunction() {
     //        document.getElementById("myDropdown").classList.toggle("show");
