@@ -2590,20 +2590,6 @@
     </table>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#myTable").css("display", "none");
-        $("#myInput").blur(function() {
-            if (!$(this).val()) {
-                $("#myTable").css("display", "none");
-            } else {
-                $("#myTable")..css("display", "block");
-            }
-        });
-    });
-
-</script>
 <script>
     function filterTable(event) {
         var filter = event.target.value.toUpperCase();
@@ -2622,21 +2608,42 @@
 
     document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
 
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
+    const input = document.getElementById('myInput');
+    const table = document.getElementById('myTable');
+    var show = function(elem) {
+        table.style.display = 'block';
+    };
+    var hide = function(elem) {
+        table.style.display = 'none';
+    };
 
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
+    document.addEventListener('keyup', showTable);
+    event.preventDefault();
+
+    function showTable(e) {
+	if (window.getComputedStyle(table).display === 'block') {
+		hide(table);
+		return;
+	}
+	show(table);
+
+    };
+
+    //    function myFunction() {
+    //        document.getElementById("myDropdown").classList.toggle("show");
+    //    }
+    //    window.onclick = function(event) {
+    //        if (!event.target.matches('.dropbtn')) {
+    //
+    //            var dropdowns = document.getElementsByClassName("dropdown-content");
+    //            var i;
+    //            for (i = 0; i < dropdowns.length; i++) {
+    //                var openDropdown = dropdowns[i];
+    //                if (openDropdown.classList.contains('show')) {
+    //                    openDropdown.classList.remove('show');
+    //                }
+    //            }
+    //        }
+    //    }
 
 </script>
