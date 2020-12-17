@@ -15,6 +15,23 @@
         font-family: Bliss2, Helvetica, Arial, sans-serif;
     }
 
+    .search_wrapper {
+        display: flex;
+        margin: auto;
+        flex-flow: column nowrap;
+        width: 800px;
+        position: relative;
+        
+    }
+
+    .search_container {
+        background-color: rgb(245, 180, 0);
+        display: flex;
+        width: 80%;
+
+        margin: auto;
+    }
+
     #myTable {
         border: none !important;
         border-collapse: collapse;
@@ -99,7 +116,10 @@
     }
 
 </style>
-<center><input id="myInput" placeholder="Zoek op titel..." title="Zoek op titel" type="text" />
+<div class="search_wrapper">
+    <div class="search_container">
+        <input id="myInput" placeholder="Zoek op titel..." title="Zoek op titel" type="text" />
+    </div>
     <table id="myTable">
         <tbody>
             <tr class="header" style="display:none">
@@ -2552,7 +2572,7 @@
             </tr>
         </tbody>
     </table>
-</center>
+</div>
 <script>
     function filterTable(event) {
         var filter = event.target.value.toUpperCase();
@@ -2587,5 +2607,10 @@
             }
         }
     }
+
+</script>
+<script src="js/jquery.min.js">
+
+
 
 </script>
