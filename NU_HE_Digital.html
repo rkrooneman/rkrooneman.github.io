@@ -90,11 +90,13 @@
     }
 
     #myInput {
-        background-image: url('https://www.noordhoffuitgevers.nl/documents/2449749/2459440/searchicon.png');
+        background-image: url('lookup.svg');
         background-position: 10px 10px;
         background-repeat: no-repeat;
         width: 80%;
-        font-size: 16px;
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
         padding: 12px 20px 12px 40px;
         border: 1px solid #ddd;
         border-radius: 4px;
@@ -2577,6 +2579,20 @@
         </tbody>
     </table>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#myTable").css("display", "none");
+    $("#myInput").blur(function(){
+        if(!$(this).val()){
+            $("#myTable").css("display", "none");
+        } else {
+            $("#myTable")..css("display", "block");
+        }
+    });
+});
+
+</script>
 <script>
     function filterTable(event) {
         var filter = event.target.value.toUpperCase();
@@ -2613,8 +2629,4 @@
     }
 
 </script>
-<script src="js/jquery.min.js">
 
-
-
-</script>
