@@ -21,15 +21,21 @@
         flex-flow: column nowrap;
         width: 800px;
         position: relative;
-        
+        align-items: center;
+
     }
 
     .search_container {
         background-color: rgb(245, 180, 0);
         display: flex;
+        flex-flow: column nowrap;
         width: 80%;
-
         margin: auto;
+    }
+
+    .search_label {
+        font-size: 1.5rem;
+        font-weight: bold;
     }
 
     #myTable {
@@ -117,9 +123,7 @@
 
 </style>
 <div class="search_wrapper">
-    <div class="search_container">
-        <input id="myInput" placeholder="Zoek op titel..." title="Zoek op titel" type="text" />
-    </div>
+    <input id="myInput" placeholder="Doorzoek producten" title="Zoek op titel" type="text" />
     <table id="myTable">
         <tbody>
             <tr class="header" style="display:none">
