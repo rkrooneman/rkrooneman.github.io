@@ -19,6 +19,8 @@
         display: flex;
         flex-flow: column nowrap;
         width: 30rem;
+        height: 955px; /* 10 items */
+        overflow: hidden;
         position: relative;
         align-items: flex-start;
 
@@ -31,7 +33,7 @@
         font-size: 16px;
         overflow: hidden;
         width: 1040px;
-        display: none;
+        /*        display: none;*/
         table-layout: fixed;
     }
 
@@ -40,6 +42,14 @@
         padding: 2rem 0;
         width: 1040px;
         border-bottom: 1px solid rgb(216, 216, 216);
+    }
+
+    tr:first-child {
+        display: none !important;
+    }
+
+    .header {
+        display: none;
     }
 
     #myTable tr:nth-child(even) {
@@ -135,7 +145,7 @@
     <input id="myInput" placeholder="Doorzoek producten" title="Zoek op titel" type="text" />
     <table id="myTable">
         <tbody>
-            <tr class="header" style="display:none">
+            <tr class="header" id="header" style="display:none">
                 <th style="display:none;"></th>
                 <th style="display:none;"></th>
             </tr>
@@ -2805,21 +2815,21 @@
         }
     })
 
-    //    function myFunction() {
-    //        document.getElementById("myDropdown").classList.toggle("show");
-    //    }
-    //    window.onclick = function(event) {
-    //        if (!event.target.matches('.dropbtn')) {
-    //
-    //            var dropdowns = document.getElementsByClassName("dropdown-content");
-    //            var i;
-    //            for (i = 0; i < dropdowns.length; i++) {
-    //                var openDropdown = dropdowns[i];
-    //                if (openDropdown.classList.contains('show')) {
-    //                    openDropdown.classList.remove('show');
-    //                }
-    //            }
-    //        }
-    //    }
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
 
 </script>
