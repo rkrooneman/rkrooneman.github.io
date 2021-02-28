@@ -229,9 +229,11 @@ svg#icon__codepen.nav__black {
     bottom: 75px;
 }
 
+/*
 .side .bottom:hover a {
     color: rgba(0, 0, 0, 0.2);
 }
+*/
 
 .side .bottom:hover a:hover {
     color: rgba(0, 0, 0, 0.8);
