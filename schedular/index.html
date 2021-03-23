@@ -59,6 +59,7 @@
         function init() {
             scheduler.config.multi_day = true;
             scheduler.config.mark_now = true;
+            scheduler.config.xml_date = "%Y-%m-%d %H:%i";
 
             scheduler.config.now_date = new Date();
 
@@ -72,10 +73,10 @@
         //        scheduler.setLoadMode("day");
         //        scheduler.load("/events", "json");
         //
-        //        var dp = new dataProcessor("/events");
-        //        dp.init(scheduler);
-        //
-        //        dp.setTransactionMode("REST");
+                var dp = new dataProcessor("/events");
+                dp.init(scheduler);
+        
+                dp.setTransactionMode("REST");
 
     </script>
 </body>
