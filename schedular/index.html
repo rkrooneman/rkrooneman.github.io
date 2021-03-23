@@ -6,7 +6,7 @@
     <title>Picknicktafel Meeroeverslaan</title>
     <meta charset="utf-8">
     <meta name="description" content="Reserveer de Picknicktafel">
-    <link rel="stylesheet" href="css/dhtmlxscheduler_material.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="/schedular/css/dhtmlxscheduler_material.css" type="text/css" charset="utf-8">
     <script src="https://cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler_material.css" type="text/css" charset="utf-8">
     <style>
@@ -64,7 +64,7 @@
             scheduler.config.now_date = new Date();
 
             scheduler.init('scheduler_here', new Date(), "week");
-            scheduler.load("package.json");
+            scheduler.load("/schedular/package.json");
         }
         //        scheduler.config.xml_date = "%Y-%m-%d %H:%i";
         //        
@@ -73,7 +73,7 @@
         //        scheduler.setLoadMode("day");
         //        scheduler.load("/events", "json");
         //
-                var dp = new dataProcessor("/events");
+                var dp = new dataProcessor("/schedular/events");
                 dp.init(scheduler);
         
                 dp.setTransactionMode("REST");
