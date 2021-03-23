@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <title>Picknicktafel Meeroeverslaan</title>
     <meta charset="utf-8">
     <meta name="description" content="Reserveer de Picknicktafel">
@@ -24,7 +24,7 @@
             flex-flow: column nowrap;
             align-items: center;
         }
-        
+
         #wrapper {
             display: block;
             width: 100%;
@@ -32,40 +32,50 @@
             margin-left: 1.25rem;
             margin-right: 1.25rem;
         }
+
     </style>
 </head>
 
-<body>
     <header>
         <h1>Picknicktafel Meeroeverslaan</h1>
     </header>
     <div id="wrapper">
-    <div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%;'>
-        <div class="dhx_cal_navline">
-            <div class="dhx_cal_prev_button">&nbsp;</div>
-            <div class="dhx_cal_next_button">&nbsp;</div>
-            <div class="dhx_cal_today_button"></div>
-            <div class="dhx_cal_date"></div>
-            <div class="dhx_cal_tab" name="day_tab"></div>
-            <div class="dhx_cal_tab" name="week_tab"></div>
-            <div class="dhx_cal_tab" name="month_tab"></div>
+        <div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%;'>
+            <div class="dhx_cal_navline">
+                <div class="dhx_cal_prev_button">&nbsp;</div>
+                <div class="dhx_cal_next_button">&nbsp;</div>
+                <div class="dhx_cal_today_button"></div>
+                <div class="dhx_cal_date"></div>
+                <div class="dhx_cal_tab" name="day_tab"></div>
+                <div class="dhx_cal_tab" name="week_tab"></div>
+                <div class="dhx_cal_tab" name="month_tab"></div>
+            </div>
+            <div class="dhx_cal_header"></div>
+            <div class="dhx_cal_data"></div>
         </div>
-        <div class="dhx_cal_header"></div>
-        <div class="dhx_cal_data"></div>
     </div>
-    </div>    
     <script>
-        scheduler.config.xml_date = "%Y-%m-%d %H:%i";
-        
-        scheduler.init("scheduler_here", new Date(), "week");
-        
-        scheduler.setLoadMode("day");
-        scheduler.load("/events", "json");
+        function init() {
+            scheduler.config.multi_day = true;
+            scheduler.config.mark_now = true;
 
-        var dp = new dataProcessor("/events");
-        dp.init(scheduler);
+            scheduler.config.now_date = new Date();
 
-        dp.setTransactionMode("REST");
+            scheduler.init('scheduler_here', new Date(), "week");
+            scheduler.load("package.json");
+        }
+        //        scheduler.config.xml_date = "%Y-%m-%d %H:%i";
+        //        
+        //        scheduler.init("scheduler_here", new Date(), "week");
+        //        
+        //        scheduler.setLoadMode("day");
+        //        scheduler.load("/events", "json");
+        //
+        //        var dp = new dataProcessor("/events");
+        //        dp.init(scheduler);
+        //
+        //        dp.setTransactionMode("REST");
+
     </script>
 </body>
 
