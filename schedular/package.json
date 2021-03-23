@@ -1,10 +1,10 @@
 {
   "name": "Schedular",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "/schedular/server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "start": "node /schedular/server.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
