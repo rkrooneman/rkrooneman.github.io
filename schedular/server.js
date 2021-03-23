@@ -34,23 +34,23 @@ app.use(function(req, res, next) {
 });
 
 // return static pages from "./public" directory
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "https://rkrooneman.github.io/schedular/public"));
 
-const router = require("./router");
+const router = require("https://rkrooneman.github.io/schedular/router");
 
 // open connection to mysql
 const connectionPool = mysql.createPool(mysqlConfig);
 connectionPool.query = util.promisify(connectionPool.query);
 
 // add listeners to basic CRUD requests
-const Storage = require("./storage");
+const Storage = require("https://rkrooneman.github.io/schedular/storage");
 const eventsStorage = new Storage(connectionPool);
-router.setRoutes(app, "/events", eventsStorage);
+router.setRoutes(app, "https://rkrooneman.github.io/schedular/events", eventsStorage);
 
 // add listeners to basic CRUD with recurring events support
-const RecurringStorage = require("./storage_recurring");
+const RecurringStorage = require("https://rkrooneman.github.io/schedular/storage_recurring");
 const recurringEventsStorage = new RecurringStorage(connectionPool);
-router.setRoutes(app, "/recurring_events", recurringEventsStorage)
+router.setRoutes(app, "https://rkrooneman.github.io/schedular/recurring_events", recurringEventsStorage)
 
 // start server
 app.listen(port, () => {
