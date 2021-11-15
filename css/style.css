@@ -687,6 +687,12 @@ p a:hover {
     display: inline-block;
 }
 
+.exp__dot {
+    background: linear-gradient(to right, #bbb 50%, #717171 50%);
+    background-position: right bottom;
+    background-size: 300% 100%;
+}
+
 .dot__left {
     background: linear-gradient(to right, #bbb 50%, #717171 50%);
     background-position: right bottom;
@@ -696,7 +702,7 @@ p a:hover {
 .dot__right {
     background: linear-gradient(to right, #bbb 50%, #717171 50%);
     background-position: right bottom;
-    background-size: 200% 100%
+    background-size: 300% 100%
 }
 
 .dot__active {
