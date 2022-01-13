@@ -684,6 +684,9 @@ p a:hover {
     cursor: pointer;
     height: .25rem;
     width: 50px;
+    background: linear-gradient(to right, #bbb 50%, #717171 50%);
+    background-position: right bottom;
+    background-size: 300% 100%;
     display: inline-block;
 }
 
