@@ -197,12 +197,12 @@ $(document).ready(function () {
     var xp1_Function = function () {
         if ($("#exp__b").hasClass("dot__active")) {
             $("#exp__b").addClass("dot__inactiveleft");
-            $("#exp__d").addClass("dot__inactive");
-            $("#exp__d").removeClass("dot__inactiveleft");
-            $("#exp__d").removeClass("dot__inactiveright");
+            $("#exp__c").addClass("dot__inactive");
+            $("#exp__c").removeClass("dot__inactiveleft");
+            $("#exp__c").removeClass("dot__inactiveright");
         }
-        if ($("#exp__d").hasClass("dot__active")) {
-            $("#exp__d").addClass("dot__inactiveright");
+        if ($("#exp__c").hasClass("dot__active")) {
+            $("#exp__c").addClass("dot__inactiveright");
             $("#exp__b").addClass("dot__inactive");
             $("#exp__b").removeClass("dot__inactiveleft");
             $("#exp__b").removeClass("dot__inactiveright");
@@ -210,7 +210,7 @@ $(document).ready(function () {
         $("#exp__a").removeClass("dot__inactiveleft");
         $("#exp__a").removeClass("dot__inactiveright");
         $("#exp__a").removeClass("dot__inactive");
-        $("#exp__d")
+        $("#exp__c")
             .removeClass("dot__right")
             .addClass("dot__left");
         $("#exp__b")
@@ -222,13 +222,11 @@ $(document).ready(function () {
         $("#exp__2").css("opacity", "0");
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
-        $("#exp__4").hide();
-        $("#exp__4").css("opacity", "0");
         $(".exp__dot").removeClass("dot__active");
         $(".exp__dot:nth-child(1)").addClass("dot__active");
-        $("#chevron__left").removeClass("xpchev__1 xpchev__2 xpchev__3");
-        $("#chevron__left").addClass("xpchev__4");
-        $("#chevron__right").removeClass("xpchev__1 xpchev__3 xpchev__4");
+        $("#chevron__left").removeClass("xpchev__1 xpchev__2");
+        $("#chevron__left").addClass("xpchev__3");
+        $("#chevron__right").removeClass("xpchev__1 xpchev__3");
         $("#chevron__right").addClass("xpchev__2");
     }
 
@@ -260,71 +258,31 @@ $(document).ready(function () {
         $("#exp__2").fadeTo("slow", 1);
         $("#exp__3").hide();
         $("#exp__3").css("opacity", "0");
-        $("#exp__4").hide();
-        $("#exp__4").css("opacity", "0");
         $(".exp__dot").removeClass("dot__active");
         $(".exp__dot:nth-child(2)").addClass("dot__active");
-        $("#chevron__left").removeClass("xpchev__2 xpchev__3 xpchev__4");
+        $("#chevron__left").removeClass("xpchev__2 xpchev__3");
         $("#chevron__left").addClass("xpchev__1");
-        $("#chevron__right").removeClass("xpchev__1 xpchev__2 xpchev__4");
+        $("#chevron__right").removeClass("xpchev__1 xpchev__2");
         $("#chevron__right").addClass("xpchev__3");
     };
 
     var xp3_Function = function () {
-        if ($("#exp__d").hasClass("dot__active")) {
-            $("#exp__d").addClass("dot__inactiveleft");
+        if ($("#exp__a").hasClass("dot__active")) {
+            $("#exp__a").addClass("dot__inactiveleft");
             $("#exp__b").addClass("dot__inactive");
             $("#exp__b").removeClass("dot__inactiveleft");
             $("#exp__b").removeClass("dot__inactiveright");
         }
         if ($("#exp__b").hasClass("dot__active")) {
             $("#exp__b").addClass("dot__inactiveright");
-            $("#exp__d").addClass("dot__inactive");
-            $("#exp__d").removeClass("dot__inactiveleft");
-            $("#exp__d").removeClass("dot__inactiveright");
+            $("#exp__a").addClass("dot__inactive");
+            $("#exp__a").removeClass("dot__inactiveleft");
+            $("#exp__a").removeClass("dot__inactiveright");
         }
         $("#exp__c").removeClass("dot__inactiveleft");
         $("#exp__c").removeClass("dot__inactiveright");
         $("#exp__c").removeClass("dot__inactive");
         $("#exp__b")
-            .removeClass("dot__right")
-            .addClass("dot__left");
-        $("#exp__d")
-            .removeClass("dot__left")
-            .addClass("dot__right");
-        $("#exp__1").hide();
-        $("#exp__1").css("opacity", "0");
-        $("#exp__2").hide();
-        $("#exp__2").css("opacity", "0");
-        $("#exp__3").show();
-        $("#exp__3").fadeTo("slow", 1);
-        $("#exp__4").hide();
-        $("#exp__4").css("opacity", "0");
-        $(".exp__dot").removeClass("dot__active");
-        $(".exp__dot:nth-child(3)").addClass("dot__active");
-        $("#chevron__left").removeClass("xpchev__1 xpchev__3 xpchev__4");
-        $("#chevron__left").addClass("xpchev__2");
-        $("#chevron__right").removeClass("xpchev__1 xpchev__2 xpchev__3");
-        $("#chevron__right").addClass("xpchev__4");
-    };
-
-    var xp3_Function = function () {
-        if ($("#exp__a").hasClass("dot__active")) {
-            $("#exp__a").addClass("dot__inactiveleft");
-            $("#exp__c").addClass("dot__inactive");
-            $("#exp__c").removeClass("dot__inactiveleft");
-            $("#exp__c").removeClass("dot__inactiveright");
-        }
-        if ($("#exp__c").hasClass("dot__active")) {
-            $("#exp__c").addClass("dot__inactiveright");
-            $("#exp__a").addClass("dot__inactive");
-            $("#exp__a").removeClass("dot__inactiveleft");
-            $("#exp__a").removeClass("dot__inactiveright");
-        }
-        $("#exp__d").removeClass("dot__inactiveleft");
-        $("#exp__d").removeClass("dot__inactiveright");
-        $("#exp__d").removeClass("dot__inactive");
-        $("#exp__c")
             .removeClass("dot__right")
             .addClass("dot__left");
         $("#exp__a")
@@ -334,27 +292,23 @@ $(document).ready(function () {
         $("#exp__1").css("opacity", "0");
         $("#exp__2").hide();
         $("#exp__2").css("opacity", "0");
-        $("#exp__3").hide();
-        $("#exp__2").css("opacity", "0");
         $("#exp__3").show();
         $("#exp__3").fadeTo("slow", 1);
         $(".exp__dot").removeClass("dot__active");
-        $(".exp__dot:nth-child(4)").addClass("dot__active");
-        $("#chevron__left").removeClass("xpchev__1 xpchev__3 xpchev__4");
-        $("#chevron__left").addClass("xpchev__3");
-        $("#chevron__right").removeClass("xpchev__2 xpchev__3 xpchev__4");
+        $(".exp__dot:nth-child(3)").addClass("dot__active");
+        $("#chevron__left").removeClass("xpchev__1 xpchev__3");
+        $("#chevron__left").addClass("xpchev__2");
+        $("#chevron__right").removeClass("xpchev__2 xpchev__3");
         $("#chevron__right").addClass("xpchev__1");
     };
 
     $("#exp__a").click(xp1_Function);
     $("#exp__b").click(xp2_Function);
     $("#exp__c").click(xp3_Function);
-    $("#exp__d").click(xp4_Function);
 
     $(document).on('click', ".xpchev__1", xp1_Function);
     $(document).on('click', ".xpchev__2", xp2_Function);
     $(document).on('click', ".xpchev__3", xp3_Function);
-    $(document).on('click', ".xpchev__4", xp4_Function);
 
     $("#exp__1").touchwipe({
         wipeLeft: xp2_Function,
