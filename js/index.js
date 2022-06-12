@@ -1,19 +1,19 @@
 $(document).ready(function () {
 
     var textArray = [
-    '🕹🏿',
-    '🏂',
-    '🏋️‍♂️',
-    '🏑',
-    '🎬',
-    '🛫',
-    '⛵️',
-    '🏄',
-    '👨‍🍳',
-    '👨‍👩‍👧‍👦',
-    '👨🏼‍💻',
-    '🎧',
-    '🍣',
+        '🕹🏿',
+        '🏂',
+        '🏋️‍♂️',
+        '🏑',
+        '🎬',
+        '🛫',
+        '⛵️',
+        '🏄',
+        '👨‍🍳',
+        '👨‍👩‍👧‍👦',
+        '👨🏼‍💻',
+        '🎧',
+        '🍣',
     ];
 
     var arr = [];
@@ -456,7 +456,7 @@ $(document).ready(function () {
     $("#skills__a").click(skills1_Function);
     $("#skills__b").click(skills2_Function);
     $("#skills__c").click(skills3_Function);
-    
+
     $(document).on('click', ".skillchev__1", skills1_Function);
     $(document).on('click', ".skillchev__2", skills2_Function);
 

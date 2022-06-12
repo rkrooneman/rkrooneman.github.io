@@ -339,7 +339,7 @@ svg#icon__codepen.nav__black {
 
 .section .section__inner {
     height: 100%;
-/*    max-width: 800px;*/
+    /*    max-width: 800px;*/
     margin: auto 0;
 }
 
@@ -667,11 +667,13 @@ p a:hover {
     opacity: .7;
 }
 
-.exp__active, .skills__active {
+.exp__active,
+.skills__active {
     display: block;
 }
 
-.exp__inactive, .skills__inactive {
+.exp__inactive,
+.skills__inactive {
     display: none;
 }
 
@@ -730,54 +732,58 @@ p a:hover {
 
 
 @keyframes dotfill__left {
-  from {
-    background: linear-gradient(to right, #bbb 50%, #717171 50%);
-    background-position: right bottom;
-    background-size: 200% 100%
+    from {
+        background: linear-gradient(to right, #bbb 50%, #717171 50%);
+        background-position: right bottom;
+        background-size: 200% 100%
     }
-  to {
-    background: linear-gradient(to right, #bbb 50%, #717171 50%);
-    background-position: left bottom;
-    background-size: 200% 100%
+
+    to {
+        background: linear-gradient(to right, #bbb 50%, #717171 50%);
+        background-position: left bottom;
+        background-size: 200% 100%
     }
 }
 
 @keyframes dotfill__right {
-  from {
-    background: linear-gradient(to right, #717171 50%, #bbb 50%);
-    background-position: left bottom;
-    background-size: 200% 100%
+    from {
+        background: linear-gradient(to right, #717171 50%, #bbb 50%);
+        background-position: left bottom;
+        background-size: 200% 100%
     }
-  to {
-    background: linear-gradient(to right, #717171 50%, #bbb 50%);
-    background-position: right bottom;
-    background-size: 200% 100%
+
+    to {
+        background: linear-gradient(to right, #717171 50%, #bbb 50%);
+        background-position: right bottom;
+        background-size: 200% 100%
     }
 }
 
 @keyframes dotempty__right {
-  from {
-    background: linear-gradient(to right, #bbb 50%, #717171 50%);
-    background-position: left bottom;
-    background-size: 200% 100%
+    from {
+        background: linear-gradient(to right, #bbb 50%, #717171 50%);
+        background-position: left bottom;
+        background-size: 200% 100%
     }
-  to {
-    background: linear-gradient(to right, #bbb 50%, #717171 50%);
-    background-position: right bottom;
-    background-size: 200% 100%
+
+    to {
+        background: linear-gradient(to right, #bbb 50%, #717171 50%);
+        background-position: right bottom;
+        background-size: 200% 100%
     }
 }
 
 @keyframes dotempty__left {
-  from {
-    background: linear-gradient(to right, #717171 50%, #bbb 50%);
-    background-position: right bottom;
-    background-size: 200% 100%
+    from {
+        background: linear-gradient(to right, #717171 50%, #bbb 50%);
+        background-position: right bottom;
+        background-size: 200% 100%
     }
-  to {
-    background: linear-gradient(to right, #717171 50%, #bbb 50%);
-    background-position: left bottom;
-    background-size: 200% 100%
+
+    to {
+        background: linear-gradient(to right, #717171 50%, #bbb 50%);
+        background-position: left bottom;
+        background-size: 200% 100%
     }
 }
 
@@ -799,7 +805,7 @@ p a:hover {
 }
 
 
-.block__chevron span  {
+.block__chevron span {
     color: #717171;
     cursor: pointer;
 }
