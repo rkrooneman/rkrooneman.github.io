@@ -256,7 +256,7 @@
       {
         title: 'Domain Lead @ Infinitas Learning',
         period: 'Sep 2025 \u2013 Present',
-        body: 'Within the Commercial domain: define and own domain strategy &amp; target architecture, drive stakeholder engagement, translate business needs into functional designs, oversee solution delivery across cross-functional teams, and safeguard governance &amp; compliance.'
+        body: 'Within the Commercial domain: define and own domain strategy &amp; target architecture, drive stakeholder engagement, translate business needs into functional designs, oversee solution delivery across cross-functional teams, and safeguard governance &amp; compliance. Pioneered AI-assisted ways of working in my own practice, using AI to turn raw business input into structured requirements, governance-grade briefs and consistent decisions, with the aim of onboarding fellow domain leads to the approach.'
       }
     ];
 
@@ -446,8 +446,8 @@
     // Ordered from a Domain Lead / senior product perspective.
     var skills = [
       {
-        title: 'Digital Strategy',
-        body: 'Setting domain vision, roadmap and target architecture, aligning a multi-market business around one commercial direction.'
+        title: 'Digital Strategy & AI',
+        body: 'Setting domain vision, roadmap and target architecture, aligning a multi-market business around one commercial direction, and building AI into how strategy and delivery actually get done.'
       },
       {
         title: 'Stakeholder Management',
