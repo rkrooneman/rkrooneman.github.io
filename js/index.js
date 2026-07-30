@@ -345,6 +345,11 @@
     // Chronological order: oldest first, most recent last (rightmost dot).
     var items = [
       {
+        title: 'BA American History @ Rijksuniversiteit Groningen',
+        period: 'Grad. 2015',
+        body: 'Foundations in American political history, grounded in archival research and manuscript study.'
+      },
+      {
         title: 'MA History Today @ Rijksuniversiteit Groningen',
         period: 'Grad. 2016',
         body: 'Master focussed on Politics, Organizations and Learning Histories, using a historical perspective to provide practical insight into current issues at an academic level.'
@@ -415,36 +420,83 @@
   });
 
   /* ------------------------------------------------------------------------
-     5. Skills carousel (2 slides, 2 dots, chevrons, swipe)
+     5. Skills carousel - data-driven (any number of skills)
      ------------------------------------------------------------------------ */
   ready(function () {
-    var a = $('#skills__a'), b = $('#skills__b');
-    var s1 = $('#skills__1'), s2 = $('#skills__2');
+    var dotsWrap = $('#skills__dots');
+    var slidesWrap = $('#skills__slides');
     var chevL = $('#skillchevron__left'), chevR = $('#skillchevron__right');
-    if (!a || !b) return;
+    if (!dotsWrap || !slidesWrap) return;
 
-    function go1() {
-      showFade(s1); hide(s2);
-      a.classList.add('dot__active'); a.classList.remove('dot__inactive');
-      b.classList.add('dot__inactive'); b.classList.remove('dot__active');
+    // Ordered from a Domain Lead / senior product perspective.
+    var skills = [
+      {
+        title: 'Digital Strategy',
+        body: 'Setting domain vision, roadmap and target architecture, aligning a multi-market business around one commercial direction.'
+      },
+      {
+        title: 'Stakeholder Management',
+        body: 'Trusted advisor across operating companies, product & tech and back-office, translating business needs into shared, actionable direction.'
+      },
+      {
+        title: 'User Centricity',
+        body: 'Authentic user-centricity as the north star: if a change does not make things genuinely better for the end user, it has not earned its place.'
+      },
+      {
+        title: 'Agile & Scrum',
+        body: 'Certified Professional Scrum Product Owner, framing problems, prioritising backlogs and enabling teams to ship and iterate quickly.'
+      },
+      {
+        title: 'Research & Learning Histories',
+        body: 'A historian\u2019s discipline, tracing how today\u2019s challenges were built over time and designing evidence-based paths forward.'
+      }
+    ];
+
+    var slides = [];
+    var dots = [];
+    var current = 0;
+
+    skills.forEach(function (skill, i) {
+      var isActive = i === current;
+      var slide = document.createElement('div');
+      slide.className = isActive ? 'exp__active' : 'exp__inactive';
+      slide.innerHTML =
+        '<h2>' + skill.title + '</h2>' +
+        '<p class="lead">' + skill.body + '</p>';
+      slidesWrap.appendChild(slide);
+      slides.push(slide);
+
+      var dot = document.createElement('span');
+      dot.className = 'skill__dot control__dot ' + (isActive ? 'dot__active' : 'dot__inactive');
+      dot.setAttribute('role', 'button');
+      dot.setAttribute('tabindex', '0');
+      dot.setAttribute('aria-label', 'Show ' + skill.title);
+      dotsWrap.appendChild(dot);
+      dots.push(dot);
+
+      dot.addEventListener('click', function () { goTo(i); });
+      dot.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(i); }
+      });
+    });
+
+    function goTo(index) {
+      current = (index + skills.length) % skills.length;
+      slides.forEach(function (s, i) { if (i === current) showFade(s); else hide(s); });
+      dots.forEach(function (d, i) {
+        d.classList.toggle('dot__active', i === current);
+        d.classList.toggle('dot__inactive', i !== current);
+      });
     }
-    function go2() {
-      hide(s1); showFade(s2);
-      b.classList.add('dot__active'); b.classList.remove('dot__inactive');
-      a.classList.add('dot__inactive'); a.classList.remove('dot__active');
-    }
-    function toggle() {
-      if (b.classList.contains('dot__active')) go1(); else go2();
-    }
 
-    a.addEventListener('click', go1);
-    b.addEventListener('click', go2);
+    if (chevL) chevL.addEventListener('click', function () { goTo(current - 1); });
+    if (chevR) chevR.addEventListener('click', function () { goTo(current + 1); });
 
-    if (chevL) chevL.addEventListener('click', toggle);
-    if (chevR) chevR.addEventListener('click', toggle);
-
-    onSwipe(s1, { left: go2, right: go2, min: 20 });
-    onSwipe(s2, { left: go1, right: go1, min: 20 });
+    onSwipe(slidesWrap, {
+      left: function () { goTo(current + 1); },
+      right: function () { goTo(current - 1); },
+      min: 20
+    });
   });
 
   /* ------------------------------------------------------------------------

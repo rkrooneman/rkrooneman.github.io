@@ -711,12 +711,12 @@ p a:hover {
 }
 
 /* Stabilise carousel height so slides of different lengths don't shift the page */
-#exp__slides,#edu__slides {
+#exp__slides,#edu__slides,#skills__slides {
     min-height: 160px;
 }
 
 @media (min-width: 30rem) {
-    #exp__slides,    #edu__slides {
+    #exp__slides,    #edu__slides,    #skills__slides {
         min-height: 150px;
     }
 }
