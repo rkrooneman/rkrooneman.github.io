@@ -1,7 +1,39 @@
+/* Self-hosted fonts (SIL Open Font License - see /fonts/*-OFL.txt) */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/lato-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/lato-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/archivo-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/archivo-700.woff2') format('woff2');
+}
+
 html {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    font-display: swap;
     color: #555;
     font-size: 16px;
     scroll-behavior: smooth;
@@ -155,7 +187,7 @@ a:focus-visible,
     width: 50px;
     border-right: 1px dashed rgba(0, 0, 0, 0.3);
     color: rgba(0, 0, 0, 1);
-    font-family: "nimbus-sans", sans-serif;
+    font-family: "Archivo", "nimbus-sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: .0875rem;
     font-size: 10px;
@@ -273,7 +305,7 @@ svg#icon__codepen.nav__black {
 .anchornav a {
     display: block;
     padding: 1em 0;
-    font-family: "nimbus-sans", sans-serif;
+    font-family: "Archivo", "nimbus-sans", sans-serif;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1.4px;
@@ -436,7 +468,7 @@ h3,
 .h3,
 h4,
 .h5 {
-    font-family: "nimbus-sans", sans-serif;
+    font-family: "Archivo", "nimbus-sans", sans-serif;
     font-weight: bold;
     font-display: swap;
     margin: 0 0 1em;
@@ -679,12 +711,12 @@ p a:hover {
 }
 
 /* Stabilise carousel height so slides of different lengths don't shift the page */
-#exp__slides {
+#exp__slides,#edu__slides {
     min-height: 160px;
 }
 
 @media (min-width: 30rem) {
-    #exp__slides {
+    #exp__slides,    #edu__slides {
         min-height: 150px;
     }
 }
@@ -858,5 +890,86 @@ p a:hover {
 
 .nav__btn:focus-visible {
     outline: 2px solid #de5f5f;
+    outline-offset: 3px;
+}
+
+/* Reduced motion: honour the user's OS preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* Skip link - visible only on keyboard focus */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 2000;
+    padding: 0.6em 1em;
+    background: #de5f5f;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+/* Back-to-top button - bottom-right, appears after scrolling */
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1500;
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #de5f5f;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top[hidden] {
+    display: none;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+}
+
+.back-to-top:hover {
+    background: #c94f4f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.back-to-top:focus-visible {
+    outline: 2px solid #151E3C;
     outline-offset: 3px;
 }

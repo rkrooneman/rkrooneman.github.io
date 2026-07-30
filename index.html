@@ -5,31 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roderik Krooneman - Online Profile</title>
-    <meta name="description" content="Roderik Krooneman is a Product Manager based in Groningen, The Netherlands. Product Management • UX/CX • Front-end Developer • Digital Historian.">
-    <meta name="keywords" content="Roderik, Krooneman, Product Manager, Product Management, UX, CX, Digital, CRO, CV, Resume, Profile, Groningen">
+    <meta name="description" content="Roderik Krooneman is a Domain Lead based in Groningen, The Netherlands. Product Management • UX/CX • Front-end Developer • Digital Historian.">
+    <meta name="keywords" content="Roderik, Krooneman, Domain Lead, Product Management, UX, CX, Digital, CRO, CV, Resume, Profile, Groningen">
     <meta name="author" content="Roderik Krooneman">
+    <meta name="theme-color" content="#de5f5f">
     <link rel="canonical" href="https://rkrooneman.github.io/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rkrooneman.github.io/">
     <meta property="og:title" content="Roderik Krooneman - Online Profile">
-    <meta property="og:description" content="Roderik Krooneman is a Product Manager based in Groningen, The Netherlands. Product Management • UX/CX • Front-end Developer • Digital Historian.">
+    <meta property="og:description" content="Roderik Krooneman is a Domain Lead based in Groningen, The Netherlands. Product Management • UX/CX • Front-end Developer • Digital Historian.">
     <meta property="og:image" content="https://rkrooneman.github.io/images/profile_krooneman_og2.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Roderik Krooneman - Online Profile">
-    <meta name="twitter:description" content="Roderik Krooneman is a Product Manager based in Groningen, The Netherlands.">
+    <meta name="twitter:description" content="Roderik Krooneman is a Domain Lead based in Groningen, The Netherlands.">
     <meta name="twitter:image" content="https://rkrooneman.github.io/images/profile_krooneman_og2.png">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <!-- Icons -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="icons/logo.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+    <link rel="manifest" href="site.webmanifest">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Roderik Krooneman",
+        "url": "https://rkrooneman.github.io/",
+        "image": "https://rkrooneman.github.io/images/profile_krooneman_og2.png",
+        "jobTitle": "Domain Lead",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Infinitas Learning"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Groningen",
+            "addressCountry": "NL"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/krooneman",
+            "https://github.com/rkrooneman",
+            "https://codepen.io/rkrooneman"
+        ]
+    }
+    </script>
 </head>
 
 <body>
-    <nav class="side">
+    <a class="skip-link" href="#intro">Skip to content</a>
+    <nav class="side" aria-label="Primary">
         <div class="side__inner">
             <div class="top nav__black">
                 <a href="#hello" aria-label="Back to top">
@@ -89,6 +122,7 @@
             </div>
         </div>
     </nav>
+    <main id="main">
     <section class="section section--hello" id="hello">
         <div class="section__inner">
             <div class="block">
@@ -98,8 +132,9 @@
                     <li><a href="#intro">Intro <span>#1 Let me tell you a story...</span></a></li>
                     <li><a href="#about">About <span>#2 Who am I?</span></a></li>
                     <li><a href="#experience">Experience <span>#3 What have I done?</span></a></li>
-                    <li><a href="#portfolio">Skills <span>#4 What can I do?</span></a></li>
-                    <li><a href="#contact">Contact <span>#5 Just hit me up</span></a></li>
+                    <li><a href="#education">Education <span>#4 What have I learned?</span></a></li>
+                    <li><a href="#portfolio">Skills <span>#5 What can I do?</span></a></li>
+                    <li><a href="#contact">Contact <span>#6 Just hit me up</span></a></li>
                 </ul>
             </div>
         </div>
@@ -168,17 +203,28 @@
 
     </section>
 
-    <section class="section section--experience2" id="experience2">
+    <section class="section section--education" id="education">
         <svg class="section__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#fff" fill-opacity="1" d="M0,192L80,192C160,192,320,192,480,181.3C640,171,800,149,960,122.7C1120,96,1280,64,1360,48L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
         </svg>
         <div class="section__inner">
             <div class="block">
-                <h2>MA History Today @ Rijksuniversiteit Groningen</h2>
-                <p class="lead">
-                    <i>Grad. 2016</i><br />
-                    Master focussed on Politics, Organizations and Learning Histories. From a historical perspective, providing insight into current issues, this with emphasis on practical historical applications at an academic level.<br />
-                </p>
+                <a class="pre" href="#education"><span>#4</span>Education</a>
+
+                <div class="slide__controls" id="edu__dots"></div>
+                <div id="edu__slides"></div>
+            </div>
+            <div id="edu__chevron" class="block__chevron">
+                <button type="button" id="educhevron__left" class="nav__btn" aria-label="Previous education">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button type="button" id="educhevron__right" class="nav__btn" aria-label="Next education">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -191,7 +237,7 @@
 
         <div class="section__inner">
             <div class="block">
-                <a class="pre" href="#portfolio"><span>#4</span>Skills</a>
+                <a class="pre" href="#portfolio"><span>#5</span>Skills</a>
 
                 <div class="slide__controls">
                     <span id="skills__a" class="skill__dot control__dot dot__active"></span>
@@ -364,7 +410,7 @@
     <section class="section section--contact" id="contact">
         <div class="section__inner">
             <div class="block">
-                <a class="pre" href="#contact"><span>#5</span>Contact</a>
+                <a class="pre" href="#contact"><span>#6</span>Contact</a>
                 <h2>For inquiries<br />or just a chat:<br />
                     <span><a href="mailto:r.krooneman@gmail.com">r.krooneman@gmail.com</a></span></h2>
                 <ul class="availability">
@@ -375,7 +421,12 @@
             </div>
         </div>
     </section>
-    <script defer src="https://unpkg.com/typewriter-effect@2.21.0/dist/core.js"></script>
+    </main>
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
     <script defer src="js/index.js"></script>
 </body>
 

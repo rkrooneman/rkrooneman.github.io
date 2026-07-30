@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Roderik Krooneman — Online Profile
+   Roderik Krooneman - Online Profile
    Vanilla JS (no jQuery). Handles: greeting + clock, typewriter intro,
    scroll-driven nav colouring, Experience & Skills carousels, touch swipe.
    ========================================================================== */
@@ -126,21 +126,84 @@
     setInterval(updateGreeting, 1000);
     updateGreeting();
 
-    // Typewriter intro (typewriter-effect is a standalone lib, no jQuery)
+    // Typewriter intro - tiny vanilla implementation (no external library).
+    // Each phrase may contain an interest <span> that the interval above fills.
     var app = document.getElementById('app');
-    if (app && typeof Typewriter !== 'undefined') {
-      new Typewriter(app, { loop: false, delay: 75 })
-        .typeString('Hello there...').pauseFor(1500).deleteAll()
-        .typeString('How are you doing?').pauseFor(1500).deleteAll()
-        .typeString('you could scroll down...').pauseFor(1500).deleteAll()
-        .typeString('or just stay here...').pauseFor(1500).deleteAll()
-        .typeString('did you know I love <span class="interest1"></span>?').pauseFor(1500).deleteAll()
-        .typeString('...and I really enjoy <span class="interest2"></span>').pauseFor(1500).deleteAll()
-        .typeString('...and ofcourse <span class="interest3"></span>').pauseFor(1500).deleteAll()
-        .typeString('how about a cup of \u2615?').pauseFor(1500)
-        .start();
+    if (app) {
+      var phrases = [
+        'Hello there...',
+        'How are you doing?',
+        'you could scroll down...',
+        'or just stay here...',
+        'did you know I love <span class="interest1"></span>?',
+        '...and I really enjoy <span class="interest2"></span>',
+        '...and ofcourse <span class="interest3"></span>',
+        'how about a cup of \u2615?'
+      ];
+
+      // Respect reduced-motion: skip the animation, show the last line.
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) {
+        app.innerHTML = phrases[phrases.length - 1];
+      } else {
+        runTypewriter(app, phrases, { typeDelay: 75, deleteDelay: 40, pause: 1500 });
+      }
     }
   });
+
+  /* Minimal typewriter: types each phrase, pauses, deletes, moves on, loops once.
+     Splits a phrase into character/markup tokens so inline <span> tags stay intact. */
+  function runTypewriter(el, phrases, opts) {
+    var pi = 0;
+
+    function tokenize(str) {
+      var tokens = [], i = 0;
+      while (i < str.length) {
+        if (str[i] === '<') {
+          var close = str.indexOf('>', i);
+          tokens.push(str.slice(i, close + 1)); // whole tag as one token
+          i = close + 1;
+        } else {
+          tokens.push(str[i]); i++;
+        }
+      }
+      return tokens;
+    }
+
+    function typePhrase() {
+      var tokens = tokenize(phrases[pi]);
+      var out = '', n = 0;
+      (function type() {
+        if (n < tokens.length) {
+          out += tokens[n++];
+          el.innerHTML = out;
+          setTimeout(type, opts.typeDelay);
+        } else if (pi === phrases.length - 1) {
+          // Last phrase: leave it on screen instead of deleting.
+        } else {
+          setTimeout(deletePhrase, opts.pause);
+        }
+      })();
+    }
+
+    function deletePhrase() {
+      // Delete by rebuilding the plain text length down to zero.
+      var text = phrases[pi];
+      var tokens = tokenize(text);
+      (function del() {
+        if (tokens.length > 0) {
+          tokens.pop();
+          el.innerHTML = tokens.join('');
+          setTimeout(del, opts.deleteDelay);
+        } else {
+          pi++;
+          if (pi < phrases.length) typePhrase();
+        }
+      })();
+    }
+
+    typePhrase();
+  }
 
   /* ------------------------------------------------------------------------
      2. Scroll-driven nav colouring (dark sections -> white nav)
@@ -184,7 +247,7 @@
   });
 
   /* ------------------------------------------------------------------------
-     3. Experience carousel — data-driven (any number of roles)
+     3. Experience carousel - data-driven (any number of roles)
      ------------------------------------------------------------------------ */
   ready(function () {
     var dotsWrap = $('#exp__dots');
@@ -208,12 +271,12 @@
       {
         title: 'E-commerce Business Manager @ Noordhoff',
         period: 'Jan 2021 \u2013 Jan 2022',
-        body: 'Business owner of the e-commerce platform and advocate of customer interests within the product vision. Owned user stories, roadmap and delivery, aligning capacity, priorities and resources for continuous improvement \u2014 the linking pin between Noordhoff and international partners.'
+        body: 'Business owner of the e-commerce platform and advocate of customer interests within the product vision. Owned user stories, roadmap and delivery, aligning capacity, priorities and resources for continuous improvement, the linking pin between Noordhoff and international partners.'
       },
       {
         title: 'Lead Product Manager @ Infinitas Learning',
         period: 'Jan 2022 \u2013 Sep 2025',
-        body: 'Identify the most valuable problems to solve, enable teams to ship and iterate high-quality solutions quickly, and validate market impact across Noordhoff.nl, Plantyn.com and Liber.se \u2014 coordinating roadmaps and go-to-market across departments and countries.'
+        body: 'Identify the most valuable problems to solve, enable teams to ship and iterate high-quality solutions quickly, and validate market impact across Noordhoff.nl, Plantyn.com and Liber.se, coordinating roadmaps and go-to-market across departments and countries.'
       },
       {
         title: 'Domain Lead @ Infinitas Learning',
@@ -271,7 +334,88 @@
   });
 
   /* ------------------------------------------------------------------------
-     4. Skills carousel (2 slides, 2 dots, chevrons, swipe)
+     4. Education carousel - data-driven (any number of items)
+     ------------------------------------------------------------------------ */
+  ready(function () {
+    var dotsWrap = $('#edu__dots');
+    var slidesWrap = $('#edu__slides');
+    var chevL = $('#educhevron__left'), chevR = $('#educhevron__right');
+    if (!dotsWrap || !slidesWrap) return;
+
+    // Chronological order: oldest first, most recent last (rightmost dot).
+    var items = [
+      {
+        title: 'MA History Today @ Rijksuniversiteit Groningen',
+        period: 'Grad. 2016',
+        body: 'Master focussed on Politics, Organizations and Learning Histories, using a historical perspective to provide practical insight into current issues at an academic level.'
+      },
+      {
+        title: 'Professional Scrum Product Owner I @ Scrum.org',
+        period: '2023',
+        body: 'Certified in the fundamentals of Scrum and the Product Owner role, maximising product value through effective backlog management and stakeholder alignment.'
+      },
+      {
+        title: 'AI for Product Management @ Pendo.io',
+        period: '2023',
+        body: 'Applying artificial intelligence to product management, using data and AI-driven insight to prioritise, build and validate better products.'
+      },
+      {
+        title: 'Cybersecurity Fundamentals @ IBM',
+        period: '2024',
+        body: 'Foundations of cybersecurity, core principles of security, threats and risk management across modern digital systems.'
+      }
+    ];
+
+    var slides = [];
+    var dots = [];
+    // Open on the most recent item (last in chronological order).
+    var current = items.length - 1;
+
+    items.forEach(function (item, i) {
+      var isActive = i === current;
+      var slide = document.createElement('div');
+      slide.className = isActive ? 'exp__active' : 'exp__inactive';
+      slide.innerHTML =
+        '<h2>' + item.title + '</h2>' +
+        '<p class="lead"><i>' + item.period + '</i><br />' + item.body + '</p>';
+      slidesWrap.appendChild(slide);
+      slides.push(slide);
+
+      var dot = document.createElement('span');
+      dot.className = 'exp__dot control__dot ' + (isActive ? 'dot__active' : 'dot__inactive');
+      dot.setAttribute('role', 'button');
+      dot.setAttribute('tabindex', '0');
+      dot.setAttribute('aria-label', 'Show ' + item.title);
+      dotsWrap.appendChild(dot);
+      dots.push(dot);
+
+      dot.addEventListener('click', function () { goTo(i); });
+      dot.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(i); }
+      });
+    });
+
+    function goTo(index) {
+      current = (index + items.length) % items.length;
+      slides.forEach(function (s, i) { if (i === current) showFade(s); else hide(s); });
+      dots.forEach(function (d, i) {
+        d.classList.toggle('dot__active', i === current);
+        d.classList.toggle('dot__inactive', i !== current);
+      });
+    }
+
+    if (chevL) chevL.addEventListener('click', function () { goTo(current - 1); });
+    if (chevR) chevR.addEventListener('click', function () { goTo(current + 1); });
+
+    onSwipe(slidesWrap, {
+      left: function () { goTo(current + 1); },
+      right: function () { goTo(current - 1); },
+      min: 20
+    });
+  });
+
+  /* ------------------------------------------------------------------------
+     5. Skills carousel (2 slides, 2 dots, chevrons, swipe)
      ------------------------------------------------------------------------ */
   ready(function () {
     var a = $('#skills__a'), b = $('#skills__b');
@@ -301,6 +445,24 @@
 
     onSwipe(s1, { left: go2, right: go2, min: 20 });
     onSwipe(s2, { left: go1, right: go1, min: 20 });
+  });
+
+  /* ------------------------------------------------------------------------
+     6. Back-to-top button - appears after scrolling, smooth-scrolls to top
+     ------------------------------------------------------------------------ */
+  ready(function () {
+    var btn = $('#back-to-top');
+    if (!btn) return;
+    btn.removeAttribute('hidden');
+
+    onScroll(function () {
+      btn.classList.toggle('is-visible', window.pageYOffset > 400);
+    });
+
+    btn.addEventListener('click', function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
   });
 
 })();
