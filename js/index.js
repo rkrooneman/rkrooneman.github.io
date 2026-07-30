@@ -73,33 +73,10 @@
   }
 
   /* ------------------------------------------------------------------------
-     1. Random interests + greeting/clock + typewriter intro
+     1. Greeting + typewriter intro
      ------------------------------------------------------------------------ */
   ready(function () {
-    var interests = [
-      '\uD83D\uDD79\uD83C\uDFFF', '\uD83C\uDFC2', '\uD83C\uDFCB\uFE0F\u200D\u2642\uFE0F',
-      '\uD83C\uDFD1', '\uD83C\uDFAC', '\uD83D\uDEEB', '\u26F5\uFE0F', '\uD83C\uDFC4',
-      '\uD83D\uDC68\u200D\uD83C\uDF73', '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66',
-      '\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDCBB', '\uD83C\uDFA7', '\uD83C\uDF63'
-    ];
-
-    // pick 3 distinct interests
-    var picks = [];
-    while (picks.length < 3) {
-      var r = Math.floor(Math.random() * interests.length);
-      if (picks.indexOf(r) === -1) picks.push(r);
-    }
-
-    // Continuously fill any interest spans the typewriter creates.
-    setInterval(function () {
-      var slots = ['.interest1', '.interest2', '.interest3'];
-      for (var i = 0; i < slots.length; i++) {
-        var node = $(slots[i]);
-        if (node) node.textContent = interests[picks[i]];
-      }
-    }, 500);
-
-    // Greeting + running clock
+    // Greeting (time-of-day)
     function updateGreeting() {
       var now = new Date();
       var hr = now.getHours();
@@ -132,13 +109,11 @@
     if (app) {
       var phrases = [
         'Hello there...',
-        'How are you doing?',
-        'you could scroll down...',
-        'or just stay here...',
-        'did you know I love <span class="interest1"></span>?',
-        '...and I really enjoy <span class="interest2"></span>',
-        '...and ofcourse <span class="interest3"></span>',
-        'how about a cup of \u2615?'
+        'I\u2019m Roderik, a Commercial Domain Lead.',
+        'I think like a historian...',
+        '...and build like a product manager.',
+        'Big problems have long histories.',
+        'Let\u2019s untangle some. Scroll down.'
       ];
 
       // Respect reduced-motion: skip the animation, show the last line.
@@ -313,6 +288,19 @@
       track.appendChild(node);
       nodes.push(node);
     });
+
+    // Hidden print-only list: shows every role when the page is printed as a CV.
+    var printList = document.createElement('div');
+    printList.className = 'exp__print-list';
+    printList.setAttribute('aria-hidden', 'true');
+    printList.innerHTML = roles.map(function (role) {
+      return '<div class="role">' +
+        '<h2 class="role__title">' + role.title + '</h2>' +
+        '<span class="role__period">' + role.period + '</span>' +
+        '<p class="lead">' + role.body + '</p>' +
+        '</div>';
+    }).join('');
+    timeline.appendChild(printList);
 
     function renderDetail() {
       var role = roles[current];
@@ -555,6 +543,48 @@
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
     });
+  });
+
+  /* ------------------------------------------------------------------------
+     7. Download CV - opens the print dialog (print stylesheet formats the page)
+     ------------------------------------------------------------------------ */
+  ready(function () {
+    var cv = $('#download-cv');
+    if (!cv) return;
+    cv.addEventListener('click', function () { window.print(); });
+  });
+
+  /* ------------------------------------------------------------------------
+     8. Easter eggs - console greeting + Konami "history mode" (opt-in only)
+     ------------------------------------------------------------------------ */
+  ready(function () {
+    // Quiet greeting for the curious who open devtools.
+    try {
+      console.log(
+        '%cRoderik Krooneman',
+        'font-size:16px;font-weight:bold;color:#D65656;'
+      );
+      console.log('%cBig problems have long histories. Curious how this is built? github.com/rkrooneman', 'color:#5A6472;');
+    } catch (e) { /* no-op */ }
+
+    // Konami code: up up down down left right left right B A
+    var seq = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    var pos = 0;
+    document.addEventListener('keydown', function (e) {
+      var key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      pos = (key === seq[pos]) ? pos + 1 : (key === seq[0] ? 1 : 0);
+      if (pos === seq.length) {
+        pos = 0;
+        historyMode();
+      }
+    });
+
+    function historyMode() {
+      var root = document.documentElement;
+      if (root.classList.contains('history-mode')) return; // already on
+      root.classList.add('history-mode');
+      console.log('%cHistory mode engaged. Big problems have long histories. (Refresh to return.)', 'color:#7a4a24;font-style:italic;');
+    }
   });
 
 })();

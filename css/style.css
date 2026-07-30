@@ -42,6 +42,22 @@
     --on-dark: #FAF9F6;    /* text on dark backgrounds */
 }
 
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/ebgaramond-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/ebgaramond-500italic.woff2') format('woff2');
+}
+
 html {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
@@ -421,6 +437,11 @@ svg#icon__codepen.nav__black {
     margin-bottom: 0.8rem;
 }
 
+/* Print-only list of all roles (hidden on screen) */
+.exp__print-list {
+    display: none;
+}
+
 /* Cross-fade for the detail panel */
 .timeline__detail .role {
     animation: role-fade 0.4s ease;
@@ -745,6 +766,112 @@ p a:hover {
     font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.1rem);
     line-height: 1.6;
     margin: 0;
+}
+
+/* Download CV button */
+.btn-cv {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.7em 1.5em;
+    font-family: "Archivo", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(214, 86, 86, 0.28);
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-cv::before {
+    content: '';
+    width: 0.9em;
+    height: 0.9em;
+    background: currentColor;
+    -webkit-mask: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    mask: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.btn-cv:hover {
+    background: var(--accent-strong);
+    border-color: var(--accent-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(214, 86, 86, 0.38);
+}
+
+.btn-cv:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+}
+
+/* Konami "history mode": swap the accent to warm ochre for a few seconds */
+/* ==========================================================================
+   "History mode" - Konami easter egg. Transforms the page into an aged
+   document: parchment palette, Garamond serif, sepia ink. Persists until refresh.
+   ========================================================================== */
+.history-mode {
+    --ink: #3a2c1a;          /* sepia ink */
+    --paper: #f2e6cf;        /* parchment */
+    --accent: #7a4a24;       /* aged umber */
+    --accent-strong: #5e3819;
+    --slate: #6b5a41;
+    --on-dark: #f2e6cf;
+}
+
+.history-mode,
+.history-mode .lead,
+.history-mode p,
+.history-mode dd {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    letter-spacing: 0.2px;
+}
+
+.history-mode h1,
+.history-mode h2,
+.history-mode .pre,
+.history-mode .anchornav a,
+.history-mode .at-a-glance dt,
+.history-mode .role__period,
+.history-mode .timeline__year {
+    font-family: 'EB Garamond', Georgia, serif !important;
+    letter-spacing: normal;
+    font-style: italic;
+}
+
+/* Parchment texture + warm vignette layered over the whole page */
+.history-mode body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at center, transparent 55%, rgba(60, 40, 15, 0.28) 100%),
+        repeating-linear-gradient(0deg, rgba(120, 90, 50, 0.03) 0, rgba(120, 90, 50, 0.03) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode: multiply;
+}
+
+/* Warm, slightly desaturated wash + soft focus for the "old photo" feel */
+.history-mode {
+    filter: sepia(0.35) contrast(0.96) brightness(1.02);
+    transition: filter 0.8s ease;
+}
+
+.history-mode * {
+    transition: color 0.8s ease, background-color 0.8s ease, border-color 0.8s ease, fill 0.8s ease;
+}
+
+/* The active timeline dot loses its bright glow; ink dot on parchment instead */
+.history-mode .timeline__node[aria-selected="true"] .timeline__dot {
+    box-shadow: 0 0 0 6px rgba(122, 74, 36, 0.18);
 }
 
 /* At-a-glance strip in the Intro section */
@@ -1081,4 +1208,108 @@ p a:hover {
 .back-to-top:focus-visible {
     outline: 2px solid var(--ink);
     outline-offset: 3px;
+}
+
+/* ==========================================================================
+   Print stylesheet - format the page as a clean CV when printed / saved as PDF
+   ========================================================================== */
+@media print {
+    :root {
+        --ink: #1a1a2e;
+        --paper: #ffffff;
+        --accent: #b84545;
+        --slate: #444;
+    }
+
+    html {
+        font-size: 11pt;
+        scroll-behavior: auto;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Hide interactive / decorative chrome */
+    .side,
+    .section__svg,
+    .block__chevron,
+    .back-to-top,
+    #download-cv,
+    .timeline__track,
+    .anchornav,
+    .day__greet,
+    .date {
+        display: none !important;
+    }
+
+    /* Flatten full-height flex sections into normal flowing blocks */
+    .section {
+        display: block !important;
+        min-height: 0 !important;
+        width: 100% !important;
+        padding: 0.6cm 0 !important;
+        page-break-inside: avoid;
+        background: #fff !important;
+        color: #000 !important;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .section__inner {
+        display: block !important;
+    }
+
+    .block,
+    .block--wide {
+        width: 100% !important;
+    }
+
+    /* Hide the animated hero entirely; the Intro section carries the name */
+    .section--hello {
+        display: none !important;
+    }
+
+    /* Reveal ALL carousel slides (Education, Skills) instead of just the active one */
+    .exp__inactive,
+    .skills__inactive,
+    .exp__active {
+        display: block !important;
+        opacity: 1 !important;
+        margin-bottom: 0.5cm;
+    }
+
+    /* Print the whole Experience timeline as a list, not the interactive detail */
+    .timeline__detail {
+        display: none !important;
+    }
+
+    .exp__print-list {
+        display: block !important;
+    }
+
+    .exp__print-list .role {
+        margin-bottom: 0.5cm;
+        page-break-inside: avoid;
+    }
+
+    /* Accent stays visible in print */
+    a {
+        color: #000 !important;
+        text-decoration: underline;
+    }
+
+    h1, h2 {
+        color: #1a1a2e !important;
+    }
+
+    .pre span,
+    .at-a-glance dt,
+    .role__period {
+        color: #b84545 !important;
+    }
+
+    @page {
+        margin: 1.4cm;
+    }
 }
