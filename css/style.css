@@ -31,132 +31,27 @@
     src: url('../fonts/archivo-700.woff2') format('woff2');
 }
 
+:root {
+    /* "Considered" palette */
+    --ink: #1A1A2E;        /* deep near-navy: dark sections + primary text */
+    --paper: #FAF9F6;      /* warm off-white: light sections */
+    --accent: #D65656;     /* refined red: links, active states, buttons */
+    --accent-strong: #b84545;
+    --slate: #5A6472;      /* muted blue-grey: secondary text/borders */
+    --ochre: #E8B04B;      /* warm ochre, used sparingly */
+    --on-dark: #FAF9F6;    /* text on dark backgrounds */
+}
+
 html {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    color: #555;
-    font-size: 16px;
+    color: var(--ink);
+    /* Fluid root size: smooth from ~17px (mobile) to ~21px (desktop) */
+    font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.3125rem);
+    line-height: 1.5;
     scroll-behavior: smooth;
-}
-
-@media (min-width: 6.25em) {
-    html {
-        font-size: 17px;
-    }
-}
-
-@media (min-width: 12.5em) {
-    html {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 18.75em) {
-    html {
-        font-size: 19px;
-    }
-}
-
-@media (min-width: 25em) {
-    html {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 31.25em) {
-    html {
-        font-size: 21px;
-    }
-}
-
-@media (min-width: 37.5em) {
-    html {
-        font-size: 22px;
-    }
-}
-
-@media (min-width: 43.75em) {
-    html {
-        font-size: 23px;
-    }
-}
-
-@media (min-width: 50em) {
-    html {
-        font-size: 24px;
-    }
-}
-
-@media (min-width: 56.25em) {
-    html {
-        font-size: 25px;
-    }
-}
-
-@media (min-width: 62.5em) {
-    html {
-        font-size: 26px;
-    }
-}
-
-@media (min-width: 68.75em) {
-    html {
-        font-size: 27px;
-    }
-}
-
-@media (min-width: 75em) {
-    html {
-        font-size: 28px;
-    }
-}
-
-@media (min-width: 81.25em) {
-    html {
-        font-size: 29px;
-    }
-}
-
-@media (min-width: 87.5em) {
-    html {
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 93.75em) {
-    html {
-        font-size: 31px;
-    }
-}
-
-@media (min-width: 100em) {
-    html {
-        font-size: 32px;
-    }
-}
-
-@media (min-width: 106.25em) {
-    html {
-        font-size: 33px;
-    }
-}
-
-@media (min-width: 112.5em) {
-    html {
-        font-size: 34px;
-    }
-}
-
-@media (min-width: 118.75em) {
-    html {
-        font-size: 35px;
-    }
-}
-
-@media (min-width: 125em) {
-    html {
-        font-size: 36px;
-    }
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -174,7 +69,7 @@ a {
 a:focus-visible,
 .control__dot:focus-visible,
 .block__chevron span:focus-visible {
-    outline: 2px solid #de5f5f;
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
 
@@ -293,7 +188,7 @@ svg#icon__codepen.nav__black {
     width: 1.3rem;
     display: block;
     height: 2px;
-    background: black;
+    background: var(--accent);
     -webkit-transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
     transition: all 0.3s cubic-bezier(0.05, 0.69, 0.14, 1);
 }
@@ -324,12 +219,12 @@ svg#icon__codepen.nav__black {
 }
 
 .anchornav a:hover {
-    color: #de5f5f;
+    color: var(--accent);
 }
 
 .anchornav a:hover span {
     opacity: 1;
-    color: #181818;
+    color: var(--ink);
 }
 
 .anchornav a:hover .anchornav li::after {
@@ -386,49 +281,255 @@ svg#icon__codepen.nav__black {
     width: 800px;
 }
 
+.block--wide {
+    width: min(900px, 100%);
+}
+
+/* ==========================================================================
+   Experience timeline
+   ========================================================================== */
+.timeline {
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+.timeline__track {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    /* --dot-row: distance from the top of the track to the centre of the dots.
+       The line is anchored to this exact value so the two always align. */
+    --dot-row: 40px;
+}
+
+/* The base line + the accent progress fill sit behind the nodes,
+   centred on the dot row. Insets by half a node so the line starts/ends
+   at the first/last dot centres, not the track edges. */
+.timeline__track::before,
+.timeline__track::after {
+    content: '';
+    position: absolute;
+    top: var(--dot-row);
+    left: calc(50% / var(--node-count, 5));
+    right: calc(50% / var(--node-count, 5));
+    height: 2px;
+    transform: translateY(-50%);
+    background: rgba(250, 249, 246, 0.25);
+}
+
+.timeline__track::after {
+    right: auto;
+    width: calc((100% - (100% / var(--node-count, 5))) * (var(--progress, 0) / 100));
+    background: var(--accent);
+    transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline__node {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+}
+
+.timeline__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 2px solid rgba(250, 249, 246, 0.5);
+    /* dot centre sits at --dot-row (11px) from the track top */
+    box-sizing: border-box;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline__year {
+    font-family: "Archivo", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    margin-top: 0.55rem;
+}
+
+/* Entrance animation: nodes pop in with a stagger (set via inline delay in JS) */
+.timeline__node {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.timeline.is-visible .timeline__node {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition-delay: var(--delay, 0ms);
+}
+
+.timeline__node:hover .timeline__dot {
+    border-color: var(--accent);
+    transform: scale(1.15);
+}
+
+.timeline__node[aria-selected="true"] .timeline__dot {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.4);
+    box-shadow: 0 0 0 6px rgba(214, 86, 86, 0.18);
+}
+
+.timeline__node[aria-selected="true"] .timeline__year {
+    opacity: 1;
+    color: var(--accent);
+}
+
+.timeline__node:focus-visible {
+    outline: none;
+}
+
+.timeline__node:focus-visible .timeline__dot {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.timeline__detail {
+    margin-top: 2.2rem;
+    min-height: 160px;
+}
+
+.timeline__detail .role__title {
+    margin-bottom: 0.4rem;
+}
+
+.timeline__detail .role__period {
+    display: block;
+    font-family: "Archivo", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+}
+
+/* Cross-fade for the detail panel */
+.timeline__detail .role {
+    animation: role-fade 0.4s ease;
+}
+
+@keyframes role-fade {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile: timeline goes vertical */
+@media (max-width: 620px) {
+    .timeline__track {
+        flex-flow: column nowrap;
+        align-items: stretch;
+        gap: 1.25rem;
+    }
+
+    /* Vertical line runs down the dot column. The dot centre sits at
+       --dot-col from the node's left edge; the line is anchored to it. */
+    .timeline__track {
+        --dot-col: 52px;
+    }
+
+    .timeline__track::before,
+    .timeline__track::after {
+        top: 7px;
+        bottom: 7px;
+        left: var(--dot-col);
+        right: auto;
+        width: 2px;
+        height: auto;
+        transform: translateX(-50%);
+    }
+
+    .timeline__track::after {
+        bottom: auto;
+        width: 2px;
+        height: calc((100% - 14px) * (var(--progress, 0) / 100));
+        transition: height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .timeline__node {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.85rem;
+        width: 100%;
+    }
+
+    .timeline__year {
+        margin-top: 0;
+    }
+
+    /* The active dot scales 1.4x from its box; nudge it back onto the line.
+       translate before scale so the 3px isn't multiplied by the scale factor. */
+    .timeline__node[aria-selected="true"] .timeline__dot {
+        transform: translateX(3px) scale(1.4);
+    }
+}
+
 .section.section--hello {
-    background-color: #FDEF52;
-    color: #181818;
+    background-color: var(--ink);
+    color: var(--on-dark);
 }
 
 .section.section--hello svg.bottom {
-    fill: #FDEF52;
+    fill: var(--ink);
     top: auto;
     bottom: -50px;
     z-index: 3;
 }
 
 .section.section--intro {
-    background-color: white;
-    color: #555;
+    background-color: var(--paper);
+    color: var(--ink);
 }
 
 .section.section--about {
-    background-color: #de5f5f;
-    color: white;
+    background-color: var(--accent);
+    color: var(--on-dark);
 }
 
 .section.section--about svg {
-    fill: #de5f5f;
+    fill: var(--accent);
 }
 
 .section.section--experience {
-    background-color: #343436;
-    color: white;
+    background-color: var(--ink);
+    color: var(--on-dark);
 }
 
 .section.section--experience svg {
-    fill: #343436;
+    fill: var(--ink);
+}
+
+.section.section--education {
+    background-color: var(--paper);
+    color: var(--ink);
 }
 
 .section.section--portfolio {
-    background-color: #028762;
-    color: white;
+    background-color: var(--ink);
+    color: var(--on-dark);
 }
 
 .section.section--portfolio svg {
     top: -20px;
-    fill: #028762;
+    fill: var(--ink);
 }
 
 .section.section--portfolio svg.bottom {
@@ -437,22 +538,22 @@ svg#icon__codepen.nav__black {
 }
 
 .section.section--portfolio1 {
-    background-color: #151E3C;
-    color: white;
+    background-color: var(--ink);
+    color: var(--on-dark);
 }
 
 .section.section--portfolio1 svg {
     top: -50px;
-    fill: #151E3C;
+    fill: var(--ink);
 }
 
-.section.section--pepperhill svg {
-    top: -50px;
-    fill: #345995;
+.section.section--contact {
+    background-color: var(--paper);
+    color: var(--ink);
 }
 
 .section.section--contact svg {
-    fill: white;
+    fill: var(--paper);
 }
 
 svg.skill__icon {
@@ -528,7 +629,7 @@ h4 a::after,
     content: '';
     display: block;
     padding-bottom: 4px;
-    border-bottom: .1875rem solid #555;
+    border-bottom: .1875rem solid var(--slate);
     width: 0;
     position: absolute;
     left: 0;
@@ -537,7 +638,7 @@ h4 a::after,
 }
 
 h2 span a::after {
-    border-bottom: .25rem solid #de5f5f;
+    border-bottom: .25rem solid var(--accent);
     ;
 }
 
@@ -555,41 +656,27 @@ h3 span,
 .h3 span,
 h4 span,
 .h5 span {
-    color: #de5f5f;
+    color: var(--accent);
 }
 
 h2#app span {
-    color: #000;
+    color: var(--on-dark);
 }
 
 h2 a {
-    color: #de5f5f;
+    color: var(--accent);
 }
 
 h1,
 .h1 {
-    font-size: 1.2rem;
-}
-
-@media (min-width: 30rem) {
-
-    h1,
-    .h1 {
-        font-size: 1.75rem;
-    }
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem);
+    line-height: 1.1;
 }
 
 h2,
 .h2 {
-    font-size: 1.2rem;
-}
-
-@media (min-width: 30rem) {
-
-    h2,
-    .h2 {
-        font-size: 1.75rem;
-    }
+    font-size: clamp(1.3rem, 1.05rem + 1.1vw, 1.8rem);
+    line-height: 1.15;
 }
 
 .pre {
@@ -615,14 +702,8 @@ h2,
 }
 
 p {
-    font-size: .75rem;
-    line-height: 1.4;
-}
-
-@media (min-width: 30rem) {
-    p {
-        font-size: .875rem;
-    }
+    font-size: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
+    line-height: 1.6;
 }
 
 li {
@@ -635,7 +716,7 @@ ul.availability {
 
 ul.availability li::before {
     content: "\2022";
-    color: #DE5F5F;
+    color: var(--accent);
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -645,7 +726,7 @@ ul.availability li::before {
 .availability span {
     text-decoration: underline;
     text-decoration-style: dotted;
-    color: #DE5F5F;
+    color: var(--accent);
 }
 
 p a {
@@ -661,14 +742,42 @@ p a:hover {
 
 .lead {
     display: block;
-    font-size: .875rem;
+    font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.1rem);
+    line-height: 1.6;
     margin: 0;
 }
 
-@media (min-width: 30rem) {
-    .lead {
-        font-size: 1rem;
-    }
+/* At-a-glance strip in the Intro section */
+.at-a-glance {
+    margin: 1.75rem 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.9rem;
+    border-left: 3px solid var(--accent);
+    padding-left: 1.1rem;
+}
+
+.at-a-glance .glance__item {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.15rem;
+}
+
+.at-a-glance dt {
+    font-family: "Archivo", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.at-a-glance dd {
+    margin: 0;
+    font-size: clamp(0.85rem, 0.8rem + 0.25vw, 0.98rem);
+    line-height: 1.35;
+    color: var(--ink);
 }
 
 .portfolio {
@@ -689,14 +798,14 @@ p a:hover {
 .portfolio .link {
     display: block;
     margin: 2em 0 0 0;
-    color: #555;
+    color: var(--slate);
     letter-spacing: 2px;
     font-size: 12px;
 }
 
 .portfolio p {
     font-size: inherit;
-    color: #343436;
+    color: var(--slate);
     opacity: .7;
 }
 
@@ -877,8 +986,8 @@ p a:hover {
 
 .nav__btn:hover {
     color: #fff;
-    background-color: #de5f5f;
-    border-color: #de5f5f;
+    background-color: var(--accent);
+    border-color: var(--accent);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(222, 95, 95, 0.35);
 }
@@ -889,7 +998,7 @@ p a:hover {
 }
 
 .nav__btn:focus-visible {
-    outline: 2px solid #de5f5f;
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
 
@@ -914,7 +1023,7 @@ p a:hover {
     top: 0;
     z-index: 2000;
     padding: 0.6em 1em;
-    background: #de5f5f;
+    background: var(--accent);
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-size: 0.9rem;
@@ -939,7 +1048,7 @@ p a:hover {
     padding: 0;
     border: none;
     border-radius: 50%;
-    background: #de5f5f;
+    background: var(--accent);
     color: #fff;
     cursor: pointer;
     opacity: 0;
@@ -964,12 +1073,12 @@ p a:hover {
 }
 
 .back-to-top:hover {
-    background: #c94f4f;
+    background: var(--accent-strong);
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
 }
 
 .back-to-top:focus-visible {
-    outline: 2px solid #151E3C;
+    outline: 2px solid var(--ink);
     outline-offset: 3px;
 }

@@ -214,7 +214,7 @@
     var logo = $('#krooneman__logo');
     var sideIcons = $all('.side__icon');
     // Every dark/coloured-background section the nav should turn white over.
-    var darkSections = $all('.section--about, .section__dark, .section__dark2');
+    var darkSections = $all('.section--hello, .section--about, .section__dark, .section__dark2');
     if (!top || !bottom) return;
 
     // Is the given viewport Y coordinate currently inside a dark section?
@@ -247,15 +247,15 @@
   });
 
   /* ------------------------------------------------------------------------
-     3. Experience carousel - data-driven (any number of roles)
+     3. Experience timeline - interactive, animated (any number of roles)
      ------------------------------------------------------------------------ */
   ready(function () {
-    var dotsWrap = $('#exp__dots');
-    var slidesWrap = $('#exp__slides');
-    var chevL = $('#chevron__left'), chevR = $('#chevron__right');
-    if (!dotsWrap || !slidesWrap) return;
+    var track = $('#exp__track');
+    var detail = $('#exp__detail');
+    var timeline = $('#exp__timeline');
+    if (!track || !detail) return;
 
-    // Chronological order: oldest first, most recent last (rightmost dot).
+    // Chronological order: oldest first, most recent last (rightmost node).
     // Edit here to add/remove/reorder roles.
     var roles = [
       {
@@ -285,52 +285,92 @@
       }
     ];
 
-    var slides = [];
-    var dots = [];
-    // Open on the most recent role (last item in chronological order).
-    var current = roles.length - 1;
+    // Pull a short year label out of each period string (e.g. "Sep 2025 - Present").
+    function yearLabel(period) {
+      if (/present/i.test(period)) return 'Now';
+      var years = period.match(/\d{4}/g);
+      return years ? years[years.length - 1] : period;
+    }
+
+    var nodes = [];
+    var current = roles.length - 1; // open on the most recent role
+
+    // Expose the count so the CSS line can span dot-centre to dot-centre.
+    track.style.setProperty('--node-count', roles.length);
 
     roles.forEach(function (role, i) {
-      var isActive = i === current;
-      var slide = document.createElement('div');
-      slide.className = isActive ? 'exp__active' : 'exp__inactive';
-      slide.innerHTML =
-        '<h2>' + role.title + '</h2>' +
-        '<p class="lead"><i>' + role.period + '</i><br />' + role.body + '</p>';
-      slidesWrap.appendChild(slide);
-      slides.push(slide);
-
-      var dot = document.createElement('span');
-      dot.className = 'exp__dot control__dot ' + (isActive ? 'dot__active' : 'dot__inactive');
-      dot.setAttribute('role', 'button');
-      dot.setAttribute('tabindex', '0');
-      dot.setAttribute('aria-label', 'Show ' + role.title);
-      dotsWrap.appendChild(dot);
-      dots.push(dot);
-
-      dot.addEventListener('click', function () { goTo(i); });
-      dot.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(i); }
-      });
+      var node = document.createElement('button');
+      node.type = 'button';
+      node.className = 'timeline__node';
+      node.setAttribute('role', 'tab');
+      node.setAttribute('aria-selected', i === current ? 'true' : 'false');
+      node.setAttribute('aria-label', role.title + ', ' + role.period);
+      node.style.setProperty('--delay', (i * 90) + 'ms');
+      node.innerHTML =
+        '<span class="timeline__year">' + yearLabel(role.period) + '</span>' +
+        '<span class="timeline__dot"></span>';
+      node.addEventListener('click', function () { goTo(i); });
+      track.appendChild(node);
+      nodes.push(node);
     });
+
+    function renderDetail() {
+      var role = roles[current];
+      detail.innerHTML =
+        '<div class="role">' +
+        '<h2 class="role__title">' + role.title + '</h2>' +
+        '<span class="role__period">' + role.period + '</span>' +
+        '<p class="lead">' + role.body + '</p>' +
+        '</div>';
+    }
+
+    function updateProgress() {
+      // Fill the line from the start up to the active node.
+      var pct = roles.length > 1 ? (current / (roles.length - 1)) * 100 : 0;
+      track.style.setProperty('--progress', pct + '%');
+    }
 
     function goTo(index) {
       current = (index + roles.length) % roles.length;
-      slides.forEach(function (s, i) { if (i === current) showFade(s); else hide(s); });
-      dots.forEach(function (d, i) {
-        d.classList.toggle('dot__active', i === current);
-        d.classList.toggle('dot__inactive', i !== current);
+      nodes.forEach(function (n, i) {
+        n.setAttribute('aria-selected', i === current ? 'true' : 'false');
       });
+      renderDetail();
+      updateProgress();
     }
 
-    if (chevL) chevL.addEventListener('click', function () { goTo(current - 1); });
-    if (chevR) chevR.addEventListener('click', function () { goTo(current + 1); });
+    // Keyboard: left/right arrows move between roles when a node has focus.
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); nodes[current].focus(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); nodes[current].focus(); }
+    });
 
-    onSwipe(slidesWrap, {
+    // Swipe on the whole timeline (mobile).
+    onSwipe(track, {
       left: function () { goTo(current + 1); },
       right: function () { goTo(current - 1); },
       min: 20
     });
+
+    // Initial state
+    renderDetail();
+    updateProgress();
+
+    // Entrance animation when the timeline scrolls into view (respect reduced-motion).
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) {
+      timeline.classList.add('is-visible');
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            timeline.classList.add('is-visible');
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      io.observe(timeline);
+    }
   });
 
   /* ------------------------------------------------------------------------
