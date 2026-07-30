@@ -115,7 +115,7 @@ a:focus-visible,
 svg#krooneman__logo.nav__white,
 svg#icon__mail.nav__white,
 svg#icon__github.nav__white,
-svg#icon__codepen.nav__white {
+svg#icon__linkedin.nav__white {
     color: #fff !important;
     fill: #fff !important;
 }
@@ -125,7 +125,7 @@ svg#icon__codepen.nav__white {
 svg#krooneman__logo.nav__black,
 svg#icon__mail.nav__black,
 svg#icon__github.nav__black,
-svg#icon__codepen.nav__black {
+svg#icon__linkedin.nav__black {
     color: rgba(0, 0, 0, 0.5) !important;
     fill: #000;
 }
