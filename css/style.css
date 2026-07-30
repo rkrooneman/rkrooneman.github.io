@@ -139,6 +139,13 @@ a {
     text-decoration: none;
 }
 
+a:focus-visible,
+.control__dot:focus-visible,
+.block__chevron span:focus-visible {
+    outline: 2px solid #de5f5f;
+    outline-offset: 3px;
+}
+
 .side {
     position: fixed;
     top: 0;
@@ -620,12 +627,6 @@ p a:hover {
 }
 */
 
-#skill__python,
-#skill__nodejs {
-    display: none;
-}
-
-
 .lead {
     display: block;
     font-size: .875rem;
@@ -677,9 +678,23 @@ p a:hover {
     display: none;
 }
 
+/* Stabilise carousel height so slides of different lengths don't shift the page */
+#exp__slides {
+    min-height: 160px;
+}
+
+@media (min-width: 30rem) {
+    #exp__slides {
+        min-height: 150px;
+    }
+}
+
 .slide__controls {
     max-width: 800px;
     margin-bottom: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
 }
 
 .control__dot {
@@ -794,8 +809,9 @@ p a:hover {
 
 .block__chevron {
     margin: auto 48px;
-    display: inherit;
-    font-size: 10rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
 }
 
 @media only screen and (max-width: 999px) {
@@ -804,12 +820,43 @@ p a:hover {
     }
 }
 
-
-.block__chevron span {
+.nav__btn {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    padding: 0;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
     color: #717171;
     cursor: pointer;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.block__chevron span:hover {
-    color: #bbb;
+.nav__btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+}
+
+.nav__btn:hover {
+    color: #fff;
+    background-color: #de5f5f;
+    border-color: #de5f5f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(222, 95, 95, 0.35);
+}
+
+.nav__btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(222, 95, 95, 0.3);
+}
+
+.nav__btn:focus-visible {
+    outline: 2px solid #de5f5f;
+    outline-offset: 3px;
 }

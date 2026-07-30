@@ -1,3 +1,0 @@
-nav .topnav:hover {
-  border-bottom: white 2px solid;  
-}

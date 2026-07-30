@@ -1,487 +1,306 @@
-$(document).ready(function () {
+/* ==========================================================================
+   Roderik Krooneman — Online Profile
+   Vanilla JS (no jQuery). Handles: greeting + clock, typewriter intro,
+   scroll-driven nav colouring, Experience & Skills carousels, touch swipe.
+   ========================================================================== */
 
-    var textArray = [
-        '🕹🏿',
-        '🏂',
-        '🏋️‍♂️',
-        '🏑',
-        '🎬',
-        '🛫',
-        '⛵️',
-        '🏄',
-        '👨‍🍳',
-        '👨‍👩‍👧‍👦',
-        '👨🏼‍💻',
-        '🎧',
-        '🍣',
+(function () {
+  'use strict';
+
+  /* Small helpers ---------------------------------------------------------- */
+  var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
+  var $all = function (sel, ctx) {
+    return Array.prototype.slice.call((ctx || document).querySelectorAll(sel));
+  };
+
+  function ready(fn) {
+    if (document.readyState !== 'loading') {
+      fn();
+    } else {
+      document.addEventListener('DOMContentLoaded', fn);
+    }
+  }
+
+  /* rAF-throttled scroll listener ----------------------------------------- */
+  function onScroll(handler) {
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        handler();
+        ticking = false;
+      });
+    }, { passive: true });
+    handler(); // run once on load
+  }
+
+  /* Simple fade-in (replaces jQuery fadeTo("slow", 1)) --------------------- */
+  function showFade(el) {
+    if (!el) return;
+    el.style.display = 'block';
+    el.style.opacity = '0';
+    // next frame so the transition applies
+    window.requestAnimationFrame(function () {
+      el.style.transition = 'opacity 0.4s ease';
+      el.style.opacity = '1';
+    });
+  }
+
+  function hide(el) {
+    if (!el) return;
+    el.style.display = 'none';
+    el.style.opacity = '0';
+  }
+
+  /* Native left/right swipe (replaces jquery.touchwipe) -------------------- */
+  function onSwipe(el, opts) {
+    if (!el) return;
+    var startX = 0, startY = 0, threshold = opts.min || 20;
+    el.addEventListener('touchstart', function (e) {
+      var t = e.changedTouches[0];
+      startX = t.clientX;
+      startY = t.clientY;
+    }, { passive: true });
+    el.addEventListener('touchend', function (e) {
+      var t = e.changedTouches[0];
+      var dx = t.clientX - startX;
+      var dy = t.clientY - startY;
+      if (Math.abs(dx) < threshold || Math.abs(dx) < Math.abs(dy)) return;
+      if (dx < 0 && opts.left) opts.left();
+      else if (dx > 0 && opts.right) opts.right();
+    }, { passive: true });
+  }
+
+  /* ------------------------------------------------------------------------
+     1. Random interests + greeting/clock + typewriter intro
+     ------------------------------------------------------------------------ */
+  ready(function () {
+    var interests = [
+      '\uD83D\uDD79\uD83C\uDFFF', '\uD83C\uDFC2', '\uD83C\uDFCB\uFE0F\u200D\u2642\uFE0F',
+      '\uD83C\uDFD1', '\uD83C\uDFAC', '\uD83D\uDEEB', '\u26F5\uFE0F', '\uD83C\uDFC4',
+      '\uD83D\uDC68\u200D\uD83C\uDF73', '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66',
+      '\uD83D\uDC68\uD83C\uDFFC\u200D\uD83D\uDCBB', '\uD83C\uDFA7', '\uD83C\uDF63'
     ];
 
-    var arr = [];
-    while (arr.length < 3) {
-        var r = Math.floor(Math.random() * textArray.length);
-        if (arr.indexOf(r) === -1) arr.push(r);
+    // pick 3 distinct interests
+    var picks = [];
+    while (picks.length < 3) {
+      var r = Math.floor(Math.random() * interests.length);
+      if (picks.indexOf(r) === -1) picks.push(r);
     }
 
-    console.log(arr);
-    console.log('interest1', textArray[arr[0]]);
-    console.log('interest2', textArray[arr[1]]);
-    console.log('interest3', textArray[arr[2]]);
-
-    setInterval(function checkcontent() {
-
-        if ($(".interest1").length > 0) {
-            $('.interest1').text(textArray[arr[0]]);
-        } else if ($(".interest2").length > 0) {
-            $('.interest2').text(textArray[arr[1]]);
-        } else if ($(".interest3").length > 0) {
-            $('.interest3').text(textArray[arr[2]]);
-        }
-
+    // Continuously fill any interest spans the typewriter creates.
+    setInterval(function () {
+      var slots = ['.interest1', '.interest2', '.interest3'];
+      for (var i = 0; i < slots.length; i++) {
+        var node = $(slots[i]);
+        if (node) node.textContent = interests[picks[i]];
+      }
     }, 500);
 
-});
+    // Greeting + running clock
+    function updateGreeting() {
+      var now = new Date();
+      var hr = now.getHours();
+      var greet;
+      var format = '';
 
-$(document).ready(function () {
-    function dateTime() {
-        var format = "";
-        var ndate = new Date();
-        var hr = ndate.getHours();
-        var h = hr % 12;
+      if (hr < 12) { greet = 'Goodmorning'; format = 'AM'; }
+      else if (hr <= 17) { greet = 'Good afternoon'; format = 'PM'; }
+      else { greet = 'Good evening'; format = 'PM'; }
 
-        if (hr < 12) {
-            greet = 'Goodmorning';
-            format = 'AM';
-        } else if (hr >= 12 && hr <= 17) {
-            greet = 'Good afternoon';
-            format = 'PM';
-        } else if (hr >= 17 && hr <= 24)
-            greet = 'Good evening';
+      var h = hr % 12;
+      var m = now.getMinutes();
+      var s = now.getSeconds();
+      var hh = h < 10 ? '0' + h : '' + h;
+      var mm = m < 10 ? '0' + m : '' + m;
+      var ss = s < 10 ? '0' + s : '' + s;
 
-        var m = ndate.getMinutes().toString();
-        var s = ndate.getSeconds().toString();
+      var greetEl = $('.day__greet');
+      if (greetEl) greetEl.innerHTML = greet;
 
-        if (h < 12) {
-            h = "0" + h;
-            $(".day__greet").html(greet);
-        } else if (h < 18) {
-            $(".day__greet").html(greet);
-        } else {
-            $(".day__greet").html(greet);
-        }
-
-        if (s < 10) {
-            s = "0" + s;
-        }
-
-        if (m < 10) {
-            m = "0" + m;
-        }
-
-        $('.date').html(h + ":" + m + ":" + s + format);
+      var dateEl = $('.date');
+      if (dateEl) dateEl.innerHTML = hh + ':' + mm + ':' + ss + format;
     }
+    setInterval(updateGreeting, 1000);
+    updateGreeting();
 
-    setInterval(dateTime, 100);
-
+    // Typewriter intro (typewriter-effect is a standalone lib, no jQuery)
     var app = document.getElementById('app');
-    var typewriter = new Typewriter(app, {
-        loop: false,
-        delay: 75,
-    });
-
-    typewriter.typeString('Hello there...')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('How are you doing?')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('you could scroll down...')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('or just stay here...')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('did you know I love <span class="interest1"></span>?')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('...and I really enjoy <span class="interest2"></span>')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('...and ofcourse <span class="interest3"></span>')
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString('how about a cup of ☕?')
-        .pauseFor(1500)
+    if (app && typeof Typewriter !== 'undefined') {
+      new Typewriter(app, { loop: false, delay: 75 })
+        .typeString('Hello there...').pauseFor(1500).deleteAll()
+        .typeString('How are you doing?').pauseFor(1500).deleteAll()
+        .typeString('you could scroll down...').pauseFor(1500).deleteAll()
+        .typeString('or just stay here...').pauseFor(1500).deleteAll()
+        .typeString('did you know I love <span class="interest1"></span>?').pauseFor(1500).deleteAll()
+        .typeString('...and I really enjoy <span class="interest2"></span>').pauseFor(1500).deleteAll()
+        .typeString('...and ofcourse <span class="interest3"></span>').pauseFor(1500).deleteAll()
+        .typeString('how about a cup of \u2615?').pauseFor(1500)
         .start();
+    }
+  });
 
-});
+  /* ------------------------------------------------------------------------
+     2. Scroll-driven nav colouring (dark sections -> white nav)
+     ------------------------------------------------------------------------ */
+  ready(function () {
+    var top = $('.top');
+    var bottom = $('.bottom');
+    var logo = $('#krooneman__logo');
+    var sideIcons = $all('.side__icon');
+    // Every dark/coloured-background section the nav should turn white over.
+    var darkSections = $all('.section--about, .section__dark, .section__dark2');
+    if (!top || !bottom) return;
 
-$(document).ready(function () {
-    $(window).scroll(function () {
-        var dark_pos = $('.section__dark').offset().top;
-        var dark_height = $('.section__dark').height();
-        var dark_pos2 = $('.section__dark2').offset().top;
-        var dark_height2 = $('.section__dark2').height();
-        var svg_height = $('.section__svg').height();
-        var menu_pos1 = $('.top').offset().top;
-        var menu_width1 = $('.top').width();
-        var scroll = $(window).scrollTop();
-
-        //        console.log('dark', dark_pos);
-        //        console.log('menu1', menu_pos1);
-        //        console.log('scroll', scroll);
-
-        if (scroll > (dark_pos - 150) && menu_pos1 < (dark_pos + dark_height + 150)) {
-            $('.top').addClass('nav__white');
-            $('#krooneman__logo').attr('class', 'nav__black nav__white');
-            $('.top').removeClass('nav__black');
-        } else if (scroll > (dark_pos2 - 150) && menu_pos1 < (dark_pos2 + dark_height2 + 150)) {
-            $('.top').addClass('nav__white');
-            $('#krooneman__logo').attr('class', 'nav__black nav__white');
-            $('.top').removeClass('nav__black');
-        } else {
-            $('.top').removeClass('nav__white');
-            $('#krooneman__logo').attr('class', 'nav__black');
-            $('.top').addClass('nav__black');
-        }
-
-    });
-});
-
-$(document).ready(function () {
-    $(window).scroll(function () {
-        var dark_pos = $('.section__dark').offset().top;
-        var dark_height = $('.section__dark').height();
-        var windowheight = $(window).height();
-        var dark_pos2 = $('.section__dark2').offset().top;
-        var dark_height2 = $('.section__dark2').height();
-        var svg_height = $('.section__svg').height();
-        var menu_pos2 = $('.bottom').offset().top;
-        var menu_width2 = $('.bottom').width();
-        var scroll = $(window).scrollTop();
-
-        console.log('menu2', menu_pos2);
-
-        if (scroll > (dark_pos - windowheight) && menu_pos2 < (dark_pos + dark_height + 150)) {
-            $('.bottom').addClass('nav__white');
-            $('.bottom').removeClass('nav__black');
-            $('.side__icon').addClass('nav__white');
-            $('.side__icon').removeClass('nav__black');
-        } else if (scroll > (dark_pos2 - windowheight) && menu_pos2 < (dark_pos2 + dark_height2 + 150)) {
-            $('.bottom').addClass('nav__white');
-            $('.bottom').removeClass('nav__black');
-            $('.side__icon').addClass('nav__white');
-            $('.side__icon').removeClass('nav__black');
-        } else {
-            $('.bottom').removeClass('nav__white');
-            $('.bottom').addClass('nav__black');
-            $('.side__icon').removeClass('nav__white');
-            $('.side__icon').addClass('nav__black');
-        }
-
-    });
-});
-
-$(document).ready(function () {
-
-    var expdot_Function = function () {
-        if ($(".exp__dot").hasClass("dot__inactive")) {
-            $(this)
-                .addClass("dot__active")
-                .removeClass("dot__inactive");
-            $(this).siblings()
-                .addClass("dot__inactive")
-                .removeClass("dot__active");
-        }
+    // Is the given viewport Y coordinate currently inside a dark section?
+    function overDark(viewportY) {
+      for (var i = 0; i < darkSections.length; i++) {
+        var r = darkSections[i].getBoundingClientRect();
+        if (viewportY >= r.top && viewportY <= r.bottom) return true;
+      }
+      return false;
     }
 
-    var xp1_Function = function () {
-        if ($("#exp__b").hasClass("dot__active")) {
-            $("#exp__b").addClass("dot__inactiveleft");
-            $("#exp__c").addClass("dot__inactive");
-            $("#exp__c").removeClass("dot__inactiveleft");
-            $("#exp__c").removeClass("dot__inactiveright");
-        }
-        if ($("#exp__c").hasClass("dot__active")) {
-            $("#exp__c").addClass("dot__inactiveright");
-            $("#exp__b").addClass("dot__inactive");
-            $("#exp__b").removeClass("dot__inactiveleft");
-            $("#exp__b").removeClass("dot__inactiveright");
-        }
-        $("#exp__a").removeClass("dot__inactiveleft");
-        $("#exp__a").removeClass("dot__inactiveright");
-        $("#exp__a").removeClass("dot__inactive");
-        $("#exp__c")
-            .removeClass("dot__right")
-            .addClass("dot__left");
-        $("#exp__b")
-            .removeClass("dot__left")
-            .addClass("dot__right");
-        $("#exp__1").show();
-        $("#exp__1").fadeTo("slow", 1);
-        $("#exp__2").hide();
-        $("#exp__2").css("opacity", "0");
-        $("#exp__3").hide();
-        $("#exp__3").css("opacity", "0");
-        $(".exp__dot").removeClass("dot__active");
-        $(".exp__dot:nth-child(1)").addClass("dot__active");
-        $("#chevron__left").removeClass("xpchev__1 xpchev__2");
-        $("#chevron__left").addClass("xpchev__3");
-        $("#chevron__right").removeClass("xpchev__1 xpchev__3");
-        $("#chevron__right").addClass("xpchev__2");
+    onScroll(function () {
+      // Vertical centre of each nav element, in viewport coordinates.
+      var topRect = top.getBoundingClientRect();
+      var bottomRect = bottom.getBoundingClientRect();
+      var topWhite = overDark(topRect.top + topRect.height / 2);
+      var bottomWhite = overDark(bottomRect.top + bottomRect.height / 2);
+
+      top.classList.toggle('nav__white', topWhite);
+      top.classList.toggle('nav__black', !topWhite);
+      if (logo) logo.setAttribute('class', topWhite ? 'nav__black nav__white' : 'nav__black');
+
+      bottom.classList.toggle('nav__white', bottomWhite);
+      bottom.classList.toggle('nav__black', !bottomWhite);
+      sideIcons.forEach(function (icon) {
+        icon.classList.toggle('nav__white', bottomWhite);
+        icon.classList.toggle('nav__black', !bottomWhite);
+      });
+    });
+  });
+
+  /* ------------------------------------------------------------------------
+     3. Experience carousel — data-driven (any number of roles)
+     ------------------------------------------------------------------------ */
+  ready(function () {
+    var dotsWrap = $('#exp__dots');
+    var slidesWrap = $('#exp__slides');
+    var chevL = $('#chevron__left'), chevR = $('#chevron__right');
+    if (!dotsWrap || !slidesWrap) return;
+
+    // Chronological order: oldest first, most recent last (rightmost dot).
+    // Edit here to add/remove/reorder roles.
+    var roles = [
+      {
+        title: 'Digital Marketeer @ Noordhoff',
+        period: 'Dec 2016 \u2013 May 2020',
+        body: 'Operational management of the webshop and responsible for digital marketing, e-commerce and social media. Front-end development (HTML/CSS/Sass/JavaScript/React), CRO, UX/UI/CX design and customer-journey mapping to grow satisfaction, leads and conversions.'
+      },
+      {
+        title: 'CX Manager @ Noordhoff',
+        period: 'May 2020 \u2013 Jan 2021',
+        body: 'Managed and continuously improved all marketing portals, webshops, websites and digital channels for user satisfaction and conversion. Business owner for the commercial systems, linking technology, data, digital marketing and sales.'
+      },
+      {
+        title: 'E-commerce Business Manager @ Noordhoff',
+        period: 'Jan 2021 \u2013 Jan 2022',
+        body: 'Business owner of the e-commerce platform and advocate of customer interests within the product vision. Owned user stories, roadmap and delivery, aligning capacity, priorities and resources for continuous improvement \u2014 the linking pin between Noordhoff and international partners.'
+      },
+      {
+        title: 'Lead Product Manager @ Infinitas Learning',
+        period: 'Jan 2022 \u2013 Sep 2025',
+        body: 'Identify the most valuable problems to solve, enable teams to ship and iterate high-quality solutions quickly, and validate market impact across Noordhoff.nl, Plantyn.com and Liber.se \u2014 coordinating roadmaps and go-to-market across departments and countries.'
+      },
+      {
+        title: 'Domain Lead @ Infinitas Learning',
+        period: 'Sep 2025 \u2013 Present',
+        body: 'Within the Commercial domain: define and own domain strategy &amp; target architecture, drive stakeholder engagement, translate business needs into functional designs, oversee solution delivery across cross-functional teams, and safeguard governance &amp; compliance.'
+      }
+    ];
+
+    var slides = [];
+    var dots = [];
+    // Open on the most recent role (last item in chronological order).
+    var current = roles.length - 1;
+
+    roles.forEach(function (role, i) {
+      var isActive = i === current;
+      var slide = document.createElement('div');
+      slide.className = isActive ? 'exp__active' : 'exp__inactive';
+      slide.innerHTML =
+        '<h2>' + role.title + '</h2>' +
+        '<p class="lead"><i>' + role.period + '</i><br />' + role.body + '</p>';
+      slidesWrap.appendChild(slide);
+      slides.push(slide);
+
+      var dot = document.createElement('span');
+      dot.className = 'exp__dot control__dot ' + (isActive ? 'dot__active' : 'dot__inactive');
+      dot.setAttribute('role', 'button');
+      dot.setAttribute('tabindex', '0');
+      dot.setAttribute('aria-label', 'Show ' + role.title);
+      dotsWrap.appendChild(dot);
+      dots.push(dot);
+
+      dot.addEventListener('click', function () { goTo(i); });
+      dot.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(i); }
+      });
+    });
+
+    function goTo(index) {
+      current = (index + roles.length) % roles.length;
+      slides.forEach(function (s, i) { if (i === current) showFade(s); else hide(s); });
+      dots.forEach(function (d, i) {
+        d.classList.toggle('dot__active', i === current);
+        d.classList.toggle('dot__inactive', i !== current);
+      });
     }
 
-    var xp2_Function = function () {
-        if ($("#exp__a").hasClass("dot__active")) {
-            $("#exp__a").addClass("dot__inactiveright");
-            $("#exp__c").addClass("dot__inactive");
-            $("#exp__c").removeClass("dot__inactiveleft");
-            $("#exp__c").removeClass("dot__inactiveright");
-        }
-        if ($("#exp__c").hasClass("dot__active")) {
-            $("#exp__c").addClass("dot__inactiveleft");
-            $("#exp__a").addClass("dot__inactive");
-            $("#exp__a").removeClass("dot__inactiveleft");
-            $("#exp__a").removeClass("dot__inactiveright");
-        }
-        $("#exp__b").removeClass("dot__inactiveleft");
-        $("#exp__b").removeClass("dot__inactiveright");
-        $("#exp__b").removeClass("dot__inactive");
-        $("#exp__a")
-            .removeClass("dot__right")
-            .addClass("dot__left");
-        $("#exp__c")
-            .removeClass("dot__left")
-            .addClass("dot__right");
-        $("#exp__1").hide();
-        $("#exp__1").css("opacity", "0");
-        $("#exp__2").show();
-        $("#exp__2").fadeTo("slow", 1);
-        $("#exp__3").hide();
-        $("#exp__3").css("opacity", "0");
-        $(".exp__dot").removeClass("dot__active");
-        $(".exp__dot:nth-child(2)").addClass("dot__active");
-        $("#chevron__left").removeClass("xpchev__2 xpchev__3");
-        $("#chevron__left").addClass("xpchev__1");
-        $("#chevron__right").removeClass("xpchev__1 xpchev__2");
-        $("#chevron__right").addClass("xpchev__3");
-    };
+    if (chevL) chevL.addEventListener('click', function () { goTo(current - 1); });
+    if (chevR) chevR.addEventListener('click', function () { goTo(current + 1); });
 
-    var xp3_Function = function () {
-        if ($("#exp__a").hasClass("dot__active")) {
-            $("#exp__a").addClass("dot__inactiveleft");
-            $("#exp__b").addClass("dot__inactive");
-            $("#exp__b").removeClass("dot__inactiveleft");
-            $("#exp__b").removeClass("dot__inactiveright");
-        }
-        if ($("#exp__b").hasClass("dot__active")) {
-            $("#exp__b").addClass("dot__inactiveright");
-            $("#exp__a").addClass("dot__inactive");
-            $("#exp__a").removeClass("dot__inactiveleft");
-            $("#exp__a").removeClass("dot__inactiveright");
-        }
-        $("#exp__c").removeClass("dot__inactiveleft");
-        $("#exp__c").removeClass("dot__inactiveright");
-        $("#exp__c").removeClass("dot__inactive");
-        $("#exp__b")
-            .removeClass("dot__right")
-            .addClass("dot__left");
-        $("#exp__a")
-            .removeClass("dot__left")
-            .addClass("dot__right");
-        $("#exp__1").hide();
-        $("#exp__1").css("opacity", "0");
-        $("#exp__2").hide();
-        $("#exp__2").css("opacity", "0");
-        $("#exp__3").show();
-        $("#exp__3").fadeTo("slow", 1);
-        $(".exp__dot").removeClass("dot__active");
-        $(".exp__dot:nth-child(3)").addClass("dot__active");
-        $("#chevron__left").removeClass("xpchev__1 xpchev__3");
-        $("#chevron__left").addClass("xpchev__2");
-        $("#chevron__right").removeClass("xpchev__2 xpchev__3");
-        $("#chevron__right").addClass("xpchev__1");
-    };
-
-    $("#exp__a").click(xp1_Function);
-    $("#exp__b").click(xp2_Function);
-    $("#exp__c").click(xp3_Function);
-
-    $(document).on('click', ".xpchev__1", xp1_Function);
-    $(document).on('click', ".xpchev__2", xp2_Function);
-    $(document).on('click', ".xpchev__3", xp3_Function);
-
-    $("#exp__1").touchwipe({
-        wipeLeft: xp2_Function,
-        wipeRight: xp3_Function,
-        min_move_x: 20,
-        min_move_y: 20,
-        preventDefaultEvents: true
+    onSwipe(slidesWrap, {
+      left: function () { goTo(current + 1); },
+      right: function () { goTo(current - 1); },
+      min: 20
     });
+  });
 
-    $("#exp__2").touchwipe({
-        wipeLeft: xp3_Function,
-        wipeRight: xp1_Function,
-        min_move_x: 20,
-        min_move_y: 20,
-        preventDefaultEvents: true
-    });
+  /* ------------------------------------------------------------------------
+     4. Skills carousel (2 slides, 2 dots, chevrons, swipe)
+     ------------------------------------------------------------------------ */
+  ready(function () {
+    var a = $('#skills__a'), b = $('#skills__b');
+    var s1 = $('#skills__1'), s2 = $('#skills__2');
+    var chevL = $('#skillchevron__left'), chevR = $('#skillchevron__right');
+    if (!a || !b) return;
 
-    $("#exp__3").touchwipe({
-        wipeLeft: xp1_Function,
-        wipeRight: xp2_Function,
-        min_move_x: 20,
-        min_move_y: 20,
-        preventDefaultEvents: true
-    });
-
-    var skilldot_Function = function () {
-        if ($(".skill__dot").hasClass("dot__inactive")) {
-            $(this)
-                .addClass("dot__active")
-                .removeClass("dot__inactive");
-            $(this).siblings()
-                .addClass("dot__inactive")
-                .removeClass("dot__active");
-        }
+    function go1() {
+      showFade(s1); hide(s2);
+      a.classList.add('dot__active'); a.classList.remove('dot__inactive');
+      b.classList.add('dot__inactive'); b.classList.remove('dot__active');
+    }
+    function go2() {
+      hide(s1); showFade(s2);
+      b.classList.add('dot__active'); b.classList.remove('dot__inactive');
+      a.classList.add('dot__inactive'); a.classList.remove('dot__active');
+    }
+    function toggle() {
+      if (b.classList.contains('dot__active')) go1(); else go2();
     }
 
-    var skills1_Function = function () {
-        if ($("#skills__b").hasClass("dot__active")) {
-            $("#skills__b").addClass("dot__inactiveleft");
-            $("#skills__c").addClass("dot__inactive");
-            $("#skills__c").removeClass("dot__inactiveleft");
-            $("#skills__c").removeClass("dot__inactiveright");
-        }
-        if ($("#skills__c").hasClass("dot__active")) {
-            $("#skills__c").addClass("dot__inactiveright");
-            $("#skills__b").addClass("dot__inactive");
-            $("#skills__b").removeClass("dot__inactiveleft");
-            $("#skills__b").removeClass("dot__inactiveright");
-        }
-        $("#skills__a").removeClass("dot__inactiveleft");
-        $("#skills__a").removeClass("dot__inactiveright");
-        $("#skills__a").removeClass("dot__inactive");
-        $("#skills__c")
-            .removeClass("dot__right")
-            .addClass("dot__left");
-        $("#skills__b")
-            .removeClass("dot__left")
-            .addClass("dot__right");
-        $("#skills__1").show();
-        $("#skills__1").fadeTo("slow", 1);
-        $("#skills__2").hide();
-        $("#skills__2").css("opacity", "0");
-        $("#skills__3").hide();
-        $("#skills__3").css("opacity", "0");
-        $(".skill__dot").removeClass("dot__active");
-        $(".skill__dot:nth-child(1)").addClass("dot__active");
-        $("#skillchevron__left").removeClass("skillchev__1");
-        $("#skillchevron__left").addClass("skillchev__2");
-        $("#skillchevron__right").removeClass("skillchev__1");
-        $("#skillchevron__right").addClass("skillchev__2");
-    }
+    a.addEventListener('click', go1);
+    b.addEventListener('click', go2);
 
-    var skills2_Function = function () {
-        if ($("#skills__a").hasClass("dot__active")) {
-            $("#skills__a").addClass("dot__inactiveright");
-            $("#skills__c").addClass("dot__inactive");
-            $("#skills__c").removeClass("dot__inactiveleft");
-            $("#skills__c").removeClass("dot__inactiveright");
-        }
-        if ($("#skills__c").hasClass("dot__active")) {
-            $("#skills__c").addClass("dot__inactiveleft");
-            $("#skills__a").addClass("dot__inactive");
-            $("#skills__a").removeClass("dot__inactiveleft");
-            $("#skills__a").removeClass("dot__inactiveright");
-        }
-        $("#skills__b").removeClass("dot__inactiveleft");
-        $("#skills__b").removeClass("dot__inactiveright");
-        $("#skills__b").removeClass("dot__inactive");
-        $("#skills__a")
-            .removeClass("dot__right")
-            .addClass("dot__left");
-        $("#skills__c")
-            .removeClass("dot__left")
-            .addClass("dot__right");
-        $("#skills__1").hide();
-        $("#skills__1").css("opacity", "0");
-        $("#skills__2").show();
-        $("#skills__2").fadeTo("slow", 1);
-        $("#skills__3").hide();
-        $("#skills__3").css("opacity", "0");
-        $(".skill__dot").removeClass("dot__active");
-        $(".skill__dot:nth-child(2)").addClass("dot__active");
-        $("#skillchevron__left").removeClass("skillchev__2");
-        $("#skillchevron__left").addClass("skillchev__1");
-        $("#skillchevron__right").removeClass("skillchev__2");
-        $("#skillchevron__right").addClass("skillchev__1");
-    };
+    if (chevL) chevL.addEventListener('click', toggle);
+    if (chevR) chevR.addEventListener('click', toggle);
 
-    var skills3_Function = function () {
-        if ($("#skills__a").hasClass("dot__active")) {
-            $("#skills__a").addClass("dot__inactiveleft");
-            $("#skills__b").addClass("dot__inactive");
-            $("#skills__b").removeClass("dot__inactiveleft");
-            $("#skills__b").removeClass("dot__inactiveright");
-        }
-        if ($("#skills__b").hasClass("dot__active")) {
-            $("#skills__b").addClass("dot__inactiveright");
-            $("#skills__a").addClass("dot__inactive");
-            $("#skills__a").removeClass("dot__inactiveleft");
-            $("#skills__a").removeClass("dot__inactiveright");
-        }
-        $("#skills__c").removeClass("dot__inactiveleft");
-        $("#skills__c").removeClass("dot__inactiveright");
-        $("#skills__c").removeClass("dot__inactive");
-        $("#skills__b")
-            .removeClass("dot__right")
-            .addClass("dot__left");
-        $("#skills__a")
-            .removeClass("dot__left")
-            .addClass("dot__right");
-        $("#skills__1").hide();
-        $("#skills__1").css("opacity", "0");
-        $("#skills__2").hide();
-        $("#skills__2").css("opacity", "0");
-        $("#skills__3").show();
-        $("#skills__3").fadeTo("slow", 1);
-        $(".skill__dot").removeClass("dot__active");
-        $(".skill__dot:nth-child(3)").addClass("dot__active");
-        $("#skillchevron__left").removeClass("skillchev__1 skillchev__3");
-        $("#skillchevron__left").addClass("skillchev__2");
-        $("#skillchevron__right").removeClass("skillchev__2 skillchev__3");
-        $("#skillchevron__right").addClass("skillchev__1");
-    };
+    onSwipe(s1, { left: go2, right: go2, min: 20 });
+    onSwipe(s2, { left: go1, right: go1, min: 20 });
+  });
 
-    $("#skills__a").click(skills1_Function);
-    $("#skills__b").click(skills2_Function);
-    $("#skills__c").click(skills3_Function);
-
-    $(document).on('click', ".skillchev__1", skills1_Function);
-    $(document).on('click', ".skillchev__2", skills2_Function);
-
-    $("#skills__1").touchwipe({
-        wipeLeft: skills2_Function,
-        wipeRight: skills2_Function,
-        min_move_x: 20,
-        min_move_y: 20,
-        preventDefaultEvents: true
-    });
-
-    $("#skills__2").touchwipe({
-        wipeLeft: skills1_Function,
-        wipeRight: skills1_Function,
-        min_move_x: 20,
-        min_move_y: 20,
-        preventDefaultEvents: true
-    });
-
-    $("#skills__3").touchwipe({
-        wipeLeft: skills1_Function,
-        wipeRight: skills2_Function,
-        min_move_x: 20,
-        min_move_y: 20,
-        preventDefaultEvents: true
-    });
-
-});
+})();
