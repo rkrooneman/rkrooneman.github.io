@@ -437,11 +437,6 @@ svg#icon__codepen.nav__black {
     margin-bottom: 0.8rem;
 }
 
-/* Print-only list of all roles (hidden on screen) */
-.exp__print-list {
-    display: none;
-}
-
 /* Cross-fade for the detail panel */
 .timeline__detail .role {
     animation: role-fade 0.4s ease;
@@ -789,6 +784,10 @@ p a:hover {
     cursor: pointer;
     box-shadow: 0 4px 14px rgba(214, 86, 86, 0.28);
     transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-cv::after {
+    display: none !important;
 }
 
 .btn-cv::before {
@@ -1210,106 +1209,3 @@ p a:hover {
     outline-offset: 3px;
 }
 
-/* ==========================================================================
-   Print stylesheet - format the page as a clean CV when printed / saved as PDF
-   ========================================================================== */
-@media print {
-    :root {
-        --ink: #1a1a2e;
-        --paper: #ffffff;
-        --accent: #b84545;
-        --slate: #444;
-    }
-
-    html {
-        font-size: 11pt;
-        scroll-behavior: auto;
-    }
-
-    body {
-        background: #fff;
-        color: #000;
-    }
-
-    /* Hide interactive / decorative chrome */
-    .side,
-    .section__svg,
-    .block__chevron,
-    .back-to-top,
-    #download-cv,
-    .timeline__track,
-    .anchornav,
-    .day__greet,
-    .date {
-        display: none !important;
-    }
-
-    /* Flatten full-height flex sections into normal flowing blocks */
-    .section {
-        display: block !important;
-        min-height: 0 !important;
-        width: 100% !important;
-        padding: 0.6cm 0 !important;
-        page-break-inside: avoid;
-        background: #fff !important;
-        color: #000 !important;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .section__inner {
-        display: block !important;
-    }
-
-    .block,
-    .block--wide {
-        width: 100% !important;
-    }
-
-    /* Hide the animated hero entirely; the Intro section carries the name */
-    .section--hello {
-        display: none !important;
-    }
-
-    /* Reveal ALL carousel slides (Education, Skills) instead of just the active one */
-    .exp__inactive,
-    .skills__inactive,
-    .exp__active {
-        display: block !important;
-        opacity: 1 !important;
-        margin-bottom: 0.5cm;
-    }
-
-    /* Print the whole Experience timeline as a list, not the interactive detail */
-    .timeline__detail {
-        display: none !important;
-    }
-
-    .exp__print-list {
-        display: block !important;
-    }
-
-    .exp__print-list .role {
-        margin-bottom: 0.5cm;
-        page-break-inside: avoid;
-    }
-
-    /* Accent stays visible in print */
-    a {
-        color: #000 !important;
-        text-decoration: underline;
-    }
-
-    h1, h2 {
-        color: #1a1a2e !important;
-    }
-
-    .pre span,
-    .at-a-glance dt,
-    .role__period {
-        color: #b84545 !important;
-    }
-
-    @page {
-        margin: 1.4cm;
-    }
-}

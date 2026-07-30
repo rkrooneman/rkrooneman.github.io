@@ -289,19 +289,6 @@
       nodes.push(node);
     });
 
-    // Hidden print-only list: shows every role when the page is printed as a CV.
-    var printList = document.createElement('div');
-    printList.className = 'exp__print-list';
-    printList.setAttribute('aria-hidden', 'true');
-    printList.innerHTML = roles.map(function (role) {
-      return '<div class="role">' +
-        '<h2 class="role__title">' + role.title + '</h2>' +
-        '<span class="role__period">' + role.period + '</span>' +
-        '<p class="lead">' + role.body + '</p>' +
-        '</div>';
-    }).join('');
-    timeline.appendChild(printList);
-
     function renderDetail() {
       var role = roles[current];
       detail.innerHTML =
@@ -546,16 +533,7 @@
   });
 
   /* ------------------------------------------------------------------------
-     7. Download CV - opens the print dialog (print stylesheet formats the page)
-     ------------------------------------------------------------------------ */
-  ready(function () {
-    var cv = $('#download-cv');
-    if (!cv) return;
-    cv.addEventListener('click', function () { window.print(); });
-  });
-
-  /* ------------------------------------------------------------------------
-     8. Easter eggs - console greeting + Konami "history mode" (opt-in only)
+     7. Easter eggs - console greeting + Konami "history mode" (opt-in only)
      ------------------------------------------------------------------------ */
   ready(function () {
     // Quiet greeting for the curious who open devtools.
