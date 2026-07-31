@@ -489,6 +489,9 @@ svg#icon__linkedin.nav__black {
 
     .timeline__year {
         margin-top: 0;
+        width: 2.75rem;
+        text-align: right;
+        flex-shrink: 0;
     }
 
     /* The active dot scales 1.4x from its box; nudge it back onto the line.
