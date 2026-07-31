@@ -256,7 +256,7 @@
       {
         title: 'Domain Lead @ Infinitas Learning',
         period: 'Sep 2025 \u2013 Present',
-        body: 'Within the Commercial domain: define and own domain strategy &amp; target architecture, drive stakeholder engagement, translate business needs into functional designs, oversee solution delivery across cross-functional teams, and safeguard governance &amp; compliance. Pioneered AI-assisted ways of working in my own practice, using AI to turn raw business input into structured requirements, governance-grade briefs and consistent decisions, with the aim of onboarding fellow domain leads to the approach.'
+        body: 'Within the Commercial domain: define and own domain strategy &amp; target architecture, drive stakeholder engagement, translate business needs into functional designs, oversee solution delivery across cross-functional teams, and safeguard governance &amp; compliance. Act as the bridge between the commercial business and the Salesforce/data landscape across opcos, mapping how each market really works and where the differences can converge onto one target model. Led the rollout of a B2B customer portal across the Netherlands, Belgium and Sweden, standardizing three markets onto one self-service channel rather than three local variants. Built AI into my own practice, turning raw business input into structured requirements, governance-grade briefs and consistent decisions, and began onboarding fellow domain leads onto the same approach.'
       }
     ];
 
@@ -446,16 +446,16 @@
     // Ordered from a Domain Lead / senior product perspective.
     var skills = [
       {
-        title: 'Digital Strategy & AI',
-        body: 'Setting domain vision, roadmap and target architecture, aligning a multi-market business around one commercial direction, and building AI into how strategy and delivery actually get done.'
+        title: 'Strategy & AI',
+        body: 'Domain vision, roadmap and target architecture, converging three markets onto one commercial direction, with AI built into how strategy and delivery actually get done.'
       },
       {
-        title: 'Stakeholder Management',
-        body: 'Trusted advisor across operating companies, product & tech and back-office, translating business needs into shared, actionable direction.'
+        title: 'Business-to-System Bridge',
+        body: 'Holding both how the business operates and how the systems model it, so process, data and platform decisions line up instead of drifting apart. As a trusted advisor across operating companies, product &amp; tech and back-office, I translate business needs into shared, actionable direction.'
       },
       {
         title: 'User Centricity',
-        body: 'Authentic user-centricity as the north star: if a change does not make things genuinely better for the end user, it has not earned its place.'
+        body: 'Keeping the people who use our products and processes at the centre of every design decision, so standardization serves users rather than the other way around.'
       },
       {
         title: 'Agile & Scrum',
@@ -463,7 +463,7 @@
       },
       {
         title: 'Research & Learning Histories',
-        body: 'A historian\u2019s discipline, tracing how today\u2019s challenges were built over time and designing evidence-based paths forward.'
+        body: 'A historian\u2019s discipline: tracing how today\u2019s complexity was built over time, then designing the evidence-based path that untangles it.'
       }
     ];
 
