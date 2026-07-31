@@ -256,7 +256,7 @@
       {
         title: 'Domain Lead @ Infinitas Learning',
         period: 'Sep 2025 \u2013 Present',
-        body: 'Within the Commercial domain: define and own domain strategy &amp; target architecture, drive stakeholder engagement, translate business needs into functional designs, oversee solution delivery across cross-functional teams, and safeguard governance &amp; compliance. Act as the bridge between the commercial business and the Salesforce/data landscape across opcos, mapping how each market really works and where the differences can converge onto one target model. Led the rollout of a B2B customer portal across the Netherlands, Belgium and Sweden, standardizing three markets onto one self-service channel rather than three local variants. Built AI into my own practice, turning raw business input into structured requirements, governance-grade briefs and consistent decisions, and began onboarding fellow domain leads onto the same approach.'
+        body: 'Within the Commercial domain: define and own domain strategy &amp; target architecture, drive stakeholder engagement, translate business needs into functional designs, oversee solution delivery, and safeguard governance &amp; compliance. Act as the bridge between the commercial business and the Salesforce/data landscape across opcos, mapping how each market works and where the differences can converge onto one target model. Led the rollout of a B2B customer portal across the Netherlands, Belgium and Sweden. Built AI into my own practice, turning raw business input into structured requirements, governance-grade briefs and consistent decisions.'
       }
     ];
 
