@@ -456,9 +456,11 @@ svg#icon__linkedin.nav__black {
     }
 
     /* Vertical line runs down the dot column. The dot centre sits at
-       --dot-col from the node's left edge; the line is anchored to it. */
+       --dot-col from the node's left edge; the line is anchored to it.
+       Derived from the flex layout: fixed year-label box (2.75rem) + row
+       gap (0.85rem) + half the 14px dot (7px). Keep in sync with those. */
     .timeline__track {
-        --dot-col: 52px;
+        --dot-col: calc(2.75rem + 0.85rem + 7px);
     }
 
     .timeline__track::before,
