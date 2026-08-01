@@ -638,7 +638,10 @@ h4 a:hover,
 }
 */
 
-p a::after,
+/* Animated growing-underline bar for HEADING links only. Inline paragraph
+   links (p a) are deliberately excluded: they keep the calm, static dotted
+   text-decoration underline instead, so the hover bar never clashes with the
+   line of text below them. */
 h1 a::after,
 .h1 a::after,
 h2 a::after,
@@ -753,13 +756,18 @@ ul.availability li::before {
 p a {
     font-weight: bold;
     color: inherit;
+    /* Calm, static dotted underline in every state (no growing hover bar), so
+       it never clashes with the line of text below. */
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
 }
 
-/*
-p a:hover {
-    border-bottom: .1875rem solid;
+p a:hover,
+p a:focus {
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
-*/
 
 .lead {
     display: block;
